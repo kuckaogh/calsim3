@@ -1,0 +1,24 @@
+!Coded by Andy Draper June 2004.
+
+!The variable 'allocation' is set in March cycle 2.
+!It is the annual allocation decision for YCWA based on
+!a multi-period optimization for the period April-September
+
+define YCWA_Alloc_dv {std kind 'fraction' units 'none'}
+
+define YCWA_Alloc {
+    case first6months {
+        condition month < APR .and. wateryear == bgnWY
+        value 1. }
+    case AprAlloc {
+        condition month == APR
+        value Alloc_YCWAMU }
+    case otherwise {
+        condition always
+        value YCWA_Alloc_dv(-1) }
+    }
+    
+goal set_alloc {YCWA_Alloc_dv = YCWA_Alloc }
+
+
+
