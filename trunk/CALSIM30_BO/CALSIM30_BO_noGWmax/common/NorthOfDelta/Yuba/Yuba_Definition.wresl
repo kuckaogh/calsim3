@@ -1,0 +1,20 @@
+define S_NBLDB       {std kind 'STORAGE' units 'TAF'}
+define	C_ENGLB		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define ER_NBLDB    {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define	I_DER001 		{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Deere Creek
+define	I_ENGLB	 	        {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Inflow to Englebright Reservoir
+define	I_NBLDB	 	        {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Inflow to New Bullards Bar Reservoir
+define	I_SLT009 		{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Slate Creek
+define	I_OGN005 		{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Oregon Creek
+define	I_NFY029 		{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! North Fork Yuba River
+define	I_MFY013 		{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Middle Fork Yuba River
+define	I_SFY007 		{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! South Fork Yuba River
+define	D_SLT009_SCT000_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'} ! Slate Creek Tunnel
+define C_NBLDB_MIF {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
+define C_NBLDB_POW {std kind 'FLOW-POWER-INSTREAM' units 'CFS'}
+define C_NBLDB_ADD {std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
+define demand_DGR {timeseries kind 'DEMAND' units 'TAF' convert 'CFS'}
+define C_ENGLB_MIF {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
+define C_ENGLB_POW {std kind 'FLOW-POWER-INSTREAM' units 'CFS'}
+define C_ENGLB_ADD {std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
+define C_NBLDB_POW_MIN {std kind 'FLOW-DELIVERY' units 'CFS'}
