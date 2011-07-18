@@ -15,7 +15,7 @@ Edited A Draper, MWH, June 6, 2011
 goal setD_WEC000_11_SA1 {
      lhs D_WEC000_11_SA1
      case NonSeason {
-          condition month >= JAN .and. month <= MAY
+          condition month >= JAN .and. month <= APR
           rhs 0.0
 	  lhs>rhs     constrain
     	  lhs<rhs     penalty 0
