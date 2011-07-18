@@ -2039,17 +2039,17 @@ define WR2_WTPCYC_16_PU       {alias WR2mon_WTPCYC_16_PU kind 'WATER-RIGHT' unit
 
 ! Assume SWP contract amount taken during months of April-September
 ! Define urban demand pattern for months April-September
-define SumUD_16_PU  {std kind 'URBAN-DEMAND' units 'TAF'} ! Annual demand
-define SumUD_16_PU_sv {
+define SumPartUD_16_PU  {std kind 'URBAN-DEMAND' units 'TAF'} ! Annual demand
+define SumPartUD_16_PU_sv {
     case oct{
      condition month == oct 
         sum(i=6,11,1) UD_16_PU(i)*cfs_taf(i) }
     case otherwise {
         condition   always
-        value SumUD_16_PU(-1) }
+        value SumPartUD_16_PU(-1) }
         }
        
-goal setSumUD_16_PU           {SumUD_16_PU=SumUD_16_PU_sv}
+goal setSumPartUD_16_PU           {SumPartUD_16_PU=SumPartUD_16_PU_sv}
 
 ! Monthly contract amount (TAF) patterned on demand   
 define CL1mon_WTPCYC_16_PU    {
