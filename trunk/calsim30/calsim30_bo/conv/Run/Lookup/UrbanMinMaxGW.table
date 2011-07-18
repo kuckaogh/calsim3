@@ -30,8 +30,8 @@ ID	MinFraction	MaxFraction
 26	1.00	1.00	!14_NU		Small communities
 27	0.00	1.00	!15N_NU		Marysville - California Water Service Company, small communities
 28	1.00	1.00	!15S_NU		Olivehurst PUD, Linda County WD, Wheatland, small communities
-29	0.00	1.00	!16_PU		Yuba City
-30	1.00	1.00	!16_NU		Small communities
+29	1.00	1.00	!16_NU		Small communities
+30	0.00	1.00	!16_PU		Yuba City
 31	1.00	1.00	!17N_NU		Small communities
 32	1.00	1.00	!17S_NU		Sutter CSD, small communities
 33	1.00	1.00	!18_NU		Small communities
