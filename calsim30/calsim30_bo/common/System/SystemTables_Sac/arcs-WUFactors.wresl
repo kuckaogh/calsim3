@@ -26,7 +26,9 @@
  Edited ADraper, MWH, 11/15/06
 */
 
-define RUFRmax {select rice from AgReuse where DU=1,month=month} !maximum reuse fraction for irrigated rice
+define TWAWRatio   {select TWAW from AgReuse where DU=1,month=month} !maximum reuse fraction for irrigated rice
+define RUFR	 	{select fraction from AgReuse where DU=1,month=month} !maximum reuse fraction for irrigated rice
+define RUFR2	 	{select fraction from AgReuse where DU=2,month=month} !maximum reuse fraction for irrigated rice
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 1      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -55,7 +57,7 @@ define DPF_SAC281_02_NA  {value 0.09} !deep percolation loss fraction
 define LFF_SAC281_02_NA  {value 0.12} !lateral flow loss fraction lateral flow
 define OSF_SAC281_02_NA  {value 0.03}  !canal operating spill fraction
 
-define RUFR_02_NA   	{value 0.5*RUFRmax} !reuse fraction for irrigated rice
+define RUFR_02_NA   	{value RUFR*TWAWRatio} !reuse fraction for irrigated rice
 define RUFO_02_NA   	{value 0.05} !reuse fraction for all other crops
 define RPF_02_NA    	{value 0.07} !riparian and miscellaneous ET fraction
 
@@ -73,7 +75,7 @@ define DPF_SAC296_02_SA  {value 0.145} !deep percolation loss fraction
 define LFF_SAC296_02_SA  {value 0.145} !lateral flow loss fraction lateral flow
 define OSF_SAC296_02_SA  {value 0.30} !canal operating spill fraction
 
-define RUFR_02_SA   	{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_02_SA   	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_02_SA   	{value 0.05} !reuse fraction for all other crops
 define RPF_02_SA    	{value 0.07} !riparian and miscellaneous ET fraction
 
@@ -91,7 +93,7 @@ define DPF_WTPCSD_02_PA  {value 0.01} !deep percolation loss fraction
 define LFF_WTPCSD_02_PA  {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_WTPCSD_02_PA  {value 0.00} !canal operating spill fraction
 
-define RUFR_02_PA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_02_PA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_02_PA   {value 0.10} 
 define RPF_02_PA    {value 0.00} !riparian and miscellaneous ET fraction (originally 5% but historical diversions low compared to demand)
 
@@ -151,7 +153,7 @@ define DPF_SAC273_03_NA  {value 0.06} !deep percolation loss fraction
 define LFF_SAC273_03_NA  {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_SAC273_03_NA  {value 0.03}  !canal operating spill fraction
 
-define RUFR_03_NA   	{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_03_NA   	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_03_NA   	{value 0.05} !reuse fraction for all other crops
 define RPF_03_NA    	{value 0.07} !riparian and miscellaneous ET fraction
 
@@ -169,7 +171,7 @@ define DPF_SAC294_03_PA  	{value 0.045} !deep percolation loss fraction
 define LFF_SAC294_03_PA  	{value 0.04} !lateral flow loss fraction lateral flow
 define OSF_SAC294_03_PA  	{value 0.03} !canal operating spill fraction
 
-define RUFR_03_PA   	{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_03_PA   	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_03_PA   	{value 0.10} !reuse fraction for all other crops (value from calibration)
 define RPF_03_PA    	{value 0.07} !riparian and miscellaneous ET fraction
 
@@ -187,7 +189,7 @@ define DPF_SAC289_03_SA  {value 0.17} !deep percolation loss fraction
 define LFF_SAC289_03_SA  {value 0.17} !lateral flow loss fraction lateral flow
 define OSF_SAC289_03_SA  {value 0.30} !canal operating spill fraction
 
-define RUFR_03_SA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_03_SA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_03_SA   {value 0.00} !reuse fraction for all other crops
 define RPF_03_SA    {value 0.07} !riparian and miscellaneous ET fraction
 
@@ -266,7 +268,7 @@ define DPF_THM012_04_NA  {value 0.06} !deep percolation loss fraction
 define LFF_THM012_04_NA  {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_THM012_04_NA  {value 0.03} !canal operating spill fraction
 
-define RUFR_04_NA   	{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_04_NA   	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_04_NA   	{value 0.05} !reuse fraction for all other crops
 define RPF_04_NA    	{value 0.05} !riparian and miscellaneous ET fraction
 
@@ -284,7 +286,7 @@ define DPF_CCL005_04_PA1 {value 0.01} !deep percolation loss fraction
 define LFF_CCL005_04_PA1 {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_CCL005_04_PA1 {value 0.00} !canal operating spill fraction
 
-define RUFR_04_PA1  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_04_PA1  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_04_PA1  {value 0.05} !reuse fraction for all other crops
 define RPF_04_PA1   {value 0.05} !riparian and miscellaneous ET fraction. .
 
@@ -302,7 +304,7 @@ define DPF_TCC022_04_PA2 {value 0.01} !deep percolation loss fraction
 define LFF_TCC022_04_PA2 {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_TCC022_04_PA2 {value 0.00} !canal operating spill fraction
 
-define RUFR_04_PA2  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_04_PA2  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_04_PA2  {value 0.10} !reuse fraction for all other crops
 define RPF_04_PA2   {value 0.00} !riparian and miscellaneous ET fraction. Originally 5%, but deliveries high compared to demand.
 
@@ -354,7 +356,7 @@ define DPF_DRC006_05_NA  {value 0.15} !deep percolation loss fraction
 define LFF_DRC006_05_NA  {value 0.16} !lateral flow loss fraction lateral flow
 define OSF_DRC006_05_NA  {value 0.09}    !canal operating spill fraction
 
-define RUFR_05_NA   	{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_05_NA   	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_05_NA   	{value 0.05} !reuse fraction for all other crops
 define RUFW_05_NA   	{value 0.15} !reuse fraction for wetlands
 define RPF_05_NA    	{value 0.05} !riparian and miscellaneous ET fraction
@@ -386,7 +388,7 @@ define DPF_STN_06_PA     {value (DPF_STN021_06_PA + DPF_STN026_06_PA)/2.} ! Used
 define LFF_STN_06_PA     {value (LFF_STN021_06_PA + LFF_STN026_06_PA)/2.} ! Used in Stony Creek allocation logic
 define OSF_STN_06_PA     {value (OSF_STN021_06_PA + OSF_STN026_06_PA)/2.} ! Used in Stony Creek allocation logic
 
-define RUFR_06_PA   {value 1.0*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_06_PA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_06_PA   {value 0.10} !reuse fraction for all other crops (no retrn flow, so all tailwater must be reused
 define RPF_06_PA    {value 0.05} !riparian and miscellaneous ET fraction (originally 0.045)
 
@@ -399,7 +401,7 @@ define DL_06_PA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 06_NA -
 !==============================
-define RUFR_06_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_06_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_06_NA   {value 0.10} !reuse fraction for all other crops
 define RPF_06_NA         {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -424,7 +426,7 @@ define DPF_TCC036_07N_PA {value 0.01} !deep percolation loss fraction - piped sy
 define LFF_TCC036_07N_PA {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_TCC036_07N_PA {value 0.00} !canal operating spill fraction
 
-define RUFR_07N_PA       {value 0.50*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_07N_PA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_07N_PA       {value 0.00} !reuse fraction for all other crops
 define RPF_07N_PA        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -437,7 +439,7 @@ define DL_07N_PA         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 07N_NA -
 !==============================
-define RUFR_07N_NA  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_07N_NA  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_07N_NA  {value 0.05} !reuse fraction for all other crops
 define RPF_07N_NA   {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -457,7 +459,7 @@ define DPF_TCC111_07S_PA {value 0.01} !deep percolation loss fraction
 define LFF_TCC111_07S_PA {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_TCC111_07S_PA {value 0.00} !canal operating spill fraction
 
-define RUFR_07S_PA       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_07S_PA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_07S_PA       {value 0.10} !reuse fraction for all other crops
 define RPF_07S_PA        {value 0.00} !riparian and miscellaneous ET fraction
 
@@ -470,7 +472,7 @@ define DL_07S_PA         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 07S_NA -
 !==============================
-define RUFR_07S_NA  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_07S_NA  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_07S_NA  {value 0.05} !reuse fraction for all other crops
 define RPF_07S_NA   {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -485,7 +487,7 @@ define DPF_CBD049_08N_PA {value 0.045} !deep percolation loss fraction
 define LFF_CBD049_08N_PA {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_CBD049_08N_PA {value 0.03} !canal operating spill fraction
 
-define RUFR_08N_PA       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08N_PA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08N_PA       {value 0.10} !reuse fraction for all other crops
 define RUFW_08N_PA       {value 0.15} !reuse fraction for wetlands
 define RPF_08N_PA        {value 0.025} !riparian and miscellaneous ET fraction
@@ -504,7 +506,7 @@ define DPF_GCC027_08N_PR1     {value 0.06} !deep percolation loss fraction
 define LFF_GCC027_08N_PR1     {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_GCC027_08N_PR1     {value 0.03} !canal operating spill fraction
 
-define RUFR_08N_PR1      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08N_PR1      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08N_PR1      {value 0.10} !reuse fraction for all other crops
 define RUFW_08N_PR1      {value 0.15} !reuse fraction for wetlands
 define RPF_08N_PR1       {value 0.00} !riparian and miscellaneous ET fraction
@@ -523,7 +525,7 @@ define DPF_GCC039_08N_PR2    {value 0.06} !deep percolation loss fraction
 define LFF_GCC039_08N_PR2     {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_GCC039_08N_PR2    {value 0.03} !canal operating spill fraction
 
-define RUFR_08N_PR2      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08N_PR2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08N_PR2      {value 0.10} !reuse fraction for all other crops
 define RUFW_08N_PR2      {value 0.05} !reuse fraction for wetlands
 define RPF_08N_PR2       {value 0.00} !riparian and miscellaneous ET fraction
@@ -552,7 +554,7 @@ define DPF_CBD049_08N_SA1     {value 0.075} !deep percolation loss fraction - or
 define LFF_CBD049_08N_SA1     {value 0.06} !lateral flow loss fraction lateral flow - originally - 0.0375
 define OSF_CBD049_08N_SA1     {value 0.03} !canal operating spill fraction - originally 0.05
 
-define RUFR_08N_SA1      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08N_SA1      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08N_SA1      {value 0.10} !reuse fraction for all other crops
 define RUFW_08N_SA1      {value 0.15} !reuse fraction for wetlands
 define RPF_08N_SA1       {value 0.025} !riparian and miscellaneous ET fraction
@@ -571,7 +573,7 @@ define DPF_GCC027_08N_SA2     {value 0.075} !deep percolation loss fraction (add
 define LFF_GCC027_08N_SA2     {value 0.06} !lateral flow loss fraction (originally 0.12375) Includes main canal
 define OSF_GCC027_08N_SA2     {value 0.03} !canal operating spill fraction
 
-define RUFR_08N_SA2      {value 0.75*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08N_SA2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08N_SA2      {value 0.15} !reuse fraction for all other crops
 define RUFW_08N_SA2      {value 0.15} !reuse fraction for wetlands
 define RPF_08N_SA2       {value 0.025} !riparian and miscellaneous ET fraction
@@ -590,7 +592,7 @@ define DPF_SAC185_08N_NA {value 0.03} !deep percolation loss fraction
 define LFF_SAC185_08N_NA {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_SAC185_08N_NA {value 0.03}  !canal operating spill fraction
 
-define RUFR_08N_NA       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08N_NA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08N_NA       {value 0.10} !reuse fraction for all other crops
 define RPF_08N_NA        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -616,7 +618,7 @@ define DPF_CBD041_08S_SA1     {value 0.045} !deep percolation loss fraction - or
 define LFF_CBD041_08S_SA1     {value 0.04} !lateral flow loss fraction lateral flow - originally - 0.0375
 define OSF_CBD041_08S_SA1     {value 0.030} !canal operating spill fraction - originally 0.05
 
-define RUFR_08S_SA1      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_SA1      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_SA1      {value 0.10} !reuse fraction for all other crops
 define RUFW_08S_SA1      {value 0.15} !reuse fraction for wetlands
 define RPF_08S_SA1       {value 0.025} !riparian and miscellaneous ET fraction
@@ -640,7 +642,7 @@ define DPF_CBD041_08S_SA2     {value 0.045} !deep percolation loss fraction - or
 define LFF_CBD041_08S_SA2     {value 0.04} !lateral flow loss fraction lateral flow - originally - 0.0375
 define OSF_CBD041_08S_SA2     {value 0.03} !canal operating spill fraction - originally 0.05
 
-define RUFR_08S_SA2      {value 0.75*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_SA2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_SA2      {value 0.15} !reuse fraction for all other crops
 define RUFW_08S_SA2      {value 0.15} !reuse fraction for wetlands
 define RPF_08S_SA2       {value 0.025} !riparian and miscellaneous ET fraction
@@ -669,7 +671,7 @@ define DPF_CBD028_08S_SA3     {value 0.01} !deep percolation loss fraction
 define LFF_CBD028_08S_SA3     {value 0.01} !lateral flow loss fraction lateral flow
 define OSF_CBD028_08S_SA3     {value 0.02} !canal operating spill fraction
 
-define RUFR_08S_SA3      {value 0.95*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_SA3      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_SA3      {value 0.10} !reuse fraction for all other crops
 define RPF_08S_SA3       {value 0.00} !riparian and miscellaneous ET fraction
 
@@ -692,7 +694,7 @@ define DPF_CBD037_08S_PR {value 0.00} !deep percolation loss fraction
 define LFF_CBD037_08S_PR {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_CBD037_08S_PR {value 0.00} !canal operating spill fraction
 
-define RUFR_08S_PR       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_PR       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_PR       {value 0.10} !reuse fraction for all other crops
 define RUFW_08S_PR       {value 0.15} !reuse fraction for wetlands
 define RPF_08S_PR        {value 0.25} !riparian and miscellaneous ET fraction. Originally 0.0 increased as demand low compared to historical deliveries
@@ -716,7 +718,7 @@ define DPF_CBD028_08S_PA {value 0.01} !deep percolation loss fraction
 define LFF_CBD028_08S_PA {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_CBD028_08S_PA {value 0.00} !canal operating spill fraction
 
-define RUFR_08S_PA       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_PA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_PA       {value 0.10} !reuse fraction for all other crops
 define RUFW_08S_PA       {value 0.15} !reuse fraction for wetlands
 define RPF_08S_PA        {value 0.025} !riparian and miscellaneous ET fraction
@@ -735,7 +737,7 @@ define DPF_SAC146_08S_NA1     {value 0.03} !deep percolation loss fraction
 define LFF_SAC146_08S_NA1     {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_SAC146_08S_NA1     {value 0.03} !canal operating spill fraction
 
-define RUFR_08S_NA1      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_NA1      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_NA1      {value 0.05} !reuse fraction for all other crops
 define RPF_08S_NA1       {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -753,7 +755,7 @@ define DPF_SAC129_08S_NA2     {value 0.09} !deep percolation loss fraction
 define LFF_SAC129_08S_NA2     {value 0.07} !lateral flow loss fraction lateral flow
 define OSF_SAC129_08S_NA2     {value 0.03} !canal operating spill fraction
 
-define RUFR_08S_NA2      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_08S_NA2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_08S_NA2      {value 0.10} !reuse fraction for all other crops
 define RPF_08S_NA2       {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -784,7 +786,7 @@ define DPF_SAC185_09_NA       {value 0.075} !deep percolation loss fraction
 define LFF_SAC185_09_NA       {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_SAC185_09_NA       {value 0.03} !canal operating spill fraction
 
-define RUFR_09_NA        {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_09_NA        {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_09_NA        {value 0.10} !reuse fraction for all other crops
 define RUFW_09_NA        {value 0.15} !reuse fraction for wetlands
 define RPF_09_NA         {value 0.05} !riparian and miscellaneous ET fraction
@@ -813,7 +815,7 @@ define DPF_MTC000_09_SA1 {value 0.06} !deep percolation loss fraction
 define LFF_MTC000_09_SA1 {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_MTC000_09_SA1 {value 0.03} !canal operating spill fraction
 
-define RUFR_09_SA1       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_09_SA1       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_09_SA1       {value 0.10} !reuse fraction for all other crops
 define RPF_09_SA1             {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -836,7 +838,7 @@ define DPF_SAC162_09_SA2 {value 0.06} !deep percolation loss fraction
 define LFF_SAC162_09_SA2 {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_SAC162_09_SA2 {value 0.03} !canal operating spill fraction
 
-define RUFR_09_SA2       {value 0.9*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_09_SA2       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_09_SA2       {value 0.10} !reuse fraction for all other crops
 define RUFW_09_SA2       {value 0.15} !reuse fraction for wetlands
 define RPF_09_SA2        {value 0.05} !riparian and miscellaneous ET fraction
@@ -855,7 +857,7 @@ define DPF_MTC000_09_PR       {value 0.01} !deep percolation loss fraction
 define LFF_MTC000_09_PR       {value 0.01} !lateral flow loss fraction lateral flow
 define OSF_MTC000_09_PR       {value 0.02} !canal operating spill fraction
 
-define RUFR_09_PR        {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_09_PR        {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_09_PR        {value 0.10} !reuse fraction for all other crops
 define RUFW_09_PR        {value 0.15} !reuse fraction for wetlands
 define RPF_09_PR         {value 0.00} !riparian and miscellaneous ET fraction
@@ -887,7 +889,7 @@ define DPF_MIO023_10_NA       {value 0.03} !deep percolation loss fraction
 define LFF_MIO023_10_NA       {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_MIO023_10_NA       {value 0.03} !canal operating spill fraction
 
-define RUFR_10_NA        {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_10_NA        {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_10_NA        {value 0.10} !reuse fraction for all other crops
 define RUFW_10_NA        {value 0.15} !reuse fraction for wetlands
 define RPF_10_NA         {value 0.05} !riparian and miscellaneous ET fraction
@@ -921,7 +923,7 @@ define DPF_DWRPS2_11_NA  {value 0.01} !deep percolation loss fraction
 define LFF_DWRPS2_11_NA  {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_DWRPS2_11_NA  {value 0.00} !canal operating spill fraction
 
-define RUFR_11_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_11_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_NA   {value 0.00} !reuse fraction for all other crops
 define RUFW_11_NA   {value 0.15} !reuse fraction for wetlands
 define RPF_11_NA    {value 0.05} !riparian and miscellaneous ET fraction
@@ -936,14 +938,14 @@ define DL_11_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 ! 11_SA1
 !==============================
 define EVF_WEC000_11_SA1 {value 0.01} !evaporative loss fraction
-define DPF_WEC000_11_SA1 {value 0.06} !deep percolation loss fraction
-define LFF_WEC000_11_SA1 {value 0.05} !lateral flow loss fraction lateral flow
+define DPF_WEC000_11_SA1 {value 0.03} !deep percolation loss fraction
+define LFF_WEC000_11_SA1 {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_WEC000_11_SA1 {value 0.03} !canal operating spill fraction
 
-define RUFR_11_SA1       {value 0.90*RUFRmax}!reuse fraction for irrigated rice
-define RUFO_11_SA1       {value 0.10} !reuse fraction for all other crops
-define RUFW_11_SA1       {value 0.15} !reuse fraction for wetlands
-define RPF_11_SA1        {value 0.05} !riparian and miscellaneous ET fraction
+define RUFR_11_SA1 	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
+define RUFO_11_SA1   	{value 0.10} !reuse fraction for all other crops
+define RUFW_11_SA1  	{value 0.15} !reuse fraction for wetlands
+define RPF_11_SA1        	{value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_11_SA1         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA1         {std kind 'deep-percolation' units 'CFS'}
@@ -964,10 +966,10 @@ define DPF_LDC007_11_SA2 {value 0.075} !deep percolation loss fraction
 define LFF_LDC007_11_SA2 {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_LDC007_11_SA2 {value 0.03} !canal operating spill fraction
 
-define RUFR_11_SA2       {value 0.10*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_11_SA2       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA2       {value 0.00} !reuse fraction for all other crops
 define RUFW_11_SA2       {value 0.15} !reuse fraction for wetlands
-define RPF_11_SA2        {value 0.25} !riparian and miscellaneous ET fraction
+define RPF_11_SA2        {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_11_SA2         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA2         {std kind 'deep-percolation' units 'CFS'}
@@ -983,10 +985,10 @@ define DPF_JBC004_11_SA3 {value 0.075} !deep percolation loss fraction
 define LFF_JBC004_11_SA3 {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_JBC004_11_SA3 {value 0.03} !canal operating spill fraction
 
-define RUFR_11_SA3       {value 0.10*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_11_SA3       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA3       {value 0.00} !reuse fraction for all other crops
 define RUFW_11_SA3       {value 0.15} !reuse fraction for wetlands
-define RPF_11_SA3        {value 0.25} !riparian and miscellaneous ET fraction
+define RPF_11_SA3        {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_11_SA3         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA3         {std kind 'deep-percolation' units 'CFS'}
@@ -1002,7 +1004,7 @@ define DPF_SEC009_11_SA4 {value 0.075} !deep percolation loss fraction
 define LFF_SEC009_11_SA4 {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_SEC009_11_SA4 {value 0.03} !canal operating spill fraction
 
-define RUFR_11_SA4       {value 0.10*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_11_SA4       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA4       {value 0.00} !reuse fraction for all other crops
 define RUFW_11_SA4       {value 0.15} !reuse fraction for wetlands
 define RPF_11_SA4        {value 0.05} !riparian and miscellaneous ET fraction
@@ -1042,7 +1044,7 @@ define DPF_RVC005_11_PR  {value 0.03} !deep percolation loss fraction
 define LFF_RVC005_11_PR  {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_RVC005_11_PR  {value 0.03}    !canal operating spill fraction
 
-define RUFR_11_PR   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_11_PR   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_PR   {value 0.10} !reuse fraction for all other crops
 define RUFW_11_PR   {value 0.15} !reuse fraction for wetlands
 define RPF_11_PR    {value 0.00} !riparian and miscellaneous ET fraction
@@ -1091,7 +1093,7 @@ define OSF_RFS13_12_NA   {value 0.02} !canal operating spill fraction
 !define LFF_FTR059_12_NA {value 0.00} !lateral flow loss fraction lateral flow
 !define OSF_FTR059_12_NA {value 0.00} !canal operating spill fraction
 
-define RUFR_12_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_12_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_12_NA   {value 0.00} !reuse fraction for all other crops
 define RUFW_12_NA   {value 0.15} !reuse fraction for wetlands
 define RPF_12_NA    {value 0.05} !riparian and miscellaneous ET fraction
@@ -1110,7 +1112,7 @@ define DPF_FTR059_12_SA  {value 0.075} !deep percolation loss fraction
 define LFF_FTR059_12_SA  {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_FTR059_12_SA  {value 0.03}  !canal operating spill fraction
 
-define RUFR_12_SA   {value 0.10*RUFRmax}  !reuse fraction for irrigated rice
+define RUFR_12_SA   {value RUFR*TWAWRatio}  !reuse fraction for irrigated rice
 define RUFO_12_SA   {value 0.10}  !reuse fraction for all other crops
 define RPF_12_SA    {value 0.06}  !riparian and miscellaneous ET fraction
 
@@ -1136,7 +1138,7 @@ define DPF_OWC000_13_NA  {value 0.512} !deep percolation loss fraction
 define LFF_OWC000_13_NA  {value 0.128} !lateral flow loss fraction lateral flow
 define OSF_OWC000_13_NA  {value 0.00} !canal operating spill fraction
 
-define RUFR_13_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_13_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_13_NA   {value 0.10} !reuse fraction for all other crops
 define RPF_13_NA    {value 0.17} !riparian and miscellaneous ET fraction
 
@@ -1188,7 +1190,7 @@ define DPF_YUB013_14_NA  {value 0.075} !deep percolation loss fraction
 define LFF_YUB013_14_NA  {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_YUB013_14_NA  {value 0.03} !canal operating spill fraction
 
-define RUFR_14_NA   {value 0.8*RUFRmax}!reuse fraction for irrigated rice (originally 0.5)
+define RUFR_14_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice (originally 0.5)
 define RUFO_14_NA   {value 0.15} !reuse fraction for all other crops (originally 10%)
 define RPF_14_NA    {value 0.05} !riparian and miscellaneous ET fraction (originally 10.5%)
 
@@ -1210,7 +1212,7 @@ define DL_14_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 15N_NA1 -
 !==============================
-define RUFR_15N_NA1 {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_15N_NA1 {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_15N_NA1 {value 0.10} !reuse fraction for all other crops
 define RPF_15N_NA1  {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1222,7 +1224,7 @@ define DPF_YUB011_15N_NA2     {value 0.06} !deep percolation loss fraction
 define LFF_YUB011_15N_NA2     {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_YUB011_15N_NA2     {value 0.03} !canal operating spill fraction
 
-define RUFR_15N_NA2      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_15N_NA2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_15N_NA2      {value 0.10} !reuse fraction for all other crops
 define RPF_15N_NA2       {value 0.06} !riparian and miscellaneous ET fraction
 
@@ -1240,7 +1242,7 @@ define DPF_FTR045_15N_SA {value 0.075} !deep percolation loss fraction
 define LFF_FTR045_15N_SA {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_FTR045_15N_SA {value 0.03}  !canal operating spill fraction
 
-define RUFR_15N_SA       {value 0.5*RUFRmax}  !reuse fraction for irrigated rice
+define RUFR_15N_SA       {value RUFR*TWAWRatio}  !reuse fraction for irrigated rice
 define RUFO_15N_SA       {value 0.10}  !reuse fraction for all other crops
 define RPF_15N_SA        {value 0.06}  !riparian and miscellaneous ET fraction
 
@@ -1268,7 +1270,7 @@ define DL_15N_NU         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !!==============================
 ! 15S_NA1 -
 !==============================
-define RUFR_15S_NA1 {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_15S_NA1 {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_15S_NA1 {value 0.10} !reuse fraction for all other crops
 define RPF_15S_NA1  {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1286,7 +1288,7 @@ define DPF_YUB011_15S_NA2     {value 0.12} !deep percolation loss fraction
 define LFF_YUB011_15S_NA2     {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_YUB011_15S_NA2     {value 0.03} !canal operating spill fraction
 
-define RUFR_15S_NA2      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_15S_NA2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_15S_NA2      {value 0.00} !reuse fraction for all other crops
 define RPF_15S_NA2       {value 0.10} !riparian and miscellaneous ET fraction
 
@@ -1309,7 +1311,7 @@ define DPF_FTR028_15S_SA {value 0.045} !deep percolation loss fraction
 define LFF_FTR028_15S_SA {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_FTR028_15S_SA {value 0.03} !canal operating spill fraction
 
-define RUFR_15S_SA       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_15S_SA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_15S_SA       {value 0.10} !reuse fraction for all other crops
 define RPF_15S_SA        {value 0.06} !riparian and miscellaneous ET fraction
 
@@ -1336,7 +1338,7 @@ define DPF_FTR021_16_PA  {value 0.01} !deep percolation loss fraction
 define LFF_FTR021_16_PA  {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_FTR021_16_PA  {value 0.00} !canal operating spill fraction
 
-define RUFR_16_PA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_16_PA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_16_PA   {value 0.075} !reuse fraction for all other crops
 define RPF_16_PA    {value 0.02} !riparian and miscellaneous ET fraction (originally 6%, reduced due to low diversions)
 
@@ -1379,7 +1381,7 @@ define DPF_DWRPS2_16_SA  {value 0.01} !deep percolation loss fraction
 define LFF_DWRPS2_16_SA  {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_DWRPS2_16_SA  {value 0.00} !canal operating spill fraction
 
-define RUFR_16_SA   {value 0.25*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_16_SA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_16_SA   {value 0.025} !reuse fraction for all other crops
 define RPF_16_SA    {value 0.10} !riparian and miscellaneous ET fraction
 
@@ -1404,7 +1406,7 @@ define DL_16_PU              {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 16_NA1 -
 !==============================
-define RUFR_16_NA1  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_16_NA1  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_16_NA1  {value 0.10} !reuse fraction for all other crops
 define RPF_16_NA1        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1416,7 +1418,7 @@ define DPF_DWRPS1_16_NA2 {value 0.01} !deep percolation loss fraction
 define LFF_DWRPS1_16_NA2 {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_DWRPS1_16_NA2 {value 0.00} !canal operating spill fraction
 
-define RUFR_16_NA2       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_16_NA2       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_16_NA2       {value 0.00} !reuse fraction for all other crops
 define RPF_16_NA2        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1443,7 +1445,7 @@ define DPF_BGD000_17N_PR {value 0.075} !deep percolation loss fraction
 define LFF_BGD000_17N_PR {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_BGD000_17N_PR {value 0.03} !canal operating spill fraction
 
-define RUFR_17N_PR       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_17N_PR       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_17N_PR       {value 0.10} !reuse fraction for all other crops
 define RUFW_17N_PR       {value 0.15} !reuse fraction for wetlands
 define RPF_17N_PR        {value 0.00} !riparian and miscellaneous ET fraction
@@ -1462,7 +1464,7 @@ define DPF_CRK005_17N_NR {value 0.03} !deep percolation loss fraction
 define LFF_CRK005_17N_NR {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_CRK005_17N_NR {value 0.03} !canal operating spill fraction
 
-define RUFR_17N_NR       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_17N_NR       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_17N_NR       {value 0.10} !reuse fraction for all other crops
 define RUFW_17N_NR       {value 0.15} !reuse fraction for wetlands
 define RPF_17N_NR        {value 0.00} !riparian and miscellaneous ET fraction
@@ -1476,7 +1478,7 @@ define DL_17N_NR         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 17N_NA -
 !==============================
-define RUFR_17N_NA  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_17N_NA  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_17N_NA  {value 0.10} !reuse fraction for all other crops
 define RPF_17N_NA   {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1496,7 +1498,7 @@ define DPF_SEC009_17S_PR {value 0.03} !deep percolation loss fraction
 define LFF_SEC009_17S_PR {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_SEC009_17S_PR {value 0.03} !canal operating spill fraction
 
-define RUFR_17S_PR       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_17S_PR       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_17S_PR       {value 0.10} !reuse fraction for all other crops
 define RUFW_17S_PR       {value 0.15} !reuse fraction for wetlands
 define RPF_17S_PR        {value 0.00} !riparian and miscellaneous ET fraction
@@ -1515,7 +1517,7 @@ define DPF_SBP014_17S_NA {value 0.03} !deep percolation loss fraction
 define LFF_SBP014_17S_NA {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_SBP014_17S_NA {value 0.03} !canal operating spill fraction
 
-define RUFR_17S_NA       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_17S_NA       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_17S_NA       {value 0.10} !reuse fraction for all other crops
 define RPF_17S_NA        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1533,7 +1535,7 @@ define DPF_FTR003_17S_SA {value 0.055} !deep percolation loss fraction
 define LFF_FTR003_17S_SA {value 0.055} !lateral flow loss fraction lateral flow
 define OSF_FTR003_17S_SA {value 0.03}  !canal operating spill fraction
 
-define RUFR_17S_SA       {value 0.5*RUFRmax}  !reuse fraction for irrigated rice
+define RUFR_17S_SA       {value RUFR*TWAWRatio}  !reuse fraction for irrigated rice
 define RUFO_17S_SA       {value 0.10}  !reuse fraction for all other crops
 define RPF_17S_SA        {value 0.06}  !riparian and miscellaneous ET fraction
 
@@ -1565,7 +1567,7 @@ define DPF_SAC136_18_NA  {value 0.045} !deep percolation loss fraction
 define LFF_SAC136_18_NA  {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_SAC136_18_NA  {value 0.03} !canal operating spill fraction
 
-define RUFR_18_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_18_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_18_NA   {value 0.10} !reuse fraction for all other crops
 define RPF_18_NA    {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1583,7 +1585,7 @@ define DPF_SAC141_18_SA  {value 0.045} !deep percolation loss fraction
 define LFF_SAC141_18_SA  {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_SAC141_18_SA  {value 0.03} !canal operating spill fraction
 
-define RUFR_18_SA   {value 0.9*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_18_SA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_18_SA   {value 0.15} !reuse fraction for all other crops, originally 10% but diversions low compared to demand
 define RPF_18_SA    {value 0.00} !riparian and miscellaneous ET fraction, originally 5%, but diversions low compared to demand
 
@@ -1604,7 +1606,7 @@ define DPF_SAC109_19_NA  {value 0.055} !deep percolation loss fraction
 define LFF_SAC109_19_NA  {value 0.055} !lateral flow loss fraction lateral flow
 define OSF_SAC109_19_NA  {value 0.03} !canal operating spill fraction
 
-define RUFR_19_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_19_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_19_NA   {value 0.10} !reuse fraction for all other crops
 define RPF_19_NA    {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1642,7 +1644,7 @@ define DPF_SAC122_19_SA  {value 0.075} !deep percolation loss fraction
 define LFF_SAC122_19_SA  {value 0.06} !lateral flow loss fraction lateral flow
 define OSF_SAC122_19_SA  {value 0.03} !canal operating spill fraction
 
-define RUFR_19_SA   {value 0.9*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_19_SA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_19_SA   {value 0.15} !reuse fraction for all other crops, originally 10% but diversions low compared to demand
 define RPF_19_SA    {value 0.00} !riparian and miscellaneous ET fraction, originally 5%, but diversions low compared to demand
 
@@ -1668,7 +1670,7 @@ define DPF_CCH052_20_NA1	{value 0.03} !deep percolation loss fraction
 define LFF_CCH052_20_NA1	{value 0.03} !lateral flow loss fraction lateral flow
 define OSF_CCH052_20_NA1	{value 0.03} !canal operating spill fraction
 
-define RUFR_20_NA1       {value 0.50*RUFRmax} !reuse fraction for irrigated rice
+define RUFR_20_NA1       {value RUFR*TWAWRatio} !reuse fraction for irrigated rice
 define RUFO_20_NA1	{value 0.05} !reuse fraction for all other crops. Originally 10%, but increased due to low diversions compared to demand
 define RPF_20_NA1		{value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1681,7 +1683,7 @@ define DL_20_NA1         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 20_NA2 -
 !==============================
-define RUFR_20_NA2  {value 0.75*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_20_NA2  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_20_NA2  {value 0.10} !reuse fraction for all other crops
 define RPF_20_NA2   {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1693,7 +1695,7 @@ define DPF_PSC003_20_PA	{value 0.01} !deep percolation loss fraction
 define LFF_PSC003_20_PA	{value 0.01} !lateral flow loss fraction lateral flow
 define OSF_PSC003_20_PA     {value 0.02} !canal operating spill fraction
 
-define RUFR_20_PA        		{value 0.75*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_20_PA        		{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_20_PA        	{value 0.10} !reuse fraction for all other crops
 define RPF_20_PA         		{value 0.00} !riparian and miscellaneous ET fraction
 
@@ -1714,7 +1716,7 @@ define DPF_SAC081_21_NA  {value 0.075}!deep percolation loss fraction
 define LFF_SAC081_21_NA  {value 0.06}!lateral flow loss fraction lateral flow
 define OSF_SAC081_21_NA  {value 0.03} !canal operating spill fraction
 
-define RUFR_21_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_21_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_21_NA   {value 0.10} !reuse fraction for all other crops
 define RPF_21_NA    {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1759,7 +1761,7 @@ define DPF_YBP023_21_SA  {value 0.02} !deep percolation loss fraction
 define LFF_YBP023_21_SA  {value 0.02} !lateral flow loss fraction lateral flow
 define OSF_YBP023_21_SA  {value 0.025} !canal operating spill fraction
 
-define RUFR_21_SA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_21_SA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_21_SA   {value 0.10} !reuse fraction for all other crops
 define RPF_21_SA    {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1777,7 +1779,7 @@ define DPF_KLR005_21_PA  {value 0.02} !deep percolation loss fraction
 define LFF_KLR005_21_PA  {value 0.02} !lateral flow loss fraction lateral flow
 define OSF_KLR005_21_PA  {value 0.025} !canal operating spill fraction
 
-define RUFR_21_PA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_21_PA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_21_PA   {value 0.10} !reuse fraction for all other crops
 define RUFW_21_PA   {value 0.15} !reuse fraction for wetlands
 define RPF_21_PA    {value 0.05} !riparian and miscellaneous ET fraction
@@ -1809,7 +1811,7 @@ define DPF_CRC002_22_SA1 {value 0.06} !deep percolation loss fraction
 define LFF_CRC002_22_SA1 {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_CRC002_22_SA1 {value 0.03} !canal operating spill fraction
 
-define RUFR_22_SA1       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_22_SA1       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_22_SA1       {value 0.10} !reuse fraction for all other crops
 define RPF_22_SA1        {value 0.10} !riparian and miscellaneous ET fraction
 
@@ -1827,7 +1829,7 @@ define DPF_FTR003_22_SA2 {value 0.01} !deep percolation loss fraction
 define LFF_FTR003_22_SA2 {value 0.01} !lateral flow loss fraction lateral flow
 define OSF_FTR003_22_SA2 {value 0.02} !canal operating spill fraction
 
-define RUFR_22_SA2       {value 0.0*RUFRmax} !reuse fraction for irrigated rice
+define RUFR_22_SA2       {value RUFR*TWAWRatio} !reuse fraction for irrigated rice
 define RUFO_22_SA2       {value 0.0} !reuse fraction for all other crops
 define RPF_22_SA2        {value 0.0} !riparian and miscellaneous ET fraction
 
@@ -1845,7 +1847,7 @@ define DPF_SAC075_22_NA  {value 0.09}!deep percolation loss fraction
 define LFF_SAC075_22_NA  {value 0.07}!lateral flow loss fraction lateral flow
 define OSF_SAC075_22_NA  {value 0.03} !canal operating spill fraction
 
-define RUFR_22_NA   {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_22_NA   {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_22_NA   {value 0.10} !reuse fraction for all other crops
 define RPF_22_NA    {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1871,7 +1873,7 @@ define DPF_BRR017_23_NA       {value 0.045} !deep percolation loss fraction
 define LFF_BRR017_23_NA       {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_BRR017_23_NA       {value 0.03} !canal operating spill fraction
 
-define RUFR_23_NA        {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_23_NA        {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_23_NA        {value 0.10} !reuse fraction for all other crops
 define RPF_23_NA         {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1908,25 +1910,26 @@ define DP_24_BEC    {std kind 'DEEP-PERCOLATION' units 'CFS'}
 define EV_24_LBC    {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_24_LBC    {std kind 'DEEP-PERCOLATION' units 'CFS'}
 
+
 !==============================
 ! 24_NA1
 !==============================
-define EVF_CBC007_24_NA1 {value 0.00} !evaporative loss fraction
-define DPF_CBC007_24_NA1 {value 0.01} !deep percolation loss fraction
-define LFF_CBC007_24_NA1 {value 0.00} !lateral flow loss fraction lateral flow
-define OSF_CBC007_24_NA1 {value 0.00} !canal operating spill fraction
+define EVF_CBC001_24_NA1 {value 0.00} !evaporative loss fraction
+define DPF_CBC001_24_NA1 {value 0.01} !deep percolation loss fraction
+define LFF_CBC001_24_NA1 {value 0.00} !lateral flow loss fraction lateral flow
+define OSF_CBC001_24_NA1 {value 0.00} !canal operating spill fraction
 
 define EVF_ABN024_24_NA1 {value 0.01} !evaporative loss fraction
 define DPF_ABN024_24_NA1 {value 0.27} !deep percolation loss fraction
 define LFF_ABN024_24_NA1 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_ABN024_24_NA1 {value 0.03} !canal operating spill fraction
 
-!define EVF_STH000_24_NA1     {value 0.01} !evaporative loss fraction
-!define DPF_STH000_24_NA1     {value 0.27} !deep percolation loss fraction
-!define LFF_STH000_24_NA1     {value 0.09} !lateral flow loss fraction lateral flow
-!define OSF_STH000_24_NA1     {value 0.03} !canal operating spill fraction
+define EVF_WSE004_24_NA1     {value 0.01} !evaporative loss fraction
+define DPF_WSE004_24_NA1     {value 0.27} !deep percolation loss fraction
+define LFF_WSE004_24_NA1     {value 0.09} !lateral flow loss fraction lateral flow
+define OSF_WSE004_24_NA1     {value 0.03} !canal operating spill fraction
 
-define RUFR_24_NA1       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_24_NA1       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_24_NA1       {value 0.10} !reuse fraction for all other crops
 define RPF_24_NA1        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1944,7 +1947,7 @@ define DPF_ABN010_24_NA2 {value 0.12} !deep percolation loss fraction
 define LFF_ABN010_24_NA2 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_ABN010_24_NA2 {value 0.03} !canal operating spill fraction
 
-define RUFR_24_NA2       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_24_NA2       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_24_NA2       {value 0.10} !reuse fraction for all other crops
 define RPF_24_NA2        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -1957,6 +1960,11 @@ define DL_24_NA2         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 24_NA3
 !==============================
+define EVF_WSE004_24_NA3 {value 0.01} !evaporative loss fraction
+define DPF_WSE004_24_NA3 {value 0.27} !deep percolation loss fraction
+define LFF_WSE004_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
+define OSF_WSE004_24_NA3 {value 0.03} !canal operating spill fraction
+
 define EVF_STH004_24_NA3 {value 0.01} !evaporative loss fraction
 define DPF_STH004_24_NA3 {value 0.27} !deep percolation loss fraction
 define LFF_STH004_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
@@ -1967,7 +1975,7 @@ define DPF_LBC049_24_NA3 {value 0.27} !deep percolation loss fraction
 define LFF_LBC049_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_LBC049_24_NA3 {value 0.03} !canal operating spill fraction
 
-define RUFR_24_NA3       {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_24_NA3       {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_24_NA3       {value 0.10} !reuse fraction for all other crops
 define RPF_24_NA3        {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -2025,12 +2033,12 @@ define DL_24_NU1     {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 24_NU3
 !==============================
-define EF_CBC007_24_NU3   {value 0.0}
-define SF_CBC007_24_NU3   {value 0.0}
+define EF_WSE004_24_NU3   {value 0.0}
+define SF_WSE004_24_NU3   {value 0.0}
 
-define DL_CBC007_24_NU3   {std kind 'DELIVERY-LOSS'    units 'CFS'}
-define EL_CBC007_24_NU3   {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define SL_CBC007_24_NU3   {std kind 'SEEPAGE-LOSS'     units 'CFS'}
+define DL_WSE004_24_NU3   {std kind 'DELIVERY-LOSS'    units 'CFS'}
+define EL_WSE004_24_NU3   {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
+define SL_WSE004_24_NU3   {std kind 'SEEPAGE-LOSS'     units 'CFS'}
 
 define DL_24_NU3     {std kind 'DELIVERY-LOSS' units 'CFS'}
 
@@ -2065,7 +2073,7 @@ define DPF_PSC003_25_PA1 	{value 0.06} !deep percolation loss fraction
 define LFF_PSC003_25_PA1 	{value 0.05} !lateral flow loss fraction lateral flow
 define OSF_PSC003_25_PA1 	{value 0.03} !canal operating spill fraction
 
-define RUFR_25_PA1       	{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_25_PA1       	{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_25_PA1       	{value 0.00} !reuse fraction for all other crops
 define RPF_25_PA1        		{value 0.05} !riparian and miscellaneous ET fraction
 
@@ -2088,7 +2096,7 @@ define DPF_RFS25_25_PA2       	{value 0.03} !deep percolation loss fraction
 define LFF_RFS25_25_PA2       	{value 0.03} !lateral flow loss fraction lateral flow
 define OSF_RFS25_25_PA2       	{value 0.03} !canal operating spill fraction
 
-define RUFR_25_PA2       		{value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_25_PA2       		{value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_25_PA2       		{value 0.10} !reuse fraction for all other crops
 define RPF_25_PA2        			{value 0.05} !riparian and miscellaneous ET fraction
 
@@ -2106,7 +2114,7 @@ define DPF_CSL005_25_NA       {value 0.045} !deep percolation loss fraction
 define LFF_CSL005_25_NA       {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_CSL005_25_NA       {value 0.03} !canal operating spill fraction
 
-define RUFR_25_NA        {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_25_NA        {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_25_NA        {value 0.10} !reuse fraction for all other crops
 define RPF_25_NA         {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -2129,7 +2137,7 @@ define DL_25_PU      {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 26N_NA -
 !==============================
-define RUFR_26N_NA  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_26N_NA  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_26N_NA  {value 0.10} !reuse fraction for all other crops
 define RPF_26N_NA   {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -2205,7 +2213,7 @@ define SL_26N_NU4    {std kind 'SEEPAGE-LOSS'     units 'CFS'}
 !==============================
 ! 26S_NA -
 !==============================
-define RUFR_26S_NA  {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_26S_NA  {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_26S_NA  {value 0.10} !reuse fraction for all other crops
 define RPF_26S_NA   {value 0.05} !riparian and miscellaneous ET fraction
 
@@ -2296,7 +2304,7 @@ define DPF_FSC015_60N_NA2     {value 0.03} !deep percolation loss fraction
 define LFF_FSC015_60N_NA2     {value 0.03} !lateral flow loss fraction lateral flow
 define OSF_FSC015_60N_NA2     {value 0.03} !canal operating spill fraction
 
-define RUFR_60N_NA2      {value 0.5*RUFRmax}!reuse fraction for irrigated rice
+define RUFR_60N_NA2      {value RUFR*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_60N_NA2      {value 0.10} !reuse fraction for all other crops
 define RPF_60N_NA2       {value 0.05} !riparian and miscellaneous ET fraction
 

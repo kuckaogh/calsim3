@@ -299,8 +299,9 @@ define DLT_MIO023_10_NA	{alias CLmon_MIO023_10_NA*taf_cfs kind 'DIVERSION-LIMIT'
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal limit_ButteC                  {CLmon_ButteC_11_NU1 + CLmon_ButteC_12_NU1 = perdv_swp_oth1*CLmon_ButteC}
 
-goal limitD_WEC000_11_SA1     {D_WEC000_11_SA1 + D_WEC000_11_PR + D_WEC000_BTC032 < perdv_swp_fsc*CLmon_WEC000_11_SA1*taf_cfs + 1.0*WRmon_WEC000_11_SA1*taf_cfs}
+goal limitD_WEC000_11_SA1     {D_WEC000_11_SA1 + D_WEC000_11_PR + D_WEC000_BTC032 < perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs + 1.0*WRmon_WRO000_WEC000*taf_cfs}
 
+define DLT_WEC000	{alias perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs + 1.0*WRmon_WRO000_WEC000*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 !Joint Water Board can buy and sell water
 ! Negatively weight these
@@ -309,7 +310,7 @@ define CL_11_SA2_Unused   {std kind 'CONTRACT' units 'CFS'}
 define CL_11_SA3_Unused   {std kind 'CONTRACT' units 'CFS'}
 define CL_11_SA4_Unused   {std kind 'CONTRACT' units 'CFS'}
 
-goal limitCL_11_SA2_Unused {CL_11_SA2_Unused < -D_RVC005_11_SA2 + perdv_swp_fsc*CLmon_RVC005_11_SA2*taf_cfs + 1.0*WRmon_RVC005_11_SA2*taf_cfs}
+goal limitCL_11_SA2_Unused {CL_11_SA2_Unused < -D_RVC005_11_SA2 + perdv_swp_fsc*CLmon_RVC005_11_SA2PR2*taf_cfs + 1.0*WRmon_RVC005_11_SA2PR2*taf_cfs}
 goal limitCL_11_SA3_Unused {CL_11_SA3_Unused < -D_JBC004_11_SA3 + perdv_swp_fsc*CLmon_JBC004_11_SA3*taf_cfs + 1.0*WRmon_JBC004_11_SA3*taf_cfs}
 goal limitCL_11_SA4_Unused {CL_11_SA4_Unused < -D_SEC009_11_SA4 + perdv_swp_fsc*CLmon_FTR039_11_SA4*taf_cfs + perdv_swp_fsc*CLmon_JBC008_11_SA4*taf_cfs + 1.0*WRmon_JBC008_11_SA4*taf_cfs + R_JBC008_FTR048}
 
@@ -329,7 +330,7 @@ goal limitCL_11_SA2_Unused2 {CL_11_SA2_Unused < season}
 goal limitCL_11_SA3_Unused2 {CL_11_SA3_Unused < season}
 goal limitCL_11_SA4_Unused2 {CL_11_SA4_Unused < season}  
     
-goal limitD_RVC005_11_SA2     {D_RVC005_11_SA2 + D_RVC005_11_PR < perdv_swp_fsc*CLmon_RVC005_11_SA2*taf_cfs + 1.0*WRmon_RVC005_11_SA2*taf_cfs - CL_11_SA2_Unused + CL_11_SA3_Unused + CL_11_SA4_Unused}
+goal limitD_RVC005_11_SA2     {D_RVC005_11_SA2 + D_RVC005_11_PR < perdv_swp_fsc*CLmon_RVC005_11_SA2PR2*taf_cfs + 1.0*WRmon_RVC005_11_SA2PR2*taf_cfs - CL_11_SA2_Unused + CL_11_SA3_Unused + CL_11_SA4_Unused}
 
 goal limitD_LDC007_11_SA2    {D_LDC007_11_SA2 < 1.0*WRmon_LDC007_11_SA2*taf_cfs}
 
@@ -457,10 +458,10 @@ define DLT_CRK005_17N_NR	{alias WRmon_CRK005_17N_NR*taf_cfs kind 'DIVERSION-LIMI
 
 define WEC_Open {
   case OctDec {
-    condition   month <= Dec
-    value      0.0 }
+    condition   month <= DEC
+    value      1.0 }
   case AprSep {
-    condition   month >=Apr
+    condition   month >=APR
     value       1.0 }
   case JanMar {
     condition   always

@@ -26,18 +26,18 @@ goal del_FTR039_11_SA4  {
 */
 ! Placeholders for SWP settlement contractors with mixed diversion of SWP and WR water - SWP shortage assumed to be zero
 define  X_SEC009_11_SA4  {alias perdv_swp_fsc*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4)*taf_cfs - perdv_swp_fsc*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4)*taf_cfs kind 'delivery-shortage' units 'cfs'}
-define  X_WEC000_11_SA1  {alias perdv_swp_fsc*CLmon_WEC000_11_SA1*taf_cfs - perdv_swp_fsc*CLmon_WEC000_11_SA1*taf_cfs kind 'delivery-shortage' units 'cfs'}
+define  X_WRO000_WEC000  {alias perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs - perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs kind 'delivery-shortage' units 'cfs'}
 define  X_JBC004_11_SA3  {alias perdv_swp_fsc*CLmon_JBC004_11_SA3*taf_cfs - perdv_swp_fsc*CLmon_JBC004_11_SA3*taf_cfs kind 'delivery-shortage' units 'cfs'}
-define  X_RVC005_11_SA2  {alias perdv_swp_fsc*CLmon_RVC005_11_SA2*taf_cfs - perdv_swp_fsc*CLmon_RVC005_11_SA2*taf_cfs kind 'delivery-shortage' units 'cfs'}
+define  X_RVC005_11_SA2PR2  {alias perdv_swp_fsc*CLmon_RVC005_11_SA2PR2*taf_cfs - perdv_swp_fsc*CLmon_RVC005_11_SA2PR2*taf_cfs kind 'delivery-shortage' units 'cfs'}
 define  X_FTR018_15S_SA  {alias perdv_swp_fsc*CLmon_FTR018_15S_SA*taf_cfs - perdv_swp_fsc*CLmon_FTR018_15S_SA*taf_cfs kind 'delivery-shortage' units 'cfs'}
 define  X_FTR014_16_SA  {alias perdv_swp_fsc*CLmon_FTR014_16_SA*taf_cfs - perdv_swp_fsc*CLmon_FTR014_16_SA*taf_cfs kind 'delivery-shortage' units 'cfs'}
 define  X_FTR018_16_SA  {alias perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs - perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs kind 'delivery-shortage' units 'cfs'}
 define  X_FTR021_16_SA  {alias perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs - perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs kind 'delivery-shortage' units 'cfs'}
 
 
-define short_swp_pag_n {alias  X_SEC009_11_SA4 +  X_WEC000_11_SA1 +  X_JBC004_11_SA3 +  X_RVC005_11_SA2 +  X_FTR018_15S_SA +  X_FTR014_16_SA +  X_FTR018_16_SA +  X_FTR021_16_SA kind  'delivery-shortage-swp' units 'cfs'}
+define short_swp_pag_n {alias  X_SEC009_11_SA4 +  X_WRO000_WEC000 +  X_JBC004_11_SA3 +  X_RVC005_11_SA2PR2 +  X_FTR018_15S_SA +  X_FTR014_16_SA +  X_FTR018_16_SA +  X_FTR021_16_SA kind  'delivery-shortage-swp' units 'cfs'}
 ! Include placeholders for SWP settlement contractors with mixed diversion of SWP and WR water - SWP delivery assumes zero shortage
-define del_swp_pag_n {alias perdv_swp_fsc*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4)*taf_cfs + perdv_swp_fsc*CLmon_WEC000_11_SA1*taf_cfs + perdv_swp_fsc*CLmon_JBC004_11_SA3*taf_cfs + perdv_swp_fsc*CLmon_RVC005_11_SA2*taf_cfs + perdv_swp_fsc*CLmon_FTR018_15S_SA*taf_cfs + perdv_swp_fsc*CLmon_FTR014_16_SA*taf_cfs + perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs kind  'delivery-swp' units 'cfs'}
+define del_swp_pag_n {alias perdv_swp_fsc*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4)*taf_cfs + perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs + perdv_swp_fsc*CLmon_JBC004_11_SA3*taf_cfs + perdv_swp_fsc*CLmon_RVC005_11_SA2PR2*taf_cfs + perdv_swp_fsc*CLmon_FTR018_15S_SA*taf_cfs + perdv_swp_fsc*CLmon_FTR014_16_SA*taf_cfs + perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs kind  'delivery-swp' units 'cfs'}
       
 /*
 define short_d6_pwr    {alias target_d6_pwr    -    d6_pwr  kind 'delivery-shortage' units 'cfs'}

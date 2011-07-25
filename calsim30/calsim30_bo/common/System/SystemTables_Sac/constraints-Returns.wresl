@@ -341,7 +341,7 @@ define WW_20_NU1 	{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
 define TW_20_NA1 	{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 define TW_20_NA2 	{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 
-goal setR_20_NU_YBP032	{R_20_NU1_YBP032 + R_20_NU1_WSB000 = WW_20_NU1}
+goal setR_20_NU1_YBP032	{R_20_NU1_YBP032 + R_20_NU1_WSB000 = WW_20_NU1}
 goal setR_20_NA1_WSB000	{R_20_NA1_WSB000 = TW_20_NA1 + LF_20_NA1 + OS_20_NA1 - RU_20_NA1}
 goal setR_20_NA2_WSB000	{R_20_NA2_WSB000 = TW_20_NA2 /*+ LF_20_NA2 + OS_20_NA2*/ - RU_20_NA2} !Groundwater only
 goal setR_20_PA_PTH011	{R_20_PA_PTH011 = TW_20_PA + LF_20_PA + OS_20_PA - RU_20_PA}

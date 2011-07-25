@@ -143,10 +143,10 @@ goal OroRelJulSep {
 /*define frsa_alloc {
   case Drought {
     condition     wyt_FEATHER == 1
-    value        0.50*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4 + CLmon_WEC000_11_SA1 + CLmon_JBC004_11_SA3 + CLmon_RVC005_11_SA2)*taf_cfs}
+    value        0.50*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4 + CLmon_WRO000_WEC000 + CLmon_JBC004_11_SA3 + CLmon_RVC005_11_SA2PR2)*taf_cfs}
   case Normal {
     condition    always
-    value        1.00*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4 + CLmon_WEC000_11_SA1 + CLmon_JBC004_11_SA3 + CLmon_RVC005_11_SA2)*taf_cfs}
+    value        1.00*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4 + CLmon_WRO000_WEC000 + CLmon_JBC004_11_SA3 + CLmon_RVC005_11_SA2PR2)*taf_cfs}
 }
 
 define yuba_alloc {value YCWA_Alloc*(CLmon_YUB013_14_NA + CLmon_YUB011_15N_NA2 + CLmon_YUB011_15S_NA2 + CLmon_YUB003_15N_NU)*taf_cfs}

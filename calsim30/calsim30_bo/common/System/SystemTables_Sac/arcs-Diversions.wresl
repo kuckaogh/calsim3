@@ -79,8 +79,10 @@ define  D_LBR002_LBC001     {std kind 'DIVERSION' units 'CFS'} !Export(previousl
 define  D_BRR050_BEC000     {std kind 'DIVERSION' units 'CFS'} !Export(previously D292)
 define  D_CMBIE_CBC000      {std kind 'DIVERSION' units 'CFS'} !Export(previously D290)
 
-define  D_CBC007_24_NU3     {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie Canal          !define D_CMB000_WTPNAB {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie Canal
-define  D_CBC007_24_NA1     {std kind 'DIVERSION' units 'CFS'} !Nevada ID                   !define D_CMB000_24_NA1 {std kind 'DIVERSION' units 'CFS'} !Nevada ID
+define  D_WSE004_24_NA1     {std kind 'DIVERSION' units 'CFS'}
+define  D_WSE004_24_NA3     {std kind 'DIVERSION' units 'CFS'}
+define  D_WSE004_24_NU3     {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie Canal          !define D_CMB000_WTPNAB {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie Canal
+define  D_CBC001_24_NA1     {std kind 'DIVERSION' units 'CFS'} !Nevada ID                   !define D_CMB000_24_NA1 {std kind 'DIVERSION' units 'CFS'} !Nevada ID
 define  D_CBC001_CCK036     {std kind 'DIVERSION' units 'CFS'} !Diversion to Cross Creek
 define  D_BRR017_23_NA      {std kind 'DIVERSION' units 'CFS'} !Camp Far West Irrigation District
 !define D_BRR016_23_NA      {std kind 'DIVERSION' units 'CFS'} !South Sutter Water District

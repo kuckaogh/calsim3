@@ -708,22 +708,18 @@ define    GPmax_26N_NA    {select  maxfraction from AgMinMaxgw where id = 73}
 define    GP_26N_NU1     {std kind 'GW-PUMPING' units 'CFS'}                   
 define    GPmin_26N_NU1    {select  minfraction from UrbanMinMaxgw where id = 47}
 define    GPmax_26N_NU1    {select  maxfraction from UrbanMinMaxgw where id = 47}                       
-define    GPmin_26N_NU1  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26N_NU2     {std kind 'GW-PUMPING' units 'CFS'}                   
 define    GPmin_26N_NU2    {select  minfraction from UrbanMinMaxgw where id = 48}
 define    GPmax_26N_NU2    {select  maxfraction from UrbanMinMaxgw where id = 48}                    
-define    GPmin_26N_NU2  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26N_NU3     {std kind 'GW-PUMPING' units 'CFS'}                   
 define    GPmin_26N_NU3    {select  minfraction from UrbanMinMaxgw where id = 49}
 define    GPmax_26N_NU3    {select  maxfraction from UrbanMinMaxgw where id = 49}                    
-define    GPmin_26N_NU3  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26N_NU4     {std kind 'GW-PUMPING' units 'CFS'}                  
 define    GPmin_26N_NU4    {select  minfraction from UrbanMinMaxgw where id = 50}
 define    GPmax_26N_NU4    {select  maxfraction from UrbanMinMaxgw where id = 50}                     
-define    GPmin_26N_NU4  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 ! no surface deliveries to 26N_NU5
 define    GP_26N_NU5     {std kind 'GW-PUMPING' units 'CFS'}                   
@@ -733,17 +729,14 @@ define    GPmax_26N_NU5    {select  maxfraction from UrbanMinMaxgw where id = 51
 define    GP_26N_PU1     {std kind 'GW-PUMPING' units 'CFS'}                  
 define    GPmin_26N_PU1    {select  minfraction from UrbanMinMaxgw where id = 52}
 define    GPmax_26N_PU1    {select  maxfraction from UrbanMinMaxgw where id = 52}                    
-define    GPmin_26N_PU1  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26N_PU2     {std kind 'GW-PUMPING' units 'CFS'}                  
 define    GPmin_26N_PU2    {select  minfraction from UrbanMinMaxgw where id = 53}
 define    GPmax_26N_PU2    {select  maxfraction from UrbanMinMaxgw where id = 53}                    
-define    GPmin_26N_PU2  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26N_PU3     {std kind 'GW-PUMPING' units 'CFS'}                  
 define    GPmin_26N_PU3    {select  minfraction from UrbanMinMaxgw where id = 54}
 define    GPmax_26N_PU3    {select  maxfraction from UrbanMinMaxgw where id = 54} 
-define    GPmin_26N_PU3  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'} 
 
 define GP_WBATotal_26N    {std kind 'GW-PUMPING' units 'CFS'}
 
@@ -758,12 +751,10 @@ define    GPmax_26S_NA    {select  maxfraction from AgMinMaxgw where id = 74}
 define    GP_26S_NU1     {std kind 'GW-PUMPING' units 'CFS'}    
 define    GPmin_26S_NU1    {select  minfraction from UrbanMinMaxgw where id = 55}
 define    GPmax_26S_NU1    {select  maxfraction from UrbanMinMaxgw where id = 55}                    
-define    GPmin_26S_NU1  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26S_NU2     {std kind 'GW-PUMPING' units 'CFS'}    
 define    GPmin_26S_NU2    {select  minfraction from UrbanMinMaxgw where id = 56}
 define    GPmax_26S_NU2    {select  maxfraction from UrbanMinMaxgw where id = 56}                     
-define    GPmin_26S_NU2  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 ! no surface deliveries to 26S_NU3
 define    GP_26S_NU3     {std kind 'GW-PUMPING' units 'CFS'}    
@@ -773,37 +764,30 @@ define    GPmax_26S_NU3    {select  maxfraction from UrbanMinMaxgw where id = 57
 define    GP_26S_NU4     {std kind 'GW-PUMPING' units 'CFS'}    
 define    GPmin_26S_NU4    {select  minfraction from UrbanMinMaxgw where id = 58}
 define    GPmax_26S_NU4    {select  maxfraction from UrbanMinMaxgw where id = 58}                     
-define    GPmin_26S_NU4  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26S_PU1     {std kind 'GW-PUMPING' units 'CFS'}    
 define    GPmin_26S_PU1    {select  minfraction from UrbanMinMaxgw where id = 59}
 define    GPmax_26S_PU1    {select  maxfraction from UrbanMinMaxgw where id = 59} 
-define    GPmin_26S_PU1  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26S_PU2     {std kind 'GW-PUMPING' units 'CFS'}                 
 define    GPmin_26S_PU2    {select  minfraction from UrbanMinMaxgw where id = 60}
 define    GPmax_26S_PU2    {select  maxfraction from UrbanMinMaxgw where id = 60}                     
-define    GPmin_26S_PU2  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26S_PU3     {std kind 'GW-PUMPING' units 'CFS'}                 
 define    GPmin_26S_PU3    {select  minfraction from UrbanMinMaxgw where id = 61}
 define    GPmax_26S_PU3    {select  maxfraction from UrbanMinMaxgw where id = 61}                     
-define    GPmin_26S_PU3  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26S_PU4     {std kind 'GW-PUMPING' units 'CFS'}                 
 define    GPmin_26S_PU4    {select  minfraction from UrbanMinMaxgw where id = 62}
 define    GPmax_26S_PU4    {select  maxfraction from UrbanMinMaxgw where id = 62}                     
-define    GPmin_26S_PU4  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define    GP_26S_PU5     {std kind 'GW-PUMPING' units 'CFS'}                
 define    GPmin_26S_PU5    {select  minfraction from UrbanMinMaxgw where id = 63}
 define    GPmax_26S_PU5    {select  maxfraction from UrbanMinMaxgw where id = 63}                              
-define    GPmin_26S_PU5  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}          
 
 define    GP_26S_PU6     {std kind 'GW-PUMPING' units 'CFS'}               
 define    GPmin_26S_PU6   {select  minfraction from UrbanMinMaxgw where id = 64}
 define    GPmax_26S_PU6    {select  maxfraction from UrbanMinMaxgw where id = 64}  
-define    GPmin_26S_PU6  {timeseries kind 'GW-PUMPING-MIN' units 'TAF' convert 'CFS'}
 
 define GP_WBATotal_26S    {std kind 'GW-PUMPING' units 'CFS'}
 
