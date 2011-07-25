@@ -15,7 +15,7 @@ Edited A Draper, MWH, June 6, 2011
 goal setD_WEC000_11_SA1 {
      lhs D_WEC000_11_SA1
      case NonSeason {
-          condition month >= JAN .and. month <= APR
+          condition month >= JAN .and. month <= MAR
           rhs 0.0
 	  lhs>rhs     constrain
     	  lhs<rhs     penalty 0
@@ -41,20 +41,20 @@ goal setD_JBC002_RVC005 {D_JBC002_RVC005 = 0.65 * D_WRO000_RVC005}
 goal setD_WEC000_BTC032 {
      lhs D_WEC000_BTC032
      case September {
-          condition month == SEP .and. I_BTC060 >= 15. * taf_cfs
-          rhs 4.0* taf_cfs
+          condition month == SEP .and. I_BTC060 <= 15. * taf_cfs
+          rhs 40.
           lhs>rhs     constrain
     	  lhs<rhs     penalty 9999
      }
      case October {
-           condition month == OCT .and. I_BTC060 >= 15. * taf_cfs
-           rhs 8.0* taf_cfs
+           condition month == OCT .and. I_BTC060 <= 15. * taf_cfs
+           rhs 140.
           lhs>rhs     constrain
     	  lhs<rhs     penalty 9999
      }
      case November {
-           condition month == NOV .and. I_BTC060 >= 15. * taf_cfs
-           rhs 2.0* taf_cfs
+           condition month == NOV .and. I_BTC060 <= 15. * taf_cfs
+           rhs 30.
           lhs>rhs     constrain
     	  lhs<rhs     penalty 9999
      }

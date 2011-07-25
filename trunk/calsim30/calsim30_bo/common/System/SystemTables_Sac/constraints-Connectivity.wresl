@@ -140,8 +140,8 @@ goal continuityBCC004   {C_BCC006 + SG_BCC004_130 - C_BCC004    = ErrPos_BCC004 
 !!! Lower Boardman, Bear River, South and Gold Hill/Combie Canals    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityCBC000   {D_CMBIE_CBC000 - D_CBC000_NID_N1 - C_CBC000                            = ErrPos_CBC000 - ErrNeg_CBC000}
-goal continuityCBC001   {C_CBC000 - D_CBC001_CCK036 - C_CBC001 - D_CBC001_CBCLOS                = ErrPos_CBC001 - ErrNeg_CBC001}
-goal continuityCBC007   {C_CBC001 + D_WSE004_CBC007 - D_CBC007_24_NA1 - D_CBC007_24_NU3         = ErrPos_CBC007 - ErrNeg_CBC007}
+goal continuityCBC001   {C_CBC000 - D_CBC001_CCK036 - D_CBC001_24_NA1 - C_CBC001 - D_CBC001_CBCLOS                = ErrPos_CBC001 - ErrNeg_CBC001}
+goal continuityCBC007   {C_CBC001 + D_WSE004_CBC007 					        = ErrPos_CBC007 - ErrNeg_CBC007}
 goal continuityLBC001   {D_LBR002_LBC001 - C_LBC001 - D_LBC001_LBCLOS                           = ErrPos_LBC001 - ErrNeg_LBC001}
 goal continuityLBC010   {C_LBC001 - D_LBC010_PCWA3 - C_LBC010                                   = ErrPos_LBC010 - ErrNeg_LBC010}
 goal continuityLBC030   {C_LBC010 - D_LBC030_BEC021 - C_LBC030                                  = ErrPos_LBC030 - ErrNeg_LBC030}
@@ -155,7 +155,7 @@ goal continuityBEC021   {C_BEC000 + D_LBC030_BEC021 - D_BEC021_LBC032 - D_BEC021
 goal continuityBEC022   {C_BEC021 - D_BEC022_WTPBWM - C_BEC022                                  = ErrPos_BEC022 - ErrNeg_BEC022}
 goal continuityBEC024   {C_BEC022 - C_BEC024                                            	= ErrPos_BEC024 - ErrNeg_BEC024}
 goal continuityWSE003   {C_BEC024 - D_WSE003_LBC040 - C_WSE003                                  = ErrPos_WSE003 - ErrNeg_WSE003}
-goal continuityWSE004   {C_WSE003 - D_WSE004_CBC007 - C_WSE004                                  = ErrPos_WSE004 - ErrNeg_WSE004}
+goal continuityWSE004   {C_WSE003 - D_WSE004_CBC007 - D_WSE004_24_NA1 - D_WSE004_24_NA3 - D_WSE004_24_NU3 - C_WSE004                                  = ErrPos_WSE004 - ErrNeg_WSE004}
 goal continuityWSE008   {C_WSE004 - C_WSE008                                            	= ErrPos_WSE008 - ErrNeg_WSE008}
 goal continuitySTH000   {C_WSE008 - D_STH000_ABN027 - C_STH000                                  = ErrPos_STH000 - ErrNeg_STH000}
 goal continuitySTH001   {C_STH000 + D_ABT002_STH001 - D_STH001_WTPOPH - C_STH001                = ErrPos_STH001 - ErrNeg_STH001}
@@ -451,14 +451,14 @@ goal continuityGCC015   {C_GCC010 + SG_GCC015_154 - C_GCC015                    
 goal continuityGCC022   {C_GCC015 + SG_GCC022_169 - C_GCC022                        			= ErrPos_GCC022 - ErrNeg_GCC022}    
 goal continuityGCC027   {C_GCC022 + SG_GCC027_183 - D_GCC027_08N_SA2 - D_GCC027_08N_PR1 - C_GCC027  	= ErrPos_GCC027 - ErrNeg_GCC027}    
 goal continuityGCC032	{C_GCC027 + SG_GCC032_198 - C_GCC032                                 		= ErrPos_GCC032 - ErrNeg_GCC032}	
-goal continuityGCC036	{C_GCC027 + D_TCC062_GCC036 + SG_GCC036_211 - C_GCC036   			= ErrPos_GCC036 - ErrNeg_GCC036}	
+goal continuityGCC036	{C_GCC032 + D_TCC062_GCC036 + SG_GCC036_211 - C_GCC036   			= ErrPos_GCC036 - ErrNeg_GCC036}	
 goal continuityGCC039	{C_GCC036 + SG_GCC039_216 - D_GCC039_08N_PR2 - C_GCC039  			= ErrPos_GCC039 - ErrNeg_GCC039}	
 goal continuityGCC042	{C_GCC039 + SG_GCC042_227 - C_GCC042               				= ErrPos_GCC042 - ErrNeg_GCC042}	
-goal continuityGCC046	{C_GCC039 + SG_GCC046_236  - C_GCC046						= ErrPos_GCC046 - ErrNeg_GCC046}	
+goal continuityGCC046	{C_GCC042 + SG_GCC046_236  - C_GCC046						= ErrPos_GCC046 - ErrNeg_GCC046}	
 goal continuityGCC050	{C_GCC046 + SG_GCC050_250 - C_GCC050                                 		= ErrPos_GCC050 - ErrNeg_GCC050}	
-goal continuityGCC056	{C_GCC046 + D_TCC085_GCC056 + SG_GCC056_258 - D_GCC056_08S_SA2 - D_GCC056_08S_PR - C_GCC056   = ErrPos_GCC056 - ErrNeg_GCC056}	
+goal continuityGCC056	{C_GCC050 + D_TCC085_GCC056 + SG_GCC056_258 - D_GCC056_08S_SA2 - D_GCC056_08S_PR - C_GCC056   = ErrPos_GCC056 - ErrNeg_GCC056}	
 goal continuityGCC060	{C_GCC056 + SG_GCC060_266 - C_GCC060                                 		= ErrPos_GCC060 - ErrNeg_GCC060}	
-goal continuityGCC065	{C_GCC056 + SG_GCC065_267 - D_GCC065_08S_PA - C_GCC065       			= ErrPos_GCC065 - ErrNeg_GCC065}    
+goal continuityGCC065	{C_GCC060 + SG_GCC065_267 - D_GCC065_08S_PA - C_GCC065       			= ErrPos_GCC065 - ErrNeg_GCC065}    
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Honcut Creek    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -503,12 +503,10 @@ goal continuityMOK004    {C_MOK014 /*+ SG_MOK004_495*/ + C_SAC029B + DA_MOK - D_
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! North Bay Aqueduct                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define temp {std kind 'DIVERSION' UNITS 'CFS'}
-
 goal continuityNBA009   {D_BKR004_NBA009 - D_NBA009_WTPTAB - C_NBA009               = ErrPos_NBA009 - ErrNeg_NBA009 }
 goal continuityNBA011   {C_NBA009 - D_NBA011_WTPNBR - C_NBA011                      = ErrPos_NBA011 - ErrNeg_NBA011 }
 goal continuityNBA021   {C_NBA011 - D_NBA021_VJB000 - C_NBA021                      = ErrPos_NBA021 - ErrNeg_NBA021 }
-goal continuityNBA027   {C_NBA021 - D_NBA027_WTPJAC - D_NBA027_WTPAMC - D_NBA027_NBALOS - TEMP        = ErrPos_NBA027 - ErrNeg_NBA027 }
+goal continuityNBA027   {C_NBA021 - D_NBA027_WTPJAC - D_NBA027_WTPAMC - D_NBA027_NBALOS	        = ErrPos_NBA027 - ErrNeg_NBA027 }
 goal continuityVJB000   {D_NBA021_VJB000 + D_PSC033_VJB000 - D_VJB000_WTPGVFH - D_VJB000_WTPBNC     = ErrPos_VJB000 - ErrNeg_VJB000 }
 goal continuityWTPTAB   {D_NBA009_WTPTAB - D_WTPTAB_TAFB                        = ErrPos_WTPTAB - ErrNeg_WTPTAB }
 goal continuityWTPJAC   {D_NBA027_WTPJAC - D_WTPJAC_NAPA                        = ErrPos_WTPJAC - ErrNeg_WTPJAC }
@@ -834,7 +832,7 @@ goal continuitySFY007   {I_SFY007 - C_SFY007                    = ErrPos_SFY007 
 goal continuityNBLDB    {I_NBLDB + C_NFY017 + C_CMT000 - C_NBLDB - E_NBLDB  = S_NBLDB * taf_cfs - S_NBLDB(-1) * taf_cfs + ErrPos_NBLDB - ErrNeg_NBLDB}! New Bullards Bar Reservoir 
 goal continuityYUB039   {C_NBLDB + C_OGN004 + C_MFY012 - C_YUB039               = ErrPos_YUB039 - ErrNeg_YUB039}! Confluence: Middle Fork Yuba
 goal continuityYUB030   {C_YUB039 + C_SFY007 - C_YUB030                         = ErrPos_YUB030 - ErrNeg_YUB030}! Confluence: South Fork Yuba
-goal continuityENGLB    {I_ENGLB + C_YUB030 - C_ENGLB - E_ENGLB - F_ENGLB  = S_ENGLB * taf_cfs - S_ENGLB(-1) * taf_cfs + ErrPos_ENGLB - ErrNeg_ENGLB}! Englebright Reservoir 
+goal continuityENGLB    {I_ENGLB + C_YUB030 - C_ENGLB - E_ENGLB	= S_ENGLB * taf_cfs - S_ENGLB(-1) * taf_cfs + ErrPos_ENGLB - ErrNeg_ENGLB}! Englebright Reservoir 
 
 !see Yuba_Definition.wresl for YUB023 goal continuityYUB023 {C_ENGLB  - C_YUB023                    = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
 

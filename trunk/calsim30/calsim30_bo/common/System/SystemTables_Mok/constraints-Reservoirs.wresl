@@ -27,7 +27,7 @@ define S_PARDE_5 		{std kind 'STORAGE-ZONE' units 'TAF'}
 goal S_PARDEZone5 	{S_PARDE_5 < S_PARDElevel5-S_PARDElevel4}                                                              
 define S_PARDE 		{std kind 'STORAGE' units 'TAF'} !Pardee Reservoir                                            
 goal storage_PARDE 	{S_PARDE=S_PARDE_1+S_PARDE_2+S_PARDE_3+S_PARDE_4+S_PARDE_5}                                                       
-define F_PARDE 		{std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}                                                 
+!define F_PARDE 		{std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}                                                 
 define E_PARDE 		{lower unbounded kind 'EVAPORATION' units 'CFS'}                                              
 define A_PARDE 		{std kind 'SURFACE-AREA' units 'ACRES'}                                                       
 define ER_PARDE 	{timeseries kind 'EVAPORATION-RATE' units 'IN'}                                          
@@ -61,7 +61,7 @@ define S_CMCHE_5 		{std kind 'STORAGE-ZONE' units 'TAF'}
 goal S_CMCHEZone5 	{S_CMCHE_5 < S_CMCHElevel5-S_CMCHElevel4}                                                              
 define S_CMCHE 		{std kind 'STORAGE' units 'TAF'} !Camanche Reservoir                                          
 goal storage_CMCHE 	{S_CMCHE=S_CMCHE_1+S_CMCHE_2+S_CMCHE_3+S_CMCHE_4+S_CMCHE_5}                                                       
-define F_CMCHE 		{std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}                                                 
+!define F_CMCHE 		{std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}                                                 
 define E_CMCHE 		{lower unbounded kind 'EVAPORATION' units 'CFS'}                                              
 define A_CMCHE 		{std kind 'SURFACE-AREA' units 'ACRES'}                                                       
 define ER_CMCHE 	{timeseries kind 'EVAPORATION-RATE' units 'IN'}                                          

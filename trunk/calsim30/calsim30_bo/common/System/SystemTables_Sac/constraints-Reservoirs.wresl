@@ -178,7 +178,6 @@ goal   MaxRel_BRYSA  	{C_BRYSA<Relcap_BRYSA}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal set_E_ENGLB {E_ENGLB =  0.0}
 goal set_S_ENGLB {S_ENGLB = 60.0}
-goal set_F_ENGLB {F_ENGLB =  0.0}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Merle Collins Reservoir, Dry Creek		

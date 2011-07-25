@@ -140,15 +140,15 @@ define ER_THRMF      {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Thermalito Afterbay, Feather River	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define S_THRMAlevel1 {value 10}
+define S_THRMAlevel1 {value 15.1}
 define S_THRMA_1     {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_THRMAlevel2 {value 10}
+define S_THRMAlevel2 {value 20.0}
 define S_THRMA_2     {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_THRMAlevel3 {value 10}
+define S_THRMAlevel3 {value 30.0}
 define S_THRMA_3     {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_THRMAlevel4 {value 11.8}
+define S_THRMAlevel4 {value 55.0}
 define S_THRMA_4     {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_THRMAlevel5 {value 11.8}
+define S_THRMAlevel5 {value 55.0}
 define S_THRMA_5     {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_THRMA       {std kind 'STORAGE' units 'TAF'}
 define E_THRMA       {lower unbounded kind 'EVAPORATION' units 'CFS'}
@@ -344,7 +344,6 @@ define Relcap_BRYSA  	{select discharge from res_info given storage=1000*S_BRYSA
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define	S_ENGLB		{std kind 'STORAGE' units 'TAF'} !
 define  E_ENGLB         {lower unbounded kind 'EVAPORATION' units 'CFS'}
-define	F_ENGLB		{std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

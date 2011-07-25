@@ -35,8 +35,8 @@ Objective obj = {
 !Storage/Reservoir Weights
 !====================================================
 
-[F_PARDE,-10000000], 
-[F_CMCHE,-10000000], 
+![F_PARDE,-10000000], 
+![F_CMCHE,-10000000], 
 
 [S_PARDE_1,2000000*taf_cfs],  
 [S_PARDE_2,29000*taf_cfs],    
