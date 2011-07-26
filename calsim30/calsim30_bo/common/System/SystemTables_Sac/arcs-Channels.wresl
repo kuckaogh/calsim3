@@ -117,6 +117,7 @@ define	C_STH007	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define 	C_BRR074 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define 	C_BRR073 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define 	C_BRR072 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define 	C_BRR067 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define 	C_BRR066 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define 	C_BRR061 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}

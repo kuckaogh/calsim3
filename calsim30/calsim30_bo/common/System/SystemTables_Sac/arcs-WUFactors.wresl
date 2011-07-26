@@ -1960,11 +1960,6 @@ define DL_24_NA2         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 24_NA3
 !==============================
-define EVF_WSE004_24_NA3 {value 0.01} !evaporative loss fraction
-define DPF_WSE004_24_NA3 {value 0.27} !deep percolation loss fraction
-define LFF_WSE004_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
-define OSF_WSE004_24_NA3 {value 0.03} !canal operating spill fraction
-
 define EVF_STH004_24_NA3 {value 0.01} !evaporative loss fraction
 define DPF_STH004_24_NA3 {value 0.27} !deep percolation loss fraction
 define LFF_STH004_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
@@ -2045,13 +2040,6 @@ define DL_24_NU3     {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! PCWA3
 !==============================
-define EF_TWL005_PCWA3    {value 0.0}
-define SF_TWL005_PCWA3    {value 0.0}
-
-define DL_TWL005_PCWA3    {std kind 'DELIVERY-LOSS'    units 'CFS'}
-define EL_TWL005_PCWA3    {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define SL_TWL005_PCWA3    {std kind 'SEEPAGE-LOSS'     units 'CFS'}
-
 define EF_LBC010_PCWA3    {value 0.0}
 define SF_LBC010_PCWA3    {value 0.0}
 

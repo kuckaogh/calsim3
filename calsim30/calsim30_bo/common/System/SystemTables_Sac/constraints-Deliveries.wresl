@@ -1194,7 +1194,7 @@ goal meetAW_24_NA2  {AW_24_NA2 + RP_24_NA2 = DN_24_NA2 + GP_24_NA2 + RU_24_NA2 +
 ! 24_NA3
 !======================================================================
 ! gross surface water diversions
-goal setDG_24_NA3   {DG_24_NA3 = D_STH004_24_NA3 + D_WSE004_24_NA3 + D_LBC049_24_NA3}
+goal setDG_24_NA3   {DG_24_NA3 = D_STH004_24_NA3 + D_LBC049_24_NA3}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_24_NA3   {DN_24_NA3 = DG_24_NA3 - DL_24_NA3}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
@@ -1241,7 +1241,7 @@ goal setUD_24_NU4   {UD_24_NU4 = GP_24_NU4 + SHRTG_24_NU4 }
 ! PCWA3
 !======================================================================
 ! gross surface water diversions
-goal setDG_PCWA3    {DG_PCWA3 = D_TWL005_PCWA3 + D_LBC010_PCWA3}
+goal setDG_PCWA3    {DG_PCWA3 = D_LBC010_PCWA3}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_PCWA3    {DN_PCWA3 = DG_PCWA3 - DL_PCWA3}
 ! Total Applied Water = net surface delivery + groundwater pumping
@@ -1545,7 +1545,6 @@ goal setD_SJR028_WTPDWS {D_SJR028_WTPDWS = 0.}
 ! Bear River Model
 goal setD_BRR050_BEC000 {D_BRR050_BEC000 < DMD_BRR050_BEC000}
 goal setD_CMBIE_CBC000  {D_CMBIE_CBC000 < DMD_CMBIE_CBC000}
-goal setD_TWL005_PCWA3  {D_TWL005_PCWA3 = 0.}
 goal setD_DRM001_BRR074 {D_DRM001_BRR074 = 0.}
 goal setD_DRM001_SYC002 {D_DRM001_SYC002 = 0.}
 	
