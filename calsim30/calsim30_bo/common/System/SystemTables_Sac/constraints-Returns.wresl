@@ -208,6 +208,7 @@ goal setR_11_SA2_CRK005	{R_11_SA2_CRK005 = TW_11_SA2 + LF_11_SA2 + OS_11_SA2 - R
 
 define TW_11_SA3 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_11_SA3_RFS11	{R_11_SA3_RFS11 = TW_11_SA3 + LF_11_SA3 + OS_11_SA3 - RU_11_SA3}
+goal setR_RFS11_WWC006   {R_RFS11_WWC006 = 0.75 * R_11_SA3_RFS11 } !Split return flows approximately 75% to Wadsworth Canal, 25% to Butte Creek/Butte Slough
 
 define TW_11_SA4 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_11_SA4_DWRPS2	{R_11_SA4_DWRPS2 = TW_11_SA4 + LF_11_SA4 + OS_11_SA4 - RU_11_SA4}

@@ -362,7 +362,8 @@ Objective obj = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [D_FDC006_14_NA, 25000], !weight of 1 on Merle Collins storage
 [D_YUB013_14_NA,15004],
-[C_FDC006,-15000], !Only release for BVID diversion
+[C_FDC006_ADD,-15000], !Only release for BVID diversion
+[C_FDC006_MIF,5100],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 15 North  !!!!!!!!!!!!!!!!!!!
@@ -370,6 +371,7 @@ Objective obj = {
 [D_YUB011_15N_NA2,15001],
 [D_YUB003_15N_NU, 15003],
 [D_FTR045_15N_SA, 5000],
+[R_JBC008_FTR048 ,  6000],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 15 South  !!!!!!!!!!!!!!!!!!!

@@ -94,6 +94,24 @@ define 	MF_OGN005 		{
     		value 8 }
 }
 
+
+!French Dry Creek below Virginia Dam
+/*
+A 1953 agreement with Sydney V. Smith (Smith Agreement) requires BVID to bypass up to 4.46
+cfs at the Virginia Ranch Dam during the irrigation season commencing in April to satisfy senior
+water rights along the Smith Ditch, which diverts water from Dry Creek six miles downstream of
+the dam and upstream of the site of the proposed Project. The 1972 Agreement with CDFG
+requires BVID to bypass sufficient water to provide a flow of 3.3 cfs or the natural inflow to
+Collins Reservoir, whichever is less, at Sicard Flat Ditch three miles downstream of Virginia
+Ranch Dam at all times except in years that the reservoir does not spill by June 1. The CDFG
+Agreement allows the minimum bypass flow requirement to be reduced to 1.0 cfs in years that
+Collins Reservoir does not spill by June 1.
+*/
+define MF_FDC006 {value 3.3} 
+define C_FDC006_MIF {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
+define C_FDC006_ADD {std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
+
+
 ! Middle Fork Yuba below Our House Diversion Dam
 define	C_MFY013_MIF	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'}	
 define	C_MFY013_ADD	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
