@@ -95,6 +95,7 @@ goal continuityBCN010   {I_BCN010 - C_BCN010                        = ErrPos_BCN
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityBRR074 {D_SYC002_BRR074 + D_DRM001_BRR074 - C_BRR074          = ErrPos_BRR074 - ErrNeg_BRR074}
 goal continuityBRR073 {C_BRR074 - C_BRR073                          = ErrPos_BRR073 - ErrNeg_BRR073}
+goal continuityBRR072 {C_BRR073 - D_BRR072_CYN010 - C_BRR072                          = ErrPos_BRR072 - ErrNeg_BRR072}
 goal continuityBRR067 {C_BRR073 + C_DRM011 - C_BRR067                       = ErrPos_BRR067 - ErrNeg_BRR067}
 goal continuityBRR066 {C_BRR067 - C_BRR066                          = ErrPos_BRR066 - ErrNeg_BRR066}
 goal continuityBRR061 {C_BRR066 - C_BRR061                       = ErrPos_BRR061 - ErrNeg_BRR061}
@@ -123,9 +124,9 @@ goal continuityDRM011 {C_DRM009 - C_DRM011                          = ErrPos_DRM
 goal continuityWLF021 {I_WLF021 + R_DSCNL_WLF021 - C_WLF021                          = ErrPos_WLF021 - ErrNeg_WLF021}
 goal continuityWLF013 {C_WLF021 - D_WLF013_TARRD - C_WLF013                         = ErrPos_WLF013 - ErrNeg_WLF013}
 goal continuityLVC001 {D_NNA013_LVC001 - C_LVC001                       = ErrPos_LVC001 - ErrNeg_LVC001}
-goal continuityCYN010 {D_DRM009_CYN010 - C_CYN010                    = ErrPos_CYN010 - ErrNeg_CYN010}
+goal continuityCYN010 {D_DRM009_CYN010 + D_BRR072_CYN010 - C_CYN010                 = ErrPos_CYN010 - ErrNeg_CYN010}
 goal continuityCYN009 {C_CYN010 - D_CYN009_TWL005 - C_CYN009                    = ErrPos_CYN009 - ErrNeg_CYN009}
-goal continuityTWL005 {D_CYN009_TWL005 - D_TWL005_PCWA3 - C_TWL005              = ErrPos_TWL005 - ErrNeg_TWL005}
+goal continuityTWL005 {D_CYN009_TWL005 - C_TWL005              		= ErrPos_TWL005 - ErrNeg_TWL005}
 goal continuityLBR002 {C_TWL005 - D_LBR002_LBC001 - C_LBR002                    = ErrPos_LBR002 - ErrNeg_LBR002}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -141,7 +142,6 @@ goal continuityBCC004   {C_BCC006 + SG_BCC004_130 - C_BCC004    = ErrPos_BCC004 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityCBC000   {D_CMBIE_CBC000 - D_CBC000_NID_N1 - C_CBC000                            = ErrPos_CBC000 - ErrNeg_CBC000}
 goal continuityCBC001   {C_CBC000 - D_CBC001_CCK036 - D_CBC001_24_NA1 - C_CBC001 - D_CBC001_CBCLOS                = ErrPos_CBC001 - ErrNeg_CBC001}
-goal continuityCBC007   {C_CBC001 + D_WSE004_CBC007 					        = ErrPos_CBC007 - ErrNeg_CBC007}
 goal continuityLBC001   {D_LBR002_LBC001 - C_LBC001 - D_LBC001_LBCLOS                           = ErrPos_LBC001 - ErrNeg_LBC001}
 goal continuityLBC010   {C_LBC001 - D_LBC010_PCWA3 - C_LBC010                                   = ErrPos_LBC010 - ErrNeg_LBC010}
 goal continuityLBC030   {C_LBC010 - D_LBC030_BEC021 - C_LBC030                                  = ErrPos_LBC030 - ErrNeg_LBC030}
@@ -155,7 +155,7 @@ goal continuityBEC021   {C_BEC000 + D_LBC030_BEC021 - D_BEC021_LBC032 - D_BEC021
 goal continuityBEC022   {C_BEC021 - D_BEC022_WTPBWM - C_BEC022                                  = ErrPos_BEC022 - ErrNeg_BEC022}
 goal continuityBEC024   {C_BEC022 - C_BEC024                                            	= ErrPos_BEC024 - ErrNeg_BEC024}
 goal continuityWSE003   {C_BEC024 - D_WSE003_LBC040 - C_WSE003                                  = ErrPos_WSE003 - ErrNeg_WSE003}
-goal continuityWSE004   {C_WSE003 - D_WSE004_CBC007 - D_WSE004_24_NA1 - D_WSE004_24_NA3 - D_WSE004_24_NU3 - C_WSE004                                  = ErrPos_WSE004 - ErrNeg_WSE004}
+goal continuityWSE004   {C_WSE003 - D_WSE004_24_NA1 - D_WSE004_24_NU3 - C_WSE004                                  = ErrPos_WSE004 - ErrNeg_WSE004}
 goal continuityWSE008   {C_WSE004 - C_WSE008                                            	= ErrPos_WSE008 - ErrNeg_WSE008}
 goal continuitySTH000   {C_WSE008 - D_STH000_ABN027 - C_STH000                                  = ErrPos_STH000 - ErrNeg_STH000}
 goal continuitySTH001   {C_STH000 + D_ABT002_STH001 - D_STH001_WTPOPH - C_STH001                = ErrPos_STH001 - ErrNeg_STH001}

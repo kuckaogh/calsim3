@@ -73,14 +73,13 @@ define  D_DRM001_BRR074     {std kind 'DIVERSION' units 'CFS'}
 define  D_DRM001_SYC002     {std kind 'DIVERSION' units 'CFS'}
 define  D_SYC002_BRR074     {std kind 'DIVERSION' units 'CFS'}
 define  D_DRM009_CYN010     {lower 0 upper 42 kind 'DIVERSION' units 'CFS'} !Upper limit set equal to Towle Canal
+define  D_BRR072_CYN010     {lower 0 upper 0 kind 'DIVERSION' units 'CFS'} !Diversion sealed shut in Feb, 1986
 define  D_CYN009_TWL005     {std kind 'DIVERSION' units 'CFS'}
-define  D_TWL005_PCWA3      {std kind 'DIVERSION' units 'CFS'}
 define  D_LBR002_LBC001     {std kind 'DIVERSION' units 'CFS'} !Export(previously D294 - R291)
 define  D_BRR050_BEC000     {std kind 'DIVERSION' units 'CFS'} !Export(previously D292)
 define  D_CMBIE_CBC000      {std kind 'DIVERSION' units 'CFS'} !Export(previously D290)
 
 define  D_WSE004_24_NA1     {std kind 'DIVERSION' units 'CFS'}
-define  D_WSE004_24_NA3     {std kind 'DIVERSION' units 'CFS'}
 define  D_WSE004_24_NU3     {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie Canal          !define D_CMB000_WTPNAB {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie Canal
 define  D_CBC001_24_NA1     {std kind 'DIVERSION' units 'CFS'} !Nevada ID                   !define D_CMB000_24_NA1 {std kind 'DIVERSION' units 'CFS'} !Nevada ID
 define  D_CBC001_CCK036     {std kind 'DIVERSION' units 'CFS'} !Diversion to Cross Creek
@@ -101,7 +100,6 @@ define  D_LBC030_BEC021     {std kind 'DIVERSION' units 'CFS'} !Lower Boardman
 define  D_LBC049_24_NA3     {std kind 'DIVERSION' units 'CFS'} !PCWA zone 1
 define  D_LBC043_MRM001     {std kind 'DIVERSION' units 'CFS'}
 define  D_WTPAUB_24_NU1     {std kind 'DIVERSION' units 'CFS'} !Auburn WTP
-define  D_WSE004_CBC007     {std kind 'DIVERSION' units 'CFS'} ! Wise Canal
 define  D_WSE003_LBC040     {std kind 'DIVERSION' units 'CFS'} ! Wise Canal
 
 define D_CBC001_CBCLOS 		{std kind 'DIVERSION' units 'CFS'}
