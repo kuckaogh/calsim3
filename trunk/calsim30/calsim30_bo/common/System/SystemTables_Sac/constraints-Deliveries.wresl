@@ -434,7 +434,7 @@ goal meetAW_08S_PR  {AW_08S_PR + RP_08S_PR > DN_08S_PR + GP_08S_PR + RU_08S_PR +
 ! 8S_SA3
 !======================================================================
 ! gross surface water diversions
-goal setDG_08S_SA3  {DG_08S_SA3 = D_SAC121_08S_SA3 + D_SAC109_08S_SA3 + D_CBD028_08S_SA3}
+goal setDG_08S_SA3  {DG_08S_SA3 = D_SAC121_08S_SA3 + D_SAC109_08S_SA3 + D_CBD023_08S_SA3}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_08S_SA3  {DN_08S_SA3 = DG_08S_SA3 - DL_08S_SA3}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
@@ -552,7 +552,7 @@ goal setUD_10_NU2   {UD_10_NU2 = GP_10_NU2 + SHRTG_10_NU2 }
 ! 11_SA1
 !======================================================================
 ! gross surface water diversions
-goal setDG_11_SA1   {DG_11_SA1 = D_WEC000_11_SA1}
+goal setDG_11_SA1   {DG_11_SA1 = D_WEC005_11_SA1}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_11_SA1   {DN_11_SA1 = DG_11_SA1 - DL_11_SA1}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
@@ -619,11 +619,11 @@ goal meetAW_11_NA   {AW_11_NA + RP_11_NA = DN_11_NA + GP_11_NA + RU_11_NA + SHRT
 ! 11_PR
 !======================================================================
 ! gross surface water diversions
-goal setDG_11_PR    {DG_11_PR = D_WEC000_11_PR + D_RVC005_11_PR}
+goal setDG_11_PR    {DG_11_PR = D_WEC005_11_PR + D_RVC005_11_PR}
 
 !Limit delivery from Western Canal WD to 50% of total
 !Limit delivery from Richvale ID to 50% of total
-goal setD_WEC000_11_PR {D_WEC000_11_PR - 0.50*DL_11_PR<0.50*AW_11_PR + 0.50*RP_11_PR - 0.50*GP_11_PR - 0.50*RU_11_PR}
+goal setD_WEC005_11_PR {D_WEC005_11_PR - 0.50*DL_11_PR<0.50*AW_11_PR + 0.50*RP_11_PR - 0.50*GP_11_PR - 0.50*RU_11_PR}
 goal setD_RVC005_11_PR {D_RVC005_11_PR - 0.50*DL_11_PR<0.50*AW_11_PR + 0.50*RP_11_PR - 0.50*GP_11_PR - 0.50*RU_11_PR}
 
 ! net surface delivery = surface diversion - conveyance losses

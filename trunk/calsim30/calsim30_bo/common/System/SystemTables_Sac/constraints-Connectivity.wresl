@@ -174,7 +174,7 @@ goal continuityBTC045   {C_BTC048 - D_BTC045_ESL008 - C_BTC045                  
 goal continuityBTC043   {C_BTC045 + D_LCC038_BTC043 + SG_BTC043_143 - C_BTC043 - D_BTC043_10_NA                                                 = ErrPos_BTC043 - ErrNeg_BTC043}
 goal continuityBTC041   {C_BTC043 - C_BTC041                                                                                                    = ErrPos_BTC041 - ErrNeg_BTC041}
 goal continuityBTC036   {C_BTC041 + SG_BTC036_147 - D_BTC036_10_NA - C_BTC036                                                                   = ErrPos_BTC036 - ErrNeg_BTC036}        
-goal continuityBTC032   {C_BTC036 + SG_BTC032_157 + R_10_NA_BTC032 + D_WEC000_BTC032 - C_BTC032                     = ErrPos_BTC032 - ErrNeg_BTC032}        
+goal continuityBTC032   {C_BTC036 + SG_BTC032_157 + R_10_NA_BTC032 + D_WEC005_BTC032 - C_BTC032                     = ErrPos_BTC032 - ErrNeg_BTC032}        
 !goal continuityBTC031   {C_BTC032 - C_BTC031                                                                                                    = ErrPos_BTC031 - ErrNeg_BTC031}
 goal continuityBTC029   {C_BTC032 + SG_BTC029_173 - C_BTC029                                                                                    = ErrPos_BTC029 - ErrNeg_BTC029}        
 goal continuityBTC024   {C_BTC029 + SG_BTC024_188 - C_BTC024                                                                                    = ErrPos_BTC024 - ErrNeg_BTC024}        
@@ -252,8 +252,8 @@ goal continuityCBD041   {C_CBD044 + SG_CBD041_253 - D_CBD041_08S_SA1 - D_CBD041_
 goal continuityCBD038   {C_CBD041 + SR_07S_CBD038 + SR_08S_CBD038 - C_CBD038                                                        = ErrPos_CBD038 - ErrNeg_CBD038}    
 goal continuityCBD037   {C_CBD038 + SG_CBD037_260 + R_08S_SA2_CBD037 - D_CBD037_08S_PR - C_CBD037                           = ErrPos_CBD037 - ErrNeg_CBD037}    
 goal continuityCBD031   {C_CBD037 + SG_CBD031_268 + C_GCC065 + R_08S_PR_CBD031 + R_08S_SA1_CBD031 + R_08S_NA1_CBD031 - C_CBD031             = ErrPos_CBD031 - ErrNeg_CBD031}    
-goal continuityCBD028   {C_CBD031 + SG_CBD028_275 + SR_07S_CBD028 + SR_08S_CBD028 + R_07S_PA_CBD028 - D_CBD028_08S_PA - D_CBD028_08S_SA3 - C_CBD028                                         = ErrPos_CBD028 - ErrNeg_CBD028}    
-goal continuityCBD023   {C_CBD028 + SG_CBD023_289 - C_CBD023                                                        = ErrPos_CBD023 - ErrNeg_CBD023}    
+goal continuityCBD028   {C_CBD031 + SG_CBD028_275 + SR_07S_CBD028 + SR_08S_CBD028 + R_07S_PA_CBD028 - D_CBD028_08S_PA - C_CBD028                                         = ErrPos_CBD028 - ErrNeg_CBD028}    
+goal continuityCBD023   {C_CBD028 + SG_CBD023_289 - D_CBD023_08S_SA3 - C_CBD023                                                        = ErrPos_CBD023 - ErrNeg_CBD023}    
 goal continuityCBD018   {C_CBD023 + SG_CBD018_302 - C_CBD018                                                            = ErrPos_CBD018 - ErrNeg_CBD018}    
 goal continuityCBD012   {C_CBD018 + SG_CBD012_314 + R_08S_PA_CBD012 - C_CBD012                                                      = ErrPos_CBD012 - ErrNeg_CBD012}
 goal continuityCBD005   {C_CBD012 + SG_CBD005_326 - C_CBD005                                                = ErrPos_CBD005 - ErrNeg_CBD005}    
@@ -339,7 +339,7 @@ goal continuityFTR072   {C_OROVL  + R_MNRRH_FTR072 - C_FTR072                   
 goal continuityFTR068   {C_FTR072 + SG_FTR068_162 - D_FTR068_THRMF - C_FTR068                                  = ErrPos_FTR068 - ErrNeg_FTR068}! Diversion to Thermalito Forebay.
 goal continuityFTR067   {C_FTR068 - C_FTR067                                                    = ErrPos_FTR067 - ErrNeg_FTR067}! Feather River at Oroville gage.   
 goal continuityTHRMF   {D_FTR068_THRMF - D_THRMF_11_NU1 - C_THRMF                                      = S_THRMF * taf_cfs - S_THRMF(-1) * taf_cfs + ErrPos_THRMF - ErrNeg_THRMF} ! Thermalito Forebay
-goal continuityTHRMA    {C_THRMF - D_THRMA_WRO000 - D_THRMA_JBC000 - E_THRMA - C_THRMA                 = S_THRMA * taf_cfs - S_THRMA(-1) * taf_cfs + ErrPos_THRMA - ErrNeg_THRMA} ! Thermalito Afterbay 
+goal continuityTHRMA    {C_THRMF - D_THRMA_WEC000 - D_THRMA_RVC000 - D_THRMA_JBC000 - E_THRMA - C_THRMA                 = S_THRMA * taf_cfs - S_THRMA(-1) * taf_cfs + ErrPos_THRMA - ErrNeg_THRMA} ! Thermalito Afterbay 
 goal continuityTAB000   {C_THRMA - C_TAB000                                                 = ErrPos_TAB000 - ErrNeg_TAB000} ! Thermalito Afterbay release to Feather River. 
 goal continuityFTR063   {C_FTR067 + SG_FTR063_161 + R_ORWWTP_FTR063 - C_FTR063                                  = ErrPos_FTR063 - ErrNeg_FTR063}    
 goal continuityFTR059   {C_FTR063 + SG_FTR059_177 + SR_11_FTR059 + C_TAB000 - D_FTR059_12_SA - C_FTR059                     = ErrPos_FTR059 - ErrNeg_FTR059}
@@ -410,9 +410,10 @@ goal continuityJBC000   {D_THRMA_JBC000 - C_JBC000                              
 goal continuityJBC002   {C_JBC000 - D_JBC002_RVC005 - D_JBC002_17N_PR - C_JBC002                            = ErrPos_JBC002 - ErrNeg_JBC002}! Joint Board Canal
 goal continuityJBC004   {C_JBC002 - D_JBC004_11_SA3 - C_JBC004                                  = ErrPos_JBC004 - ErrNeg_JBC004}! Joint Board Canal
 goal continuityJBC008   {C_JBC004 - R_JBC008_FTR048 - C_JBC008                                  = ErrPos_JBC008 - ErrNeg_JBC008}! Joint Board Canal
-goal continuityWRO000   {D_THRMA_WRO000 - D_WRO000_WEC000 - D_WRO000_RVC005                             = ErrPos_WRO000 - ErrNeg_WRO000}! Joint Board Canal
-goal continuityRVC005   {D_WRO000_RVC005 + D_JBC002_RVC005 - D_RVC005_11_SA2 - D_RVC005_11_PR                   = ErrPos_RVC005 - ErrNeg_RVC005}! Richvale Canal
-goal continuityWEC000   {D_WRO000_WEC000 - D_WEC000_11_SA1 - D_WEC000_BTC032 - D_WEC000_11_PR                       = ErrPos_WEC000 - ErrNeg_WEC000}! Western Canal
+goal continuityWEC000   {D_THRMA_WEC000 - C_WEC000                              = ErrPos_WEC000 - ErrNeg_WEC000}! Joint Board Canal
+goal continuityRVC000   {D_THRMA_RVC000 - C_RVC000		                   = ErrPos_RVC000 - ErrNeg_RVC000}! Richvale Canal
+goal continuityRVC005   {C_RVC000 + D_JBC002_RVC005 - D_RVC005_11_SA2 - D_RVC005_11_PR                   = ErrPos_RVC005 - ErrNeg_RVC005}! Richvale Canal
+goal continuityWEC005   {C_WEC000 - D_WEC005_11_SA1 - D_WEC005_BTC032 - D_WEC005_11_PR                       = ErrPos_WEC005 - ErrNeg_WEC005}! Western Canal
 goal continuityMNRRH    {D_SFF011_MNRRH - R_MNRRH_FTR072 - D_MNRRH_13_NA - D_MNRRH_13_NU2 - D_MNRRH_WTPMNR      = ErrPos_MNRRH  - ErrNeg_MNRRH}! MNRRH 
                                                                                                                         
 goal continuityOWC000   {D_LST004_OWC000 - D_OWC000_13_NA - D_OWC000_RFS13                      = ErrPos_OWC000  - ErrNeg_OWC000} ! Oroville-Wyandotte Canal

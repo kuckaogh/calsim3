@@ -364,13 +364,14 @@ define	C_FTR012	{lower 0 upper 320000 kind 'CHANNEL' units 'CFS'}
 define	C_FTR008	{lower 0 upper 320000 kind 'CHANNEL' units 'CFS'}	
 define	C_FTR003	{lower 0 upper 320000 kind 'CHANNEL' units 'CFS'}	
 
-define  C_JBC000  		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define  C_JBC002  		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define  C_JBC004  		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define  C_JBC008  		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define  C_THRMF  		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}	
-define  C_RFS13  		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}	
-!define  C_RFS17N  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define  C_JBC000  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define  C_JBC002  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define  C_JBC004  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define  C_JBC008  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define  C_THRMF  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}	
+define  C_RFS13  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}	
+define  C_WEC000  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define  C_RVC000  	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 
 define	C_RVPHB	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define	C_WBF030	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}

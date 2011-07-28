@@ -578,13 +578,13 @@ define  X_GCC027_08N_PR1  {alias CLmon_GCC027_08N_PR1 * taf_cfs*perdv_cvprf_sys 
 define  X_GCC039_08N_PR2  {alias CLmon_GCC039_08N_PR2 * taf_cfs*perdv_cvprf_sys - D_GCC039_08N_PR2 kind 'delivery-shortage' units 'cfs'}
 define  X_GCC056_08S_PR  {alias CLmon_GCC056_08S_PR * taf_cfs*perdv_cvprf_sys - D_GCC056_08S_PR kind 'delivery-shortage' units 'cfs'}
 define  X_CBD037_08S_PR  {alias CLmon_CBD037_08S_PR * taf_cfs*perdv_cvprf_sys - D_CBD037_08S_PR kind 'delivery-shortage' units 'cfs'}
-!define  X_WEC000_11_PR  {alias CLmon_WEC000_11_PR * taf_cfs*perdv_cvprf_sys - D_WEC000_11_PR kind 'delivery-shortage' units 'cfs'}
+!define  X_WEC005_11_PR  {alias CLmon_WEC005_11_PR * taf_cfs*perdv_cvprf_sys - D_WEC005_11_PR kind 'delivery-shortage' units 'cfs'}
 !define  X_RVC005_11_PR  {alias CLmon_RVC005_11_PR * taf_cfs*perdv_cvprf_sys - D_RVC005_11_PR kind 'delivery-shortage' units 'cfs'}
 define  X_MTC000_09_PR   {alias CLmon_MTC000_09_PR * taf_cfs*perdv_cvprf_sys - D_MTC000_09_PR kind 'delivery-shortage' units 'cfs'}
 
-define short_cvp_prf_n {alias  X_GCC027_08N_PR1 +  X_GCC039_08N_PR2 +  X_GCC056_08S_PR +  X_CBD037_08S_PR /*+ X_WEC000_11_PR + X_RVC005_11_PR*/ +  X_MTC000_09_PR kind 'delivery-shortage-cvp' units 'cfs'}
+define short_cvp_prf_n {alias  X_GCC027_08N_PR1 +  X_GCC039_08N_PR2 +  X_GCC056_08S_PR +  X_CBD037_08S_PR /*+ X_WEC005_11_PR + X_RVC005_11_PR*/ +  X_MTC000_09_PR kind 'delivery-shortage-cvp' units 'cfs'}
 
-define del_cvp_prf_n {alias D_GCC027_08N_PR1 + D_GCC039_08N_PR2 + D_GCC056_08S_PR + D_CBD037_08S_PR /*+ D_WEC000_11_PR + D_RVC005_11_PR*/ + D_MTC000_09_PR kind 'delivery-cvp' units 'cfs'}
+define del_cvp_prf_n {alias D_GCC027_08N_PR1 + D_GCC039_08N_PR2 + D_GCC056_08S_PR + D_CBD037_08S_PR /*+ D_WEC005_11_PR + D_RVC005_11_PR*/ + D_MTC000_09_PR kind 'delivery-cvp' units 'cfs'}
 
 
 ! TOTAL CVP North (non-Water Forum)

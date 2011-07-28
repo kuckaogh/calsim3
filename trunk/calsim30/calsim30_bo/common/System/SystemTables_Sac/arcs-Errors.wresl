@@ -337,6 +337,7 @@ define ErrPos_RFS8S    {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_RLLNS    {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_RSL001   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_RSL004   {std kind 'Error-TERM' units 'CFS'}
+define ErrPos_RVC000   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_RVC005   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_DCWWTP   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_SAC000   {std kind 'Error-TERM' units 'CFS'}
@@ -517,14 +518,14 @@ define ErrPos_TRN111   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_TWL005   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_VCT002   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_VJB000   {std kind 'Error-TERM' units 'CFS'}
-define ErrPos_WEC000   {std kind 'Error-TERM' units 'CFS'}
+define ErrPos_WEC005   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WBF030   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WBF015   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WBF006   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WKYTN    {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WLF021   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WLF013   {std kind 'Error-TERM' units 'CFS'}
-define ErrPos_WRO000   {std kind 'Error-TERM' units 'CFS'}
+define ErrPos_WEC000   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WSB000   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WSE003   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_WSE004   {std kind 'Error-TERM' units 'CFS'}
@@ -903,6 +904,7 @@ define ErrNeg_RFS8S    {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_RLLNS    {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_RSL001   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_RSL004   {std kind 'Error-TERM' units 'CFS'}
+define ErrNeg_RVC000   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_RVC005   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_DCWWTP   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_SAC000   {std kind 'Error-TERM' units 'CFS'}
@@ -1086,11 +1088,11 @@ define ErrNeg_VJB000   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WBF030   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WBF015   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WBF006   {std kind 'Error-TERM' units 'CFS'}
-define ErrNeg_WEC000   {std kind 'Error-TERM' units 'CFS'}
+define ErrNeg_WEC005   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WKYTN    {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WLF021   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WLF013   {std kind 'Error-TERM' units 'CFS'}
-define ErrNeg_WRO000   {std kind 'Error-TERM' units 'CFS'}
+define ErrNeg_WEC000   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WSB000   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WSE003   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_WSE004   {std kind 'Error-TERM' units 'CFS'}

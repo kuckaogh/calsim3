@@ -2027,7 +2027,7 @@ define WRmon_CBD041_08S_SA2   {
 ! RD108, River Garden Farms Company
 ! RD108 75 cfs, Apr - Sep (A011899)
 ! RGFC 19 cfs, Apr - Sep 15 (A011910) from Knights Landing Ridge Cut but included here
-define WRmon_CBD028_08S_SA3   {
+define WRmon_CBD023_08S_SA3   {
 	case AprAug{
 		condition month >= APR .and. month <= AUG
           	value (75. + 19.) * cfs_taf}
@@ -2521,9 +2521,6 @@ define WRmon_WTPFTH_02_SU     {value 0.}
 define WRmon_WTPFTH_03_SU     {value 0.}
 
 
-define WRann_WTPCSD_02_PU     {value 0.900 + 5.100} ! Townsend Flat Water Ditch Company Transfer + McConnell Foundation  
+define WRann_WTPCSD_02_PU     {select right from WaterRightAmounts where diversion=12} ! Townsend Flat Water Ditch Company Transfer + McConnell Foundation  
 define WRmon_WTPCSD_02_PU     {value max(0.0, WRann_WTPCSD_02_PU * UD_02_PU*cfs_taf / UDann_02_PU)} ! Monthly water right amount (TAF) patterned on demand
 define WR_WTPCSD_02_PU        {alias WRmon_WTPCSD_02_PU kind 'WATER-RIGHT' units 'TAF'}
-
-!define CLann_WTPCSD_02_PU    {select contract from Contracts_CVPService where diversion=12} ! Annual contract amount from lookup table
-define WR_WTPCSD_02_PU        {select right from WaterRightAmounts where diversion=12}

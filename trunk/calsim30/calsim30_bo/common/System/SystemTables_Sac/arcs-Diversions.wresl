@@ -156,7 +156,7 @@ define  D_CBD041_08S_SA1{std kind 'DIVERSION' units 'CFS'}
 define  D_CBD041_08S_SA2{std kind 'DIVERSION' units 'CFS'}
 define  D_CBD037_08S_PR{std kind 'DIVERSION' units 'CFS'}
 define  D_CBD028_08S_PA {std kind 'DIVERSION' units 'CFS'}
-define  D_CBD028_08S_SA3    {std kind 'DIVERSION' units 'CFS'}
+define  D_CBD023_08S_SA3    {std kind 'DIVERSION' units 'CFS'}
 define  D_CBD001_KLR005 {std kind 'DIVERSION' units 'CFS'}
 define  D_KLR005_21_PA  {std kind 'DIVERSION' units 'CFS'}
 
@@ -220,15 +220,14 @@ define  D_ELD012_04_NA  {std kind 'DIVERSION' units 'CFS'}
 define  D_OROVL_13_NU1      {std kind 'DIVERSION' units 'CFS'}
 define  D_FTR068_THRMF     {std kind 'DIVERSION' units 'CFS'}
 define  D_THRMF_11_NU1     {std kind 'DIVERSION' units 'CFS'}
-define  D_THRMA_WRO000      {std kind 'DIVERSION' units 'CFS'}
+define  D_THRMA_WEC000      {std kind 'DIVERSION' units 'CFS'}
 define  D_THRMA_JBC000      {std kind 'DIVERSION' units 'CFS'}
-define  D_WRO000_WEC000     {std kind 'DIVERSION' units 'CFS'}
-define  D_WRO000_RVC005     {std kind 'DIVERSION' units 'CFS'}
-define  D_WEC000_BTC032     {std kind 'DIVERSION' units 'CFS'}
-define  D_WEC000_11_SA1     {std kind 'DIVERSION' units 'CFS'}
+define  D_THRMA_RVC000     {std kind 'DIVERSION' units 'CFS'}
+define  D_WEC005_BTC032     {std kind 'DIVERSION' units 'CFS'}
+define  D_WEC005_11_SA1     {std kind 'DIVERSION' units 'CFS'}
 define  D_JBC002_RVC005     {std kind 'DIVERSION' units 'CFS'}
 define  D_JBC004_11_SA3     {std kind 'DIVERSION' units 'CFS'}
-define  D_WEC000_11_PR      {std kind 'DIVERSION' units 'CFS'}
+define  D_WEC005_11_PR      {std kind 'DIVERSION' units 'CFS'}
 define  D_RVC005_11_PR      {std kind 'DIVERSION' units 'CFS'}
 define  D_RVC005_11_SA2     {std kind 'DIVERSION' units 'CFS'}
 define  D_JBC002_17N_PR     {std kind 'DIVERSION' units 'CFS'}

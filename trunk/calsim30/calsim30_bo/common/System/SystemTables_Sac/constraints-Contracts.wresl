@@ -49,7 +49,7 @@ goal limitD_WTPCSD_02_PA      {D_WTPCSD_02_PA < CLmon_WTPCSD_02_PA *taf_cfs* per
 define DLT_WTPCSD_02_PA	{alias CLmon_WTPCSD_02_PA *taf_cfs* perdv_cvpag_sys kind 'DIVERSION-LIMIT' units 'CFS'}
 
 goal limitD_WTPCSD_02_PU      {D_WTPCSD_02_PU < CLmon_WTPCSD_02_PU *taf_cfs* perdv_cvpmi_sys + WRmon_WTPCSD_02_PU*taf_cfs}
-define DLT_WTPCSD_02_PU	{alias CLmon_WTPCSD_02_PU *taf_cfs* perdv_cvpmi_sys + WRmon_WTPCSD_02_PU*taf_cf kind 'DIVERSION-LIMIT' units 'CFS'}
+define DLT_WTPCSD_02_PU	{alias CLmon_WTPCSD_02_PU *taf_cfs* perdv_cvpmi_sys + WRmon_WTPCSD_02_PU*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 goal limitD_WKYTN_02_PU       {D_WKYTN_02_PU       < CLmon_WKYTN_02_PU *taf_cfs* perdv_cvpmi_sys}
 define DLT_WKYTN_02_PU	{alias CLmon_WKYTN_02_PU *taf_cfs* perdv_cvpmi_sys kind 'DIVERSION-LIMIT' units 'CFS'}
@@ -219,8 +219,8 @@ define DLT_SAC121_08S_SA3		{alias CLmon_SAC121_08S_SA3*taf_cfs*perdv_cvpsc_sys +
 goal limitD_SAC109_08S_SA3         {D_SAC109_08S_SA3 < CLmon_SAC109_08S_SA3*taf_cfs*perdv_cvpsc_sys + 1.0*WRmon_SAC109_08S_SA3*taf_cfs}
 define DLT_SAC109_08S_SA3		{alias CLmon_SAC109_08S_SA3*taf_cfs*perdv_cvpsc_sys + 1.0*WRmon_SAC109_08S_SA3*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
-goal limitD_CBD028_08S_SA3         {D_CBD028_08S_SA3 < WRmon_CBD028_08S_SA3*taf_cfs}
-define DLT_CBD028_08S_SA3		{alias WRmon_CBD028_08S_SA3*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
+goal limitD_CBD023_08S_SA3         {D_CBD023_08S_SA3 < WRmon_CBD023_08S_SA3*taf_cfs}
+define DLT_CBD023_08S_SA3		{alias WRmon_CBD023_08S_SA3*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 goal limitD_GCC056_08S_PR          {D_GCC056_08S_PR < CLmon_GCC056_08S_PR *taf_cfs* perdv_cvprf_sys}
 define DLT_GCC056_08S_PR		{alias CLmon_GCC056_08S_PR *taf_cfs* perdv_cvprf_sys kind 'DIVERSION-LIMIT' units 'CFS'}
@@ -299,9 +299,9 @@ define DLT_MIO023_10_NA	{alias CLmon_MIO023_10_NA*taf_cfs kind 'DIVERSION-LIMIT'
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal limit_ButteC                  {CLmon_ButteC_11_NU1 + CLmon_ButteC_12_NU1 = perdv_swp_oth1*CLmon_ButteC}
 
-goal limitD_WEC000_11_SA1     {D_WEC000_11_SA1 + D_WEC000_11_PR + D_WEC000_BTC032 < perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs + 1.0*WRmon_WRO000_WEC000*taf_cfs}
+goal limitD_WEC005_11_SA1     {D_WEC005_11_SA1 + D_WEC005_11_PR + D_WEC005_BTC032 < perdv_swp_fsc*CLmon_WEC005*taf_cfs + 1.0*WRmon_WEC005*taf_cfs}
 
-define DLT_WEC000	{alias perdv_swp_fsc*CLmon_WRO000_WEC000*taf_cfs + 1.0*WRmon_WRO000_WEC000*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
+define DLT_WEC005	{alias perdv_swp_fsc*CLmon_WEC005*taf_cfs + 1.0*WRmon_WEC005*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 !Joint Water Board can buy and sell water
 ! Negatively weight these
@@ -342,11 +342,11 @@ goal limitD_THRMF_11_NU1    {D_THRMF_11_NU1 < 1.0*WRmon_THRMF_11_NU1*taf_cfs + C
 
 goal limitD_DWRPS2_11_NA {D_DWRPS2_11_NA < WRmon_DWRPS2_11_NA*taf_cfs}
 
-goal limitD_WEC000_11_PR {D_WEC000_11_PR < WRmon_WEC000_11_PR*taf_cfs}
-define DLT_WEC000_11_PR		{alias WRmon_WEC000_11_PR*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'} 
+goal limitD_WEC005_11_PR {D_WEC005_11_PR < WRmon_WEC005_11_PR*taf_cfs}
+define DLT_WEC005_11_PR		{alias WRmon_WEC005_11_PR*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'} 
 
 
-goal limitAW_WEC000_11_PR     {D_WEC000_11_PR < (AWR_11_PR*(1.- RUFR_11_PR) + AWO_11_PR*(1.- RUFO_11_PR) + AWW_11_PR*(1.- RUFW_11_PR))*(1.+ EVF_WEC000_11_PR + DPF_WEC000_11_PR + LFF_WEC000_11_PR + OSF_WEC000_11_PR)*(2255/4710)} ! Factor based on relative areas of the refuges
+goal limitAW_WEC005_11_PR     {D_WEC005_11_PR < (AWR_11_PR*(1.- RUFR_11_PR) + AWO_11_PR*(1.- RUFO_11_PR) + AWW_11_PR*(1.- RUFW_11_PR))*(1.+ EVF_WEC005_11_PR + DPF_WEC005_11_PR + LFF_WEC005_11_PR + OSF_WEC005_11_PR)*(2255/4710)} ! Factor based on relative areas of the refuges
 
 goal limitD_RVC005_11_PR {D_RVC005_11_PR < WRmon_RVC005_11_PR*taf_cfs}
 define DLT_RVC005_11_PR		{alias WRmon_RVC005_11_PR*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
@@ -425,7 +425,7 @@ goal limitD_FTR014_16_SA       {D_FTR014_16_SA < perdv_swp_fsc*CLmon_FTR014_16_S
 define DLT_FTR014_16_SA	{alias perdv_swp_fsc*CLmon_FTR014_16_SA*taf_cfs + 1.0*WRmon_FTR014_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 goal limitD_FTR018_16_SA       {D_FTR018_16_SA < perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + 1.0*WRmon_FTR018_16_SA*taf_cfs}
-define DLT_FTR018_16_SA	{alias perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + 1.0*WRmon_FTR018_16_SA*taf_cf kind 'DIVERSION-LIMIT' units 'CFS'}
+define DLT_FTR018_16_SA	{alias perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + 1.0*WRmon_FTR018_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 goal limitD_FTR021_16_SA       {D_FTR021_16_SA < perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs}
 define DLT_FTR021_16_SA	{alias perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
@@ -468,7 +468,7 @@ define WEC_Open {
     value       0.0 }
 }
 
-goal limitD_WEC000_BTC032     {D_WEC000_BTC032 < WRmon_WEC000_BTC032*taf_cfs*WEC_Open}
+goal limitD_WEC005_BTC032     {D_WEC005_BTC032 < WRmon_WEC005_BTC032*taf_cfs*WEC_Open}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 17-South    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
