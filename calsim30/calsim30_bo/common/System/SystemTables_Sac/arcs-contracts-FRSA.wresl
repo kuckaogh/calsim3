@@ -19,7 +19,7 @@ define RUFr_TS	{timeseries kind 'REUSE-FACTOR' units 'NONE' }
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! Settlement contracts with DWR
-define CLann_WRO000_WEC000    	{select contract from Contracts_FRSA where contractor=1} !Western Canal WD
+define CLann_WEC005    		{select contract from Contracts_FRSA where contractor=1} !Western Canal WD
 define CLann_JBC004_11_SA3    	{select contract from Contracts_FRSA where contractor=2} !Butte WD and Biggs-West Gridley WD
 define CLann_RVC005_11_SA2PR2	{select contract from Contracts_FRSA where contractor=3} !Richvale ID
 define CLann_FTR039_11_SA4    	{select contract from Contracts_FRSA where contractor=4} !Sutter Extension WD
@@ -34,9 +34,9 @@ define CLann_JBC008_11_SA4    	{select contract from Contracts_FRSA where contra
 define WRann_FTR014_16_SA    	{select right from WaterRightAmounts where diversion=3}   !Garden Highway MWC
 define WRann_FTR018_15S_SA    	{select right from WaterRightAmounts where diversion=4}   !Plumas MWC
 define WRann_FTR018_16_SA     	{select right from WaterRightAmounts where diversion=5}   !Tudor MWC
-define WRann_WRO000_WEC000  	{select right from WaterRightAmounts where diversion=10} !Western Canal WD
+define WRann_WEC005  		{select right from WaterRightAmounts where diversion=10} !Western Canal WD
 define WRann_LDC007_11_SA2    	{select right from WaterRightAmounts where diversion=11} !Richvale ID
-define WRann_RVC005_11_SA2PR2{select right from WaterRightAmounts where diversion=13} !Richvale ID
+define WRann_RVC005_11_SA2PR2	{select right from WaterRightAmounts where diversion=13} !Richvale ID
 define WRann_JBC004_11_SA3    	{select right from WaterRightAmounts where diversion=14} !Butte WD and Biggs-West Gridley WD
 define WRann_JBC008_11_SA4    	{select right from WaterRightAmounts where diversion=15} !Sutter Extension WD
 
@@ -125,29 +125,29 @@ define SumAW_11_PR_sv {
 goal setSumAW_11_PR          {SumAW_11_PR=SumAW_11_PR_sv}
 
 ! Monthly contract amount (TAF) patterned on demand   
-define CLmon_WRO000_WEC000    {
+define CLmon_WEC005    {
      case NovFeb{
           condition month > 1 .and. month < 6
           value 0.0}
      case MarOct{
           condition always
-          value max(0.0, CLann_WRO000_WEC000 * (AWR_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFr_TS) + AWO_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFo_11_SA1) + AWW_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFw_11_SA1)
+          value max(0.0, CLann_WEC005 * (AWR_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFr_TS) + AWO_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFo_11_SA1) + AWW_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFw_11_SA1)
           		+ 0.5*AWR_11_PR*cfs_taf*(1+ RPF_11_PR - RUFr_TS) + 0.5*AWO_11_PR*cfs_taf*(1+ RPF_11_PR - RUFo_11_PR) + 0.5*AWW_11_PR*cfs_taf*(1+ RPF_11_PR - RUFw_11_PR)) / (SumAW_11_SA1_sv + 0.5*SumAW_11_PR_sv))} 
           }
           
-define CL_WRO000_WEC000      {alias CLmon_WRO000_WEC000 kind 'CONTRACT-LIMIT' units 'TAF'}
+define CL_WEC005      {alias CLmon_WEC005 kind 'CONTRACT-LIMIT' units 'TAF'}
 
-define WRmon_WRO000_WEC000    {
+define WRmon_WEC005    {
      case NovFeb{
           condition month > 1 .and. month < 6
           value 99999.}
      case MarOct{
           condition always
-          value max(0.0, WRann_WRO000_WEC000 * (AWR_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFr_TS) + AWO_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFo_11_SA1) + AWW_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFw_11_SA1)
+          value max(0.0, WRann_WEC005 * (AWR_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFr_TS) + AWO_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFo_11_SA1) + AWW_11_SA1*cfs_taf*(1+ RPF_11_SA1 - RUFw_11_SA1)
           		+ 0.5*AWR_11_PR*cfs_taf*(1+ RPF_11_PR - RUFr_TS) + 0.5*AWO_11_PR*cfs_taf*(1+ RPF_11_PR - RUFo_11_PR) + 0.5*AWW_11_PR*cfs_taf*(1+ RPF_11_PR - RUFw_11_PR)) / (SumAW_11_SA1_sv + 0.5*SumAW_11_PR_sv))} 
           }
 
-define WR_WRO000_WEC000       {alias WRmon_WRO000_WEC000 kind 'WATER-RIGHT' units 'TAF'}
+define WR_WEC005       {alias WRmon_WEC005 kind 'WATER-RIGHT' units 'TAF'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!! Richvale Irrigation District !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -30,7 +30,7 @@ define CLDamLeak 		{value 5.0}
 define C_CLRLK_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
 define C_CLRLK_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 goal C_CLRLKtotal  	{C_CLRLK = C_CLRLK_MIF + C_CLRLK_ADD}
-goal C_CLRLK_MIF 		{C_CLRLK_MIF < CLDamLeak}
+goal setC_CLRLK_MIF 	{C_CLRLK_MIF < CLDamLeak}
 
 ! Weight on C_CLRLK_MIF 5000, Weight on dead storage -10,000
 

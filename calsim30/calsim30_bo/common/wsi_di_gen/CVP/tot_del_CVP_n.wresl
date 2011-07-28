@@ -54,7 +54,7 @@ define cvpdel_PR {
 
        case      MAR  {
        condition month == MAR .and. wateryear > bgnWY
-       sum(i=-1,-12,-1) (D_GCC027_08N_PR1(i) + D_GCC039_08N_PR2(i) + D_GCC056_08S_PR(i) + D_CBD037_08S_PR(i) /*+ D_WEC000_11_PR(i) + D_RVC005_11_PR(i)*/ + D_MTC000_09_PR(i))* cfs_taf(i) }
+       sum(i=-1,-12,-1) (D_GCC027_08N_PR1(i) + D_GCC039_08N_PR2(i) + D_GCC056_08S_PR(i) + D_CBD037_08S_PR(i) /*+ D_WEC005_11_PR(i) + D_RVC005_11_PR(i)*/ + D_MTC000_09_PR(i))* cfs_taf(i) }
 
        case      otherwise {
        condition always

@@ -360,7 +360,7 @@ define WRmon_SBP028_17S_PR   {
 ! The Little Dry Creek Unit and Howard Slough Unit of the Upper Butte Basin Wildlife Area have been annexed
 ! into Richvale ID and Western Canal WD, respectively. The agreements do not specify a fixed quantity of water
 ! It is assumed that this water is subject to diversion limits for these two settlement contractors
-define WRmon_WEC000_11_PR     {value 99999.}
+define WRmon_WEC005_11_PR     {value 99999.}
 define WRmon_RVC005_11_PR     {value 99999.}
 
 define CLmon_MTC000_09_PR     {value 99999.}
@@ -369,7 +369,7 @@ define WRmon_CRK005_17N_NR    {value 99999.}
 
 define CL_MTC000_09_PR        {alias CLmon_MTC000_09_PR kind 'CONTRACT-LIMIT' units 'TAF'}
 
-define WR_WEC000_11_PR        {alias WRmon_WEC000_11_PR kind 'CONTRACT-LIMIT' units 'TAF'}
+define WR_WEC005_11_PR        {alias WRmon_WEC005_11_PR kind 'CONTRACT-LIMIT' units 'TAF'}
 
 define WR_RVC005_11_PR        {alias WRmon_RVC005_11_PR kind 'CONTRACT-LIMIT' units 'TAF'}
 
@@ -387,7 +387,7 @@ define WR_CRK005_17N_NR  {alias WRmon_CRK005_17N_NR kind 'WATER-RIGHT' units 'TA
 ! Model using October to December period
 ! Western Canal is typically closed mid-January
 
-define WRmon_WEC000_BTC032    {
+define WRmon_WEC005_BTC032    {
      case OctMar{
           condition month >= OCT .and. month <= MAR
           value 250.*cfs_taf}
@@ -396,7 +396,7 @@ define WRmon_WEC000_BTC032    {
           value 0.0} 
           }
           
-define WR_WEC000_BTC032       {alias WRmon_WEC000_BTC032 kind 'WATER-RIGHT' units 'TAF'}!For output only
+define WR_WEC005_BTC032       {alias WRmon_WEC005_BTC032 kind 'WATER-RIGHT' units 'TAF'}!For output only
 
 
 
