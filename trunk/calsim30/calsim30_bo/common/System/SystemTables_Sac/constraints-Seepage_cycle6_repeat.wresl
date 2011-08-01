@@ -349,15 +349,15 @@ define seepYBP011_448  {value  - GetSeep(409)   / cfs_cfm}
 define seepYBP007_460  {value  - GetSeep(410)   / cfs_cfm}
 define seepYBP002_473  {value  - GetSeep(411)   / cfs_cfm}
 
-goal setYBP032_360 { SG_YBP032_360 = seepYBP032_360 * int_fweir1 }
-goal setYBP026_401 { SG_YBP026_401 = seepYBP026_401 * int_fweir1 }
-goal setYBP023_407 { SG_YBP023_407 = seepYBP023_407 * int_fweir1 }
-goal setYBP020_414 { SG_YBP020_414 = seepYBP020_414 * int_fweir1 }
-goal setYBP016_433 { SG_YBP016_433 = seepYBP016_433 * int_fweir1 }
-goal setYBP014_432 { SG_YBP014_432 = seepYBP014_432 * int_fweir1 }
-goal setYBP011_448 { SG_YBP011_448 = seepYBP011_448 * int_fweir1 }
-goal setYBP007_460 { SG_YBP007_460 = seepYBP007_460 * int_fweir1 }
-goal setYBP002_473 { SG_YBP002_473 = seepYBP002_473 * int_fweir1 }
+goal setYBP032_360 { SG_YBP032_360 = seepYBP032_360 * int_fweir1dv }
+goal setYBP026_401 { SG_YBP026_401 = seepYBP026_401 * int_fweir1dv }
+goal setYBP023_407 { SG_YBP023_407 = seepYBP023_407 * int_fweir1dv }
+goal setYBP020_414 { SG_YBP020_414 = seepYBP020_414 * int_fweir1dv }
+goal setYBP016_433 { SG_YBP016_433 = seepYBP016_433 * int_fweir1dv }
+goal setYBP014_432 { SG_YBP014_432 = seepYBP014_432 * int_fweir1dv }
+goal setYBP011_448 { SG_YBP011_448 = seepYBP011_448 * int_fweir1dv }
+goal setYBP007_460 { SG_YBP007_460 = seepYBP007_460 * int_fweir1dv }
+goal setYBP002_473 { SG_YBP002_473 = seepYBP002_473 * int_fweir1dv }
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!! Yuba River          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
