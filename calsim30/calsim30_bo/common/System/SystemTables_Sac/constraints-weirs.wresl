@@ -265,6 +265,7 @@ goal boundSAC083in_2 {SAC083in_2 > int_fweir2 * 93308.}
 goal boundSAC083in_3 {SAC083in_3 < int_fweir2 * 9999999.}
 
 define QsacFth {alias C_SAC085 + C_FTR003 + CT_VERONA kind 'flow-channel' units 'cfs'}
+define int_fweir1dv {alias int_fweir1 KIND 'INTEGER' UNITS 'NONE'}
 
 ! *******************************************************************************
 ! Estimated Overflow Rating for Sacramento Weir to the Yolo Bypass

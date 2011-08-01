@@ -8,6 +8,11 @@ Original formation _ AJD, jtpayne July 2006
 updated _ BJoyce Sept 2006
 */
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Folsom South Canal  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define FSC_Losses       {timeseries kind 'SEEPAGE'  units 'TAF' convert 'CFS'}  !Seepage losses for Folsom South Canal
+goal setSG_FSC003       {SG_FSC003 < -FSC_Losses}
 
 INCLUDE '..\..\CVGroundwater\SaveHeads_Stages.wresl'
 
