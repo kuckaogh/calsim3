@@ -334,7 +334,7 @@ goal continuityELD005   {C_ELD012 + SG_ELD005_085 - C_ELD005                = Er
 !!! Feather River   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 goal continuityFTR074   {C_SFF002 + C_NFF008 - C_FTR074                                             = ErrPos_FTR074 - ErrNeg_FTR074}! Inflow to Oroville 
-goal continuityOROVL    {C_FTR074 + I_OROVL - D_OROVL_13_NU1 - E_OROVL - C_OROVL                    = S_OROVL * taf_cfs - S_OROVL(-1) * taf_cfs + ErrPos_OROVL - ErrNeg_OROVL} ! Lake Oroville. 
+goal continuityOROVL    {C_FTR074 + I_OROVL + CT_OROVL - D_OROVL_13_NU1 - E_OROVL - C_OROVL                    = S_OROVL * taf_cfs - S_OROVL(-1) * taf_cfs + ErrPos_OROVL - ErrNeg_OROVL} ! Lake Oroville. 
 goal continuityFTR072   {C_OROVL  + R_MNRRH_FTR072 - C_FTR072                                           = ErrPos_FTR072 - ErrNeg_FTR072}! Kelly Ridge return
 goal continuityFTR068   {C_FTR072 + SG_FTR068_162 - D_FTR068_THRMF - C_FTR068                                  = ErrPos_FTR068 - ErrNeg_FTR068}! Diversion to Thermalito Forebay.
 goal continuityFTR067   {C_FTR068 - C_FTR067                                                    = ErrPos_FTR067 - ErrNeg_FTR067}! Feather River at Oroville gage.   

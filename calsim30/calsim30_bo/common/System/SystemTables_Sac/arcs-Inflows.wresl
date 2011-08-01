@@ -293,6 +293,7 @@ define  CT_Nicolaus    	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS
 define  CT_FairOaks    	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at AMR022
 define  CT_Yolo    	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at CCH012
 define  CT_Davis   	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at PTH007
+define  CT_OROVL   	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at OROVL
 
 
 !!! Delta           !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
