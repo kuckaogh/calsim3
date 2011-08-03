@@ -1864,25 +1864,25 @@ define DL_22_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 !==============================
 ! 23_NA
 !==============================
-!define EVF_BRR016_23_NA {value 0.01} !evaporative loss fraction
-!define DPF_BRR016_23_NA {value 0.055} !deep percolation loss fraction
-!define LFF_BRR016_23_NA {value 0.055} !lateral flow loss fraction lateral flow
-!define OSF_BRR016_23_NA {value 0.03} !canal operating spill fraction
+define EVF_ABN024_23_NA {value 0.01} !evaporative loss fraction
+define DPF_ABN024_23_NA {value 0.045} !deep percolation loss fraction
+define LFF_ABN024_23_NA {value 0.04} !lateral flow loss fraction lateral flow
+define OSF_ABN024_23_NA {value 0.03} !canal operating spill fraction
 
-define EVF_BRR017_23_NA       {value 0.01} !evaporative loss fraction
-define DPF_BRR017_23_NA       {value 0.045} !deep percolation loss fraction
-define LFF_BRR017_23_NA       {value 0.04} !lateral flow loss fraction lateral flow
-define OSF_BRR017_23_NA       {value 0.03} !canal operating spill fraction
+define EVF_BRR017_23_NA {value 0.01} !evaporative loss fraction
+define DPF_BRR017_23_NA {value 0.045} !deep percolation loss fraction
+define LFF_BRR017_23_NA {value 0.04} !lateral flow loss fraction lateral flow
+define OSF_BRR017_23_NA {value 0.03} !canal operating spill fraction
 
-define RUFR_23_NA        {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_23_NA        {value 0.10} !reuse fraction for all other crops
-define RPF_23_NA         {value 0.05} !riparian and miscellaneous ET fraction
+define RUFR_23_NA       {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
+define RUFO_23_NA       {value 0.10} !reuse fraction for all other crops
+define RPF_23_NA        {value 0.05} !riparian and miscellaneous ET fraction
 
-define EV_23_NA               {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define DP_23_NA               {std kind 'DEEP-PERCOLATION' units 'CFS'}
-define LF_23_NA               {std kind 'LATERAL-FLOW-LOSS' units 'CFS'}
-define OS_23_NA               {std kind 'SPILL-LOSS' units 'CFS'}
-define DL_23_NA               {std kind 'DELIVERY-LOSS' units 'CFS'}
+define EV_23_NA         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
+define DP_23_NA         {std kind 'DEEP-PERCOLATION' units 'CFS'}
+define LF_23_NA         {std kind 'LATERAL-FLOW-LOSS' units 'CFS'}
+define OS_23_NA         {std kind 'SPILL-LOSS' units 'CFS'}
+define DL_23_NA         {std kind 'DELIVERY-LOSS' units 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 24          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

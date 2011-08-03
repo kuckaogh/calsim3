@@ -1263,10 +1263,10 @@ goal setRP_22_NA    {RP_22_NA = AW_22_NA * RPF_22_NA}
 !==============================
 ! 23_NA
 !==============================
-goal setEV_23_NA    {EV_23_NA = D_BRR017_23_NA * EVF_BRR017_23_NA} 
-goal setDP_23_NA    {DP_23_NA = D_BRR017_23_NA * DPF_BRR017_23_NA} 
-goal setLF_23_NA    {LF_23_NA = D_BRR017_23_NA * LFF_BRR017_23_NA} 
-goal setOS_23_NA    {OS_23_NA = D_BRR017_23_NA * OSF_BRR017_23_NA} 
+goal setEV_23_NA    {EV_23_NA = D_BRR017_23_NA * EVF_BRR017_23_NA + D_ABN024_23_NA * EVF_ABN024_23_NA} 
+goal setDP_23_NA    {DP_23_NA = D_BRR017_23_NA * DPF_BRR017_23_NA + D_ABN024_23_NA * DPF_ABN024_23_NA} 
+goal setLF_23_NA    {LF_23_NA = D_BRR017_23_NA * LFF_BRR017_23_NA + D_ABN024_23_NA * LFF_ABN024_23_NA} 
+goal setOS_23_NA    {OS_23_NA = D_BRR017_23_NA * OSF_BRR017_23_NA + D_ABN024_23_NA * OSF_ABN024_23_NA} 
 goal setDL_23_NA    {DL_23_NA = EV_23_NA  + DP_23_NA  + LF_23_NA + OS_23_NA}
 ! reuse
 goal setRU_23_NA   {RU_23_NA = min(TW_23_NA, RUFR_23_NA*AWR_23_NA + RUFO_23_NA*AWO_23_NA)} 

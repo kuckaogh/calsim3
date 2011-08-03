@@ -1160,7 +1160,7 @@ goal setUD_23_NU    {UD_23_NU = GP_23_NU + SHRTG_23_NU }
 ! 23_NA
 !======================================================================
 ! gross surface water diversions
-goal setDG_23_NA    {DG_23_NA = /*D_BRR016_23_NA +*/ D_BRR017_23_NA}
+goal setDG_23_NA    {DG_23_NA = D_ABN024_23_NA + D_BRR017_23_NA}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_23_NA    {DN_23_NA = DG_23_NA - DL_23_NA}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse

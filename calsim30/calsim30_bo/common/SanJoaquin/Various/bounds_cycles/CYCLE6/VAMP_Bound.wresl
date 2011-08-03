@@ -8,6 +8,9 @@
 /*
 VAMP releases from SJRAG members
 */
+define VAMP_reqdv {std kind 'flow-requirement' units 'cfs'}
+define VAMP_defdv {std kind 'flow-deficiency' units 'cfs'}
+
 ! VAMP requirement for April- May window
 goal setVAMP_reqdv {
     lhs     VAMP_reqdv

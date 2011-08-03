@@ -272,6 +272,8 @@ define WRWF_SCWC     {value WRWF_ANN_SCWC   * perdem_SCWC   * taf_cfs}
 !*********************************************************************************************************************
 ! Limit deliveries
 
+goal limit_D_WTPFBN_26N_NU1 {D_WTPFBN_26N_NU1 = 0.0} ! No surface water delivery under existing conditions
+
 goal limit_D_SAC077_WTPSRW {D_SAC077_WTPSRW = 0.0} ! < WRWF_NRWD_S + CL2_PCWA_S + WRWF_PCWA_S}
 goal limit_D_WTPSRW_26N_NU1{D_WTPSRW_26N_NU1 < WRWF_NRWD_S}
 goal limit_D_WTPSRW_24_NU2 {D_WTPSRW_24_NU2  < CL2_PCWA_S + WRWF_PCWA_S}
