@@ -60,7 +60,7 @@ goal continuityABWWTP   {R_24_NU1_ABWWTP - R_ABWWTP_ABN027                      
 
 goal continuityABN027   {D_STH000_ABN027 + R_ABWWTP_ABN027 - C_ABN027                       = ErrPos_ABN027 - ErrNeg_ABN027}
 goal continuityABN026   {C_ABN027 + C_ABT002 - C_ABN026                             = ErrPos_ABN026 - ErrNeg_ABN026}
-goal continuityABN024   {C_ABN026 - D_ABN024_24_NA1 - C_ABN024                          = ErrPos_ABN024 - ErrNeg_ABN024}
+goal continuityABN024   {C_ABN026 - D_ABN024_24_NA1 - D_ABN024_23_NA - C_ABN024                 = ErrPos_ABN024 - ErrNeg_ABN024}
 goal continuityABN010   {C_ABN024 + SR_24_ABN010 - D_ABN010_24_NA2 - C_ABN010                   = ErrPos_ABN010 - ErrNeg_ABN010}
 goal continuityABN000   {C_ABN010 + C_CCK007 + SR_23_ABN000 + SR_24_ABN000 + R_24_NA2_ABN000 - C_ABN000     = ErrPos_ABN000 - ErrNeg_ABN000}
 goal continuityCCK038   {R_24_NU3_CCK038 - C_CCK038                             = ErrPos_CCK038 - ErrNeg_CCK038}

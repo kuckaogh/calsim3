@@ -84,7 +84,7 @@ define  D_WSE004_24_NU3     {std kind 'DIVERSION' units 'CFS'} !Gold Hill Combie
 define  D_CBC001_24_NA1     {std kind 'DIVERSION' units 'CFS'} !Nevada ID                   !define D_CMB000_24_NA1 {std kind 'DIVERSION' units 'CFS'} !Nevada ID
 define  D_CBC001_CCK036     {std kind 'DIVERSION' units 'CFS'} !Diversion to Cross Creek
 define  D_BRR017_23_NA      {std kind 'DIVERSION' units 'CFS'} !Camp Far West Irrigation District
-!define D_BRR016_23_NA      {std kind 'DIVERSION' units 'CFS'} !South Sutter Water District
+define  D_ABN024_23_NA      {std kind 'DIVERSION' units 'CFS'}
 !define  D_WTPNAB_24_NU3    {std kind 'DIVERSION' units 'CFS'} !North Auburn
 define  D_BEC021_LBC032     {std kind 'DIVERSION' units 'CFS'}
 define  D_BEC022_WTPBWM     {std kind 'DIVERSION' units 'CFS'} !Bowman WTP

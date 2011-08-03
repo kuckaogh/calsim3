@@ -454,8 +454,8 @@ Objective obj = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 23    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[D_BRR017_23_NA, 15001], ! Camp Far West
-![D_BRR016_23_NA, 15002], ! South Sutter Water District
+[D_BRR017_23_NA, 5000], ! Camp Far West ID and South Sutter Water District
+[D_ABN024_23_NA, 5000], ! Nevada ID sale to SSWD
      
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 24    !!!!!!!!!!!!!!!!!!!!!!!
