@@ -102,9 +102,10 @@ define  D_LBC043_MRM001     {std kind 'DIVERSION' units 'CFS'}
 define  D_WTPAUB_24_NU1     {std kind 'DIVERSION' units 'CFS'} !Auburn WTP
 define  D_WSE003_LBC040     {std kind 'DIVERSION' units 'CFS'} ! Wise Canal
 
-define D_CBC001_CBCLOS 		{std kind 'DIVERSION' units 'CFS'}
-define D_BEC021_BECLOS 		{std kind 'DIVERSION' units 'CFS'}
-define D_LBC001_LBCLOS 		{std kind 'DIVERSION' units 'CFS'}
+define D_CBC001_CBCLOS 	{std kind 'DIVERSION' units 'CFS'}
+define D_BEC021_BECLOS 	{std kind 'DIVERSION' units 'CFS'}
+define D_LBC001_LBCLOS 	{std kind 'DIVERSION' units 'CFS'}
+define D_DRM008_DRMLOS 	{std kind 'DIVERSION' units 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Briggs West Gridley Drainage (Cherokee Canal) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

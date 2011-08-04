@@ -384,7 +384,7 @@ define S_RLLNS_5 {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_RLLNS {std kind 'STORAGE' units 'TAF'} !Rollins Reservoir
 define E_RLLNS {lower unbounded kind 'EVAPORATION' units 'CFS'}
 define A_RLLNS {std kind 'SURFACE-AREA' units 'ACRES'}
-define evap_S_RLLNS {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define ER_RLLNS {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 define A_RLLNSlast {select area from res_info given storage=1000*S_RLLNS(-1) use linear where res_num=293}
 define A_RLLNSforward {select area from res_info given storage=1050*S_RLLNS(-1) use linear where res_num=293}
 define A_RLLNSback {select area from res_info given storage=950*S_RLLNS(-1) use linear where res_num=293}
@@ -415,7 +415,7 @@ define S_CMBIE {std kind 'STORAGE' units 'TAF'} !Lake Combie
 !define F_CMBIE {std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}
 define E_CMBIE {lower unbounded kind 'EVAPORATION' units 'CFS'}
 define A_CMBIE {std kind 'SURFACE-AREA' units 'ACRES'}
-define evap_S_CMBIE {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define ER_CMBIE {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 define A_CMBIElast {select area from res_info given storage=1000*S_CMBIE(-1) use linear where res_num=291}
 define A_CMBIEforward {select area from res_info given storage=1050*S_CMBIE(-1) use linear where res_num=291}
 define A_CMBIEback {select area from res_info given storage=950*S_CMBIE(-1) use linear where res_num=291}
@@ -439,7 +439,7 @@ define S_CMPFW {std kind 'STORAGE' units 'TAF'} !Camp Far West Reservoir
 !define F_CMPFW {std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}
 define E_CMPFW {lower unbounded kind 'EVAPORATION' units 'CFS'}
 define A_CMPFW {std kind 'SURFACE-AREA' units 'ACRES'}
-define evap_S_CMPFW {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define ER_CMPFW {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 define A_CMPFWlast {select area from res_info given storage=1000*S_CMPFW(-1) use linear where res_num=286}
 define A_CMPFWforward {select area from res_info given storage=1050*S_CMPFW(-1) use linear where res_num=286}
 define A_CMPFWback {select area from res_info given storage=950*S_CMPFW(-1) use linear where res_num=286}
