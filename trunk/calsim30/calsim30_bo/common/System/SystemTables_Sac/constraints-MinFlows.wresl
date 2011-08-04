@@ -27,7 +27,7 @@ goal   C_WBF015total {C_WBF015 = C_WBF015_MIF + C_WBF015_ADD}
 goal   C_WBF015minflow {C_WBF015_MIF < MF_WBF015}
 
 goal   C_WBF030total {C_WBF030 = C_WBF030_MIF + C_WBF030_ADD}
-goal C_WBF030minflow {C_WBF030_MIF < MF_WBF030}
+goal   C_WBF030minflow {C_WBF030_MIF < MF_WBF030}
 
 goal   C_AMR004total {C_AMR004 = C_AMR004_MIF + C_AMR004_ADD}  ! Lower American River
 
@@ -72,29 +72,37 @@ goal C_YUB006total	{C_YUB006 = C_YUB006_MIF + C_YUB006_ADD}
 goal meetYUB006min	{C_YUB006_MIF < MIF_C_YUB006dv[SJRBASE]} 
 
 ! Bear River above Rollins Reservoir
-goal C_BRR060total {C_BRR060=C_BRR060_MIF+C_BRR060_ADD}
-goal C_BRR060minflow {C_BRR060_MIF < MF_C_BRR060}
+goal C_BRR073total {C_BRR073=C_BRR073_MIF+C_BRR073_ADD}
+goal C_BRR073minflow {C_BRR073_MIF < MF_BRR073}
+
+! Bear River above Rollins Reservoir
+goal C_BRR066total {C_BRR066=C_BRR066_MIF+C_BRR066_ADD}
+goal C_BRR066minflow {C_BRR066_MIF < MF_BRR066}
 
 ! Bear River Canal Diversion Dam
 goal C_BRR050total {C_BRR050=C_BRR050_MIF+C_BRR050_ADD}
-goal C_BRR050minflow {C_BRR050_MIF < MF_C_BRR050}
+goal C_BRR050minflow {C_BRR050_MIF < MF_BRR050}
 
+! Combie Reservoir release
+goal C_CMBIEtotal {C_CMBIE=C_CMBIE_MIF+C_CMBIE_ADD}
+goal C_CMBIEminflow {C_CMBIE_MIF < MF_CMBIE*taf_cfs}
+/*
 ! Camp Far West Reservoir release
 goal C_CMPFWtotal {C_CMPFW=C_CMPFW_MIF+C_CMPFW_ADD}
-goal C_CMPFWminflow {C_CMPFW_MIF < MF_C_CMPFW*taf_cfs}
-
+goal C_CMPFWminflow {C_CMPFW_MIF < MF_CMPFW*taf_cfs}
+*/
 ! Bear River below Camp Far West near Wheatland	gage
 goal C_BRR017total {C_BRR017=C_BRR017_MIF+C_BRR017_ADD}
-goal C_BRR017minflow {C_BRR017_MIF < MF_C_BRR017*taf_cfs}
+goal C_BRR017minflow {C_BRR017_MIF < MF_BRR017*taf_cfs}
 
 ! North Fork Cache Creek below Indian Valley Reservoir
 goal C_INDVLtotal {C_INDVL=C_INDVL_MIF+C_INDVL_ADD}
-goal C_INDVLminflow {C_INDVL_MIF < MF_C_INDVL}
+goal C_INDVLminflow {C_INDVL_MIF < MF_INDVL}
 
 ! Cache Creek below Capay Diversion Dam
 goal C_CCH030total {C_CCH030=C_CCH030_MIF+C_CCH030_ADD}
-goal C_CCH030minflow {C_CCH030_MIF < MF_C_CCH030}
+goal C_CCH030minflow {C_CCH030_MIF < MF_CCH030}
 
 ! Cache Creek at Yolo USGS gage 11452500
 goal C_CCH012total 	{C_CCH012=C_CCH012_MIF+C_CCH012_ADD}
-goal C_CCH012minflow 	{C_CCH012_MIF < MF_C_CCH012}
+goal C_CCH012minflow 	{C_CCH012_MIF < MF_CCH012}

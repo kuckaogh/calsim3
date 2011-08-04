@@ -117,7 +117,7 @@ goal continuityBRR004 {C_BRR011 + SG_BRR004_331 + SR_23_BRR004 + SR_24_BRR004 + 
 goal continuityDRM000 {D_SPLDG_DRM000 - C_DRM000                        = ErrPos_DRM000 - ErrNeg_DRM000}
 goal continuityDRM001 {C_DRM000 - D_DRM001_BRR074 - D_DRM001_SYC002 - C_DRM001          = ErrPos_DRM001 - ErrNeg_DRM001}
 goal continuityDRM002 {C_DRM001 + C_LVC001 - C_DRM002                       = ErrPos_DRM002 - ErrNeg_DRM002}
-goal continuityDRM008 {C_DRM002 - C_DRM008                          = ErrPos_DRM008 - ErrNeg_DRM008}
+goal continuityDRM008 {C_DRM002 - D_DRM008_DRMLOS - C_DRM008                          = ErrPos_DRM008 - ErrNeg_DRM008}
 goal continuityDRM009 {C_DRM008 - D_DRM009_CYN010 - C_DRM009                    = ErrPos_DRM009 - ErrNeg_DRM009}
 goal continuityDRM011 {C_DRM009 - C_DRM011                          = ErrPos_DRM011 - ErrNeg_DRM011}
 
@@ -838,11 +838,11 @@ goal continuityENGLB    {I_ENGLB + C_YUB030 - C_ENGLB - E_ENGLB	= S_ENGLB * taf_
 !see Yuba_Definition.wresl for YUB023 goal continuityYUB023 {C_ENGLB  - C_YUB023                    = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
 
 goal continuityMERLC    {I_MERLC - C_MERLC - E_MERLC                       = S_MERLC * taf_cfs - S_MERLC(-1) * taf_cfs + ErrPos_MERLC - ErrNeg_MERLC} 
-goal continuityYUB023   {C_ENGLB  - C_YUB023                                        = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
+goal continuityYUB023   {C_ENGLB + CT_Smartville  - C_YUB023                                        = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
 goal continuityYUB022   {C_DER001 + C_YUB023 - C_YUB022                                         = ErrPos_YUB022 - ErrNeg_YUB022}! Confluence: Deere Creek
 goal continuityYUB014   {C_YUB022 + C_FDC006 + R_RFS14_YUB014 - C_YUB014                = ErrPos_YUB014 - ErrNeg_YUB014}! Confluence: French Dry Creek
 goal continuityYUB013   {C_YUB014 - D_YUB013_14_NA - C_YUB013                       = ErrPos_YUB013 - ErrNeg_YUB013}! BVID Pipeline Canal Diversion
 goal continuityYUB011   {C_YUB013 + SG_YUB011_285 + SR_14_YUB011 - D_YUB011_15N_NA2 - D_YUB011_15S_NA2 - C_YUB011   = ErrPos_YUB011 - ErrNeg_YUB011}! Degeurre Dam & diversions for N. and S. Canals
-goal continuityYUB006   {C_YUB011 + CT_Smartville + SG_YUB006_284 - C_YUB006                        = ErrPos_YUB006 - ErrNeg_YUB006}! Marysville gage (USGS ####), flow requirement
+goal continuityYUB006   {C_YUB011 + SG_YUB006_284 - C_YUB006                        = ErrPos_YUB006 - ErrNeg_YUB006}! Marysville gage (USGS ####), flow requirement
 goal continuityYUB003   {C_YUB006 - D_YUB003_15N_NU - C_YUB003                      = ErrPos_YUB003 - ErrNeg_YUB003}! Diversion for Marysville's Lake Ellis (presumed)
 goal continuityYUB002   {C_YUB003 - C_YUB002                                = ErrPos_YUB002 - ErrNeg_YUB002}! Yuba River at Marysville

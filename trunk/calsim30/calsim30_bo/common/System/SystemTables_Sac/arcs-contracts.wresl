@@ -2347,7 +2347,7 @@ define SumAW_22_NA_sv {
 goal setSumAW_22_NA           {SumAW_22_NA=SumAW_22_NA_sv}
 
 define WRann_SAC075_22_NA     {select right from WaterRightAmounts where diversion=30}    
-define WRmon_SAC075_22_NA     {value max(0.0,WRann_SAC075_22_NA * (AWR_22_NA*cfs_taf*(1+ RPF_22_NA - RUFr5_TS(i)) + AWO_22_NA*cfs_taf*(1+ RPF_22_NA - RUFo_22_NA)) / SumAW_22_NA_sv)} 
+define WRmon_SAC075_22_NA     {value max(0.0,WRann_SAC075_22_NA * (AWR_22_NA*cfs_taf*(1+ RPF_22_NA - RUFr5_TS) + AWO_22_NA*cfs_taf*(1+ RPF_22_NA - RUFo_22_NA)) / SumAW_22_NA_sv)} 
 define WR_SAC075_22_NA   {alias WRmon_SAC075_22_NA kind 'WATER-RIGHT' units 'TAF'}
 
 ! Little Chico Creek and Sacramento River
