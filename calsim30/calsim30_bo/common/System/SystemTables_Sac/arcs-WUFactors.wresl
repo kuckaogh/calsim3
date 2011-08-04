@@ -1865,17 +1865,17 @@ define DL_22_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 ! 23_NA
 !==============================
 define EVF_ABN024_23_NA {value 0.01} !evaporative loss fraction
-define DPF_ABN024_23_NA {value 0.045} !deep percolation loss fraction
-define LFF_ABN024_23_NA {value 0.04} !lateral flow loss fraction lateral flow
+define DPF_ABN024_23_NA {value 0.06} !deep percolation loss fraction
+define LFF_ABN024_23_NA {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_ABN024_23_NA {value 0.03} !canal operating spill fraction
 
 define EVF_BRR017_23_NA {value 0.01} !evaporative loss fraction
-define DPF_BRR017_23_NA {value 0.045} !deep percolation loss fraction
-define LFF_BRR017_23_NA {value 0.04} !lateral flow loss fraction lateral flow
+define DPF_BRR017_23_NA {value 0.06} !deep percolation loss fraction
+define LFF_BRR017_23_NA {value 0.05} !lateral flow loss fraction lateral flow
 define OSF_BRR017_23_NA {value 0.03} !canal operating spill fraction
 
 define RUFR_23_NA       {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_23_NA       {value 0.10} !reuse fraction for all other crops
+define RUFO_23_NA       {value 0.05} !reuse fraction for all other crops
 define RPF_23_NA        {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_23_NA         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
@@ -1887,51 +1887,26 @@ define DL_23_NA         {std kind 'DELIVERY-LOSS' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 24          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-!=======================================================================
-! Conveyance Canal Losses
-!=======================================================================
-/*
-define EVF_24_CBC   {value 0.01}!evaporative loss fraction
-define DPF_24_CBC{value 0.09}!deep percolation loss fraction
-
-define EVF_24_BEC   {value 0.01}
-define DPF_24_BEC   {value 0.09}
-
-define EVF_24_LBC   {value 0.01}
-define DPF_24_LBC   {value 0.09}
-
-
-define EV_24_CBC    {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define DP_24_CBC    {std kind 'DEEP-PERCOLATION' units 'CFS'}
-
-define EV_24_BEC    {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define DP_24_BEC    {std kind 'DEEP-PERCOLATION' units 'CFS'}
-
-define EV_24_LBC    {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define DP_24_LBC    {std kind 'DEEP-PERCOLATION' units 'CFS'}
-*/
-
-!==============================
-! 24_NA1
-!==============================
-define EVF_CBC001_24_NA1 {value 0.00} !evaporative loss fraction
-define DPF_CBC001_24_NA1 {value 0.01} !deep percolation loss fraction
-define LFF_CBC001_24_NA1 {value 0.00} !lateral flow loss fraction lateral flow
-define OSF_CBC001_24_NA1 {value 0.00} !canal operating spill fraction
+!==================================
+! 24_NA1 Nevada Irrigation District
+!==================================
+define EVF_CBC001_24_NA1 {value 0.01} !evaporative loss fraction
+define DPF_CBC001_24_NA1 {value 0.12} !deep percolation loss fraction
+define LFF_CBC001_24_NA1 {value 0.09} !lateral flow loss fraction lateral flow
+define OSF_CBC001_24_NA1 {value 0.03} !canal operating spill fraction
 
 define EVF_ABN024_24_NA1 {value 0.01} !evaporative loss fraction
-define DPF_ABN024_24_NA1 {value 0.27} !deep percolation loss fraction
+define DPF_ABN024_24_NA1 {value 0.12} !deep percolation loss fraction
 define LFF_ABN024_24_NA1 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_ABN024_24_NA1 {value 0.03} !canal operating spill fraction
 
-define EVF_WSE004_24_NA1     {value 0.01} !evaporative loss fraction
-define DPF_WSE004_24_NA1     {value 0.27} !deep percolation loss fraction
-define LFF_WSE004_24_NA1     {value 0.09} !lateral flow loss fraction lateral flow
-define OSF_WSE004_24_NA1     {value 0.03} !canal operating spill fraction
+define EVF_WSE004_24_NA1 {value 0.01} !evaporative loss fraction
+define DPF_WSE004_24_NA1 {value 0.12} !deep percolation loss fraction
+define LFF_WSE004_24_NA1 {value 0.09} !lateral flow loss fraction lateral flow
+define OSF_WSE004_24_NA1 {value 0.03} !canal operating spill fraction
 
 define RUFR_24_NA1       {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_24_NA1       {value 0.10} !reuse fraction for all other crops
+define RUFO_24_NA1       {value 0.05} !reuse fraction for all other crops
 define RPF_24_NA1        {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_24_NA1         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
@@ -1940,16 +1915,16 @@ define LF_24_NA1         {std kind 'LATERAL-FLOW-LOSS' units 'CFS'}
 define OS_24_NA1         {std kind 'SPILL-LOSS' units 'CFS'}
 define DL_24_NA1         {std kind 'DELIVERY-LOSS' units 'CFS'}
 
-!==============================
-! 24_NA2
-!==============================
+!===========================================
+! 24_NA2 Placer County Water Agency - Zone 5
+!===========================================
 define EVF_ABN010_24_NA2 {value 0.01} !evaporative loss fraction
 define DPF_ABN010_24_NA2 {value 0.12} !deep percolation loss fraction
 define LFF_ABN010_24_NA2 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_ABN010_24_NA2 {value 0.03} !canal operating spill fraction
 
 define RUFR_24_NA2       {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_24_NA2       {value 0.10} !reuse fraction for all other crops
+define RUFO_24_NA2       {value 0.05} !reuse fraction for all other crops
 define RPF_24_NA2        {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_24_NA2         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
@@ -1958,21 +1933,21 @@ define LF_24_NA2         {std kind 'LATERAL-FLOW-LOSS' units 'CFS'}
 define OS_24_NA2         {std kind 'SPILL-LOSS' units 'CFS'}
 define DL_24_NA2         {std kind 'DELIVERY-LOSS' units 'CFS'}
 
-!==============================
-! 24_NA3
-!==============================
+!===========================================
+! 24_NA3 Placer County Water Agency - Zone 1
+!===========================================
 define EVF_STH004_24_NA3 {value 0.01} !evaporative loss fraction
-define DPF_STH004_24_NA3 {value 0.27} !deep percolation loss fraction
+define DPF_STH004_24_NA3 {value 0.12} !deep percolation loss fraction
 define LFF_STH004_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_STH004_24_NA3 {value 0.03} !canal operating spill fraction
 
 define EVF_LBC049_24_NA3 {value 0.01} !evaporative loss fraction
-define DPF_LBC049_24_NA3 {value 0.27} !deep percolation loss fraction
+define DPF_LBC049_24_NA3 {value 0.12} !deep percolation loss fraction
 define LFF_LBC049_24_NA3 {value 0.09} !lateral flow loss fraction lateral flow
 define OSF_LBC049_24_NA3 {value 0.03} !canal operating spill fraction
 
 define RUFR_24_NA3       {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_24_NA3       {value 0.10} !reuse fraction for all other crops
+define RUFO_24_NA3       {value 0.05} !reuse fraction for all other crops
 define RPF_24_NA3        {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_24_NA3         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}

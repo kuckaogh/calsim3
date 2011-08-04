@@ -119,8 +119,8 @@ goal setR_07S_PA_CBD028	{R_07S_PA_CBD028 = TW_07S_PA + LF_07S_PA + OS_07S_PA - R
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 8-North		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define TW_08N_NA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
-goal setR_08N_NA_CBD049	{R_08N_NA_CBD049 = TW_08N_NA /*+ LF_08N_NA + OS_08N_NA*/ - RU_08N_NA}
+define TW_08N_NA 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
+goal setR_08N_NA_CBD049		{R_08N_NA_CBD049 = TW_08N_NA + LF_08N_NA + OS_08N_NA - RU_08N_NA}
 
 define TW_08N_SA2 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_08N_SA2_CBD049	{R_08N_SA2_CBD049 = TW_08N_SA2 + LF_08N_SA2 + OS_08N_SA2 - RU_08N_SA2}
@@ -134,8 +134,8 @@ goal setR_08N_PR2_CBD044 	{R_08N_PR2_CBD044 = TW_08N_PR2 + LF_08N_PR2 + OS_08N_P
 define TW_08N_SA1 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_08N_SA1_CBD044	{R_08N_SA1_CBD044 = TW_08N_SA1 + LF_08N_SA1 + OS_08N_SA1 - RU_08N_SA1}
 
-define TW_08N_PA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
-goal setR_08N_PA_CBD044	{R_08N_PA_CBD044 = TW_08N_PA + LF_08N_PA + OS_08N_PA - RU_08N_PA}
+define TW_08N_PA 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
+goal setR_08N_PA_CBD044		{R_08N_PA_CBD044 = TW_08N_PA + LF_08N_PA + OS_08N_PA - RU_08N_PA}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 08S		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -143,23 +143,23 @@ goal setR_08N_PA_CBD044	{R_08N_PA_CBD044 = TW_08N_PA + LF_08N_PA + OS_08N_PA - R
 define TW_08S_SA2 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_08S_SA2_CBD037 	{R_08S_SA2_CBD037 = TW_08S_SA2 + LF_08S_SA2 + OS_08S_SA2 - RU_08S_SA2}
 
-define TW_08S_PA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
-goal setR_08S_PA_CBD012	{R_08S_PA_CBD012 = TW_08S_PA + LF_08S_PA + OS_08S_PA - RU_08S_PA}
+define TW_08S_PA 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
+goal setR_08S_PA_CBD012		{R_08S_PA_CBD012 = TW_08S_PA + LF_08S_PA + OS_08S_PA - RU_08S_PA}
 
-define TW_08S_PR 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
+define TW_08S_PR 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_08S_PR_CBD031  	{R_08S_PR_CBD031 = TW_08S_PR + LF_08S_PR + OS_08S_PR - RU_08S_PR}
 
 define TW_08S_NA1 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
-goal setR_08S_NA1_CBD031	{R_08S_NA1_CBD031 = TW_08S_NA1 /*+ LF_08S_NA1 + OS_08S_NA1*/ - RU_08S_NA1}
+goal setR_08S_NA1_CBD031	{R_08S_NA1_CBD031 = TW_08S_NA1 + LF_08S_NA1 + OS_08S_NA1 - RU_08S_NA1}
 
 define TW_08S_SA1 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 goal setR_08S_SA1_CBD031 	{R_08S_SA1_CBD031 = TW_08S_SA1 + LF_08S_SA1 + OS_08S_SA1 - RU_08S_SA1}
 
 define TW_08S_NA2 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
-goal setR_08S_NA2_RFS8S	{R_08S_NA2_RFS8S = TW_08S_NA2}
+goal setR_08S_NA2_RFS8S		{R_08S_NA2_RFS8S = TW_08S_NA2 + LF_08S_NA2 + OS_08S_NA2 - RU_08S_NA2}
 
 define TW_08S_SA3 		{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
-goal setR_08S_SA3_RFS8S	{R_08S_SA3_RFS8S = TW_08S_SA3 + LF_08S_SA3 + OS_08S_SA3 - RU_08S_SA3}
+goal setR_08S_SA3_RFS8S		{R_08S_SA3_RFS8S = TW_08S_SA3 + LF_08S_SA3 + OS_08S_SA3 - RU_08S_SA3}
 
 goal setR_RFS8S			{R_RFS8S_SAC097 = 5*R_RFS8S_SAC093} !Based on flow records 1949-1985
 
@@ -355,7 +355,7 @@ define TW_21_NA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 define WW_21_PU 			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
 define TW_21_SA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 
-goal setR_21_NA_YBP032	{R_21_NA_YBP032 = TW_21_NA /*+ LF_21_NA + OS_21_NA*/ - RU_21_NA} !Groundwater only
+goal setR_21_NA_YBP032	{R_21_NA_YBP032 = TW_21_NA + LF_21_NA + OS_21_NA - RU_21_NA} !Groundwater only
 goal setR_21_PU_SRWWTP	{R_21_PU_SRWWTP = WW_21_PU}
 goal setR_21_SA_YBP020	{R_21_SA_YBP020 = TW_21_SA + LF_21_SA + OS_21_SA - RU_21_SA}
 goal setR_21_PA_YBP032	{R_21_PA_YBP032 = TW_21_PA + LF_21_PA + OS_21_PA - RU_21_PA}
@@ -367,7 +367,7 @@ define TW_22_NA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 define TW_22_SA1 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 define TW_22_SA2 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 
-goal setR_22_NA_RFS22		{R_22_NA_RFS22  = TW_22_NA /*+ LF_22_NA + OS_22_NA*/ - RU_22_NA} !Groundwater only
+goal setR_22_NA_RFS22		{R_22_NA_RFS22  = TW_22_NA + LF_22_NA + OS_22_NA - RU_22_NA} !Groundwater only
 goal setR_22_SA1_RFS22	{R_22_SA1_RFS22  = TW_22_SA1 + LF_22_SA1 + OS_22_SA1 - RU_22_SA1}
 goal setR_22_SA2_SAC083	{R_22_SA2_SAC083  = TW_22_SA2 + LF_22_SA2 + OS_22_SA2 - RU_22_SA2}
 goal setR_RFS22_EMD001	{R_RFS22_EMD001 = 0.5 * R_22_NA_RFS22 + 0.5 * R_22_SA1_RFS22}
