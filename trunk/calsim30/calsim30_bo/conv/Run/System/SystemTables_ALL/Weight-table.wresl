@@ -89,41 +89,49 @@ Objective obj = {
 [S_BLKBT_5,-15000*taf_cfs],
 
 [S_BRYSA_1, 20000*taf_cfs],
-[S_BRYSA_2,    102*taf_cfs],
-[S_BRYSA_3,    101*taf_cfs],
-[S_BRYSA_4,    100*taf_cfs],
+[S_BRYSA_2,   102*taf_cfs],
+[S_BRYSA_3,   101*taf_cfs],
+[S_BRYSA_4,   100*taf_cfs],
 [S_BRYSA_5,-15000*taf_cfs],
 
 [S_CLRLK_1, 20000*taf_cfs],
-[S_CLRLK_2,    102*taf_cfs],
-[S_CLRLK_3,    101*taf_cfs],
-[S_CLRLK_4,    100*taf_cfs],
+[S_CLRLK_2,   102*taf_cfs],
+[S_CLRLK_3,   101*taf_cfs],
+[S_CLRLK_4,   100*taf_cfs],
 [S_CLRLK_5,-15000*taf_cfs],
 
 [S_INDVL_1, 20000*taf_cfs],
-[S_INDVL_2,    400*taf_cfs],
-[S_INDVL_3,    300*taf_cfs],
-[S_INDVL_4,    200*taf_cfs],
+[S_INDVL_2,   400*taf_cfs],
+[S_INDVL_3,   300*taf_cfs],
+[S_INDVL_4,   200*taf_cfs],
 [S_INDVL_5,-15000*taf_cfs],
 
 ! Bear River Model
-[S_RLLNS_1,20000*taf_cfs],
-[S_RLLNS_2,15000*taf_cfs],
-[S_RLLNS_3,1500*taf_cfs],
-[S_RLLNS_4,1200*taf_cfs],
-[S_RLLNS_5,-15000*taf_cfs],
+[S_RLLNS_1, 20000*taf_cfs],
+[S_RLLNS_2, 20000*taf_cfs],
+[S_RLLNS_3, 20000*taf_cfs],
+[S_RLLNS_4,   200*taf_cfs],
+[S_RLLNS_5,-10000*taf_cfs],
 
-[S_CMBIE_1,20000*taf_cfs],
-[S_CMBIE_2,12500*taf_cfs],
-[S_CMBIE_3,1600*taf_cfs],
-[S_CMBIE_4,1300*taf_cfs],
-[S_CMBIE_5,-15000*taf_cfs],
+[S_CMBIE_1, 20000*taf_cfs],
+[S_CMBIE_2, 20000*taf_cfs],
+[S_CMBIE_3, 20000*taf_cfs],
+[S_CMBIE_4,   200*taf_cfs],
+[S_CMBIE_5,-10000*taf_cfs],
 
-[S_CMPFW_1,1000*taf_cfs],
-[S_CMPFW_2,110*taf_cfs],
-[S_CMPFW_3,20*taf_cfs],
-[S_CMPFW_4,10*taf_cfs],
-[S_CMPFW_5,-15000*taf_cfs],
+[S_CMPFW_1, 20000*taf_cfs],
+[S_CMPFW_2,   400*taf_cfs],
+[S_CMPFW_3,   300*taf_cfs],
+[S_CMPFW_4,   200*taf_cfs],
+[S_CMPFW_5,-10000*taf_cfs],
+
+[C_BRR073_MIF,5100],
+[C_BRR066_MIF,5100],
+[C_BRR060_MIF,5100],
+[C_BRR050_MIF,5100],
+[C_CMBIE_MIF, 5100],
+[C_CMPFW_MIF,  200],
+[C_BRR017_MIF,5100],
 
 [D_BRR050_BEC000,12000],
 [D_CMBIE_CBC000,12000],
@@ -134,11 +142,6 @@ Objective obj = {
 [C_WBF030_MIF,90001],
 [D_WBF030_HKC002,15000],
 [D_WBF015_MIO023,15000],
-
-[C_BRR060_MIF,5100],
-[C_BRR050_MIF,16000],
-[C_CMPFW_MIF,200],
-[C_BRR017_MIF,30],
 
 [D_BSL000_SAC141,1000],
 
@@ -454,8 +457,8 @@ Objective obj = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 23    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[D_BRR017_23_NA, 5000], ! Camp Far West ID and South Sutter Water District
-[D_ABN024_23_NA, 5000], ! Nevada ID sale to SSWD
+[D_BRR017_23_NA, 5000], ! Camp Far West ID and South Sutter WD
+[D_ABN024_23_NA, 4950], ! Nevada ID sale to South Sutter WD
      
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 24    !!!!!!!!!!!!!!!!!!!!!!!
@@ -464,23 +467,20 @@ Objective obj = {
 [D_WSE004_24_NA1,5000],
 [D_CBC001_24_NA1,5000],
 [D_CBC001_CCK036,5000],
-![D_STH000_24_NA1,5000],
 [D_STH000_ABN027, -5],
 [D_BEC021_LBC032, -5],
 [D_BEC022_WTPBWM,5000],
 [D_LBC038_WTPAUB,5000],
-![D_ABT002_ABN027,5000],
-![D_ABT002_WTPFSS,5000],
 [D_STH004_WTPFSS,5000],
 [D_ABN024_24_NA1,5000],
-[D_ABN010_24_NA2,5000],
+[D_ABN010_24_NA2,4950], !Lower weight on Zone 5 deliveries
 [D_STH001_WTPOPH,5000],
 [D_STH004_24_NA3,5000],
 [D_LBC049_24_NA3,5000],
 [D_LBC043_MRM001,10],
 [D_WTPSRW_24_NU2,5000],
 [D_WSE003_LBC040,5000],
-[D_LBC010_PCWA3, 5000],
+[D_LBC010_PCWA3,20000], !Ensure deliveries to PCWA Zone 3 are met
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 25    !!!!!!!!!!!!!!

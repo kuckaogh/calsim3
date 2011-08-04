@@ -356,7 +356,7 @@ goal setDG_08N_PR1  {DG_08N_PR1 = D_GCC027_08N_PR1}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_08N_PR1  {DN_08N_PR1 = DG_08N_PR1 - DL_08N_PR1}
 ! Total Applied Water = net surface delivery + groundwater pumping
-goal meetAW_08N_PR1 {AW_08N_PR1 + RP_08N_PR1 > DN_08N_PR1 + GP_08N_PR1 + RU_08N_PR1 + SHRTG_08N_PR1 }
+goal meetAW_08N_PR1 {AW_08N_PR1 + RP_08N_PR1 = DN_08N_PR1 + GP_08N_PR1 + RU_08N_PR1 + SHRTG_08N_PR1 }
 
 !======================================================================
 ! 8N_PR2
@@ -366,7 +366,7 @@ goal setDG_08N_PR2  {DG_08N_PR2 = D_GCC039_08N_PR2}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_08N_PR2  {DN_08N_PR2 = DG_08N_PR2 - DL_08N_PR2}
 ! Total Applied Water = net surface delivery + groundwater pumping
-goal meetAW_08N_PR2 {AW_08N_PR2 + RP_08N_PR2 > DN_08N_PR2 + GP_08N_PR2 + RU_08N_PR2 + SHRTG_08N_PR2 }
+goal meetAW_08N_PR2 {AW_08N_PR2 + RP_08N_PR2 = DN_08N_PR2 + GP_08N_PR2 + RU_08N_PR2 + SHRTG_08N_PR2 }
 
 !======================================================================
 ! 8N_NA
@@ -428,7 +428,7 @@ goal setDG_08S_PR   {DG_08S_PR = D_GCC056_08S_PR + D_CBD037_08S_PR}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_08S_PR   {DN_08S_PR = DG_08S_PR - DL_08S_PR}
 ! Total Applied Water = net surface delivery + groundwater pumping
-goal meetAW_08S_PR  {AW_08S_PR + RP_08S_PR > DN_08S_PR + GP_08S_PR + RU_08S_PR + SHRTG_08S_PR }
+goal meetAW_08S_PR  {AW_08S_PR + RP_08S_PR = DN_08S_PR + GP_08S_PR + RU_08S_PR + SHRTG_08S_PR }
 
 !======================================================================
 ! 8S_SA3
@@ -516,7 +516,7 @@ goal setDG_09_PR    {DG_09_PR = D_MTC000_09_PR}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_09_PR    {DN_09_PR = DG_09_PR - DL_09_PR}
 ! Total Applied Water = net surface delivery + groundwater pumping
-goal meetAW_09_PR   {AW_09_PR + RP_09_PR > DN_09_PR + GP_09_PR + RU_09_PR + SHRTG_09_PR }
+goal meetAW_09_PR   {AW_09_PR + RP_09_PR = DN_09_PR + GP_09_PR + RU_09_PR + SHRTG_09_PR }
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 10      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -629,7 +629,7 @@ goal setD_RVC005_11_PR {D_RVC005_11_PR - 0.50*DL_11_PR<0.50*AW_11_PR + 0.50*RP_1
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_11_PR    {DN_11_PR = DG_11_PR - DL_11_PR}
 ! Total Applied Water = net surface delivery + groundwater pumping
-goal meetAW_11_PR   {AW_11_PR + RP_11_PR > DN_11_PR + GP_11_PR + RU_11_PR + SHRTG_11_PR }
+goal meetAW_11_PR   {AW_11_PR + RP_11_PR = DN_11_PR + GP_11_PR + RU_11_PR + SHRTG_11_PR }
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 12      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -891,7 +891,7 @@ goal setDG_17N_NR   {DG_17N_NR = /*D_BTC012_17N_NR +*/ D_CRK005_17N_NR}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_17N_NR   {DN_17N_NR = DG_17N_NR - DL_17N_NR}
 ! Total Applied Water = net surface delivery + groundwater pumping
-goal meetAW_17N_NR  {AW_17N_NR + RP_17N_NR > DN_17N_NR + GP_17N_NR + RU_17N_NR + SHRTG_17N_NR }
+goal meetAW_17N_NR  {AW_17N_NR + RP_17N_NR = DN_17N_NR + GP_17N_NR + RU_17N_NR + SHRTG_17N_NR }
 
 !======================================================================
 ! 17N_NA

@@ -355,34 +355,57 @@ define S_SLYCK       {std kind 'STORAGE' units 'TAF'}
 !define E_SLYCK		{std kind 'EVAPORATION' units 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!Bear River !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!Rollins Reservoir !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define S_RLLNSlevel1 {value 5}
+define S_RLLNSlevel1 {value 0.559}
 define S_RLLNS_1 {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_RLLNSlevel2 {timeseries kind 'STORAGE-LEVEL' units 'TAF'}
-define S_RLLNS_2 {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_RLLNSlevel3 {value 66}
+define S_RLLNSlevel2 {
+        case MayAug     {condition month >= MAY .and. month <= SEP value 50.185 }
+        case SepApr     {condition always value 5.566 } }
+define S_RLLNS_2  {std kind 'STORAGE-ZONE' units 'TAF'}
+define S_RLLNSlevel3 {
+        case Jan        {condition month == JAN value 59.502 }
+        case Feb        {condition month == FEB value 60.371 }
+        case Mar        {condition month == MAR value 63.545 }
+        case Apr        {condition month == APR value 65.580 }
+        case May        {condition month == MAY value 65.996 }
+        case Jun        {condition month == JUN value 65.996 }
+        case Jul        {condition month == JUL value 65.996 }
+        case Aug        {condition month == AUG value 64.355 }
+        case Sep        {condition month == SEP value 61.159}
+        case Oct        {condition month == OCT value 45.004 }
+        case Nov        {condition month == NOV value 57.988 }
+        case Dec        {condition always value 57.988 } }
 define S_RLLNS_3 {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_RLLNSlevel4 {value 66}
+define S_RLLNSlevel4 {value 65.996}
 define S_RLLNS_4 {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_RLLNSlevel5 {value 66}
+define S_RLLNSlevel5 {value 69.372}
 define S_RLLNS_5 {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_RLLNS {std kind 'STORAGE' units 'TAF'} !Rollins Reservoir
-!define F_RLLNS {std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}
 define E_RLLNS {lower unbounded kind 'EVAPORATION' units 'CFS'}
 define A_RLLNS {std kind 'SURFACE-AREA' units 'ACRES'}
-define ER_RLLNS {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define evap_S_RLLNS {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 define A_RLLNSlast {select area from res_info given storage=1000*S_RLLNS(-1) use linear where res_num=293}
 define A_RLLNSforward {select area from res_info given storage=1050*S_RLLNS(-1) use linear where res_num=293}
 define A_RLLNSback {select area from res_info given storage=950*S_RLLNS(-1) use linear where res_num=293}
 define coefev_RLLNS {value (A_RLLNSforward - A_RLLNSback)/(100*max(0.01,S_RLLNS(-1)))}
 define relcap_RLLNS {select discharge from res_info given storage=1000*S_RLLNS(-1) use linear where res_num=293}
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!Lake Combie !!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define S_CMBIElevel1 {value 0.1}
 define S_CMBIE_1 {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_CMBIElevel2 {value 0.6}
 define S_CMBIE_2 {std kind 'STORAGE-ZONE' units 'TAF'}
-define S_CMBIElevel3 {value 5.555}
+define S_CMBIElevel3 {
+        case JanJun     {condition month >= JAN .and. month <= JUN value 5.555 }
+        case Jul        {condition month == JUL value 5.400 }
+        case Aug        {condition month == AUG value 5.300 }
+        case Sep        {condition month == SEP value 5.000 }
+        case Oct        {condition month == OCT value 4.600 }
+        case Nov        {condition month == NOV value 4.400 }
+        case Dec        {condition always value 5.200 } }
 define S_CMBIE_3 {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_CMBIElevel4 {value 5.555}
 define S_CMBIE_4 {std kind 'STORAGE-ZONE' units 'TAF'}
@@ -392,13 +415,16 @@ define S_CMBIE {std kind 'STORAGE' units 'TAF'} !Lake Combie
 !define F_CMBIE {std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}
 define E_CMBIE {lower unbounded kind 'EVAPORATION' units 'CFS'}
 define A_CMBIE {std kind 'SURFACE-AREA' units 'ACRES'}
-define ER_CMBIE {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define evap_S_CMBIE {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 define A_CMBIElast {select area from res_info given storage=1000*S_CMBIE(-1) use linear where res_num=291}
 define A_CMBIEforward {select area from res_info given storage=1050*S_CMBIE(-1) use linear where res_num=291}
 define A_CMBIEback {select area from res_info given storage=950*S_CMBIE(-1) use linear where res_num=291}
 define coefev_CMBIE {value (A_CMBIEforward - A_CMBIEback)/(100*max(0.01,S_CMBIE(-1)))}
 define relcap_CMBIE {select discharge from res_info given storage=1000*S_CMBIE(-1) use linear where res_num=291}
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!Camp Far West Reservoir !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define S_CMPFWlevel1 {value 1}
 define S_CMPFW_1 {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_CMPFWlevel2 {select target from res_level where res_num=286,level=2,month=month}
@@ -413,12 +439,13 @@ define S_CMPFW {std kind 'STORAGE' units 'TAF'} !Camp Far West Reservoir
 !define F_CMPFW {std kind 'FLOW-SPILL-NON-RECOV' units 'CFS'}
 define E_CMPFW {lower unbounded kind 'EVAPORATION' units 'CFS'}
 define A_CMPFW {std kind 'SURFACE-AREA' units 'ACRES'}
-define ER_CMPFW {timeseries kind 'EVAPORATION-RATE' units 'IN'}
+define evap_S_CMPFW {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 define A_CMPFWlast {select area from res_info given storage=1000*S_CMPFW(-1) use linear where res_num=286}
 define A_CMPFWforward {select area from res_info given storage=1050*S_CMPFW(-1) use linear where res_num=286}
 define A_CMPFWback {select area from res_info given storage=950*S_CMPFW(-1) use linear where res_num=286}
 define coefev_CMPFW {value (A_CMPFWforward - A_CMPFWback)/(100*max(0.01,S_CMPFW(-1)))}
 define relcap_CMPFW {select discharge from res_info given storage=1000*S_CMPFW(-1) use linear where res_num=286}
+
 
 ! Clear Lake
 define S_CLRLKlevel1 	{value 842.0}
