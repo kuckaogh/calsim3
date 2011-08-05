@@ -457,29 +457,30 @@ Objective obj = {
 ! WBA 23    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [D_BRR017_23_NA, 5000], ! Camp Far West ID and South Sutter WD
-[D_ABN024_23_NA, 4950], ! Nevada ID sale to South Sutter WD
+[D_ABN024_23_NA, 4950], ! Nevada ID sale to South Sutter WD, lower weight
      
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 24    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[D_WSE004_24_NU3,5000],
-[D_WSE004_24_NA1,5000],
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! WBA 24    !!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[D_WSE004_24_NU3,5050],
 [D_CBC001_24_NA1,5000],
-[D_CBC001_CCK036,5000],
-[D_STH000_ABN027, -5],
-[D_BEC021_LBC032, -5],
-[D_BEC022_WTPBWM,5000],
-[D_LBC038_WTPAUB,5000],
-[D_STH004_WTPFSS,5000],
+[D_WSE004_24_NA1,5000],
+![D_CBC001_CCK036,5000],
+[D_BEC022_WTPBWM,5050],
+[D_LBC038_WTPAUB,5050],
+[D_STH004_WTPFSS,5050],
 [D_ABN024_24_NA1,5000],
-[D_ABN010_24_NA2,4950], !Lower weight on Zone 5 deliveries
-[D_STH001_WTPOPH,5000],
+[D_ABN010_24_NA2,4950], ! Lower weight on Zone 5 deliveries
+[D_STH001_WTPOPH,5050],
 [D_STH004_24_NA3,5000],
 [D_LBC049_24_NA3,5000],
 [D_LBC043_MRM001,10],
 [D_WTPSRW_24_NU2,5000],
-[D_WSE003_LBC040,5000],
-[D_LBC010_PCWA3,20000], !Ensure deliveries to PCWA Zone 3 are met
+[D_LBC010_PCWA3, 20000], !Ensure deliveries to PCWA Zone 3 are met
+[D_CBC000_NIDDC, 5000],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 25    !!!!!!!!!!!!!!

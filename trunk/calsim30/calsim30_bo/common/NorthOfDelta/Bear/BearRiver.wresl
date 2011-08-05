@@ -103,7 +103,7 @@ goal setD_DRM001_SYC002 {D_DRM001_SYC002 = 0.}
 
 ! Assume 1% canal loss
 ! Use C_DRM000 otherwise canal loss influences discharge through wastegate to Bear River
-goal setD_DRM008_DRMLOS {D_DRM008_DRMLOS = 0.01*C_DRM000 + 0.01*C_LVC001}
+goal setD_DRM007_DRMLOS {D_DRM008_DRMLOS = 0.01*C_DRM000 + 0.01*C_LVC001}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Lower Boardman Canal Diversion     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -489,11 +489,13 @@ Sep 	4.84
 define D_CMBIE_CBC000_SV 	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'}
 define C_CBC000_SV 		{timeseries kind 'CHANNEL' units 'TAF' convert 'CFS'}
 
-goal setD_CMBIE_CBC000 	{lhs D_CMBIE_CBC000 rhs D_CMBIE_CBC000_SV lhs<rhs penalty 10000 lhs>rhs penalty 50000}
-goal setC_CBC000 			{lhs C_CBC000 rhs C_CBC000_SV lhs<rhs penalty 10000 lhs>rhs penalty 10000}
+!goal setD_CMBIE_CBC000 	{lhs D_CMBIE_CBC000 rhs D_CMBIE_CBC000_SV lhs<rhs penalty 9999 lhs>rhs penalty 50000}
+!goal setC_CBC000 			{lhs C_CBC000 rhs C_CBC000_SV lhs<rhs penalty 9999 lhs>rhs penalty 10000}
+goal setD_CBC000_NIDDC	{D_CBC000_NIDDC < D_CMBIE_CBC000_SV - C_CBC000_SV}
+goal setD_CBC001_CCK036	{D_CBC001_CCK036 = 0.0 * C_CBC000} !Fix spill if diversions from Combie Canal are not pre-operated
 
 ! Limit releases from Combie Reservoir to flood releases - not releases for downstream water supply
-goal setC_CMBIE{lhs C_CMBIE rhs C_CMBIE_MIF 	lhs>rhs penalty 10000 lhs<rhs penalty 0}
+goal setC_CMBIE{lhs C_CMBIE rhs C_CMBIE_MIF 	lhs>rhs penalty 9999 lhs<rhs penalty 0}
 
 ! Raw Water Master Plan Update, NID, 2005. assumes 15% conveyance loss
 goal setD_CBC001_CBCLOS	{D_CBC001_CBCLOS = 0.15 * C_CBC000}
@@ -505,4 +507,4 @@ goal setD_CBC001_CBCLOS	{D_CBC001_CBCLOS = 0.15 * C_CBC000}
 Limit releases from Camp Far West Reservoir and Dam to flood releases, and releases for 
 Camp Far West ID and South Sutter WD, not releases for demand downstream of Wheatland gage
 */
-goal setC_BRR017 {lhs C_BRR017 rhs C_BRR017_MIF lhs>rhs penalty 10000 lhs<rhs penalty 0}
+goal setC_BRR017 {lhs C_BRR017 rhs C_BRR017_MIF lhs>rhs penalty 9999 lhs<rhs penalty 0}

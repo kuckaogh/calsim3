@@ -43,7 +43,6 @@ define	C_EMD007	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define	C_SCR002	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define	C_DCK012	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define	C_CBC000	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define	C_CBC001	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
