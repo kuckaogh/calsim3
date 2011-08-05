@@ -141,7 +141,7 @@ goal continuityBCC004   {C_BCC006 + SG_BCC004_130 - C_BCC004    = ErrPos_BCC004 
 !!! Lower Boardman, Bear River, South and Gold Hill/Combie Canals    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityCBC000   {D_CMBIE_CBC000 - D_CBC000_NID_N1 - C_CBC000                            = ErrPos_CBC000 - ErrNeg_CBC000}
-goal continuityCBC001   {C_CBC000 - D_CBC001_CCK036 - D_CBC001_24_NA1 - C_CBC001 - D_CBC001_CBCLOS                = ErrPos_CBC001 - ErrNeg_CBC001}
+goal continuityCBC001   {C_CBC000 - D_CBC001_CCK036 - D_CBC001_24_NA1 - D_CBC001_CBCLOS 	= ErrPos_CBC001 - ErrNeg_CBC001}
 goal continuityLBC001   {D_LBR002_LBC001 - C_LBC001 - D_LBC001_LBCLOS                           = ErrPos_LBC001 - ErrNeg_LBC001}
 goal continuityLBC010   {C_LBC001 - D_LBC010_PCWA3 - C_LBC010                                   = ErrPos_LBC010 - ErrNeg_LBC010}
 goal continuityLBC030   {C_LBC010 - D_LBC030_BEC021 - C_LBC030                                  = ErrPos_LBC030 - ErrNeg_LBC030}
