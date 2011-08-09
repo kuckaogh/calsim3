@@ -77,7 +77,7 @@ define IBU_UWFE_max     {value 9999999.}
 !goal NODOSswp_storage_change {NODOSswpDS = C31 + C31A + C5_S32SWP /*+ D31*/ - C177B} !NODOS storage change                      
 
 goal swp_storage_change {SWPDS = C_THRMA + C_FTR068 + D_THRMF_11_NU1 + D_THRMA_WEC000 + D_THRMA_RVC000 + D_THRMA_JBC000
-         + D_OROVL_13_NU1 - C_FTR074 - I_OROVL - CT_OROVL - R_MNRRH_FTR072 /*+ NODOSswpDS*/}!Define SWP Storage Change
+         + D_OROVL_13_NU1 - C_FTR074 - I_OROVL - CT_OROVILLE - R_MNRRH_FTR072 /*+ NODOSswpDS*/}!Define SWP Storage Change
 
 ! **************************** CVP STORAGE CHANGE DEFINITIONS ******************************
 

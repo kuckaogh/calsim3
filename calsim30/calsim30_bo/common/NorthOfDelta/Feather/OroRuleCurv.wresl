@@ -24,8 +24,8 @@ define OroNextMonTarget {alias OroNextMonTarg kind 'STORAGE-LEVEL' units 'TAF'}
 
 define S_OROVLlevel3   {value min(2470.,S_OROVLlevel4) }
 
-define OroInf    {value (I_OROVL + CT_OROVL + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 + D_SLT009_SCT000_SV) * cfs_taf}
-define OroInfEst {sum   (i=0,SEP-month,1) (I_OROVL(i) + CT_OROVL(i) + I_WBF006(i) + I_NFF027(i) + I_MFF019(i) + I_SFF008(i) + I_WBF030(i) + I_SFF011(i) + I_LGRSV(i) + I_LST007(i) + D_SLT009_SCT000_SV(i))*cfs_taf(i) }
+define OroInf    {value (I_OROVL + CT_OROVILLE + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 + D_SLT009_SCT000_SV) * cfs_taf}
+define OroInfEst {sum   (i=0,SEP-month,1) (I_OROVL(i) + CT_OROVILLE(i) + I_WBF006(i) + I_NFF027(i) + I_MFF019(i) + I_SFF008(i) + I_WBF030(i) + I_SFF011(i) + I_LGRSV(i) + I_LST007(i) + D_SLT009_SCT000_SV(i))*cfs_taf(i) }
 define OroDiv    {value (D_WBF030_HKC002_SV + D_WBF015_MIO023_SV + D_SFF011_MNRRH_SV + D_LST004_OWC000_SV)*cfs_taf }
 define OroDivEst {sum   (i=0,SEP-month,1) (0.8*D_WBF030_HKC002_SV(i) + D_WBF015_MIO023_SV(i) + D_SFF011_MNRRH_SV(i) + D_LST004_OWC000_SV(i))*cfs_taf(i) }
 

@@ -1,15 +1,14 @@
 /*
-CONSTRAINTS-RETURNS.WRESL
-CALSIM 3.0 SYSTEM FILE
+Constraints-returns.wresl
+CalSim 3.0 System File
 
-Purpose: Calculate return flow from demand units
+Purpose:
+Calculate return flow from demand units
 
-NAMING TAKES THE FOLLOWING FORMS:
-R_{DEMAND UNIT}		- return flow from specific demand unit
+Naming takes the following form:
+R_{DEMAND UNIT}			- return flow from specific demand unit
 R_{WBA}_{DESTINATION}	- aggregated return from WBA to specific location
 
- Edited ADraper, MWH, 05/11/08
- Edited ADraper, MWH, 11/15/06/
 */
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! DIVERSIONS TO WBAS, AND SUB-ARCS
@@ -671,7 +670,7 @@ goal setR_26S_NU4_RFS26S		{R_26S_NU4_RFS26S = WW_26S_NU4}
 
 goal setR_ELDID_EDWWTP		{R_ELDID_EDWWTP = WW_26S_EID}
 
-goal setR_RFS26S_SRWWTP		{R_RFS26S_SRWWTP = 0.9*R_26S_NU4_RFS26S} !0.90 is placeholder value
+goal setR_RFS26S_SRWWTP		{R_RFS26S_AMR020 = min((6.67/12)* taf_cfs,WW_26S_NU4)}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Misc.		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

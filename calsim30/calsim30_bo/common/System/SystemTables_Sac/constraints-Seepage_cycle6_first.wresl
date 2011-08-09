@@ -1,5 +1,10 @@
 /*
-SEEPAGE ARCS
+File Name: constraints-seepage_cycle6_first.wresl
+CalSim 3.0 System File
+
+Purpose:
+
+Naming takes the following form:
 
 The sign of GetSeep is with respect to groundwater; i.e.
 
@@ -8,8 +13,6 @@ The sign of GetSeep is with respect to groundwater; i.e.
 
 When multiplied by -1, it reflects stream's perspective.  
 
-Original formulation _ AJD, jtpayne July 2006
-updated _ Can Dogrul June 2007
 */
 
 

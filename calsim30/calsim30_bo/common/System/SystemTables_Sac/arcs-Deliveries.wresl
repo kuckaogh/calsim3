@@ -1,11 +1,11 @@
 /*
-ARCS-DELIVERIES.WRESL
-CALSIM III SYSTEM FILE
+File Name: arcs-deliveries.wresl
+CalSim 3.0 System File
 
-Purpose: Define arcs associated with delivery of water
+Purpose:
+Define arcs associated with delivery of water
 
-
-NAMING TAKES THE FOLLOWING FORMS:
+Naming takes the following form:
 DG_{Demand Unit}         - Total (Gross) Surface diversion
 DN_{Demand Unit}         - Net Surface Delivery, reduced by conveyance losses and spills
 RU_{Demand Unit}         - Reuse of return flow from field/farm and lateral seepage from canal system to toe drains
@@ -16,9 +16,6 @@ AWO_{Demand Unit}        - Applied Water for all other crops
 AWW_{Demand Unit}        - Applied Water for wetlands
 UD_{Demand Unit}         - Urban demand
 
-Edited ADraper, MWH, 05/11/08
-Edited DJones, DWR, 04/21/08
-Edited ADraper, MWH, 11/15/06
 */
 !define SHRTG_09_PR    {std kind 'SHORTAGE' units 'CFS'}
 !define SHRTG_09_PR2    {std kind 'SHORTAGE' units 'CFS'}

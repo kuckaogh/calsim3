@@ -1,17 +1,15 @@
 /*
-CALSIM III SYSTEM FILE
-ARCS-SEEPAGE.WRESL
+File Name: arcs-seepage.wresl
+CalSim 3.0 System File
 
+Purpose:
 
-NAMING TAKES THE FOLLOWING FORM:
+Naming takes the following form:
 SG_{CalSim_3 Node}_{corresponding C2VSIM Groundwater Node}	  ! C2VSIM element Node	 C2VSIM river node
 
 positive seepage = gaining stream
 negative seepage = loosing stream
 
-
-Edited ajdraper, MWH, November 15, 2006
-Modified by Can Dogrul, DWR, April 3, 2008
 */
 !!! Estimated Stream Gain for Current Timestep !!!
 

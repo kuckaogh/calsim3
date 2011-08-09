@@ -1,13 +1,9 @@
 /*
-CONSTRAINTS-CONNECTIVITY.WRESL
-CALSIM III SYSTEM FILE
+Constraints-connectivity.wresl
+CalSim 3.0 System File
 
-Purpose: Assure continuity in surface water network
-
- Edited ADraper, MWH, 05/11/08
- Edited DJones, DWR, 04/25/08
- Edited ADraper, MWH, 11/15/06/
- 
+Purpose:
+Assure continuity in surface water network
  */
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -334,7 +330,7 @@ goal continuityELD005   {C_ELD012 + SG_ELD005_085 - C_ELD005                = Er
 !!! Feather River   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 goal continuityFTR074   {C_SFF002 + C_NFF008 - C_FTR074                                             = ErrPos_FTR074 - ErrNeg_FTR074}! Inflow to Oroville 
-goal continuityOROVL    {C_FTR074 + I_OROVL + CT_OROVL - D_OROVL_13_NU1 - E_OROVL - C_OROVL                    = S_OROVL * taf_cfs - S_OROVL(-1) * taf_cfs + ErrPos_OROVL - ErrNeg_OROVL} ! Lake Oroville. 
+goal continuityOROVL    {C_FTR074 + I_OROVL + CT_OROVILLE - D_OROVL_13_NU1 - E_OROVL - C_OROVL                    = S_OROVL * taf_cfs - S_OROVL(-1) * taf_cfs + ErrPos_OROVL - ErrNeg_OROVL} ! Lake Oroville. 
 goal continuityFTR072   {C_OROVL  + R_MNRRH_FTR072 - C_FTR072                                           = ErrPos_FTR072 - ErrNeg_FTR072}! Kelly Ridge return
 goal continuityFTR068   {C_FTR072 + SG_FTR068_162 - D_FTR068_THRMF - C_FTR068                                  = ErrPos_FTR068 - ErrNeg_FTR068}! Diversion to Thermalito Forebay.
 goal continuityFTR067   {C_FTR068 - C_FTR067                                                    = ErrPos_FTR067 - ErrNeg_FTR067}! Feather River at Oroville gage.   
@@ -645,7 +641,7 @@ goal continuitySAC134   {C_SAC136 + SG_SAC134_269 - C_SAC134                    
 goal continuitySAC129   {C_SAC134 + SG_SAC129_277 - D_SAC129_08S_NA2 - C_SAC129                                                        = ErrPos_SAC129 - ErrNeg_SAC129}    
 goal continuitySAC122   {C_SAC129 + SG_SAC122_291 + R_RFS18_SAC122 - D_SAC122_19_SA - SP_SAC122_SBP021 - C_SAC122           = ErrPos_SAC122 - ErrNeg_SAC122}    ! Tisdale Bypass. 
 goal continuitySAC121   {C_SAC122 - D_SAC121_08S_SA3 - C_SAC121                                     = ErrPos_SAC121 - ErrNeg_SAC121}
-goal continuitySAC120   {C_SAC121 + CT_WilkinsSl - C_SAC120                                                    = ErrPos_SAC120 - ErrNeg_SAC120}
+goal continuitySAC120   {C_SAC121 + CT_WilkinsSlough - C_SAC120                                                    = ErrPos_SAC120 - ErrNeg_SAC120}
 goal continuitySAC115   {C_SAC120 + SG_SAC115_303 - D_SAC115_19_SA - C_SAC115                                           = ErrPos_SAC115 - ErrNeg_SAC115}    
 goal continuitySAC109   {C_SAC115 - D_SAC109_08S_SA3 - D_SAC109_19_SA - C_SAC109                                         = ErrPos_SAC109 - ErrNeg_SAC109}
 goal continuitySAC106   {C_SAC109 + SG_SAC106_315 - C_SAC106                                        = ErrPos_SAC106 - ErrNeg_SAC106}

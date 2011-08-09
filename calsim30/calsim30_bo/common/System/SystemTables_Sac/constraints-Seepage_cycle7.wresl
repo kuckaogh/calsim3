@@ -1,11 +1,14 @@
 /*
-SEEPAGE ARCS
+File Name: constraints-seepage_cycle7.wresl
+CalSim 3.0 System File
+
+Purpose:
+
+Naming takes the following form:
 
 positive seepage = gaining stream
 negative seepage = loosing stream
 
-Original formation _ AJD, jtpayne July 2006
-updated _ BJoyce Sept 2006
 */
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
