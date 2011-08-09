@@ -1,6 +1,11 @@
-/*Weir_steps.wresl
+/*
+File Name: constraints-weirs2.wresl
+CalSim 3.0 System File
 
-Revised 12/20/99
+Purpose:
+
+Naming takes the following form:
+
 
 Sacramento River - Butte & Colusa Basin, and Weir Overflow Operation.
 Weir and Overflow ratings are estimates and therefore subject to change.

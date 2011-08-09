@@ -1,3 +1,16 @@
+/*
+
+File Name: constraints-runoff.wresl
+CalSim 3.0 System File
+
+Purpose:
+
+Naming takes the following form:
+
+*/
+
+
+
 define Area_02_CWD003	{select fraction from WatershedArea where watershed =1}
 define Area_02_KSWCK	{select fraction from WatershedArea where watershed =2}
 define Area_02_SAC257	{select fraction from WatershedArea where watershed =3}

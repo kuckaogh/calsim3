@@ -1,12 +1,12 @@
 /*
-CONSTRAINTS-DELIVERIES.WRESL
-CALSIM III SYSTEM FILE
+File Name: constraints-deliveries.wresl
+CalSim 3.0 System File
 
-Purpose: Assure continuity in delivery arcs
+Purpose:
+Assure continuity in delivery arcs
 
- Edited ADraper, MWH, 05/11/08
- Edited DJones, DWR, 04/27/08
- Edited ADraper, MWH, 11/15/06/
+Naming takes the following form:
+
 */
 
 ! For managed wetlands constrain groundwater pumping to minimum specified amount

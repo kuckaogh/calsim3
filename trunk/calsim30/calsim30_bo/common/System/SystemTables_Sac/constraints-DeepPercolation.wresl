@@ -1,6 +1,10 @@
 /*
-SETDEEPPERC.WRESL
-DEEP PERC PASSED TO GW MODULE
+File Name: constraints-deeppercolation.wresl
+CalSim 3.0 System File
+
+Purpose:
+
+Naming takes the following form:
 
 The total deep perc for each WBA that are input to CalSim-III are passed
 to GW module using SetDP function.  The deep perc amounts are for each
@@ -10,7 +14,6 @@ perc at a WBA is scaled back using fDP_WBA_?? factor based on its area
 overlaid by C2VSIM domain.  This scaled back deep perc is passed to the 
 GW module.
 
-Can Dogrul October 2008
 */
 
 !*********************************************************************

@@ -1,12 +1,13 @@
 /*
-LIMIT DIVERSIONS TO DIVERSION-LIMIT AMOUNTS AND CHANNEL CAPACITY CONSTRAINTS
+Constraints-contracts.wresl
+CalSim 3.0 System File
 
-NAMING TAKES THE FOLLOWING FORMS:
+Purpose:
+Limit surface water diversions to contract amounts, water allocations and water rights
 
-CLmon_{ORIGIN PREFIX}_{DESTINATION}     - monthly contract limit on specific contractors diversion from particular source (state variable)
-WRmon_{ORIGIN PREFIX}_{DESTINATION} - monthly water right on specific water user diversion from particular source (state variable)     
+Naming takes the following form:
+DLT_{upstream node}_{demand unit}   - monthly contract or water right limit on specific contractors diversion from particular source  
 
- Original formulation: jtpayne  August 2006
 */
 ! define CVP allocations 
 define perdv_cvpag_sys   {std kind 'percent-delivery' units 'none'}

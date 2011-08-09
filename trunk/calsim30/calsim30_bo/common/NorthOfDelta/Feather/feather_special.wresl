@@ -154,7 +154,7 @@ define yuba_alloc {value YCWA_Alloc*(CLmon_YUB013_14_NA + CLmon_YUB011_15N_NA2 +
 define minflowFeaMouth {
     case DiversionSeason {
         condition month>=APR .and. month<=SEP
-        value     max(min(2800.,I_DER001 + I_ENGLB +I_NBLDB + I_SLT009 + I_OGN005 + I_NFY029 + I_MFY013 + I_SFY007 - yuba_alloc + I_OROVL + CT_OROVL + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 - frsa_alloc),minflowFeather) }
+        value     max(min(2800.,I_DER001 + I_ENGLB +I_NBLDB + I_SLT009 + I_OGN005 + I_NFY029 + I_MFY013 + I_SFY007 - yuba_alloc + I_OROVL + CT_OROVILLE + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 - frsa_alloc),minflowFeather) }
     case other {
         condition always
         value     minflowFeather }

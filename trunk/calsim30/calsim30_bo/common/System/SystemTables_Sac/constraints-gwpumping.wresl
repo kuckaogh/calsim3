@@ -1,8 +1,12 @@
 /*
-CALSIM 3.0 SYSTEM FILE
-CONSTRAINTS-GWPUMPING.WRESL
+File Name: constraints-GWpumping.wresl
+CalSim 3.0 System File
 
-Edited A Draper, MWH, June 11, 2011
+Purpose:
+
+Naming takes the following form:
+
+
 */
 
 !Note: Constraints for demand units with no access to surface water are not meaningful.

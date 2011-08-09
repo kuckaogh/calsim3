@@ -1,15 +1,16 @@
 /*
-CALSIM 3.0 SYSTEM FILE
-ARCS-CONTRACTS.WRESL
+File Name: arcs-contracts.wresl
+CalSim 3.0 System File
 
-NAMING TAKES THE FOLLOWING FORMS:
+Purpose:
+
+Naming takes the following form:
 CLann_{ORIGIN PREFIX}_{DESTINATION}     - annual limitation on specific contractors diversion from particular source (state variable)
 CLmon_{ORIGIN PREFIX}_{DESTINATION}     - monthly limitation on specific contractors diversion from particular source (state variable)
 CL_{ORIGIN PREFIX}_{DESTINATION}        - monthly limitation on specific contractors diversion from particular source (decision variable for output)
 
 All units is TAF
 
-Edited ajdraper, MWH, November 28, 2007
 */
 
 ! The summation of annual applied water for CVP Ag, M&I and refuge is done in sumcvpDR_sys.wresl

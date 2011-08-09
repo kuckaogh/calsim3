@@ -1,17 +1,16 @@
 /*
-CALSIM III SYSTEM FILE
-ARCS-ERROR.WRESL
+File Name: arcs-errors.wresl
+CalSim 3.0 System File
 
-NAMING TAKES THE FOLLOWING FORM:
+Purpose:
+
+Naming takes the following form:
 ErrPos_{CalSim-III node}
 ErrNeg_{CalSim-III node}
 
 Ensures connectivity constraints can be met
 Large penalty assigned to arcs
 
-
-Edited ajdraper, MWH, November 15, 2006
-Edited DJones, DWR, April 30, 2008
 */
 
 

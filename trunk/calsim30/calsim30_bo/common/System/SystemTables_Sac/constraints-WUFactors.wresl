@@ -1,10 +1,11 @@
 /*
-CONSTRAINTS-WUFACTORS.WRESL
-CALSIM III SYSTEM FILE
+File Name: constraints-WUfactors.wresl
+CalSim 3.0 System File
 
-Purpose: Apply water use factors
+Purpose:
+Apply water use factors
  
- NAMING TAKES THE FOLLOWING FORMS:
+Naming takes the following form:
  EL_{source prefix}_{demand unit} - evaporative loss (non-recoverable)
  PL_{source prefix}_{demand unit} - percolation loss (to groundwater)
  RL_{source prefix}_{demand unit} - return flow loss (seepage loss to canal toe drain, available for reuse)
@@ -12,10 +13,6 @@ Purpose: Apply water use factors
   
  DL_{source prefix}_{demand unit}  - total conveyance loss  associated with diversion (EL + PL + RL + SL)
  DL_{demand unit}             - total conveyance loss  associated with demand unit from multiple diversion arcs
-  
- Edited ADraper, MWH, 05/11/08
- Edited ADraper, MWH, 11/15/06/
-  
   
 */
 

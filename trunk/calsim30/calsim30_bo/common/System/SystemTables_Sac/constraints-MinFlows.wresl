@@ -1,3 +1,12 @@
+/*
+File Name: constraints-minflows.wresl
+CalSim 3.0 System File
+
+Purpose:
+
+*/
+
+
 ! Instream flow requirements
 goal   C_LWSTNtotal  {C_LWSTN = C_LWSTN_MIF + C_LWSTN_ADD}
 

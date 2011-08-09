@@ -1,12 +1,11 @@
 /*
-CALSIM III SYSTEM FILE
-ARCS-WEIRS.WRESL
+File Name: arcs-weirs.wresl
+CalSim 3.0 System File
 
-NAMING TAKES THE FOLLOWING FORM:
-S_{CalSim-III river node which looses water to another river, channel or bypass}
+Purpose:
 
-
-Edited ajdraper, MWH, November 15, 2006
+Naming takes the following form:
+S_{CalSim-3.0 river node which looses water to another river, channel or bypass}
 */
 
 
