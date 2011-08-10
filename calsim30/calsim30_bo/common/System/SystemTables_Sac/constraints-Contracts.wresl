@@ -347,7 +347,7 @@ goal limitD_WEC005_11_PR {D_WEC005_11_PR < WRmon_WEC005_11_PR*taf_cfs}
 define DLT_WEC005_11_PR		{alias WRmon_WEC005_11_PR*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'} 
 
 
-goal limitAW_WEC005_11_PR     {D_WEC005_11_PR < (AWR_11_PR*(1.- RUFR_11_PR) + AWO_11_PR*(1.- RUFO_11_PR) + AWW_11_PR*(1.- RUFW_11_PR))*(1.+ EVF_WEC005_11_PR + DPF_WEC005_11_PR + LFF_WEC005_11_PR + OSF_WEC005_11_PR)*(2255/4710)} ! Factor based on relative areas of the refuges
+goal limitAW_WEC005_11_PR     {D_WEC005_11_PR < (AWR_11_PR*(1.- RUFR_11_PR) + AWO_11_PR*(1.- RUFO_11_PR) + AWW_11_PR*(1.- RUFW_11_PR))*(1-GPmin_11_PR)*(1.+ EVF_WEC005_11_PR + DPF_WEC005_11_PR + LFF_WEC005_11_PR + OSF_WEC005_11_PR)*(2255./4710.)} ! Factor based on relative areas of the refuges
 
 goal limitD_RVC005_11_PR {D_RVC005_11_PR < WRmon_RVC005_11_PR*taf_cfs}
 define DLT_RVC005_11_PR		{alias WRmon_RVC005_11_PR*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}

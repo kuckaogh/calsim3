@@ -241,7 +241,7 @@ MODEL SETUP {      !CYCLE 6
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
@@ -344,7 +344,7 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 7
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
 
@@ -453,7 +453,7 @@ MODEL WHEELCVC {      !CYCLE 8
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
 
