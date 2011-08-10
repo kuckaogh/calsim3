@@ -96,7 +96,8 @@ define	CLN_SAC099_19_SA	{select nonpeak from Contracts_CVPSettlement where diver
 define[local] CLWF_ANN_PCWA_A   {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define[local] CLWF_ANN_FOLSM     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define[local] CLWF_ANN_SJWD_S   {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
-define[local] CLWF_ANN_ELDOR     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
+define[local] CLWF_ANN_ELDOR_ID     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
+define[local] CLWF_ANN_ELDOR_CO     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define[local] CLWF_ANN_SMUD       {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define[local] CLWF_ANN_SCWA       {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define[local] CLWF_ANN_ROSEV     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
@@ -138,7 +139,8 @@ define anncvpCL_pmi_n { value
       +CLWF_ANN_PCWA_A
       +CLWF_ANN_FOLSM
       +CLWF_ANN_SJWD_S
-      +CLWF_ANN_ELDOR
+      +CLWF_ANN_ELDOR_ID
+      +CLWF_ANN_ELDOR_CO
       +CLWF_ANN_SMUD
       +CLWF_ANN_SCWA
       +CLWF_ANN_ROSEV

@@ -947,7 +947,7 @@ define OSF_WEC005_11_SA1 {value 0.03} !canal operating spill fraction
 define RUFR_11_SA1 	{value RUFR2*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA1   	{value 0.10} !reuse fraction for all other crops
 define RUFW_11_SA1  	{value 0.15} !reuse fraction for wetlands
-define RPF_11_SA1        	{value 0.025} !riparian and miscellaneous ET fraction
+define RPF_11_SA1       {value 0.025} !riparian and miscellaneous ET fraction
 
 define EV_11_SA1         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA1         {std kind 'DEEP-PERCOLATION' units 'CFS'}
@@ -971,7 +971,7 @@ define OSF_LDC007_11_SA2 {value 0.03} !canal operating spill fraction
 define RUFR_11_SA2       {value RUFR1*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA2       {value 0.00} !reuse fraction for all other crops
 define RUFW_11_SA2       {value 0.15} !reuse fraction for wetlands
-define RPF_11_SA2        {value 0.010} !riparian and miscellaneous ET fraction
+define RPF_11_SA2        {value 0.10} !riparian and miscellaneous ET fraction
 
 define EV_11_SA2         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA2         {std kind 'DEEP-PERCOLATION' units 'CFS'}
@@ -990,7 +990,7 @@ define OSF_JBC004_11_SA3 {value 0.03} !canal operating spill fraction
 define RUFR_11_SA3       {value RUFR1*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA3       {value 0.00} !reuse fraction for all other crops
 define RUFW_11_SA3       {value 0.15} !reuse fraction for wetlands
-define RPF_11_SA3        {value 0.010} !riparian and miscellaneous ET fraction
+define RPF_11_SA3        {value 0.10} !riparian and miscellaneous ET fraction
 
 define EV_11_SA3         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA3         {std kind 'DEEP-PERCOLATION' units 'CFS'}
@@ -1009,7 +1009,7 @@ define OSF_SEC009_11_SA4 {value 0.03} !canal operating spill fraction
 define RUFR_11_SA4       {value RUFR1*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_11_SA4       {value 0.00} !reuse fraction for all other crops
 define RUFW_11_SA4       {value 0.15} !reuse fraction for wetlands
-define RPF_11_SA4        {value 0.010} !riparian and miscellaneous ET fraction
+define RPF_11_SA4        {value 0.10} !riparian and miscellaneous ET fraction
 
 define EV_11_SA4         {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_11_SA4         {std kind 'DEEP-PERCOLATION' units 'CFS'}

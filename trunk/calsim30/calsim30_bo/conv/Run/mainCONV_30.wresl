@@ -258,7 +258,7 @@ MODEL SETUP {      !CYCLE 6
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
@@ -361,7 +361,7 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 7
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
 
@@ -466,7 +466,7 @@ MODEL UPSTREAM {      !CYCLE 8
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
 
@@ -575,7 +575,7 @@ MODEL DELTA {      !CYCLE 9
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
 
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_UPSTREAM.wresl'
 
@@ -684,7 +684,7 @@ MODEL DELTA2 {      !CYCLE 10
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
 
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA.wresl'
 
@@ -800,7 +800,7 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 11
     INCLUDE [LOCAL] '..\..\common\Delta\Delta_ANN_Reduced_Calls.wresl'     ! Use this file for ANN salinity requirements
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
-    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA2.wresl'
 
