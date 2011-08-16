@@ -36,7 +36,7 @@ goal set_carryover_NBB {
 define I_NBB_APR { 
 	case april	{
 		condition month == apr
-		value I_NFY029    + I_NBLDB    + I_SLT009    + min(min(max(0., I_MFY013 - 50.),850.) + max(0., I_OGN005 - 10.),1100.)  - D_SLT009_SCT000_SV   }
+		value max(0.0, I_NFY029    + I_NBLDB    + I_SLT009    + min(min(max(0., I_MFY013 - 50.),850.) + max(0., I_OGN005 - 10.),1100.)  - D_SLT009_SCT000_SV)}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -44,7 +44,7 @@ define I_NBB_APR {
 define I_NBB_MAY {
 	case april	{
 		condition month == apr
-		value I_NFY029(1) + I_NBLDB(1) + I_SLT009(1) + min(min(max(0., I_MFY013(1) - 60.),850.) + max(0., I_OGN005(1) - 12.),1100.) - D_SLT009_SCT000_SV(1)}
+		value max(0.0, I_NFY029(1) + I_NBLDB(1) + I_SLT009(1) + min(min(max(0., I_MFY013(1) - 60.),850.) + max(0., I_OGN005(1) - 12.),1100.) - D_SLT009_SCT000_SV(1))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -52,7 +52,7 @@ define I_NBB_MAY {
 define I_NBB_JUN {
 	case april	{
 		condition month == apr
-		value I_NFY029(2) + I_NBLDB(2) + I_SLT009(2) + min(min(max(0., I_MFY013(2) - 50.),850.) + max(0., I_OGN005(2) - 10.),1100.) - D_SLT009_SCT000_SV(2)}
+		value max(0.0, I_NFY029(2) + I_NBLDB(2) + I_SLT009(2) + min(min(max(0., I_MFY013(2) - 50.),850.) + max(0., I_OGN005(2) - 10.),1100.) - D_SLT009_SCT000_SV(2))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -60,7 +60,7 @@ define I_NBB_JUN {
 define I_NBB_JUL {
 	case april	{
 		condition month == apr
-		value I_NFY029(3) + I_NBLDB(3) + I_SLT009(3) + min(min(max(0., I_MFY013(3) - 30.),850.) + max(0., I_OGN005(3) - 8.),1100.) - D_SLT009_SCT000_SV(3)}
+		value max(0.0, I_NFY029(3) + I_NBLDB(3) + I_SLT009(3) + min(min(max(0., I_MFY013(3) - 30.),850.) + max(0., I_OGN005(3) - 8.),1100.) - D_SLT009_SCT000_SV(3))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -68,7 +68,7 @@ define I_NBB_JUL {
 define I_NBB_AUG {
 	case april	{
 		condition month == apr
-		value I_NFY029(4) + I_NBLDB(4) + I_SLT009(4) + min(min(max(0., I_MFY013(4) - 30.),850.) + max(0., I_OGN005(4) - 8.),1100.) - D_SLT009_SCT000_SV(4)}
+		value max(0.0, I_NFY029(4) + I_NBLDB(4) + I_SLT009(4) + min(min(max(0., I_MFY013(4) - 30.),850.) + max(0., I_OGN005(4) - 8.),1100.) - D_SLT009_SCT000_SV(4))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -76,7 +76,7 @@ define I_NBB_AUG {
 define I_NBB_SEP {
 	case april	{
 		condition month == apr
-		value I_NFY029(5) + I_NBLDB(5) + I_SLT009(5) + min(min(max(0., I_MFY013(5) - 30.),850.) + max(0., I_OGN005(5) - 8.),1100.) - D_SLT009_SCT000_SV(5)}
+		value max(0.0, I_NFY029(5) + I_NBLDB(5) + I_SLT009(5) + min(min(max(0., I_MFY013(5) - 30.),850.) + max(0., I_OGN005(5) - 8.),1100.) - D_SLT009_SCT000_SV(5))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -85,7 +85,7 @@ define I_NBB_SEP {
 define I_EB_APR {
 	case april	{
 		condition month == apr
-		value I_ENGLB + CT_SMARTVILLE	  + I_OGN005    + I_MFY013    + I_SFY007    - min(min(max(0., I_MFY013 - 50.),850.) + max(0., I_OGN005 - 10.),1100.)}
+		value max(0.0, I_ENGLB + CT_SMARTVILLE	  + I_OGN005    + I_MFY013    + I_SFY007    - min(min(max(0., I_MFY013 - 50.),850.) + max(0., I_OGN005 - 10.),1100.))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -93,7 +93,7 @@ define I_EB_APR {
 define I_EB_MAY {
 	case april	{
 		condition month == apr
-		value I_ENGLB(1) + CT_SMARTVILLE(1) + I_OGN005(1) + I_MFY013(1) + I_SFY007(1) - min(min(max(0., I_MFY013(1) - 60.),850.) + max(0., I_OGN005(1) - 12.),1100.)}
+		value max(0.0, I_ENGLB(1) + CT_SMARTVILLE(1) + I_OGN005(1) + I_MFY013(1) + I_SFY007(1) - min(min(max(0., I_MFY013(1) - 60.),850.) + max(0., I_OGN005(1) - 12.),1100.))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -101,7 +101,7 @@ define I_EB_MAY {
 define I_EB_JUN {
 	case april	{
 		condition month == apr
-		value I_ENGLB(2) + CT_SMARTVILLE(2) + I_OGN005(2) + I_MFY013(2) + I_SFY007(2) - min(min(max(0., I_MFY013(2) - 50.),850.) + max(0., I_OGN005(2) - 10.),1100.)}
+		value max(0.0, I_ENGLB(2) + CT_SMARTVILLE(2) + I_OGN005(2) + I_MFY013(2) + I_SFY007(2) - min(min(max(0., I_MFY013(2) - 50.),850.) + max(0., I_OGN005(2) - 10.),1100.))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -109,7 +109,7 @@ define I_EB_JUN {
 define I_EB_JUL {
 	case april	{
 		condition month == apr
-		value I_ENGLB(3) + CT_SMARTVILLE(3) + I_OGN005(3) + I_MFY013(3) + I_SFY007(3) - min(min(max(0., I_MFY013(3) - 30.),850.) + max(0., I_OGN005(3) - 8.),1100.)}
+		value max(0.0, I_ENGLB(3) + CT_SMARTVILLE(3) + I_OGN005(3) + I_MFY013(3) + I_SFY007(3) - min(min(max(0., I_MFY013(3) - 30.),850.) + max(0., I_OGN005(3) - 8.),1100.))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -117,7 +117,7 @@ define I_EB_JUL {
 define I_EB_AUG {
 	case april	{
 		condition month == apr
-		value I_ENGLB(4) + CT_SMARTVILLE(4) + I_OGN005(4) + I_MFY013(4) + I_SFY007(4) - min(min(max(0., I_MFY013(4) - 30.),850.) + max(0., I_OGN005(4) - 8.),1100.)}
+		value max(0.0, I_ENGLB(4) + CT_SMARTVILLE(4) + I_OGN005(4) + I_MFY013(4) + I_SFY007(4) - min(min(max(0., I_MFY013(4) - 30.),850.) + max(0., I_OGN005(4) - 8.),1100.))}
 	case other	{
 		condition always
 		value 0.0 }}
@@ -125,7 +125,7 @@ define I_EB_AUG {
 define I_EB_SEP {
 	case april	{
 		condition month == apr
-		value I_ENGLB(5) + CT_SMARTVILLE(5) + I_OGN005(5) + I_MFY013(5) + I_SFY007(5) - min(min(max(0., I_MFY013(5) - 30.),850.) + max(0., I_OGN005(5) - 8.),1100.)}
+		value max(0.0, I_ENGLB(5) + CT_SMARTVILLE(5) + I_OGN005(5) + I_MFY013(5) + I_SFY007(5) - min(min(max(0., I_MFY013(5) - 30.),850.) + max(0., I_OGN005(5) - 8.),1100.))}
 	case other	{
 		condition always
 		value 0.0 }}
