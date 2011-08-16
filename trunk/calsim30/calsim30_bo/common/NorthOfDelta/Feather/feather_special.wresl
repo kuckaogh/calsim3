@@ -149,7 +149,7 @@ goal OroRelJulSep {
     value        1.00*(CLmon_FTR039_11_SA4 + CLmon_JBC008_11_SA4 + CLmon_WEC005 + CLmon_JBC004_11_SA3 + CLmon_RVC005_11_SA2PR2)*taf_cfs}
 }
 
-define yuba_alloc {value YCWA_Alloc*(CLmon_YUB013_14_NA + CLmon_YUB011_15N_NA2 + CLmon_YUB011_15S_NA2 + CLmon_YUB003_15N_NU)*taf_cfs}
+define yuba_alloc {value YCWA_Alloc(-1)*(CLmon_YUB013_14_NA + CLmon_YUB011_15N_NA2 + CLmon_YUB011_15S_NA2 + CLmon_YUB003_15N_NU)*taf_cfs}
 
 define minflowFeaMouth {
     case DiversionSeason {

@@ -95,9 +95,9 @@ MODEL SJRBASE {         !CYCLE 1
     INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCommon2.wresl'
     INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCyc1.wresl'    
 
-    INCLUDE '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
-    INCLUDE '..\..\common\northofdelta\yuba\wateryear_index.wresl'
-    INCLUDE[LOCAL]       '..\..\common\northofdelta\yuba\AnnualAllocation.wresl'
+!    INCLUDE '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
+!    INCLUDE '..\..\common\northofdelta\yuba\wateryear_index.wresl'
+!    INCLUDE[LOCAL]       '..\..\common\northofdelta\yuba\AnnualAllocation.wresl'
      }
 MODEL SJR_WQ1 {         !CYCLE 2
 !CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
@@ -112,7 +112,7 @@ MODEL SJR_WQ1 {         !CYCLE 2
     INCLUDE[local] '..\..\common\sanjoaquin\WaterQuality\Vernalis_WQmin_Disag.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\Groundwater\SJRGW_restrict.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\various\bounds_cycles\bounds_cycle2.wresl'
-    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
+!    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
      }
 
 MODEL SJR_PULSE {            !CYCLE 3
@@ -128,7 +128,7 @@ MODEL SJR_PULSE {            !CYCLE 3
     INCLUDE[local] '..\..\common\sanjoaquin\Tuolumne\tuol_FERC_pulse.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\Groundwater\SJRGW_restrict.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\various\bounds_cycles\bounds_cycle3.wresl'
-    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
+!    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
      }
 
 MODEL SJR_WQ2 {         !CYCLE 4
@@ -144,7 +144,7 @@ MODEL SJR_WQ2 {         !CYCLE 4
     INCLUDE[local] '..\..\common\sanjoaquin\WaterQuality\Vernalis_WQpulse_Disag.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\Groundwater\SJRGW_restrict.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\various\bounds_cycles\bounds_cycle4.wresl'
-    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
+!    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
      }
 
 MODEL VAMP_AND_DO {           !CYCLE 5
@@ -161,7 +161,7 @@ MODEL VAMP_AND_DO {           !CYCLE 5
     INCLUDE[local] '..\..\common\SANJOAQUIN\STANISLAUS\DO.WRESL'
     INCLUDE[local] '..\..\common\sanjoaquin\Groundwater\SJRGW_restrict.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\various\bounds_cycles\bounds_cycle5.wresl'
-    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
+!    INCLUDE[local]'..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
      }
 
 
@@ -169,7 +169,8 @@ MODEL SETUP {      !CYCLE 6
     define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
-    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'    
+!    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
     INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_first.wresl'
     INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
@@ -260,18 +261,21 @@ MODEL SETUP {      !CYCLE 6
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
+
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation.wresl'    
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
     
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
-    INCLUDE '..\..\common\northofdelta\yuba\power.wresl'
-    INCLUDE '..\..\common\northofdelta\yuba\nbb_operations.wresl'
-    INCLUDE '..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
      }
      
 MODEL MONTHLYWEIGHTED {      !CYCLE 7
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
-    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'    
+!    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac2.wresl'
     INCLUDE[LOCAL] '..\..\common\hydrology\weirs\weir_steps_dailyops_SETUP.wresl'
     INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_repeat_WSI.wresl'
@@ -363,18 +367,21 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 7
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
+
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
     
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\power.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\nbb_operations.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
      }
      
 MODEL WHEELCVC {      !CYCLE 8
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
-    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'    
+!    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac2.wresl'
     INCLUDE[LOCAL] '..\..\common\hydrology\weirs\weir_steps_dailyops_MONTHLYWEIGHTED.wresl'
     INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle7_WSI.wresl'
@@ -479,10 +486,12 @@ MODEL WHEELCVC {      !CYCLE 8
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
     INCLUDE[local] '..\..\common\CCWD\WQ_Calcs\WQ_Calcs_MONTHLYWEIGHTED.wresl'
 
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
+
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\power.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\nbb_operations.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\AnnualAllocation_YUBA_CY2.wresl'
 
 !    INCLUDE[local] 'CycleOutput\cycle_output.wresl'
     INCLUDE[local] '..\..\common\CycleOutput\cycle_output.wresl'

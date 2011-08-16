@@ -255,16 +255,16 @@ define I_TRNTY 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}
 define I_LWSTN 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}
 
 !!! Yolo Bypass !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-/*
-!!! Yuba River (see Yuba_Definition.wresl) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!! Yuba River     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define I_NBLDB  {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Inflow to New Bullards Bar Reservoir
+define I_ENGLB  {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Inflow to Englebright Reservoir
 define I_SLT009 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Slate Creek
-define I_CMT001 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Comptonville Tunnel
-define I_NFY017 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! North Fork Yuba River and small watersheds
-define I_ENGLB {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Inflow to Englebright Reservoir
-define I_DER001 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Deere Creek
-!define I_YUB014 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Local inflow between Englebright Dam and Daguerre Point Dam
-!define I_YUB003 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! EWA NOD Purchases
-*/
+define I_OGN005 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Oregon Creek
+define I_NFY029 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! North Fork Yuba River
+define I_MFY013 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Middle Fork Yuba River
+define I_SFY007 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! South Fork Yuba River
+define I_DER001 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Deer Creek
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! CLOSURE TERMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

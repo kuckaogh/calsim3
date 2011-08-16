@@ -498,8 +498,7 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 6
      INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
      INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
    !  INCLUDE[local] '..\..\common\Los_Vaqueros\LVE_OpsFixPreJPOD.wresl'
-     INCLUDE[local] '..\..\common\yuba\Misc_YUBA\lowerbasin\yuba_cycle7.wresl'
-
+     
      define D419_swpC6 {alias D419_swp[monthlyweighted5] units 'cfs'}
      
      define DRsys {alias anncvpDR_sysdv[SJRBASE] UNITS 'TAF'}

@@ -48,7 +48,7 @@ ID	MinFraction	MaxFraction
 44	0.00	1.00	!24_NU4		Small communities
 45	1.00	1.00	!25_NU		Rio Vista, Dixon, small communities
 46	0.00	1.00	!25_PU		Vacaville
-47	0.00	1.00	!26N_NU1	San Juan WD - other wholesale
+47	0.00	0.30	!26N_NU1	San Juan WD - other wholesale
 48	0.20	1.00	!26N_NU2	Carmichael WD - groundwater is used to meet peak demands
 49	0.00	1.00	!26N_NU3	Sacramento - North
 50	0.00	1.00	!26N_NU4	Sacramento Suburban WD

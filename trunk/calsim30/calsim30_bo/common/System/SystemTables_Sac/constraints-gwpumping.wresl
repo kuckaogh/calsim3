@@ -753,7 +753,7 @@ goal set_GP_WBATotal_25  {GP_WBATotal_25 - GP_25_PA2 - GP_25_NA - GP_25_PA1 - GP
 
 !26N_NU1
 goal setGPmin_26N_NU1      {GP_26N_NU1 > GPmin_26N_NU1 * UD_26N_NU1}
-!goal setGPmax_26N_NU1      {GP_26N_NU1 < GPmax_26N_NU1 * UD_26N_NU1}
+goal setGPmax_26N_NU1      {GP_26N_NU1 < GPmax_26N_NU1 * UD_26N_NU1}
 
 !26N_NU2
 goal setGPmin_26N_NU2      {GP_26N_NU2 > GPmin_26N_NU2 * UD_26N_NU2}
