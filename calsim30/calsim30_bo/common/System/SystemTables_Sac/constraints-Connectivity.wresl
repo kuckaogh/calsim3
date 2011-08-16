@@ -103,11 +103,11 @@ goal continuityCMBIE  {I_CMBIE + C_BRR049 - D_CMBIE_CBC000 - C_CMBIE - E_CMBIE =
 goal continuityBRR031 {C_CMBIE + C_WLF013 /*+ R_TARR_BRR031*/ - C_BRR031                = ErrPos_BRR031 - ErrNeg_BRR031} !
 goal continuityBRR028 {C_BRR031 - C_BRR028                          = ErrPos_BRR028 - ErrNeg_BRR028} 
 goal continuityBRR025 {C_BRR028 - C_BRR025                          = ErrPos_BRR025 - ErrNeg_BRR025} 
-goal continuityCMPFW  {I_CMPFW + C_BRR025 - C_CMPFW - E_CMPFW = S_CMPFW*taf_cfs - S_CMPFW(-1)*taf_cfs + ErrPos_CMPFW - ErrNeg_CMPFW} !Camp Far West Reservoir
+goal continuityCMPFW  {I_CMPFW + C_BRR025 + CT_Wheatland - C_CMPFW - E_CMPFW = S_CMPFW*taf_cfs - S_CMPFW(-1)*taf_cfs + ErrPos_CMPFW - ErrNeg_CMPFW} !Camp Far West Reservoir
 
 goal continuityBRR017 {C_CMPFW + SG_BRR017_333 - D_BRR017_23_NA - C_BRR017          = ErrPos_BRR017 - ErrNeg_BRR017}
 !goal continuityBRR016 {C_BRR017 - C_BRR016                         = ErrPos_BRR016 - ErrNeg_BRR016}    
-goal continuityBRR011 {C_BRR017 + CT_Wheatland + SG_BRR011_332 + SR_23_BRR011 + SR_24_BRR011 - C_BRR011                    = ErrPos_BRR011 - ErrNeg_BRR011}    
+goal continuityBRR011 {C_BRR017 + SG_BRR011_332 + SR_23_BRR011 + SR_24_BRR011 - C_BRR011                    = ErrPos_BRR011 - ErrNeg_BRR011}    
 goal continuityBRR004 {C_BRR011 + SG_BRR004_331 + SR_23_BRR004 + SR_24_BRR004 + C_DHC001 + R_RFS23_BRR004 - C_BRR004    = ErrPos_BRR004 - ErrNeg_BRR004}
 
 goal continuityDRM000 {D_SPLDG_DRM000 - C_DRM000                        = ErrPos_DRM000 - ErrNeg_DRM000}
@@ -829,12 +829,12 @@ goal continuitySFY007   {I_SFY007 - C_SFY007                    = ErrPos_SFY007 
 goal continuityNBLDB    {I_NBLDB + C_NFY017 + C_CMT000 - C_NBLDB - E_NBLDB  = S_NBLDB * taf_cfs - S_NBLDB(-1) * taf_cfs + ErrPos_NBLDB - ErrNeg_NBLDB}! New Bullards Bar Reservoir 
 goal continuityYUB039   {C_NBLDB + C_OGN004 + C_MFY012 - C_YUB039               = ErrPos_YUB039 - ErrNeg_YUB039}! Confluence: Middle Fork Yuba
 goal continuityYUB030   {C_YUB039 + C_SFY007 - C_YUB030                         = ErrPos_YUB030 - ErrNeg_YUB030}! Confluence: South Fork Yuba
-goal continuityENGLB    {I_ENGLB + C_YUB030 - C_ENGLB - E_ENGLB	= S_ENGLB * taf_cfs - S_ENGLB(-1) * taf_cfs + ErrPos_ENGLB - ErrNeg_ENGLB}! Englebright Reservoir 
+goal continuityENGLB    {I_ENGLB + C_YUB030 + CT_Smartville - C_ENGLB - E_ENGLB	= S_ENGLB * taf_cfs - S_ENGLB(-1) * taf_cfs + ErrPos_ENGLB - ErrNeg_ENGLB}! Englebright Reservoir 
 
 !see Yuba_Definition.wresl for YUB023 goal continuityYUB023 {C_ENGLB  - C_YUB023                    = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
 
 goal continuityMERLC    {I_MERLC - C_MERLC - E_MERLC                       = S_MERLC * taf_cfs - S_MERLC(-1) * taf_cfs + ErrPos_MERLC - ErrNeg_MERLC} 
-goal continuityYUB023   {C_ENGLB + CT_Smartville  - C_YUB023                                        = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
+goal continuityYUB023   {C_ENGLB - C_YUB023                                        = ErrPos_YUB023 - ErrNeg_YUB023}! Smartsville gage (USGS ####), flow requirement
 goal continuityYUB022   {C_DER001 + C_YUB023 - C_YUB022                                         = ErrPos_YUB022 - ErrNeg_YUB022}! Confluence: Deere Creek
 goal continuityYUB014   {C_YUB022 + C_FDC006 + R_RFS14_YUB014 - C_YUB014                = ErrPos_YUB014 - ErrNeg_YUB014}! Confluence: French Dry Creek
 goal continuityYUB013   {C_YUB014 - D_YUB013_14_NA - C_YUB013                       = ErrPos_YUB013 - ErrNeg_YUB013}! BVID Pipeline Canal Diversion

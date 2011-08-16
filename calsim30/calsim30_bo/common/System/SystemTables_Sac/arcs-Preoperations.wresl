@@ -25,7 +25,7 @@ define E_SLYCK_SV		{timeseries kind 'EVAPORATION' units 'TAF' convert 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! YUBA RIVER	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!define	D_SLT009_SCT000_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'} see Yuba_Definition.wresl
+define	D_SLT009_SCT000_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'} ! Slate Creek Tunnel
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! COMBIE CANAL	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

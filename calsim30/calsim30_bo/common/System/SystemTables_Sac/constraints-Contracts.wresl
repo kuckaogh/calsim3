@@ -21,7 +21,7 @@ define alloc_ouwua_ndv   {std kind 'percent-delivery' units 'none'}
 define alloc_ouwua_sdv   {std kind 'percent-delivery' units 'none'}
 
 ! define YCWA Member Unit allocations
-! define YCWA_Alloc_dv {std kind 'fraction' units 'none'}
+define YCWA_Alloc {std kind 'fraction' units 'none'}
 
 ! define YCFCWCD allocations
 !define alloc_YCFCWCD_dv    {std kind 'percent-delivery' units 'none'}
