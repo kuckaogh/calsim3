@@ -1,4 +1,0 @@
-!New file
-
-define c5_add {st}
-
