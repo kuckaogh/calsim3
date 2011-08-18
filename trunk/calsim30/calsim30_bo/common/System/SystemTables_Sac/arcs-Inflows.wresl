@@ -272,9 +272,9 @@ define I_DER001 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Deer Cree
 define CT_BendBridge 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC257
 define CT_ButteCity 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC169
 define CT_WilkinsSlough	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC120
-define CT_Verona 		{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC083
+define CT_Verona 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC083
 define CT_Freeport 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC049
-define CT_Colusa 		{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at CBD000
+define CT_Colusa 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at CBD000
 define CT_Woodland 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at CSL005
 define CT_SacSlough 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SSL001
 define CT_Smartville 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at ENGLB
@@ -282,8 +282,8 @@ define CT_Wheatland 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} 
 define CT_Nicolaus 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at FTR008
 define CT_FairOaks 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at AMR022
 define CT_Yolo 		{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at CCH012
-define CT_Davis 		{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at PTH007
-define CT_Oroville 		{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at OROVL
+define CT_Davis 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at PTH007
+define CT_Oroville 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at OROVL
 
 
 !!! Delta !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -294,3 +294,5 @@ define DA_SJR_West 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS'
 define DA_SAC_South 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS'}
 define DA_SAC_North 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS'}
 define DA_SAC_West 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS'}
+
+define BC_Verona 	{timeseries kind 'BIAS-CORRECTION' units 'TAF' convert 'CFS'} ! 3.2 inches evap. in last 2 weeks of Sept. x 510,000 acres of rice
