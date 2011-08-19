@@ -435,7 +435,28 @@ goal limitDG_18_SA { lhs DG_18_SA
                    }
 }
 
+!==============================
+! 20_PA -
+!==============================
+define DLTsv_20_PA	{value CLmon_PSC003_20_PA*1.0*taf_cfs}
 
+define DLsv_20_PA {value (EVF_PSC003_20_PA+DPF_PSC003_20_PA+LFF_PSC003_20_PA+OSF_PSC003_20_PA) * DLTsv_20_PA}
+
+define GPest_20_PA {value AWR_20_PA + AWO_20_PA         !AW_20_PA
+               + (AWR_20_PA + AWO_20_PA)* RPF_20_PA      !RP_08N_PA
+               + DLsv_20_PA
+               - DLTsv_20_PA                
+               - min(TW_20_PA, RUFR_20_PA*AWR_20_PA + RUFO_20_PA*AWO_20_PA)           !RU_20_PA 
+}
+               
+goal limitDG_20_PA { lhs DG_20_PA 
+                    case  GP_larger_GPmin { condition GPest_20_PA > GPmin_20_PA
+                    rhs DLTsv_20_PA 
+                     lhs<rhs penalty 99999
+                     lhs>rhs penalty 0
+                    }
+                   }
+	                     
 !==============================
 ! 21_PA -
 !==============================
