@@ -271,7 +271,7 @@ define I_DER001 {timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Deer Cree
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define CT_BendBridge 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC257
 define CT_ButteCity 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC169
-define CT_WilkinsSlough	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC120
+define CT_WilkinsSl	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC120
 define CT_Verona 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC083
 define CT_Freeport 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at SAC049
 define CT_Colusa 	{timeseries kind 'CLOSURE-TERM' units 'TAF' convert 'CFS'} ! Applied at CBD000
