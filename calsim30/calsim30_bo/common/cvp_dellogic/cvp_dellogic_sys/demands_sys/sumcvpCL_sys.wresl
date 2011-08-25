@@ -56,7 +56,7 @@ define	CLP_SAC121_08S_SA3	{select peak from Contracts_CVPSettlement where divers
 define	CLP_SAC109_08S_SA3	{select peak from Contracts_CVPSettlement where diversion=13}
 define	CLP_MTC000_09_SA1	{select peak from Contracts_CVPSettlement where diversion=14}
 define	CLP_SAC162_09_SA2	{select peak from Contracts_CVPSettlement where diversion=15}
-define	CLP_SAC141_18_SA	{select peak from Contracts_CVPSettlement where diversion=16}
+define	CLP_SAC136_18_SA	{select peak from Contracts_CVPSettlement where diversion=16}
 define	CLP_SAC122_19_SA	{select peak from Contracts_CVPSettlement where diversion=17}
 define	CLP_SAC115_19_SA	{select peak from Contracts_CVPSettlement where diversion=18}
 define	CLP_SAC091_19_SA	{select peak from Contracts_CVPSettlement where diversion=19}
@@ -82,7 +82,7 @@ define	CLN_SAC121_08S_SA3	{select nonpeak from Contracts_CVPSettlement where div
 define	CLN_SAC109_08S_SA3	{select nonpeak from Contracts_CVPSettlement where diversion=13}
 define	CLN_MTC000_09_SA1	{select nonpeak from Contracts_CVPSettlement where diversion=14}
 define	CLN_SAC162_09_SA2	{select nonpeak from Contracts_CVPSettlement where diversion=15}
-define	CLN_SAC141_18_SA	{select nonpeak from Contracts_CVPSettlement where diversion=16}
+define	CLN_SAC136_18_SA	{select nonpeak from Contracts_CVPSettlement where diversion=16}
 define	CLN_SAC122_19_SA	{select nonpeak from Contracts_CVPSettlement where diversion=17}
 define	CLN_SAC115_19_SA	{select nonpeak from Contracts_CVPSettlement where diversion=18}
 define	CLN_SAC091_19_SA	{select nonpeak from Contracts_CVPSettlement where diversion=19}
@@ -168,7 +168,7 @@ define anncvpCL_psc_n { value
        +CLP_SAC109_08S_SA3      	+CLN_SAC109_08S_SA3
        +CLP_MTC000_09_SA1	+CLN_MTC000_09_SA1
        +CLP_SAC162_09_SA2	+CLN_SAC162_09_SA2
-       +CLP_SAC141_18_SA	+CLN_SAC141_18_SA
+       +CLP_SAC136_18_SA	+CLN_SAC136_18_SA
        +CLP_SAC122_19_SA	+CLN_SAC122_19_SA
        +CLP_SAC115_19_SA	+CLN_SAC115_19_SA
        +CLP_SAC099_19_SA        +CLN_SAC099_19_SA  

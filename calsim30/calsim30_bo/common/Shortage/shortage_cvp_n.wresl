@@ -194,12 +194,12 @@ goal short_SAC162_09_SA2  {
 	rhs 0. }
 	}
 
-define  X_SAC141_18_SA {std kind 'delivery-shortage' units 'cfs'}
-goal short_SAC141_18_SA  {
-	lhs  X_SAC141_18_SA
+define  X_SAC136_18_SA {std kind 'delivery-shortage' units 'cfs'}
+goal short_SAC136_18_SA  {
+	lhs  X_SAC136_18_SA
 	case APR_OCT {
 	condition month == OCT .or. month >= APR .and. month <= SEP
-	rhs CLmon_SAC141_18_SA * taf_cfs*perdv_cvpsc_sys - D_SAC141_18_SA }
+	rhs CLmon_SAC136_18_SA * taf_cfs*perdv_cvpsc_sys - D_SAC136_18_SA }
 	
 	case otherwise {
 	condition always
@@ -302,7 +302,7 @@ goal short_SAC078_22_SA1  {
 	rhs 0. }
 	}
 
-define short_cvp_psc_n {alias  X_SAC296_02_SA +  X_WTPFTH_03_SU +  X_WTPFTH_02_SU +  X_SAC289_03_SA +  X_SAC178_08N_SA1 +  X_GCC027_08N_SA2 +  X_SAC159_08S_SA1 +  X_GCC056_08S_SA2 +  X_SAC121_08S_SA3 +  X_SAC109_08S_SA3 +  X_MTC000_09_SA1 +  X_SAC162_09_SA2 +  X_SAC141_18_SA +  X_SAC122_19_SA +  X_SAC115_19_SA + X_SAC099_19_SA + X_SAC091_19_SA +  X_SAC083_21_SA +  X_SAC074_21_SA +  X_SAC082_22_SA1 +  X_SAC078_22_SA1 kind 'delivery-shortage-cvp' units 'cfs'}
+define short_cvp_psc_n {alias  X_SAC296_02_SA +  X_WTPFTH_03_SU +  X_WTPFTH_02_SU +  X_SAC289_03_SA +  X_SAC178_08N_SA1 +  X_GCC027_08N_SA2 +  X_SAC159_08S_SA1 +  X_GCC056_08S_SA2 +  X_SAC121_08S_SA3 +  X_SAC109_08S_SA3 +  X_MTC000_09_SA1 +  X_SAC162_09_SA2 +  X_SAC136_18_SA +  X_SAC122_19_SA +  X_SAC115_19_SA + X_SAC099_19_SA + X_SAC091_19_SA +  X_SAC083_21_SA +  X_SAC074_21_SA +  X_SAC082_22_SA1 +  X_SAC078_22_SA1 kind 'delivery-shortage-cvp' units 'cfs'}
 
 
 ! Settlement contractor deliveries occur in April-October and non-project water right diversions occur at same diversion arc in November-March
@@ -462,12 +462,12 @@ goal del_SAC162_09_SA2  {
 	rhs 0. }
 	}
 
-define Z_SAC141_18_SA {std kind 'delivery-cvp' units 'cfs'}
-goal del_SAC141_18_SA  {
-	lhs Z_SAC141_18_SA
+define Z_SAC136_18_SA {std kind 'delivery-cvp' units 'cfs'}
+goal del_SAC136_18_SA  {
+	lhs Z_SAC136_18_SA
 	case APR_OCT {
 	condition month == OCT .or. month >= APR .and. month <= SEP
-	rhs D_SAC141_18_SA }
+	rhs D_SAC136_18_SA }
 	
 	case otherwise {
 	condition always
@@ -570,7 +570,7 @@ goal del_SAC078_22_SA1  {
 	rhs 0. }
 	}
 
-define del_cvp_psc_n {alias Z_SAC296_02_SA + Z_WTPFTH_03_SU + Z_WTPFTH_02_SU + Z_SAC289_03_SA + Z_SAC178_08N_SA1 + Z_SAC159_08N_SA1 + Z_GCC027_08N_SA2 + Z_SAC159_08S_SA1 + Z_GCC056_08S_SA2 + Z_SAC121_08S_SA3 + Z_SAC109_08S_SA3 + Z_MTC000_09_SA1 + Z_SAC162_09_SA2 + Z_SAC141_18_SA + Z_SAC122_19_SA + Z_SAC115_19_SA + Z_SAC099_19_SA + Z_SAC091_19_SA + Z_SAC083_21_SA + Z_SAC074_21_SA + Z_SAC082_22_SA1 + Z_SAC078_22_SA1 kind 'delivery-cvp' units 'cfs'}
+define del_cvp_psc_n {alias Z_SAC296_02_SA + Z_WTPFTH_03_SU + Z_WTPFTH_02_SU + Z_SAC289_03_SA + Z_SAC178_08N_SA1 + Z_SAC159_08N_SA1 + Z_GCC027_08N_SA2 + Z_SAC159_08S_SA1 + Z_GCC056_08S_SA2 + Z_SAC121_08S_SA3 + Z_SAC109_08S_SA3 + Z_MTC000_09_SA1 + Z_SAC162_09_SA2 + Z_SAC136_18_SA + Z_SAC122_19_SA + Z_SAC115_19_SA + Z_SAC099_19_SA + Z_SAC091_19_SA + Z_SAC083_21_SA + Z_SAC074_21_SA + Z_SAC082_22_SA1 + Z_SAC078_22_SA1 kind 'delivery-cvp' units 'cfs'}
 
 
 ! Refuge

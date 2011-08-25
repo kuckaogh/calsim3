@@ -40,7 +40,7 @@ define cvpdel_PS {
 
        case      MAR  {
        condition month == MAR .and. wateryear > bgnWY
-       sum(i=-5,-11,-1) (D_SAC296_02_SA(i) + D_WTPFTH_03_SU(i) + D_WTPFTH_02_SU(i) + D_SAC289_03_SA(i) + D_SAC178_08N_SA1(i) + D_SAC159_08N_SA1(i)+ D_GCC027_08N_SA2(i) + D_SAC159_08S_SA1(i) + D_GCC056_08S_SA2(i) + D_SAC121_08S_SA3(i) + D_SAC109_08S_SA3(i) + D_MTC000_09_SA1(i) + D_SAC162_09_SA2(i) + D_SAC141_18_SA(i) + D_SAC122_19_SA(i) + D_SAC115_19_SA(i) + D_SAC099_19_SA(i) + D_SAC091_19_SA(i) + D_SAC083_21_SA(i) + D_SAC074_21_SA(i) + D_SAC082_22_SA1(i) + D_SAC078_22_SA1(i))* cfs_taf(i) }
+       sum(i=-5,-11,-1) (D_SAC296_02_SA(i) + D_WTPFTH_03_SU(i) + D_WTPFTH_02_SU(i) + D_SAC289_03_SA(i) + D_SAC178_08N_SA1(i) + D_SAC159_08N_SA1(i)+ D_GCC027_08N_SA2(i) + D_SAC159_08S_SA1(i) + D_GCC056_08S_SA2(i) + D_SAC121_08S_SA3(i) + D_SAC109_08S_SA3(i) + D_MTC000_09_SA1(i) + D_SAC162_09_SA2(i) + D_SAC136_18_SA(i) + D_SAC122_19_SA(i) + D_SAC115_19_SA(i) + D_SAC099_19_SA(i) + D_SAC091_19_SA(i) + D_SAC083_21_SA(i) + D_SAC074_21_SA(i) + D_SAC082_22_SA1(i) + D_SAC078_22_SA1(i))* cfs_taf(i) }
 
        case      otherwise {
        condition always

@@ -498,8 +498,8 @@ define DLT_SBP031_18_NA	{alias WRmon_SBP031_18_NA*taf_cfs kind 'DIVERSION-LIMIT'
 goal limitD_SAC136_18_NA {D_SAC136_18_NA < WRmon_SAC136_18_NA*taf_cfs}
 define DLT_SAC136_18_NA	{alias WRmon_SAC136_18_NA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
-goal limitD_SAC141_18_SA {D_SAC141_18_SA < CLmon_SAC141_18_SA*taf_cfs*perdv_cvpsc_sys + 1.0*WRmon_SAC141_18_SA*taf_cfs}
-define DLT_SAC141_18_SA	{alias CLmon_SAC141_18_SA*taf_cfs*perdv_cvpsc_sys + 1.0*WRmon_SAC141_18_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
+goal limitD_SAC136_18_SA {D_SAC136_18_SA < CLmon_SAC136_18_SA*taf_cfs*perdv_cvpsc_sys + 1.0*WRmon_SAC136_18_SA*taf_cfs}
+define DLT_SAC136_18_SA	{alias CLmon_SAC136_18_SA*taf_cfs*perdv_cvpsc_sys + 1.0*WRmon_SAC136_18_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
