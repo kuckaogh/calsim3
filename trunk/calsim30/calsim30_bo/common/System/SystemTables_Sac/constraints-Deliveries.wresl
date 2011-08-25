@@ -956,7 +956,7 @@ goal setUD_17S_NU   {UD_17S_NU = GP_17S_NU } ! + SHRTG_17S_NU }
 ! 18_SA
 !======================================================================
 ! gross surface water diversions
-goal setDG_18_SA    {DG_18_SA = D_SAC141_18_SA}
+goal setDG_18_SA    {DG_18_SA = D_SAC136_18_SA}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_18_SA    {DN_18_SA = DG_18_SA - DL_18_SA}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse

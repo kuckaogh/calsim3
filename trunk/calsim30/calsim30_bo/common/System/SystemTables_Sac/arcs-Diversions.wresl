@@ -440,7 +440,7 @@ define D_SAC159_08N_SA1 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC159_08S_SA1 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC146_08S_NA1 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC129_08S_NA2 	{std kind 'DIVERSION' units 'CFS'}
-define D_SAC141_18_SA 	{std kind 'DIVERSION' units 'CFS'}
+define D_SAC136_18_SA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC136_18_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC122_19_SA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC121_08S_SA3 	{std kind 'DIVERSION' units 'CFS'}

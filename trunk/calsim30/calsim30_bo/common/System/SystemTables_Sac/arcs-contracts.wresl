@@ -1495,19 +1495,19 @@ define PeakAW_18_SA_sv {
 goal setPeakAW_18_SA     {PeakAW_18_SA = PeakAW_18_SA_sv}
 
 ! Monthly contract amount (TAF) patterned on demand
-define    CLmon_SAC141_18_SA  {    
+define    CLmon_SAC136_18_SA  {    
     case nonpeak {
      condition month == oct .or. month >= apr .and. month <= jun
-     value max(0.0, CLN_SAC141_18_SA * (AWR_18_SA*(1+ RPF_18_SA - RUFr5_TS) + AWO_18_SA*(1+ RPF_18_SA - RUFo_18_SA))*cfs_taf / (SumAW_18_SA_sv - PeakAW_18_SA_sv))}
+     value max(0.0, CLN_SAC136_18_SA * (AWR_18_SA*(1+ RPF_18_SA - RUFr5_TS) + AWO_18_SA*(1+ RPF_18_SA - RUFo_18_SA))*cfs_taf / (SumAW_18_SA_sv - PeakAW_18_SA_sv))}
     case peak {
      condition month >= jul .and. month <= sep
-     value max(0.0, CLP_SAC141_18_SA * (AWR_18_SA*(1+ RPF_18_SA - RUFr5_TS) + AWO_18_SA*(1+ RPF_18_SA - RUFo_18_SA))*cfs_taf / PeakAW_18_SA_sv)}     
+     value max(0.0, CLP_SAC136_18_SA * (AWR_18_SA*(1+ RPF_18_SA - RUFr5_TS) + AWO_18_SA*(1+ RPF_18_SA - RUFo_18_SA))*cfs_taf / PeakAW_18_SA_sv)}     
     case otherwise {
         condition   always
         value 0.0 }
         }
         
-define CL_SAC141_18_SA   {alias CLmon_SAC141_18_SA kind 'CONTRACT-LIMIT' units 'TAF'}
+define CL_SAC136_18_SA   {alias CLmon_SAC136_18_SA kind 'CONTRACT-LIMIT' units 'TAF'}
 
 
 define SumAW_19_SA       {std kind 'ANNUAL-APPLIED-WATER' units 'TAF'} ! Annual demand
@@ -2437,7 +2437,7 @@ define WRmon_SAC109_08S_SA3   {value WRmon_CVPSettlement}
 define WRmon_SAC115_19_SA     {value WRmon_CVPSettlement}
 define WRmon_SAC122_19_SA     {value WRmon_CVPSettlement}
 define WRmon_SAC121_08S_SA3   {value WRmon_CVPSettlement}
-define WRmon_SAC141_18_SA     {value WRmon_CVPSettlement}
+define WRmon_SAC136_18_SA     {value WRmon_CVPSettlement}
 define WRmon_SAC159_08N_SA1   {value WRmon_CVPSettlement}
 define WRmon_SAC159_08S_SA1   {value WRmon_CVPSettlement}
 define WRmon_SAC162_09_SA2    {value WRmon_CVPSettlement}

@@ -1582,10 +1582,10 @@ define DL_18_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 !=============================================
 ! 18_SA -
 !=============================================
-define EVF_SAC141_18_SA  {value 0.01} !evaporative loss fraction
-define DPF_SAC141_18_SA  {value 0.045} !deep percolation loss fraction
-define LFF_SAC141_18_SA  {value 0.04} !lateral flow loss fraction lateral flow
-define OSF_SAC141_18_SA  {value 0.03} !canal operating spill fraction
+define EVF_SAC136_18_SA  {value 0.01} !evaporative loss fraction
+define DPF_SAC136_18_SA  {value 0.045} !deep percolation loss fraction
+define LFF_SAC136_18_SA  {value 0.04} !lateral flow loss fraction lateral flow
+define OSF_SAC136_18_SA  {value 0.03} !canal operating spill fraction
 
 define RUFR_18_SA   {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_18_SA   {value 0.10} !reuse fraction for all other crops, originally 10% but diversions low compared to demand

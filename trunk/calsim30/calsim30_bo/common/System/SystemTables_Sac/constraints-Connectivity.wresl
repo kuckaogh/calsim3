@@ -635,8 +635,8 @@ goal continuitySAC159   {C_SAC162 - D_SAC159_08S_SA1 - D_SAC159_08N_SA1 - SP_SAC
 goal continuitySAC154   {C_SAC159 + SG_SAC154_240 + SR_08N_SAC154 - C_SAC154                                                        = ErrPos_SAC154 - ErrNeg_SAC154}! C2VSim inflow Moultin Weir
 goal continuitySAC148   {C_SAC154 + SG_SAC148_254 - SP_SAC148_BTC003 - C_SAC148                                     = ErrPos_SAC148 - ErrNeg_SAC148}! Colusa Bypass.
 goal continuitySAC146   {C_SAC148 + SR_08S_SAC146 - D_SAC146_08S_NA1 - C_SAC146                                        = ErrPos_SAC146 - ErrNeg_SAC146}! Colusa gage  
-goal continuitySAC141   {C_SAC146 + SG_SAC141_262 + D_BSL000_SAC141 + SR_09_SAC141 - D_SAC141_18_SA  - C_SAC141                      = ErrPos_SAC141 - ErrNeg_SAC141}! Butte Slough, confluence Butte Creek.  
-goal continuitySAC136   {C_SAC141 - D_SAC136_18_NA - C_SAC136                                                       = ErrPos_SAC136 - ErrNeg_SAC136}
+goal continuitySAC141   {C_SAC146 + SG_SAC141_262 + D_BSL000_SAC141 + SR_09_SAC141  - C_SAC141                      = ErrPos_SAC141 - ErrNeg_SAC141}! Butte Slough, confluence Butte Creek.  
+goal continuitySAC136   {C_SAC141 - D_SAC136_18_NA - D_SAC136_18_SA - C_SAC136                                                       = ErrPos_SAC136 - ErrNeg_SAC136}
 goal continuitySAC134   {C_SAC136 + SG_SAC134_269 - C_SAC134                                                        = ErrPos_SAC134 - ErrNeg_SAC134}
 goal continuitySAC129   {C_SAC134 + SG_SAC129_277 - D_SAC129_08S_NA2 - C_SAC129                                                        = ErrPos_SAC129 - ErrNeg_SAC129}    
 goal continuitySAC122   {C_SAC129 + SG_SAC122_291 + R_RFS18_SAC122 - D_SAC122_19_SA - SP_SAC122_SBP021 - C_SAC122           = ErrPos_SAC122 - ErrNeg_SAC122}    ! Tisdale Bypass. 

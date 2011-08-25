@@ -417,8 +417,8 @@ goal limitDG_15S_SA { lhs DG_15S_SA
 !==============================
 ! 18_SA -
 !==============================
-define DLTsv_18_SA {value CLmon_Sac141_18_SA*taf_cfs*perdel_cvpsc_sys + 1.0*WRmon_Sac141_18_SA*taf_cfs }
-define DLsv_18_SA {value  (EVF_Sac141_18_SA+DPF_Sac141_18_SA+LFF_Sac141_18_SA+OSF_Sac141_18_SA) * DLTsv_18_SA}
+define DLTsv_18_SA {value CLmon_SAC136_18_SA*taf_cfs*perdel_cvpsc_sys + 1.0*WRmon_SAC136_18_SA*taf_cfs }
+define DLsv_18_SA {value  (EVF_SAC136_18_SA+DPF_SAC136_18_SA+LFF_SAC136_18_SA+OSF_SAC136_18_SA) * DLTsv_18_SA}
    
 define GPest_18_SA {value AWR_18_SA + AWO_18_SA            !AW_ 
                + (AWR_18_SA + AWO_18_SA )* RPF_18_SA         !RP_ 

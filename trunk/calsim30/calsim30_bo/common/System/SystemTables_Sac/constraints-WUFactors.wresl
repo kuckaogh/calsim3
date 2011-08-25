@@ -1065,10 +1065,10 @@ goal setRP_18_NA    {RP_18_NA = AW_18_NA * RPF_18_NA}
 !==============================
 ! 18_SA -
 !==============================
-goal setEV_18_SA    {EV_18_SA = D_Sac141_18_SA * EVF_SAC141_18_SA} 
-goal setDP_18_SA    {DP_18_SA = D_Sac141_18_SA * DPF_SAC141_18_SA} 
-goal setLF_18_SA    {LF_18_SA = D_Sac141_18_SA * LFF_SAC141_18_SA} 
-goal setOS_18_SA    {OS_18_SA = D_Sac141_18_SA * OSF_SAC141_18_SA} 
+goal setEV_18_SA    {EV_18_SA = D_SAC136_18_SA * EVF_SAC136_18_SA} 
+goal setDP_18_SA    {DP_18_SA = D_SAC136_18_SA * DPF_SAC136_18_SA} 
+goal setLF_18_SA    {LF_18_SA = D_SAC136_18_SA * LFF_SAC136_18_SA} 
+goal setOS_18_SA    {OS_18_SA = D_SAC136_18_SA * OSF_SAC136_18_SA} 
 goal setDL_18_SA    {DL_18_SA = EV_18_SA  + DP_18_SA  + LF_18_SA + OS_18_SA}
 ! reuse
 goal setRU_18_SA   {RU_18_SA = min(TW_18_SA, RUFR_18_SA*AWR_18_SA + RUFO_18_SA*AWO_18_SA)} 
