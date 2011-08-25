@@ -46,16 +46,16 @@ define WRWF_ANN_SCWC 		{timeseries kind 'WRWF-CONTRACT-LIMIT' units 'TAF'} !Annu
 
 !Define demands for CVP contract water - reduced by WF agreement
 define CLWF_ANN_PCWA_NFA	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_PCWA_A	 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
+!define CLWF_ANN_PCWA_A	 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
 define CLWF_ANN_PCWA_S	 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_FOLSM 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_SJWD_S 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_ELDOR_ID 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_ELDOR_CO 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_SMUD 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_SCWA 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_ROSEV 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
-define CLWF_ANN_CAREC 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
+!define CLWF_ANN_FOLSM 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_SJWD_S 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_ELDOR_ID 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_ELDOR_CO 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_SMUD 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_SCWA 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_ROSEV 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
+!define CLWF_ANN_CAREC 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
 
 !Special allocations for Hodge Decision flow criteria
 !If flow in the lower American River is less than the Hodge Decision flow levels,
