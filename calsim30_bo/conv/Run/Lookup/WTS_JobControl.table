@@ -1,4 +1,4 @@
-! BST_WTS_Inputs_Existing_081109.xls
+! BST_WTS_Inputs_Future_081109.xls
 ! Job Control for WTS system
 !
 ! item #1  : If Operations Maximum simulation, set to 1, else set to 0; Using 1 removes the multi-year bounds on GW subtitution transfers

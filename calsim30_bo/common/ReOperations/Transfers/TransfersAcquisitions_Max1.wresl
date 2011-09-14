@@ -25,14 +25,14 @@ define YubaGW_Max1 {
 ! Max 3yr     116 TAF   1.90    140 TAF   2.00
 !
 ! Existing
-        value min(    1.00 * YubaGW_Max1yr,
-                  max(1.90 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep), 0.),
-                  max(1.90 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep) - PrevYrYubaGWdv(prevSep), 0.))
+!        value min(    1.00 * YubaGW_Max1yr,
+!                  max(1.90 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep), 0.),
+!                  max(1.90 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep) - PrevYrYubaGWdv(prevSep), 0.))
 !
 ! Future NA
-!        value min(    1.00 * YubaGW_Max1yr,
-!                  max(1.71 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep), 0.),
-!                  max(2.00 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep) - PrevYrYubaGWdv(prevSep), 0.))
+        value min(    1.00 * YubaGW_Max1yr,
+                  max(1.71 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep), 0.),
+                  max(2.00 * YubaGW_Max1yr - YubaGWdv(prevSep) - AnnYubaGW_EWAdv(prevSep) - PrevYrYubaGWdv(prevSep), 0.))
     }
 }
 ! LYRA C1 SW transfers code:

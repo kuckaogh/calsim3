@@ -43,13 +43,13 @@ define C805 {lower 0. upper 10000 kind 'FLOW-CHANNEL' units 'CFS'} !O'Neill Fore
 define C806 {lower 0. upper 13100 kind 'FLOW-CHANNEL' units 'CFS'}
 define C807 {lower 0. upper 8465 kind 'FLOW-CHANNEL' units 'CFS'}
 define C808 {lower 0. upper 8465 kind 'FLOW-CHANNEL' units 'CFS'}
-define C809 {lower 0. upper 300. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Pumping Plants        - 300cfs for upper reachs w/o SBA improvement project
-define C810 {lower 0. upper 300. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Reach 1-4  Alameda Z7 - 300cfs for upper reachs w/o SBA improvement project
-define C811 {lower 0. upper 300. kind 'FLOW-CHANNEL' units 'CFS'} !Diversion To SWP Lake Del Valle     - 300cfs for upper reachs w/o SBA improvement project
-define C812 {lower 0. upper 300. kind 'FLOW-CHANNEL' units 'CFS'} !SWP Lake Del Valle Return           - 300cfs for Del Valle pipeline/w/o SBA improvement project
-define C813 {lower 0. upper 300. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Reach 5-6  Alameda Z7 - 300cfs for Sunol pipeline/w/o SBA improvement project
-define C814 {lower 0. upper 184. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Reach 7-8  Alameda CO - 184cfs for Santa Clara pipeline/w/o SBA improvement project
-define C815 {lower 0. upper 184. kind 'FLOW-CHANNEL' units 'CFS'} !South Bay Reach 9  Santa Clara VWD  - 184cfs for Santa Clara pipeline/w/o SBA improvement project
+define C809 {lower 0. upper 430. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Pumping Plants        - 430cfs for upper reachs w/ SBA improvement project
+define C810 {lower 0. upper 430. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Reach 1-4  Alameda Z7 - 430cfs for upper reachs w/ SBA improvement project
+define C811 {lower 0. upper 430. kind 'FLOW-CHANNEL' units 'CFS'} !Diversion To SWP Lake Del Valle     - 430cfs for upper reachs w/ SBA improvement project
+define C812 {lower 0. upper 363. kind 'FLOW-CHANNEL' units 'CFS'} !SWP Lake Del Valle Return           - 363cfs for Del Valle pipeline/SBA improvement project
+define C813 {lower 0. upper 305. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Reach 5-6  Alameda Z7 - 305cfs for Sunol pipeline/SBA improvement project
+define C814 {lower 0. upper 184. kind 'FLOW-CHANNEL' units 'CFS'} !SWP South Bay Reach 7-8  Alameda CO - 184cfs for Santa Clara pipeline/SBA improvement project
+define C815 {lower 0. upper 184. kind 'FLOW-CHANNEL' units 'CFS'} !South Bay Reach 9  Santa Clara VWD  - 184cfs for Santa Clara pipeline/SBA improvement project
 define C818 {std kind 'FLOW-CHANNEL' units 'CFS'} !SWP Wheeling for CVP Dummy
 define C820 {lower 0. upper 8465 kind 'FLOW-CHANNEL' units 'CFS'}
 define C821 {lower 0. upper 8465 kind 'FLOW-CHANNEL' units 'CFS'}
@@ -125,7 +125,7 @@ define C895 {lower 0. upper 18000 kind 'FLOW-CHANNEL' units 'CFS'} !SWP Reach 30
 define C899 {lower 0. upper 730 kind 'FLOW-CHANNEL' units 'CFS'} !SWP Reach 28G-28H  MWD
 define C11 {lower 0. upper 8000 kind 'FLOW-CHANNEL' units 'CFS'} !CVP SAN LUIS RESERVOIR
 define C12 {lower 0. upper 8900 kind 'FLOW-CHANNEL' units 'CFS'} !SWP SAN LUIS RESERVOIR
-define C15 {lower 0. upper 300. kind 'FLOW-CHANNEL' units 'CFS'} !LAKE DEL VALLE - 300cfs for Del Valle pipeline/w/o SBA improvement project
+define C15 {lower 0. upper 363. kind 'FLOW-CHANNEL' units 'CFS'} !LAKE DEL VALLE - 363cfs for Del Valle pipeline/SBA improvement project
 define C25 {lower 0. upper 2600 kind 'FLOW-CHANNEL' units 'CFS'} !SILVERWOOD LAKE
 define C28 {lower 0. upper 18000 kind 'FLOW-CHANNEL' units 'CFS'} !PYRAMID LAKE
 define C29 {lower 0. upper 18000 kind 'FLOW-CHANNEL' units 'CFS'} !CASTAIC LAKE

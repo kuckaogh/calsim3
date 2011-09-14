@@ -94,8 +94,8 @@ goal setConvLimit_pump3  {BANKS_p2ConvLtd + TRACY_ConvLtd < DELTA_ConvLtd + IF_C
 goal setConvLimit_pump4  {BANKS_p2ConvLtd < BANKS_ConvLtd} !make sure 2nd priority is less than Banks alone condition
 
 ! Constraints for reaches along South Bay Aqueduct (SBA)
-goal setConvLimit_C809 {BANKS_SB_ConvLtd < 300. - C809}     ! 430 cfs with, or 300 cfs without SBA enlargement
-goal setConvLimit_C812 {BANKS_SB_ConvLtd < 300. - C812}     ! 363 cfs with, or 300 cfs without SBA enlargement
+goal setConvLimit_C809 {BANKS_SB_ConvLtd < 430. - C809}     ! 430 cfs with, or 300 cfs without SBA enlargement
+goal setConvLimit_C812 {BANKS_SB_ConvLtd < 363. - C812}     ! 363 cfs with, or 300 cfs without SBA enlargement
 goal setConvLimit_C814 {BANKS_SB_ConvLtd < 184. - C814}
 
 ! Constraints for reaches from Banks to San Luis
@@ -157,12 +157,12 @@ goal setConvLimit_SC   {SC_ConvLtd < SC_EB_ConvLtd + SC_WB_ConvLtd}
 !
 !Banks PP       D419*     N/A    Banks PP
 !Banks to SL    C800*   10300    Banks to SL
-!South Bay      D801      300    South Bay       ! assuming without SBA expansion
-!               C809*     300    South Bay
-!               C810      300    South Bay
-!               C811      300    South Bay
-!               C812*     300    South Bay
-!               C813      300    South Bay
+!South Bay      D801      430    South Bay       ! assuming without SBA expansion
+!               C809*     430    South Bay
+!               C810      430    South Bay
+!               C811      430    South Bay
+!               C812*     363    South Bay
+!               C813      305    South Bay
 !               C814*     184    South Bay
 !Banks To SL    C801*   10000    Banks To SL
 !               C802    10000    Banks To SL
