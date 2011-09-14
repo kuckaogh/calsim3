@@ -31,11 +31,11 @@ Core San Joaquin River Model Code for use for dynamic operations (Global Resolut
     INCLUDE 'WaterQuality\wq_defs_Disag.wresl'
     INCLUDE 'WaterQuality\disaggregation\Disag_Def.wresl'
 
-    INCLUDE 'Calaveras\Calaveras_Dems.wresl'                !Use if DWSP not included
-!    INCLUDE 'Calaveras\Calaveras_Dems_StocktonDWSP.wresl'   !Use only if DWSP is included
+!    INCLUDE 'Calaveras\Calaveras_Dems.wresl'                !Use if DWSP not included
+    INCLUDE 'Calaveras\Calaveras_Dems_StocktonDWSP.wresl'   !Use only if DWSP is included
 
     INCLUDE 'Delta\DWSP_arc_split.wresl'
-    INCLUDE 'Delta\COSMA_zeroset.wresl'                     !Use if DWSP not included
-!    INCLUDE 'Delta\COSMA_restrict.wresl'                    !Use only if DWSP is included
+!    INCLUDE 'Delta\COSMA_zeroset.wresl'                     !Use if DWSP not included
+    INCLUDE 'Delta\COSMA_restrict.wresl'                    !Use only if DWSP is included
 
 !    INCLUDE '..\System\SystemTables_SJR\weight-table.wresl'

@@ -1,4 +1,4 @@
-! BST_WTS_Inputs_Existing_081109.xls
+! BST_WTS_Inputs_Future_081109.xls
 !
 ! This is the Stage 1 Acquisition Scheme
 ! These are the rules the WTS uses to pair up Purchases with Suppliere for Stage 1
@@ -31,5 +31,5 @@ WTS_Stage1_AcquisitionScheme
 Total         Yuba_GW       Yuba_SW       Feather_GW    SacValley_GW  SacOther_GW   AmerR_GW
 0.00          0             0.00          0             0             0             0
 94.99         0             94.99         0             0             0             0
-94.99         0             94.99         0             0             0             0
-9999          0             94.99         0             0             0             0
+279.99        18.5          94.99         29            95            7.5           35
+9999          18.5          94.99         29            95            7.5           35

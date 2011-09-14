@@ -77,8 +77,7 @@ define lim_MOK_ann_ {alias lim_MOK_ann kind 'annual-div-limit' units 'cfs'}
 !define perdv_cvpmi_sys {timeseries kind 'percent-delivery' units 'none'}
 
 !Calculate annual allocation.
-define ann_CVP_alloc {value perdel_cvpmi_sys*195.}  ! as of 2010
-!define ann_CVP_alloc {value perdel_cvpmi_sys*140.}
+define ann_CVP_alloc {value perdel_cvpmi_sys*195.}
 
 !Track annual diversions of CVP water.
 define ann_CVP_div_ {std kind 'annual-diversion' units 'taf'}

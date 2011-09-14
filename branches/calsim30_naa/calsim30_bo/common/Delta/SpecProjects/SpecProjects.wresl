@@ -25,7 +25,7 @@ goal set_D_SAC000_ANTWR { D_SAC000_ANTWR < Antioch_demand * taf_cfs}
 !goal set_D403D { D403D < FVB_demand * int_IBU_UWFE * taf_cfs}
 
 !******************************************************************************
-! Davis-Woodland project for excess flows - FUTURE ONLY  - Comment out Oct - Sep for EXISTING level
+! Davis-Woodland project for excess flows - NOT USED
 define Woodland_demand {
 !    case OCT { condition month == OCT value 2.041 }    !max TAF/mon
 !    case NOV { condition month == NOV value 1.392 }

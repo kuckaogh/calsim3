@@ -2,5 +2,5 @@
 !D. Easton 1/25/07
 !TAF
 Merced_GP570_ann_demand
-number	demand	demand_f
-1	45	25
+number	demand_e	demand
+1	45		25
