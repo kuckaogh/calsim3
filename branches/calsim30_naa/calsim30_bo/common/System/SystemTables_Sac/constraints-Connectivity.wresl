@@ -20,7 +20,7 @@ goal continuityNFA022   {C_NFA048 + I_NFA022 - C_NFA022                         
 goal continuityNFA016   {C_NFA022 + C_MFA001 - D_NFA016_ABT002 - C_NFA016                                   = ErrPos_NFA016 - ErrNeg_NFA016}
 goal continuityNFA011   {C_NFA016 + C_STH007 + C_MRM001 - C_NFA011                                      = ErrPos_NFA011 - ErrNeg_NFA011}
 goal continuityABT002    {D_NFA016_ABT002 - D_ABT002_STH001 - C_ABT002                                      = ErrPos_ABT002  - ErrNeg_ABT002 } !Auburn Dam Site
-goal continuityFOLSM    {C_NFA011 + I_FOLSM + C_SFA030 + SG_FOLSM_389 - C_FOLSM - D_FOLSM_WTPRSV - D_FOLSM_WTPSJP - D_FOLSM_WTPFOL - D_FOLSM_WTPEDH - E_FOLSM   = S_FOLSM * taf_cfs - S_FOLSM(-1) * taf_cfs + ErrPos_FOLSM - ErrNeg_FOLSM} !Folsom Lake 
+goal continuityFOLSM    {C_NFA011 + I_FOLSM + C_SFA030 + SG_FOLSM_389 - C_FOLSM - D_FOLSM_PCWA - D_FOLSM_WTPRSV - D_FOLSM_WTPSJP - D_FOLSM_WTPFOL - D_FOLSM_WTPEDH - E_FOLSM   = S_FOLSM * taf_cfs - S_FOLSM(-1) * taf_cfs + ErrPos_FOLSM - ErrNeg_FOLSM} !Folsom Lake 
 goal continuityNTOMA    {C_FOLSM + SR_26N_NTOMA + SR_26S_NTOMA + SG_NTOMA_385 - C_NTOMA - D_NTOMA_FSC003 - E_NTOMA  = S_NTOMA * taf_cfs - S_NTOMA(-1) * taf_cfs + ErrPos_NTOMA - ErrNeg_NTOMA} !Lake Natoma
 goal continuityAMR022   {C_NTOMA + CT_FairOaks - C_AMR022                                                     = ErrPos_AMR022 - ErrNeg_AMR022 } !Lower American River - C2VSIM seepage node
 goal continuityAMR020   {C_AMR022 + SG_AMR020_384 + R_RFS26S_AMR020 - C_AMR020                                  = ErrPos_AMR020 - ErrNeg_AMR020 } !Lower American River - C2VSIM seepage node
