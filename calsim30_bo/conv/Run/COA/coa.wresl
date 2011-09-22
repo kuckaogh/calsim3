@@ -97,7 +97,7 @@ goal shasta_storage_change {SHADS = C_KSWCK_m - I_SHSTA - D_WKYTN_m + D_SHSTA_WT
     + Diversions from Folsom Lake - Inflow to Folsom
     Including local inflow into Nimbus this results in: */
 
-goal folsom_storage_change { FOLDS = C_NTOMA_m + D_FOLSM_WTPRSV + D_FOLSM_WTPSJP + D_FOLSM_WTPFOL + D_FOLSM_WTPEDH + D_NTOMA_FSC003 - SR_26N*Area_26N_NTOMA - SR_26S*Area_26S_NTOMA - I_FOLSM - I_SFA030 - C_NFA011}      !Define Folsom Storage Change
+goal folsom_storage_change { FOLDS = C_NTOMA_m + D_FOLSM_PCWA + D_FOLSM_WTPRSV + D_FOLSM_WTPSJP + D_FOLSM_WTPFOL + D_FOLSM_WTPEDH + D_NTOMA_FSC003 - SR_26N*Area_26N_NTOMA - SR_26S*Area_26S_NTOMA - I_FOLSM - I_SFA030 - C_NFA011}      !Define Folsom Storage Change
 
 ! Whiskeytown Reservoir
 
