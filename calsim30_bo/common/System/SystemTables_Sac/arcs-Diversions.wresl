@@ -30,7 +30,7 @@ define D_WTPEDH_ELDID 	{std kind 'DIVERSION' units 'CFS'}
 define D_NTOMA_FSC003 	{std kind 'DIVERSION' units 'CFS'}
 define D_AMR017_WTPBJM 	{std kind 'DIVERSION' units 'CFS'}
 define D_AMR007_WTPFBN 	{std kind 'DIVERSION' units 'CFS'}
-
+define D_FOLSM_PCWA     {std kind 'DIVERSION' units 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Antelope Creek !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

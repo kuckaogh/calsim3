@@ -20,7 +20,7 @@ goal continuityNFA022   {C_NFA048 + I_NFA022 - C_NFA022                         
 goal continuityNFA016   {C_NFA022 + C_MFA001 - D_NFA016_ABT002 - C_NFA016                                   = ErrPos_NFA016 - ErrNeg_NFA016}
 goal continuityNFA011   {C_NFA016 + C_STH007 + C_MRM001 - C_NFA011                                      = ErrPos_NFA011 - ErrNeg_NFA011}
 goal continuityABT002    {D_NFA016_ABT002 - D_ABT002_STH001 - C_ABT002                                      = ErrPos_ABT002  - ErrNeg_ABT002 } !Auburn Dam Site
-goal continuityFOLSM    {C_NFA011 + I_FOLSM + C_SFA030 + SG_FOLSM_389 - C_FOLSM - D_FOLSM_WTPRSV - D_FOLSM_WTPSJP - D_FOLSM_WTPFOL - D_FOLSM_WTPEDH - E_FOLSM   = S_FOLSM * taf_cfs - S_FOLSM(-1) * taf_cfs + ErrPos_FOLSM - ErrNeg_FOLSM} !Folsom Lake 
+goal continuityFOLSM    {C_NFA011 + I_FOLSM + C_SFA030 + SG_FOLSM_389 - C_FOLSM - D_FOLSM_PCWA - D_FOLSM_WTPRSV - D_FOLSM_WTPSJP - D_FOLSM_WTPFOL - D_FOLSM_WTPEDH - E_FOLSM   = S_FOLSM * taf_cfs - S_FOLSM(-1) * taf_cfs + ErrPos_FOLSM - ErrNeg_FOLSM} !Folsom Lake 
 goal continuityNTOMA    {C_FOLSM + SR_26N_NTOMA + SR_26S_NTOMA + SG_NTOMA_385 - C_NTOMA - D_NTOMA_FSC003 - E_NTOMA  = S_NTOMA * taf_cfs - S_NTOMA(-1) * taf_cfs + ErrPos_NTOMA - ErrNeg_NTOMA} !Lake Natoma
 goal continuityAMR022   {C_NTOMA + CT_FairOaks - C_AMR022                                                     = ErrPos_AMR022 - ErrNeg_AMR022 } !Lower American River - C2VSIM seepage node
 goal continuityAMR020   {C_AMR022 + SG_AMR020_384 + R_RFS26S_AMR020 - C_AMR020                                  = ErrPos_AMR020 - ErrNeg_AMR020 } !Lower American River - C2VSIM seepage node
@@ -263,7 +263,7 @@ goal continuityCBD000   {C_CBD001 + CT_Colusa - C_CBD000                        
 !goal continuityCCC007  {C_CCC004 + C_TRNSFR - D_CCC007_CCWD        = ErrPos_CCC007 - ErrNeg_CCC007}!
 !goal continuityORP000  {D_OMR021_ORP000 + D_VCT002_ORP000 - C_ORP000   = ErrPos_ORP000 - ErrNeg_ORP000}!
 !goal continuityTRNSFR  {C_ORP000 + C_LOSVQ - D_TRNSFR_LOSVQ - C_TRNSFR = ErrPos_TRNSFR - ErrNeg_TRNSFR}!
-goal continuityAIP  {D_VCT002_ORP000 = 0.}!
+!goal continuityAIP  {D_VCT002_ORP000 = 0.}!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Corning Canal   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -697,7 +697,7 @@ goal continuitySJR043       {C_SJR048 + C_FCS006 + SR_61_SJR043 - C_SJR043      
 goal continuitySJR042       {C_SJR043 /*+ SG_SJR042_567*/ + R_STWWTP_SJR042 - C_SJR042                  = ErrPos_SJR042 - ErrNeg_SJR042}!Return flow from Stockton Regional Wastewater Treatment Plant
 goal continuitySJR038       {C_SJR042 /*+ SG_SJR038_558*/ + C_CLV004 + R514 + SR_60N_SJR038 + SR_60S_SJR038 - C_SJR038  = ErrPos_SJR038 - ErrNeg_SJR038}!Confluence with Calaveras River. R514 represents return flow from Stockton East Water District.
 goal continuitySJR033       {C_SJR038 /*+ SG_SJR033_553*/ - C_SJR033                            = ErrPos_SJR033 - ErrNeg_SJR033}!
-goal continuitySJR028       {C_SJR033 /*+ SG_SJR028_543*/ + R_60N_NA3_SJR028 + R_WSWWTP_SJR028 + SR_60N_SJR028 + SR_60S_SJR028 - D_SJR028_WTPDWS - C_SJR028 = ErrPos_SJR028 - ErrNeg_SJR028}!City of Stockton proposed diversion. Return flows from North San Joaquin WCD and White Slough WWTP (City of Lodi).
+goal continuitySJR028       {C_SJR033 /*+ SG_SJR028_543*/ + R_60N_NA3_SJR028 + R_WSWWTP_SJR028 + SR_60N_SJR028 + SR_60S_SJR028 - D514A - D514B /*D_SJR028_WTPDWS*/ - C_SJR028 = ErrPos_SJR028 - ErrNeg_SJR028}!City of Stockton proposed diversion. Return flows from North San Joaquin WCD and White Slough WWTP (City of Lodi).
 !goal continuityWTPDWS      {D_SJR028_WTPDWS - D_WTPDWS_60S_NU1                                 = ErrPos_WTPDWS - ErrNeg_WTPDWS}!                   
 goal continuitySJR026       {C_SJR028 + DA_SJR_East - D_SJR026_DD_SJRE /*+ R_60N_SJR026*/ - C_SJR026                  = ErrPos_SJR026 - ErrNeg_SJR026}!
 goal continuitySJR023       {C_SJR026 /*+ SG_SJR023_540*/ - C_SJR023                                        = ErrPos_SJR023 - ErrNeg_SJR023}!
