@@ -816,7 +816,7 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 11
     INCLUDE [LOCAL] '..\..\common\Delta\Delta_ANN_Reduced_Calls.wresl'     ! Use this file for ANN salinity requirements
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
-!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
     INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA2.wresl'
 
