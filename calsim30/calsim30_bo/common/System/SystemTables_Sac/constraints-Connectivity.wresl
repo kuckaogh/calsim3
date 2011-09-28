@@ -92,7 +92,7 @@ goal continuityBCN010   {I_BCN010 - C_BCN010                        = ErrPos_BCN
 goal continuityBRR074 {D_SYC002_BRR074 + D_DRM001_BRR074 - C_BRR074          = ErrPos_BRR074 - ErrNeg_BRR074}
 goal continuityBRR073 {C_BRR074 - C_BRR073                          = ErrPos_BRR073 - ErrNeg_BRR073}
 goal continuityBRR072 {C_BRR073 - D_BRR072_CYN010 - C_BRR072                          = ErrPos_BRR072 - ErrNeg_BRR072}
-goal continuityBRR067 {C_BRR073 + C_DRM011 - C_BRR067                       = ErrPos_BRR067 - ErrNeg_BRR067}
+goal continuityBRR067 {C_BRR072 + C_DRM011 - C_BRR067                       = ErrPos_BRR067 - ErrNeg_BRR067}
 goal continuityBRR066 {C_BRR067 - C_BRR066                          = ErrPos_BRR066 - ErrNeg_BRR066}
 goal continuityBRR061 {C_BRR066 - C_BRR061                       = ErrPos_BRR061 - ErrNeg_BRR061}
 goal continuityBRR060 {C_BRR061 + C_LBR002 - C_BRR060                          = ErrPos_BRR060 - ErrNeg_BRR060} !Total inflow above boardman canal div
@@ -373,7 +373,7 @@ goal continuityLGRSV    {I_LGRSV - E_LGRSV - C_LGRSV                            
 goal continuitySFF040   {C_LGRSV - C_SFF040                                 = ErrPos_SFF040 - ErrNeg_SFF040}
 goal continuitySFF028   {C_SFF040 - D_SFF028_SFT000 - C_SFF028                      = ErrPos_SFF028 - ErrNeg_SFF028}
 goal continuitySFF027   {C_SFF028 - C_SFF027                                = ErrPos_SFF027 - ErrNeg_SFF027}
-goal continuitySFF019   {C_SFF027 + C_LST004 - C_SFF019                         = ErrPos_SFF019 - ErrNeg_SFF019}
+goal continuitySFF019   {C_SFF027 + C_LST003 - C_SFF019                         = ErrPos_SFF019 - ErrNeg_SFF019}
 goal continuitySFF018   {C_SFF019 - C_SFF018                                = ErrPos_SFF018 - ErrNeg_SFF018}
 goal continuitySFF011   {C_SFF018 + I_SFF011 - D_SFF011_MNRRH - C_SFF011                = ErrPos_SFF011 - ErrNeg_SFF011}
 goal continuitySFF008   {C_SFF011 + I_SFF008 - C_SFF008                         = ErrPos_SFF008 - ErrNeg_SFF008}
@@ -682,7 +682,7 @@ goal continuitySAC017   {C_SAC022 + SG_SAC017_492 + C_CSL005A + DA_SAC_South - D
 goal continuitySAC011   {C_SAC017 + SG_SAC011_527 - C_SAC011                                        = ErrPos_SAC011 - ErrNeg_SAC011}!
 goal continuitySAC007   {C_SAC011 + SG_SAC007_526 - C_SAC007                                        = ErrPos_SAC007 - ErrNeg_SAC007}
 goal continuitySAC003   {C_SAC007 + SG_SAC003_525 - C_SAC003                                        = ErrPos_SAC003 - ErrNeg_SAC003}! 
-goal continuitySAC000   {C_SAC003 /*+ SG_SAC000_531*/ + C_SJR006 + DA_SAC_West - C_SAC000 - D_SAC000_DD_SACW - D_SAC000_ANTWR                = ErrPos_SAC000 - ErrNeg_SAC000}
+goal continuitySAC000   {C_SAC003 /*+ SG_SAC000_531*/ + C_SJR006 + DA_SAC_West - C_SAC000 - D_SAC000_DD_SACW                = ErrPos_SAC000 - ErrNeg_SAC000}
 goal continuityNDO  {C_SAC000 - D_NDO - C_NDO                                           = 0.}!ErrPos_NDO - ErrNeg_NDO}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -704,7 +704,7 @@ goal continuitySJR023       {C_SJR026 /*+ SG_SJR023_540*/ - C_SJR023            
 goal continuitySJR022       {C_SJR023 /*+ SG_SJR022_520*/ + R_60N_NA4_SJR022 + C_MOK004 + SR_60N_SJR022 - C_SJR022              = ErrPos_SJR022 - ErrNeg_SJR022}!Confluence with Mokelumne. Return flow from Woodbridge ID.
 goal continuitySJR013       {C_SJR022 /*+ SG_SJR013_534*/ + C_OMR002 + DA_SJR_West - D_SJR013_DD_SJRW /*+ R_TCWWTP_SJR013*/ - C_SJR013    = ErrPos_SJR013 - ErrNeg_SJR013}!
 goal continuitySJR009       {C_SJR013 /*+ SG_SJR009_533*/ + C_MSH015 - C_SJR009                     = ErrPos_SJR009 - ErrNeg_SJR009}
-goal continuitySJR006       {C_SJR009 /*+ SG_SJR006_532*/ - C_SJR006                            = ErrPos_SJR006 - ErrNeg_SJR006}
+goal continuitySJR006       {C_SJR009 /*+ SG_SJR006_532*/ - D_SJR006_ANTOC - C_SJR006               = ErrPos_SJR006 - ErrNeg_SJR006}
 
 goal setC_FCS006    {C_FCS006 = 0.}
 
