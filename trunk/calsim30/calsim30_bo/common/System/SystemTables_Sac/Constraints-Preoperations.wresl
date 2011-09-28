@@ -27,7 +27,7 @@ goal set_S_SLYCK	{S_SLYCK < S_SLYCK_SV}
 !!! Bear River		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal setD_SYC002_BRR074		{D_SYC002_BRR074 = D_SYC002_BRR074_SV}
-goal setD_SPLDG_DRM000		{D_SPLDG_DRM000 = D_SPLDG_DRM000_SV}
+goal setD_SPLDG_DRM000		{D_SPLDG_DRM000 = min(840.0, D_SPLDG_DRM000_SV)} !Capacity of Drum Canal set at 840 cfs
 !goal set_D_LBC010_PCWA3	{D_LBC010_PCWA3	< D_LBC010_PCWA3_SV}
 !goal set_D_LBC038_WTPAUB	{D_LBC038_WTPAUB < D_LBC038_WTPAUB_SV}
 !goal set_D_BEC022_WTPBWM	{D_BEC022_WTPBWM < D_BEC022_WTPBWM_SV}

@@ -465,7 +465,6 @@ define D_SAC030_MOK014 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC017_DD_SACS 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
 define D_SAC041_DD_SACN 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
 define D_SAC000_DD_SACW 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
-define D_SAC000_ANTWR 	{std kind 'DIVERSION' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -500,6 +499,7 @@ define D_SJR026_DD_SJRE 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
 define D_SJR013_DD_SJRW 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}!Delta Net
 define D_SJR062_50_PA 		{std kind 'DIVERSION' units 'CFS'}
 define D_SJR028_WTPDWS 	{std kind 'DIVERSION' units 'CFS'}
+define D_SJR006_ANTOC 	{std kind 'DIVERSION' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
