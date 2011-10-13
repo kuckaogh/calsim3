@@ -43,7 +43,7 @@ goal continuityAMADR        {I_AMADR + D_PARDE_AMADR - D_AMADR_60N_NA1 - C_AMADR
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityPARDE        {I_PARDE - D_PARDE_AMADR - D_PARDE_EBA000 - C_PARDE - E_PARDE = S_PARDE*taf_cfs - S_PARDE(-1)*taf_cfs + ErrPos_PARDE  - ErrNeg_PARDE}!
 goal continuityCMCHE        {I_CMCHE + SG_CMCHE_516  + C_PARDE - C_CMCHE - E_CMCHE = S_CMCHE*taf_cfs - S_CMCHE(-1)*taf_cfs + ErrPos_CMCHE  - ErrNeg_CMCHE}!
-goal continuityMOK057       {C_CMCHE - C_MOK057 = ErrPos_MOK057 - ErrNeg_MOK057}!USGS 11323500 Mokelumne R. blw Camanche Dam
+goal continuityMOK057       {C_CMCHE - C_MOK057 = ErrPos_MOK057 - ErrNeg_MOK057} !USGS 11323500 Mokelumne R. blw Camanche Dam
 goal continuityMOK055       {C_MOK057 + SG_MOK055_515 - C_MOK055 = ErrPos_MOK055 - ErrNeg_MOK055}!
 goal continuityMOK050       {C_MOK055 + SG_MOK050_514 - D_MOK050_60N_NA3 - D_MOK050_60N_NA5 - C_MOK050 = ErrPos_MOK050 - ErrNeg_MOK050}!
 goal continuityMOK044       {C_MOK050 + SG_MOK044_513 - C_MOK044 = ErrPos_MOK044 - ErrNeg_MOK044}!
