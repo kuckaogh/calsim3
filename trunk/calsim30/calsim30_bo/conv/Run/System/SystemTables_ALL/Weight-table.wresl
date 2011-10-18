@@ -65,7 +65,7 @@ Objective obj = {
 [S_FOLSM_6,-15000*taf_cfs],
       
 [S_NTOMA_1, 20000*taf_cfs],
-[S_NTOMA_2,    96*taf_cfs],
+[S_NTOMA_2, 10000*taf_cfs],
 [S_NTOMA_3,    95*taf_cfs],
 [S_NTOMA_4,    94*taf_cfs],
 [S_NTOMA_5,-15000*taf_cfs],
