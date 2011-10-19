@@ -139,7 +139,7 @@ define wyt_YB {
 define MF_BRR050 	{
  case novaprdry 	{condition month >= NOV .and. month <= APR .and. wyt_YB >= 3. value 15. }
  case novaprwet 	{condition month >= NOV .and. month <= APR .and. wyt_YB <= 2. value 20. }
- case mayoctdry 	{condition month >= MAY .or. month <= OCT .and. wyt_YB >= 3. value 40. } 
+ case mayoctdry 	{condition month >= MAY .and. month <= SEP .and. wyt_YB >= 3. .or. month == OCT .and. wyt_YB >= 3. value 40. } 
  case other 		{condition always value 70. } 
 }
 

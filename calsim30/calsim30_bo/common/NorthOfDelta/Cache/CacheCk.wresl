@@ -122,7 +122,7 @@ goal setalloc_YCFCWCD_dv {alloc_YCFCWCD_dv = alloc_YCFCWCD}
 goal set_C_CLRLK_WS {
      lhs C_CLRLK_WS
      case Low {
-          condition adjCLRLK_May1 <= 130.00 .and. month >= MAY .or. month <= OCT
+          condition adjCLRLK_May1 <= 130.00 .and. month >= MAY .and. month <= SEP .or. adjCLRLK_May1 <= 130.00 .and. month == OCT
           rhs CLDamLeak
 	  lhs>rhs     constrain
     	  lhs<rhs     penalty 0
@@ -203,7 +203,7 @@ case April  {
     	lhs>rhs     constrain
     	lhs<rhs     penalty 0 }
 case MayOct {
-    	condition   month >= MAY .or. month <= OCT
+    	condition   month >= MAY .and. month <= SEP .or. month == OCT
     	rhs max(C_CLRLK_WSMax,CLDamLeak) ! Assume no flood release during irrigation season
     	lhs>rhs     constrain
     	lhs<rhs     penalty 0 }
