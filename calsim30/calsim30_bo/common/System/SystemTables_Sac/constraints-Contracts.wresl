@@ -17,8 +17,8 @@ define perdv_cvpsc_sys   {std kind 'percent-delivery' units 'none'}
 define perdv_cvprf_sys   {std kind 'percent-delivery' units 'none'}
 
 ! define Orland Unit allocations - near Stony Creek
-define alloc_ouwua_ndv   {std kind 'percent-delivery' units 'none'}
-define alloc_ouwua_sdv   {std kind 'percent-delivery' units 'none'}
+!define alloc_ouwua_ndv   {std kind 'percent-delivery' units 'none'}
+!define alloc_ouwua_sdv   {std kind 'percent-delivery' units 'none'}
 
 ! define YCWA Member Unit allocations
 define YCWA_Alloc {std kind 'fraction' units 'none'}
