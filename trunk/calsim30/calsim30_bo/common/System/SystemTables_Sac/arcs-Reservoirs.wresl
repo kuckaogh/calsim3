@@ -431,7 +431,7 @@ define relcap_CMBIE {select discharge from res_info given storage=1000*S_CMBIE(-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!Camp Far West Reservoir !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define S_CMPFWlevel1 {value 1}
+define S_CMPFWlevel1 {value 2.9}
 define S_CMPFW_1 {std kind 'STORAGE-ZONE' units 'TAF'}
 define S_CMPFWlevel2 {select target from res_level where res_num=286,level=2,month=month}
 define S_CMPFW_2 {std kind 'STORAGE-ZONE' units 'TAF'}
