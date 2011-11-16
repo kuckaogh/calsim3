@@ -295,4 +295,3 @@ define DA_SAC_South 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS
 define DA_SAC_North 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS'}
 define DA_SAC_West 	{timeseries kind 'DELTA-ACCRETION' units 'TAF' convert 'CFS'}
 
-define BC_Verona 	{timeseries kind 'BIAS-CORRECTION' units 'TAF' convert 'CFS'} ! 3.2 inches evap. in last 2 weeks of Sept. x 510,000 acres of rice

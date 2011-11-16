@@ -653,7 +653,7 @@ goal continuitySAC091   {C_SAC092 - D_SAC091_19_SA - C_SAC091                   
 goal continuitySAC085   {C_SAC091 + SG_SAC085_349 + C_SSL001 + R_17S_SA_SAC085 - C_SAC085                       = ErrPos_SAC085 - ErrNeg_SAC085}    ! Knights Landing Ridgecut/Grays Bend.  
 goal continuitySAC083   {C_SAC085 + CT_Verona + SG_SAC083_350 + C_FTR003 + R_22_SA2_SAC083 - D_SAC083_21_SA - SP_SAC083_YBP034 - C_SAC083           = ErrPos_SAC083 - ErrNeg_SAC083}
 goal continuitySAC082   {C_SAC083 + SG_SAC082_351 + C_CRC002 - D_SAC082_22_SA1 - C_SAC082                           = ErrPos_SAC082 - ErrNeg_SAC082}! confluence Feather River.  
-goal continuitySAC081   {C_SAC082 + SG_SAC081_363 - BC_Verona - D_SAC081_21_NA - C_SAC081                                                = ErrPos_SAC081 - ErrNeg_SAC081}! Verona gage
+goal continuitySAC081   {C_SAC082 + SG_SAC081_363 - D_SAC081_21_NA - C_SAC081                                                = ErrPos_SAC081 - ErrNeg_SAC081}! Verona gage
 goal continuitySAC078   {C_SAC081 + SG_SAC078_362 - D_SAC078_22_SA1 - C_SAC078                                              = ErrPos_SAC078 - ErrNeg_SAC078}
 goal continuitySAC077   {C_SAC078 - D_SAC077_WTPSRW - C_SAC077                                              = ErrPos_SAC077 - ErrNeg_SAC077}
 goal continuityWTPSRW   {D_SAC077_WTPSRW - D_WTPSRW_24_NU2 - D_WTPSRW_26N_NU1 - D_WTPSRW_26N_PU1 - D_WTPSRW_26N_NU3                 = ErrPos_WTPSRW - ErrNeg_WTPSRW}
