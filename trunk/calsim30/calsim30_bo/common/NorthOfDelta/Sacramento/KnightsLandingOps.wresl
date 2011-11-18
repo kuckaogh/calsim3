@@ -10,7 +10,7 @@ goal C_SAC093SurplusFlow  {C_SAC093 - 15000.0 = C_SAC093_1 - C_SAC093_0}
 goal C_SAC093FlowAbove	  {C_SAC093_1         < 99999.0 - C_SAC093IntFlow*99999.0} ! If C_SAC093 > 15000. then C_SAC093IntFlow = 0
 goal C_SAC093FlowBelow    {C_SAC093_0         < C_SAC093IntFlow*99999.0}           ! If C_SAC093 < 15000. then C_SAC093IntFlow = 1
 
-goal LimitC_CBD001        {C_CBD001 < C_SAC093IntFlow*99999.0}
+goal LimitC_CBD000        {C_CBD000 < C_SAC093IntFlow*99999.0}
 
 define maxCBD001_KLR005   {timeseries kind 'FLOW_MAX' units 'TAF'}
 goal LimitD_CBD001_KLR005 {D_CBD001_KLR005 < maxCBD001_KLR005*taf_cfs + 99999.0 - C_SAC093IntFlow*99999.0}

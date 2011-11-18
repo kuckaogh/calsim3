@@ -147,11 +147,11 @@ define C_BRR050_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
 define C_BRR050_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 
 ! Combie Lake Release
-define MF_CMBIE 		{value 5. }
+define MF_CMBIE 		{value 5. } !cfs
 define C_CMBIE_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
 define C_CMBIE_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 
-! Bear River below diversion dam
+! Bear River below diversion dam min flow in cfs
 define MF_BRR017 {
  case aprjun 	{condition month >= APR .and. month <= JUN value 25. }
  case other 	{condition always value 10. }
