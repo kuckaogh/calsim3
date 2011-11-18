@@ -1436,6 +1436,9 @@ goal setDN_26S_PU3  {DN_26S_PU3 = DG_26S_PU3 - DL_26S_PU3}
 ! Total Applied Water = net surface delivery + groundwater pumping
 goal setUD_26S_PU3  {UD_26S_PU3 = DN_26S_PU3 + GP_26S_PU3 } ! + SHRTG_26S_PU3 }
 
+define FSC_Losses {timeseries kind 'SEEPAGE'  units 'TAF' convert 'CFS'}  !Seepage losses for Folsom South Canal
+goal setD_FSC003_FSCLOS {D_FSC003_FSCLOS = FSC_Losses}
+
 !======================================================================
 ! 26S_NU3
 !======================================================================

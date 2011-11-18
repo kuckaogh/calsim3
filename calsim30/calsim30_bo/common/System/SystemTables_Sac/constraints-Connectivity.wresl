@@ -253,8 +253,8 @@ goal continuityCBD023   {C_CBD028 + SG_CBD023_289 - D_CBD023_08S_SA3 - C_CBD023 
 goal continuityCBD018   {C_CBD023 + SG_CBD018_302 - C_CBD018                                                            = ErrPos_CBD018 - ErrNeg_CBD018}    
 goal continuityCBD012   {C_CBD018 + SG_CBD012_314 + R_08S_PA_CBD012 - C_CBD012                                                      = ErrPos_CBD012 - ErrNeg_CBD012}
 goal continuityCBD005   {C_CBD012 + SG_CBD005_326 - C_CBD005                                                = ErrPos_CBD005 - ErrNeg_CBD005}    
-goal continuityCBD001   {C_CBD005 - D_CBD001_KLR005 - C_CBD001                                              = ErrPos_CBD001 - ErrNeg_CBD001}
-goal continuityCBD000   {C_CBD001 + CT_Colusa - C_CBD000                                        = ErrPos_CBD000 - ErrNeg_CBD000}
+goal continuityCBD001   {C_CBD005 + CT_Colusa - D_CBD001_KLR005 - C_CBD001                                              = ErrPos_CBD001 - ErrNeg_CBD001}
+goal continuityCBD000   {C_CBD001 - C_CBD000                                        = ErrPos_CBD000 - ErrNeg_CBD000}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Contra Costa Water District !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -422,7 +422,7 @@ goal continuityYCWWTP   {R_16_PU_YCWWTP - R_YCWWTP_FTR028                       
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Folsom South Canal  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityFSC003   {D_NTOMA_FSC003 + SG_FSC003 - D_FSC003_WTPCOL - D_FSC003_26S_PU3 - C_FSC003 = ErrPos_FSC003 - ErrNeg_FSC003}
+goal continuityFSC003   {D_NTOMA_FSC003 - D_FSC003_FSCLOS - D_FSC003_WTPCOL - D_FSC003_26S_PU3 - C_FSC003 = ErrPos_FSC003 - ErrNeg_FSC003}
 goal continuityFSC013   {C_FSC003   + D_FPT013_FSC013 - C_FSC013                    = ErrPos_FSC013 - ErrNeg_FSC013}
 goal continuityFSC015   {C_FSC013   - D_FSC015_60N_NA2  - C_FSC015                  = ErrPos_FSC015 - ErrNeg_FSC015}
 goal continuityFSC025   {C_FSC015   - D_FSC025_60N_PU - C_FSC025                    = ErrPos_FSC025 - ErrNeg_FSC025}
@@ -515,7 +515,7 @@ goal continuityWTPBNC   {D_VJB000_WTPBNC - D_WTPBNC_BNCIA                       
 !!! Old and Middle River Combined (Delta)   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityOMR028   {C_SJR053B - D_OMR028_DMC003 - C_OMR028         = ErrPos_OMR028 - ErrNeg_OMR028}
-goal continuityOMR027   {C_OMR028 + DA_OMR - D_OMR027_CAA000 - D_OMR027_DD_OMR - C_OMR027    = ErrPos_OMR027 - ErrNeg_OMR027}
+goal continuityOMR027   {C_OMR028 + DA_OMR - DND_OMR_adj - D_OMR027_CAA000 - D_OMR027_DD_OMR - C_OMR027    = ErrPos_OMR027 - ErrNeg_OMR027}
 goal continuityOMR024   {C_OMR027 - C_OMR024A - C_OMR024B           = ErrPos_OMR024 - ErrNeg_OMR024}
 goal continuityOMR021   {C_OMR024A - D_OMR021_ORP000 - C_OMR021         = ErrPos_OMR021 - ErrNeg_OMR021}
 goal continuityOMR018   {C_OMR021 + C_RSL001B - C_OMR018            = ErrPos_OMR018 - ErrNeg_OMR018}
@@ -647,8 +647,8 @@ goal continuitySAC109   {C_SAC115 - D_SAC109_08S_SA3 - D_SAC109_19_SA - C_SAC109
 goal continuitySAC106   {C_SAC109 + SG_SAC106_315 - C_SAC106                                        = ErrPos_SAC106 - ErrNeg_SAC106}
 goal continuitySAC099   {C_SAC106 - D_SAC099_19_SA - C_SAC099                                           = ErrPos_SAC099 - ErrNeg_SAC099}
 goal continuitySAC097   {C_SAC099 + SG_SAC097_327 + R_RFS8S_SAC097 - C_SAC097                              = ErrPos_SAC097 - ErrNeg_SAC097}    
-goal continuitySAC093   {C_SAC097 + SG_SAC093_339 + C_CBD000 + R_RFS8S_SAC093 - C_SAC093                                                        = ErrPos_SAC093 - ErrNeg_SAC093}
-goal continuitySAC092   {C_SAC093 - C_SAC092                                                    = ErrPos_SAC092 - ErrNeg_SAC092}
+goal continuitySAC093   {C_SAC097 + C_CBD000 + R_RFS8S_SAC093 - C_SAC093                                                        = ErrPos_SAC093 - ErrNeg_SAC093}
+goal continuitySAC092   {C_SAC093 + SG_SAC092_339 - C_SAC092                                                    = ErrPos_SAC092 - ErrNeg_SAC092}
 goal continuitySAC091   {C_SAC092 - D_SAC091_19_SA - C_SAC091                                           = ErrPos_SAC091 - ErrNeg_SAC091}
 goal continuitySAC085   {C_SAC091 + SG_SAC085_349 + C_SSL001 + R_17S_SA_SAC085 - C_SAC085                       = ErrPos_SAC085 - ErrNeg_SAC085}    ! Knights Landing Ridgecut/Grays Bend.  
 goal continuitySAC083   {C_SAC085 + CT_Verona + SG_SAC083_350 + C_FTR003 + R_22_SA2_SAC083 - D_SAC083_21_SA - SP_SAC083_YBP034 - C_SAC083           = ErrPos_SAC083 - ErrNeg_SAC083}
