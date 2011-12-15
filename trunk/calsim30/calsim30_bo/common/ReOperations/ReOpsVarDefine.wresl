@@ -63,11 +63,11 @@ define C_SAC041_EWA {std kind 'FLOW-REOP-ADJ' units 'cfs'}
 goal splitC_SAC041_reop {C_SAC041_reop = C_SAC041_whlcv + C_SAC041_whljp + C_SAC041_WTS + C_SAC041_EWA}
 
 ! Outflow required (per ANN) in excess of D407
-define C_NDO_whlcv {std kind 'FLOW-CHANNEL' units 'CFS'}
-define C_NDO_whljp {std kind 'FLOW-CHANNEL' units 'CFS'}
-define C_NDO_WTS {std kind 'flow-channel' units 'cfs'}
-define C_NDO_ewa {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
-define C_NDO_ewarels {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
+define C_SAC000_ADD_whlcv {std kind 'FLOW-CHANNEL' units 'CFS'}
+define C_SAC000_ADD_whljp {std kind 'FLOW-CHANNEL' units 'CFS'}
+define C_SAC000_ADD_WTS {std kind 'flow-channel' units 'cfs'}
+define C_SAC000_ADD_ewa {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
+define C_SAC000_ADD_ewarels {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
 
 ! REOP Balance Error terms
 define Reop_Rel_Bal_Err {lower unbounded upper unbounded kind 'BALANCE-ERROR' UNITS 'CFS'}

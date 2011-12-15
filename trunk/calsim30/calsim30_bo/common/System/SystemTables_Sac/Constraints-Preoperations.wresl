@@ -14,7 +14,7 @@ Naming takes the following form:
 goal set_D_LST004_OWC000	{D_LST004_OWC000	< D_LST004_OWC000_SV}
 goal set_R_MNRRH_FTR072		{R_MNRRH_FTR072		< R_MNRRH_FTR072_SV}
 goal set_D_OROVL_13_NU1		{D_OROVL_13_NU1		< D_OROVL_13_NU1_SV} 
-!goal set_D_WBF030_TTC011	{D_WBF030_TTC011	< D_WBF030_TTC011_SV}
+!goal set_D_WBF030_TTC002	{D_WBF030_TTC002	< D_WBF030_TTC002_SV}
 !goal set_D_WBF015_MIO023	{D_WBF015_MIO023	< D_WBF015_MIO023_SV}
 goal set_D_SLT009_SCT000	{D_SLT009_SCT000	< D_SLT009_SCT000_SV}
 
@@ -39,8 +39,8 @@ goal set_C_MRM001 {C_MRM001 < C_MRM001_SV}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Wolf Creek		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal setD_WLF013_TARRD		{D_WLF013_TARRD < D_WLF013_TARRD_SV}
-goal setR_DSCNL_WLF021		{R_DSCNL_WLF021 = R_DSCNL_WLF021_SV}
+goal setD_WLF013_NIDTD		{D_WLF013_NIDTD < D_WLF013_NIDTD_SV}
+goal setR_NIDDC_WLF021		{R_NIDDC_WLF021 = R_NIDDC_WLF021_SV}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! American River		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

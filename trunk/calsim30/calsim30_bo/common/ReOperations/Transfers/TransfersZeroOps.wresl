@@ -14,7 +14,7 @@ goal setI852_WTS {I852_WTS = 0.}
 !goal zeroD7b_WTS  {D7b_WTS = 0.}
 !goal zeroD168A_WTS {D168A_WTS = 0.}
 
-goal zeroC_NDO_WTS {C_NDO_WTS  = 0.}
+goal zeroC_SAC000_ADD_WTS {C_SAC000_ADD_WTS  = 0.}
 goal zeroD418_WTS {D418_WTS  = 0.}
 goal zeroD419_WTS {D419_WTS  = 0.}
 

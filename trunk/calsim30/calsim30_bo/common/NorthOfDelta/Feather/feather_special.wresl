@@ -52,7 +52,7 @@ define nov_trigger_cfs {
         from      featherfish_058
         where   month = NOV}
 
-define MF_C_FTR059 {
+define MF_FTR059 {
   case October {
     condition month == OCT
     value   0
@@ -107,7 +107,7 @@ goal avoidTrigger {
   }
   case November {
     condition month == NOV
-    rhs   max(nov_trigger_cfs, MF_C_FTR059 + 500)
+    rhs   max(nov_trigger_cfs, MF_FTR059 + 500)
     lhs>rhs   penalty 4600
     lhs<rhs   penalty 0
   }
@@ -164,7 +164,7 @@ define minflowFeather {timeseries kind 'FLOW-MIN-REQUIRED' units 'CFS'}
 
 define minflow_C_FTR068 {select minflow from minflow where C_arc=200,month=month}
 goal mnflw_C_FTR068 {C_FTR068_MIF < minflow_C_FTR068}
-goal minflow_C_FTR059 {C_FTR059_MIF < max(MF_C_FTR059,minflowFeather)} ! below Thermalito return
+goal minflow_C_FTR059 {C_FTR059_MIF < max(MF_FTR059,minflowFeather)} ! below Thermalito return
 goal minflow_C_FTR039 {C_FTR039_MIF < minflowFeather} ! below Sunset Pumps
 goal minflow_C_FTR003 {C_FTR003_MIF < minflowFeather} ! at the mouth
 
@@ -174,12 +174,12 @@ goal oro_releases {
     lhs C_OROVL
     case low_storage {
         condition S_OROVL(-1) < 1000. + DrainTar_buffer
-            rhs MF_C_FTR059
+            rhs MF_FTR059
             lhs>rhs penalty 3000.
             lhs<rhs penalty 0 }
     case norm_storage {
         condition always
-            rhs MF_C_FTR059
+            rhs MF_FTR059
             lhs>rhs penalty 0
             lhs<rhs penalty 0 }
 }

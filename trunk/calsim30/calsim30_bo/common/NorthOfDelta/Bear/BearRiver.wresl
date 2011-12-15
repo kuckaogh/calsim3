@@ -384,7 +384,7 @@ define D_STH000_ABN027_PCWA 	{std kind 'DIVERSION' units 'CFS'}
 define D_STH000_ABN027_SPILL 	{std kind 'DIVERSION' units 'CFS'}
 
 goal totalD_STH000_ABN027		{D_STH000_ABN027 = D_STH000_ABN027_NID + D_STH000_ABN027_PCWA + D_STH000_ABN027_SPILL}
-goal setD_ABN024_24_NA1		{D_ABN024_24_NA1 + D_ABN024_23_NA = D_STH000_ABN027_NID}! Deliveries to NID plus sales to SSWD
+goal setD_ABN024_24_NA1		{D_ABN024_24_NA1 + D_ABN006_23_NA = D_STH000_ABN027_NID}! Deliveries to NID plus sales to SSWD
 goal setD_ABN010_24_NA2		{D_ABN010_24_NA2 = D_STH000_ABN027_PCWA + C_ABT002} ! Deliveries to PCWA Zone 5
 
 ! Pre-operate deliveries from South Canal to NID via Auburn Ravine 
@@ -491,7 +491,7 @@ define C_CBC000_SV 		{timeseries kind 'CHANNEL' units 'TAF' convert 'CFS'}
 
 !goal setD_CMBIE_CBC000 	{lhs D_CMBIE_CBC000 rhs D_CMBIE_CBC000_SV lhs<rhs penalty 9999 lhs>rhs penalty 50000}
 !goal setC_CBC000 			{lhs C_CBC000 rhs C_CBC000_SV lhs<rhs penalty 9999 lhs>rhs penalty 10000}
-goal setD_CBC000_NIDDC	{D_CBC000_NIDDC < D_CMBIE_CBC000_SV - C_CBC000_SV}
+goal setD_CBC000_NIDTD	{D_CBC000_NIDTD < D_CMBIE_CBC000_SV - C_CBC000_SV}
 goal setD_CBC001_CCK036	{D_CBC001_CCK036 = 0.0 * C_CBC000} !Fix spill if diversions from Combie Canal are not pre-operated
 
 ! Limit releases from Combie Reservoir to flood releases - not releases for downstream water supply

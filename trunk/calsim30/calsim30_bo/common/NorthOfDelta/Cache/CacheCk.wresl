@@ -97,7 +97,7 @@ case FirstMonth {
     	value 313.0 }
 case May {
     	condition   month == May
-    	value S_adjCLRLK(-1) + C_CLRLK(-1)*cfs_taf(-1) - max(0.0, S_CLRLK(-2) + I_CLRLK(-1)*cfs_taf(-1) -E_CLRLK(-1)*cfs_taf(-1)-S_CLRLKLevel4(-1)) }
+    	value S_adjCLRLK(-1) + C_CLRLK(-1)*cfs_taf(-1) - max(0.0, S_CLRLK(-2) + I_CLRLK(-1)*cfs_taf(-1) - D_CLRLK_CLLPT(-1) - E_CLRLK(-1)*cfs_taf(-1) - S_CLRLKLevel4(-1)) }
 case other  {
     	condition always
     	value adjCLRLK_May1_dv(-1) }

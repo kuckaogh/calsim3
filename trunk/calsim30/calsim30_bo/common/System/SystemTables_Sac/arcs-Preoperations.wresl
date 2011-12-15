@@ -43,8 +43,8 @@ define	C_MRM001_SV		{timeseries kind 'CHANNEL' units 'TAF' convert 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Wolf Creek	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define	D_WLF013_TARRD_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'}
-define  R_DSCNL_WLF021_SV	{timeseries kind 'RETURN-FLOW' units 'TAF' convert 'CFS'}
+define	D_WLF013_NIDTD_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'}
+define  R_NIDDC_WLF021_SV	{timeseries kind 'RETURN-FLOW' units 'TAF' convert 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! AMERICAN RIVER	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

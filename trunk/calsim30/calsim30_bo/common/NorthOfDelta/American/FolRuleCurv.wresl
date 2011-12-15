@@ -20,9 +20,10 @@ define FolDiv {value (WRWF_ANN_PCWA_A + CLWF_ANN_PCWA_A) * perdem_PCWA +
                      (WRWF_ANN_SJWD_S + CLWF_ANN_SJWD_S) * perdem_SJWD_S +
                      (WRWF_ANN_ELDOR + CLWF_ANN_ELDOR_ID + CLWF_ANN_ELDOR_CO) * perdem_ELDOR  +
                      (WRWF_ANN_ROSEV  + CLWF_ANN_ROSEV ) * perdem_ROSEV +
-                      WRWF_ANN_SCWC                     * perdem_SCWC +
+                      WRWF_ANN_GSWC                     * perdem_GSWC +
                       CLWF_ANN_CAREC                   * perdem_CAREC +
                       CLWF_ANN_SMUD                    * perdem_SMUD +
+                      CLWF_ANN_GSWC                    * perdem_GSWC +
                       FSC_Losses * cfs_taf}
 
 define FolDivEst {sum(i=0,SEP-month,1)
@@ -34,9 +35,10 @@ define FolDivEst {sum(i=0,SEP-month,1)
                      (WRWF_ANN_SJWD_S(i) + CLWF_ANN_SJWD_S(i)) * perdem_SJWD_S(i) +
                      (WRWF_ANN_ELDOR(i) + CLWF_ANN_ELDOR_ID(i) + CLWF_ANN_ELDOR_CO(i)) * perdem_ELDOR(i)  +
                      (WRWF_ANN_ROSEV(i)  + CLWF_ANN_ROSEV(i) ) * perdem_ROSEV(i) +
-                      WRWF_ANN_SCWC(i)                        * perdem_SCWC(i) +
+                      WRWF_ANN_GSWC(i)                        * perdem_GSWC(i) +
                       CLWF_ANN_CAREC(i)                      * perdem_CAREC(i) +
                       CLWF_ANN_SMUD(i)                       * perdem_SMUD(i) +
+                      CLWF_ANN_GSWC(i)                       * perdem_GSWC(i) +
                       FSC_Losses(i) * cfs_taf(i))}
 
 

@@ -109,8 +109,8 @@ define MF_MFY013 {
 }
 
 ! Yuba River's Smartsville gage flow requirement
-define C_YUB023_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'} 
-define C_YUB023_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
+define C_YUB024_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'} 
+define C_YUB024_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 
 ! Yuba River's Marysville gage flow requirement
 define C_YUB006_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'} 

@@ -18,7 +18,7 @@ define  X_WTPBUK_03_PU3  {alias CLmon_WTPBUK_03_PU3 * taf_cfs*perdv_cvpmi_sys - 
 define  X_WTPCSD_02_PU  {alias CLmon_WTPCSD_02_PU * taf_cfs*perdv_cvpmi_sys - D_WTPCSD_02_PU kind 'delivery-shortage' units 'cfs'}
 define  X_WKYTN_02_PU  {alias CLmon_WKYTN_02_PU * taf_cfs*perdv_cvpmi_sys - D_WKYTN_02_PU kind 'delivery-shortage' units 'cfs'}
 define  X_SHSTA_03_PU1  {alias CLmon_SHSTA_03_PU1 * taf_cfs*perdv_cvpmi_sys - D_WTPJMS_03_PU1 kind 'delivery-shortage' units 'cfs'}
-define  X_SAC294_03_PU2  {alias CLmon_SAC294_03_PU2 * taf_cfs*perdv_cvpmi_sys - D_SAC294_03_PU2 kind 'delivery-shortage' units 'cfs'}
+define  X_WTPBLV_03_PU2  {alias CLmon_WTPBLV_03_PU2 * taf_cfs*perdv_cvpmi_sys - D_WTPBLV_03_PU2 kind 'delivery-shortage' units 'cfs'}
 ! Placeholders for nine CVP MI contractors with mixed diversion of CVP and Water Forum water - CVP shortage assumed to be zero. 
 define  X_CL2_FOLSM  {alias CL2_FOLSM - CL2_FOLSM kind 'delivery-shortage' units 'cfs'}
 define  X_CL2_SJWD_S  {alias CL2_SJWD_S - CL2_SJWD_S kind 'delivery-shortage' units 'cfs'}
@@ -30,10 +30,10 @@ define  X_CL2_SMUD  {alias CL2_SMUD - CL2_SMUD kind 'delivery-shortage' units 'c
 define  X_CL2_SCWA  {alias CL2_SCWA - CL2_SCWA kind 'delivery-shortage' units 'cfs'}
 define  X_CL2_PCWA_A  {alias CL2_PCWA_A - CL2_PCWA_A kind 'delivery-shortage' units 'cfs'}
 
-define short_cvp_pmi_n {alias  X_WTPBUK_03_PU3 +  X_WTPCSD_02_PU +  X_WKYTN_02_PU +  X_SHSTA_03_PU1 +  X_SAC294_03_PU2  +  X_CL2_FOLSM +  X_CL2_SJWD_S +  X_CL2_ELDOR +  X_CL2_ROSEV +  X_CL2_CAREC +  X_CL2_SMUD /*+  X_CL2_PCWA_S*/ +  X_CL2_SCWA +  X_CL2_PCWA_A kind 'delivery-shortage-cvp' units 'cfs'}
+define short_cvp_pmi_n {alias  X_WTPBUK_03_PU3 +  X_WTPCSD_02_PU +  X_WKYTN_02_PU +  X_SHSTA_03_PU1 +  X_WTPBLV_03_PU2  +  X_CL2_FOLSM +  X_CL2_SJWD_S +  X_CL2_ELDOR +  X_CL2_ROSEV +  X_CL2_CAREC +  X_CL2_SMUD /*+  X_CL2_PCWA_S*/ +  X_CL2_SCWA +  X_CL2_PCWA_A kind 'delivery-shortage-cvp' units 'cfs'}
 
 ! Include placeholders for nine CVP MI contractors with mixed diversion of CVP and Water Forum water - CVP delivery assumes zero shortage
-define del_cvp_pmi_n {alias D_WTPBUK_03_PU3 + D_WTPCSD_02_PU + D_WKYTN_02_PU + D_WTPJMS_03_PU1 + D_SAC294_03_PU2 + CL2_FOLSM + CL2_SJWD_S + CL2_ELDOR + CL2_ROSEV + CL2_CAREC + CL2_SMUD /*+ CL2_PCWA_S*/ + CL2_SCWA + CL2_PCWA_A kind 'delivery-cvp' units 'cfs'}
+define del_cvp_pmi_n {alias D_WTPBUK_03_PU3 + D_WTPCSD_02_PU + D_WKYTN_02_PU + D_WTPJMS_03_PU1 + D_WTPBLV_03_PU2 + CL2_FOLSM + CL2_SJWD_S + CL2_ELDOR + CL2_ROSEV + CL2_CAREC + CL2_SMUD /*+ CL2_PCWA_S*/ + CL2_SCWA + CL2_PCWA_A kind 'delivery-cvp' units 'cfs'}
 
 
 ! Settlement contractor deliveries occur in April-October and non-project water right diversions occur at same diversion arc in November-March

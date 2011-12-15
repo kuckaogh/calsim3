@@ -915,9 +915,6 @@ define    UD_19_NU  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 20          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! no surface deliveries to 20_NU1
-define    UD_20_NU1  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'} 
-
 ! no surface deliveries to 20_NU2
 define    UD_20_NU2  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}  
 
@@ -944,6 +941,9 @@ define    AW_20_PA  {std kind 'APPLIED-WATER' units 'CFS'} ! Total Applied Water
 define    AWR_20_PA {timeseries kind 'APPLIED-WATER' units 'TAF' convert 'CFS'}! Applied Water for rice
 define    AWO_20_PA {timeseries kind 'APPLIED-WATER' units 'TAF' convert 'CFS'}! Applied Water for all other crops
 
+define    DN_20_NU1  {std kind 'SW-DELIVERY-NET' units 'CFS'}               
+define    DG_20_NU1  {std kind 'SW-DELIVERY-GROSS' units 'CFS'}
+define    UD_20_NU1  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 21          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1112,7 +1112,7 @@ define    UD_SUISN  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_FRFLD  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_VLLJO  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_BNCIA  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
-define    UD_TAFB        {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
+define    UD_TVAFB        {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 
 !Demand are currently not defined for Napa and Anerican Canyon.
 !Table A water and Arcticle 21 water is delivered from the NBA and split 21% to American Canyon and 79% to Napa
