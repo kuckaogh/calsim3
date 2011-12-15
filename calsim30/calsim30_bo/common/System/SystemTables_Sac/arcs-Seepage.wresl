@@ -75,7 +75,7 @@ define	SG_BTC032_157	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 define	SG_BTC029_173	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!173		286
 define	SG_BTC024_188	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!188		287
 define	SG_BTC018_204	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!204		288
-define	SG_BTC012_223	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!223		289
+define	SG_BTC015_223	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!223		289
 define	SG_BTC007_242	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!242		290
 define	SG_BTC003_255	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!255		291		
 define	SG_BSL001_263	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!263		292	
@@ -159,7 +159,7 @@ define	SG_COW_Total		{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 !!! Deer Creek		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define 	SG_DRC010_096		{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!096		256
-define 	SG_DRC006_100		{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!100		257
+define 	SG_DRC005_100		{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!100		257
 
 define	SG_DRC_Total		{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 											  !
@@ -285,7 +285,7 @@ define	SG_SAC214_105	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 define	SG_SAC207_113	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!113		261 
 define	SG_SAC196_129	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!129		262
 define	SG_SAC193_140	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!140		274 
-define	SG_SAC185_144	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!144		275 
+define	SG_SAC188_144	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!144		275 
 define	SG_SAC182_155	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!155		276 
 define	SG_SAC178_171	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!171		277 
 define	SG_SAC174_186	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!186		278 

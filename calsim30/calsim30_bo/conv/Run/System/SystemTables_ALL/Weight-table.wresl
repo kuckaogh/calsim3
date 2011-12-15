@@ -301,7 +301,7 @@ Objective obj = {
 [D_SHSTA_WTPJMS, 5000],
 [D_WTPJMS_03_PU1, 5000],
 [D_SAC294_03_PA,  5000],
-[D_SAC294_03_PU2, 5010], !Higher weight to favor urban deliveries over agriculture
+[D_WTPBLV_03_PU2, 5010], !Higher weight to favor urban deliveries over agriculture
 [D_SAC296_WTPFTH,5000],
 [D_SAC289_03_SA,  5000],
 [D_COW014_03_NA,  5100],
@@ -325,7 +325,7 @@ Objective obj = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [D_ANT010_05_NA,  5101],
 [D_DRC010_05_NA,  5104], !Use Deer Creek as second supply up to availability
-[D_DRC006_05_NA,  5103], !Use Deer Creek as second supply up to availability
+[D_DRC005_05_NA,  5103], !Use Deer Creek as second supply up to availability
 [D_MLC006_05_NA,  5102],
 [D_SAC240_05_NA,  5105], ! Use Sacramento CVP contract water first, upto contract amount
 
@@ -367,7 +367,7 @@ Objective obj = {
 [D_SAC159_08S_SA1,5000],
 [D_CBD041_08S_SA1,5010],
 [D_CBD041_08S_SA2,5010],
-[D_CBD023_08S_SA3,5010],
+[D_CBD028_08S_SA3,5010],
 [D_CBD028_08S_PA, 5000],
 [D_GCC056_08S_SA2,5000],
 [D_GCC039_08N_PR2,5000],
@@ -434,10 +434,9 @@ Objective obj = {
 ! WBA 12    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [D_FTR059_12_SA,  5000], ! Riparian
-![D_FTR059_12_NU1,  5100],
 [D_RFS13_12_NA,   5100],
 [D_MIO023_12_NU1, 15000],
-
+[D_THRMF_12_NU1,  5100],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 13    !!!!!!!!!!!!!!!!!!!!!!!
@@ -446,7 +445,6 @@ Objective obj = {
 [D_OWC000_13_NA,   5000],
 [D_MNRRH_13_NA,    5000],
 [D_MNRRH_13_NU2,   5000],
-[D_OWC000_RFS13,     -5], ! spill to RFS13
 [D_MNRRH_WTPMNR,   5000],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -523,6 +521,7 @@ Objective obj = {
 [D_CCH052_20_NA1,5000],
 [D_CCH030_20_NA1,5000],
 [D_PSC003_20_PA,5000],
+![D_WTPDWP_20_NU1,5000], ! future diversion to Davis and Woodland
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 21    !!!!!!!!!!!!!!!!!!!!!!!
@@ -548,7 +547,7 @@ Objective obj = {
 ! WBA 23    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [D_BRR017_23_NA, 5000], ! Camp Far West ID and South Sutter WD
-[D_ABN024_23_NA, 4950], ! Nevada ID sale to South Sutter WD, lower weight
+[D_ABN006_23_NA, 4950], ! Nevada ID sale to South Sutter WD, lower weight
      
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 24    !!!!!!!!!!!!!!!!!!!!!!!
@@ -571,7 +570,7 @@ Objective obj = {
 [D_LBC043_MRM001,10],
 [D_WTPSRW_24_NU2,5000],
 [D_LBC010_PCWA3, 20000], !Ensure deliveries to PCWA Zone 3 are met
-[D_CBC000_NIDDC, 5000],
+[D_CBC000_NIDTD, 5000],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 25    !!!!!!!!!!!!!!
@@ -580,7 +579,8 @@ Objective obj = {
 !Putah South Canal Deliveries
 [D_PSC003_25_PA1,   5000],
 [D_PSC006_25_PA2,   5000],
-[D_PSC015_CSPSO,    5000],      
+[D_PSC015_CSPSO,    5000],
+[D_PSC017_WTPNBR,   5000],
 [D_PSC024_SIDSH,    5000],
 [D_PSC033_VJB000,   5000],  
 [D_WTPCMT_SUISN ,   5000],
@@ -621,7 +621,7 @@ Objective obj = {
 [D_WTPFBN_26S_NU2,   4998],
 [D_WTPVNY_26S_PU5,   5000],
 [D_WTPVNY_26S_PU6,   5000],
-[D_FSC003_26S_PU3,   5000],
+[D_FOLSM_26S_PU3,    5000],
 [D_FOLSM_WTPEDH,     5000],
 [D_WTPFOL_26S_NU4,   4999],
 
@@ -674,7 +674,7 @@ Objective obj = {
 [C_NTOMA_ADD2,-1266],   ! Lower American River below Natoma
 [C_AMR004_MIF, 5500],   ! Lower American River
 
-[C_YUB023_MIF,15000],  ! Yuba River at Smartsville
+[C_YUB024_MIF,15000],  ! Yuba River at Smartsville
 [C_YUB006_MIF,15500],  ! Yuba River at Marysville  
 [C_NBLDB_MIF,70000]
 [C_NBLDB_POW,10],
@@ -716,14 +716,14 @@ Objective obj = {
 ![D_WBF030_HKC002, 99999],
 ![D_WBF015_MIO023, 99999],
 [D_SLT009_SCT000, 99999],
-[D_WLF013_TARRD, 99999],
+[D_WLF013_NIDTD, 99999],
 [S_LGRSV, 99999],
 [S_SLYCK, 99999],
 [C_STH007, 99999],
 [C_MRM001, 99999],
 [D_NNA013_LVC001, 99999],
 ![D_OGN005_CMT000, 99999],
-[R_DSCNL_WLF021, 99999],
+[R_NIDDC_WLF021, 99999],
 
 ![FRWP_EB,     4999.9], ! Freeport Regional Water Project
 ![FRWP_SC_CVP_IU,5000], ! Freeport Regional Water Project
@@ -740,10 +740,10 @@ Objective obj = {
 
 [UNUSED_FS,   -1285],   ! COA - unused federal share
 [UNUSED_SS,   -1285],   ! COA - unused state share
-[C_NDO_CVP,    -2000],   ! Delta outflow - CVP share
-[C_NDO_SWP,    -2000],   ! Delta outflow - SWP share
-[C_NDO_WHLCV,  -2000],   ! Delta outflow - wheeling share
-[C_NDO_ANN,    -2000],   ! Delta outflow - ANN share
+[C_SAC000_ADD_CVP,    -2000],   ! Delta outflow - CVP share
+[C_SAC000_ADD_SWP,    -2000],   ! Delta outflow - SWP share
+[C_SAC000_ADD_WHLCV,  -2000],   ! Delta outflow - wheeling share
+[C_SAC000_ADD_ANN,    -2000],   ! Delta outflow - ANN share
 [D407,         5000],   ! Required Delta Outflow
 [D_SAC030_MOK014,-5],   ! Delta Cross Channel
 [D408,         5000],   ! CCWD diversions at Rock Slough and Old River
@@ -761,19 +761,19 @@ Objective obj = {
 [D_BKR004_NBA009_NAPA_PLS,  	1285],
 [D_BKR004_NBA009_SCWA_PMI,  	1265],
 [D_BKR004_NBA009_SCWA_PCO,  1264],
-[D_WTPGVFH_VLLJO,  -1], !All water pumped in excess of demand goes here
+[D_WTPFMH_VLLJO,  -1], !All water pumped in excess of demand goes here
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! Delta Depletion !!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-[D_SAC017_DD_SACS, 99998], ! Delta Depletion
-[D_MOK004_DD_MOK, 99998], ! Delta Depletion
-[D_SJR026_DD_SJRE, 99998], ! Delta Depletion
-[D_SJR013_DD_SJRW, 99998], ! Delta Depletion
-[D_OMR027_DD_OMR, 99998], ! Delta Depletion
-[D_SAC041_DD_SACN, 99998], ! Delta Depletion
-[D_SAC000_DD_SACW, 99998], ! Delta Depletion
+[DD_SAC017_SACS, 99998], ! Delta Depletion
+[DD_MOK004_MOK, 99998], ! Delta Depletion
+[DD_SJR026_SJRE, 99998], ! Delta Depletion
+[DD_SJR013_SJRW, 99998], ! Delta Depletion
+[DD_OMR027_OMR, 99998], ! Delta Depletion
+[DD_SAC041_SACN, 99998], ! Delta Depletion
+[DD_SAC000_SACW, 99998], ! Delta Depletion
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! South of Delta !!!!!!!!!!!!!!!!!!
@@ -1175,8 +1175,8 @@ Objective obj = {
 [ErrPos_ABN024  ,-99999],
 ![ErrPos_ABN021  ,-99999],
 [ErrPos_ABN010  ,-99999],
+[ErrPos_ABN006  ,-99999],
 [ErrPos_ABN000  ,-99999],
-[ErrPos_ABWWTP  ,-99999],
 [ErrPos_ABT002   ,-99999], 
 [ErrPos_AMR004  ,-99999], 
 [ErrPos_AMR007  ,-99999], 
@@ -1204,7 +1204,7 @@ Objective obj = {
 [ErrPos_BRR011  ,-99999],
 ![ErrPos_BRR016  ,-99999],
 [ErrPos_BRR017  ,-99999], 
-[ErrPos_BRR025  ,-99999], 
+[ErrPos_BRR023  ,-99999], 
 [ErrPos_BRR028  ,-99999],
 [ErrPos_BRR031  ,-99999],
 [ErrPos_BRR049  ,-99999],
@@ -1296,7 +1296,7 @@ Objective obj = {
 [ErrPos_DER001  ,-99999],
 [ErrPos_DHC001  ,-99999],
 [ErrPos_DMC003  ,-99999],
-[ErrPos_DRC006  ,-99999], 
+[ErrPos_DRC005  ,-99999], 
 [ErrPos_DRC010  ,-99999], 
 [ErrPos_DRC012  ,-99999],
 [ErrPos_DRM000  ,-99999],
@@ -1443,6 +1443,7 @@ Objective obj = {
 [ErrPos_OMR024,  -99999],
 [ErrPos_OMR027  ,-99999],
 [ErrPos_OMR028  ,-99999],
+[ErrPos_OMR039  ,-99999],
 [ErrPos_ORWWTP  ,-99999],
 [ErrPos_OWC000  ,-99999],
 [ErrPos_THRMF  ,-99999], 
@@ -1583,10 +1584,10 @@ Objective obj = {
 [ErrPos_SFF008  ,-99999],
 [ErrPos_SFF011  ,-99999],
 [ErrPos_SFF018  ,-99999],
-[ErrPos_SFF019  ,-99999],
-[ErrPos_SFF027  ,-99999],
-[ErrPos_SFF028 ,-99999],
-[ErrPos_SFF040  ,-99999],
+[ErrPos_SFF020  ,-99999],
+[ErrPos_SFF028  ,-99999],
+[ErrPos_SFF029 ,-99999],
+[ErrPos_SFF039  ,-99999],
 [ErrPos_SFT000 ,-99999],
 [ErrPos_SFY007 ,-99999],
 [ErrPos_SJR070  ,-99999],
@@ -1648,7 +1649,6 @@ Objective obj = {
 [ErrPos_THM026  ,-99999], 
 [ErrPos_THM028  ,-99999],
 [ErrPos_TRN111  ,-99999],
-[ErrPos_TTC011  ,-99999],
 [ErrPos_TWL005  ,-99999],
 [ErrPos_VCT002  ,-99999],
 [ErrPos_VJB000  ,-99999],
@@ -1690,7 +1690,7 @@ Objective obj = {
 [ErrPos_WTPWMN  ,-99999],
 [ErrPos_WTPTAB  ,-99999],
 [ErrPos_WTPBNC  ,-99999],
-[ErrPos_WTPGVFH ,-99999],
+[ErrPos_WTPFMH ,-99999],
 [ErrPos_WTPAMC  ,-99999],
 [ErrPos_WTPJAC  ,-99999],
 [ErrPos_YBP002  ,-99999],
@@ -1710,8 +1710,8 @@ Objective obj = {
 [ErrPos_YUB011  ,-99999],
 [ErrPos_YUB013  ,-99999],
 [ErrPos_YUB014  ,-99999],
-[ErrPos_YUB022  ,-99999],
 [ErrPos_YUB023  ,-99999],
+[ErrPos_YUB024  ,-99999],
 [ErrPos_YUB030  ,-99999],
 [ErrPos_YUB039  ,-99999],
 
@@ -1720,8 +1720,8 @@ Objective obj = {
 [ErrNeg_ABN024 ,-99999],
 ![ErrNeg_ABN021 ,-99999],
 [ErrNeg_ABN010 ,-99999],
+[ErrNeg_ABN006 ,-99999],
 [ErrNeg_ABN000 ,-99999],
-[ErrNeg_ABWWTP ,-99999],
 [ErrNeg_ABT002  ,-99999], 
 [ErrNeg_AMR004 ,-99999],
 [ErrNeg_AMR007 ,-99999],  
@@ -1749,7 +1749,7 @@ Objective obj = {
 [ErrNeg_BRR011 ,-99999],
 ![ErrNeg_BRR016 ,-99999],
 [ErrNeg_BRR017 ,-99999], 
-[ErrNeg_BRR025 ,-99999], 
+[ErrNeg_BRR023 ,-99999], 
 [ErrNeg_BRR028 ,-99999],
 [ErrNeg_BRR031  ,-99999],
 [ErrNeg_BRR049  ,-99999],
@@ -1841,7 +1841,7 @@ Objective obj = {
 [ErrNeg_DER001 ,-99999],
 [ErrNeg_DHC001 ,-99999],
 [ErrNeg_DMC003 ,-99999],
-[ErrNeg_DRC006 ,-99999], 
+[ErrNeg_DRC005 ,-99999], 
 [ErrNeg_DRC010 ,-99999], 
 [ErrNeg_DRC012 ,-99999],
 [ErrNeg_DRM000  ,-99999],
@@ -1988,6 +1988,7 @@ Objective obj = {
 [ErrNeg_OMR024 ,-99999],
 [ErrNeg_OMR027  ,-99999],
 [ErrNeg_OMR028  ,-99999],
+[ErrNeg_OMR039  ,-99999],
 [ErrNeg_ORWWTP ,-99999], 
 [ErrNeg_OWC000 ,-99999], 
 [ErrNeg_THRMF ,-99999], 
@@ -2128,10 +2129,10 @@ Objective obj = {
 [ErrNeg_SFF008 ,-99999],
 [ErrNeg_SFF011 ,-99999],
 [ErrNeg_SFF018 ,-99999],
-[ErrNeg_SFF019 ,-99999],
-[ErrNeg_SFF027 ,-99999],
+[ErrNeg_SFF020 ,-99999],
 [ErrNeg_SFF028 ,-99999],
-[ErrNeg_SFF040 ,-99999],
+[ErrNeg_SFF029 ,-99999],
+[ErrNeg_SFF039 ,-99999],
 [ErrNeg_SFT000 ,-99999],
 [ErrNeg_SFY007 ,-99999],
 [ErrNeg_SJR070  ,-99999],
@@ -2193,7 +2194,6 @@ Objective obj = {
 [ErrNeg_THM026 ,-99999],  
 [ErrNeg_THM028 ,-99999],
 [ErrNeg_TRN111 ,-99999],
-[ErrNeg_TTC011 ,-99999],
 [ErrNeg_TWL005 ,-99999],
 [ErrNeg_VCT002  ,-99999],
 [ErrNeg_VJB000  ,-99999],
@@ -2235,7 +2235,7 @@ Objective obj = {
 [ErrNeg_WTPWMN ,-99999],
 [ErrNeg_WTPTAB  ,-99999],
 [ErrNeg_WTPBNC  ,-99999],
-[ErrNeg_WTPGVFH ,-99999],
+[ErrNeg_WTPFMH ,-99999],
 [ErrNeg_WTPAMC  ,-99999],
 [ErrNeg_WTPJAC  ,-99999],
 [ErrNeg_YBP002 ,-99999],
@@ -2255,8 +2255,8 @@ Objective obj = {
 [ErrNeg_YUB011 ,-99999],
 [ErrNeg_YUB013 ,-99999],
 [ErrNeg_YUB014 ,-99999],
-[ErrNeg_YUB022 ,-99999],
 [ErrNeg_YUB023 ,-99999],
+[ErrNeg_YUB024 ,-99999],
 [ErrNeg_YUB030 ,-99999],
 [ErrNeg_YUB039 ,-99999],
 

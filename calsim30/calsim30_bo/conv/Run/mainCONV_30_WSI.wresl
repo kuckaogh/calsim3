@@ -39,6 +39,7 @@ SEQUENCE CYCLE8 {
 
 MODEL SJRBASE {         !CYCLE 1
     INCLUDE '..\..\common\NewFacilitySwitches.wresl'
+    INCLUDE '..\..\common\LevelofDevelopment.wresl'
     INCLUDE '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_JobControl.wresl'
     INCLUDE '..\..\common\CAAFramework\LCPSIM\LCPSIM_Defines.wresl'
     INCLUDE '..\..\common\CAAFramework\LCPSIM\LCPSIM_to_CALSIM_linkage.wresl'

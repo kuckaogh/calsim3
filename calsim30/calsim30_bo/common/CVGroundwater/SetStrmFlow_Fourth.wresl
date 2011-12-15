@@ -157,9 +157,9 @@ define rSetFlow_023_214  {value    SetStrmFlow(C_COW003[delta] * cfs_cfm,214) }
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define rSetFlow_096_256  {value    SetStrmFlow((C_DRC012[delta] + C_DRC010[delta])/2  * cfs_cfm,256) }
  
-define rSetFlow_100_257  {value    SetStrmFlow((C_DRC010[delta] + C_DRC006[delta])/2   * cfs_cfm,257) }
+define rSetFlow_100_257  {value    SetStrmFlow((C_DRC010[delta] + C_DRC005[delta])/2   * cfs_cfm,257) }
  
-define rSetFlow_099_258  {value    SetStrmFlow(C_DRC006[delta] * cfs_cfm,258) }
+define rSetFlow_099_258  {value    SetStrmFlow(C_DRC005[delta] * cfs_cfm,258) }
  
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Elder Creek		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

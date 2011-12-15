@@ -157,9 +157,9 @@ define rSetFlow_023_214  {value    SetStrmFlow(C_COW003[monthlyweighted] * cfs_c
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define rSetFlow_096_256  {value    SetStrmFlow((C_DRC012[monthlyweighted] + C_DRC010[monthlyweighted])/2  * cfs_cfm,256) }
  
-define rSetFlow_100_257  {value    SetStrmFlow((C_DRC010[monthlyweighted] + C_DRC006[monthlyweighted])/2   * cfs_cfm,257) }
+define rSetFlow_100_257  {value    SetStrmFlow((C_DRC010[monthlyweighted] + C_DRC005[monthlyweighted])/2   * cfs_cfm,257) }
  
-define rSetFlow_099_258  {value    SetStrmFlow(C_DRC006[monthlyweighted] * cfs_cfm,258) }
+define rSetFlow_099_258  {value    SetStrmFlow(C_DRC005[monthlyweighted] * cfs_cfm,258) }
  
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Elder Creek		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

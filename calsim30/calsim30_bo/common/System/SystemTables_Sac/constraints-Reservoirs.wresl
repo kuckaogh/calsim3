@@ -226,7 +226,7 @@ goal S_CMPFWZone5 {S_CMPFW_5 < S_CMPFWlevel5-S_CMPFWlevel4}
 goal storage_CMPFW {S_CMPFW=S_CMPFW_1+S_CMPFW_2+S_CMPFW_3+S_CMPFW_4+S_CMPFW_5}
 goal area_CMPFW {A_CMPFW=A_CMPFWlast+1000*coefev_CMPFW*S_CMPFW-1000*coefev_CMPFW*S_CMPFW(-1)}
 goal evap_CMPFW {E_CMPFW*cfs_af=(ER_CMPFW/24)*A_CMPFWlast+(ER_CMPFW/24)*A_CMPFW}
-goal maxrelease_CMPFW {C_BRR025<relcap_CMPFW}
+goal maxrelease_CMPFW {C_CMPFW < relcap_CMPFW}
 
 
 ! Clear Lake

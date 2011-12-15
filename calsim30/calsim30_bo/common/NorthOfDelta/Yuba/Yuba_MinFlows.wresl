@@ -246,7 +246,7 @@ define Index_D1644 {
  
  
  !Smartsville- MINFLOWDEFINITION
- define MIF_YUB023 {
+ define MIF_YUB024 {
  	case Wet {
          	condition wytype_YUBA == 1
          	select Wet   from Yuba_LowerYubaMinflow where C_arc=237,standard = MinFlowCrit,month=month}
@@ -267,8 +267,8 @@ define Index_D1644 {
          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=237,standard = MinFlowCrit,month=month}
          }
  
- define MIF_YUB023dv {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
- goal set_MIF_YUB023dv {MIF_YUB023dv=MIF_YUB023}
+ define MIF_YUB024dv {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
+ goal set_MIF_YUB024dv {MIF_YUB024dv=MIF_YUB024}
  
-goal meetYUB023min  {C_YUB023_MIF < MIF_YUB023} 
+goal meetYUB024min  {C_YUB024_MIF < MIF_YUB024} 
 goal meetYUB006min  {C_YUB006_MIF < MIF_YUB006} 

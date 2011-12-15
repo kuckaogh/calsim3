@@ -523,3 +523,9 @@ define coefev_SLYCK {value (A_SLYCKforward - A_SLYCKback)/(100*max(0.01,S_SLYCK(
 
 ! This storage is pre-operated
 define S_RVPHB      	{std kind 'STORAGE' units 'TAF'}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Los Vaqueros Reservoir !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define S_LOSVQ      	{std kind 'STORAGE' units 'TAF'}
+define E_LOSVQ      	{std kind 'EVAPORATION' units 'CFS'}

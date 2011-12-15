@@ -20,7 +20,7 @@ goal continuityCSM005       {C_CSM011 + SG_CSM005_466 + R_60N_NA2_CSM005 - C_CSM
 !!! Deer Creek (Eastside Streams - trib to Cosumnes River       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityDEE023       {I_DEE023 - C_DEE023 = 0.}
-goal continuityDEE020       {C_DEE023 + /* R_EDWWTP_DEE020 */ - C_DEE020 = 0.}
+goal continuityDEE020       {C_DEE023 + R_EDWWTP_DEE020 - C_DEE020 = 0.}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Dry and Sutter Creeks - Eastside trib to Mokelumne       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
