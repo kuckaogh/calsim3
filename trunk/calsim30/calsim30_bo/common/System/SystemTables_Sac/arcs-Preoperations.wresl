@@ -19,8 +19,8 @@ define D_WBF030_HKC002_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'
 define D_WBF015_MIO023_SV	{timeseries kind 'DIVERSION' units 'TAF' convert 'CFS'} !Only for OroRuleCurv.wresl and X2days_FWS.wresl
 define S_LGRSV_SV		{timeseries kind 'STORAGE' units 'TAF'}
 define S_SLYCK_SV		{timeseries kind 'STORAGE' units 'TAF'}
-define E_LGRSV_SV		{timeseries kind 'EVAPORATION' units 'TAF' convert 'CFS'}
-define E_SLYCK_SV		{timeseries kind 'EVAPORATION' units 'TAF' convert 'CFS'}
+!define E_LGRSV_SV		{timeseries kind 'EVAPORATION' units 'TAF' convert 'CFS'}
+!define E_SLYCK_SV		{timeseries kind 'EVAPORATION' units 'TAF' convert 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! YUBA RIVER	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
