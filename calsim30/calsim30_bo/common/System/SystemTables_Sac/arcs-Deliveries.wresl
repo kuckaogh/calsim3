@@ -1106,7 +1106,7 @@ define    DN_25_PU  {std kind 'SW-DELIVERY-NET' units 'CFS'}
 define    DG_25_PU  {std kind 'SW-DELIVERY-GROSS' units 'CFS'}
 define    UD_25_PU  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 
-define AWO_SIDSH    {timeseries kind 'APPLIED-WATER' units 'TAF' convert 'CFS'} !21% of AWo_25_PA1
+!define AWO_SIDSH    {timeseries kind 'APPLIED-WATER' units 'TAF' convert 'CFS'} !21% of AWo_25_PA1
 define    UD_CSPSO  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_SUISN  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_FRFLD  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
@@ -1238,6 +1238,6 @@ define    DG_60N_PU {std kind 'SW-DELIVERY-GROSS' units 'CFS'}
 define    UD_60N_PU {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 
 !Bear River Model demand
-define DMD_BRR050_BEC000 {timeseries kind 'DEMAND' units 'TAF' convert 'CFS'}
-define DMD_CMBIE_CBC000       {timeseries kind 'DEMAND' units 'TAF' convert 'CFS'}
+!define DMD_BRR050_BEC000 {timeseries kind 'DEMAND' units 'TAF' convert 'CFS'}
+!define DMD_CMBIE_CBC000       {timeseries kind 'DEMAND' units 'TAF' convert 'CFS'}
 
