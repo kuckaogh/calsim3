@@ -252,6 +252,30 @@ goal limitD_SAC207_GCC007     {D_SAC207_GCC007 + D_TCC062_GCC036 + D_TCC085_GCC0
                          + WRmon_GCC027_08N_SA2 + WRmon_GCC056_08S_SA2
                          + WestSacRfgDelTar * perdv_cvprf_sys}
 
+! Limit Glenn-Colusa Canal winter Ag diversions under permit 21101 (max. of 1200 cfs Nov. 1 - Mar.31)
+! and the canal is shut down for maintenence from Jan.7 - Feb.20 (assume Jan.1 - Feb.14 for modeling).
+
+goal GCIDpermit {
+	lhs D_GCC027_08N_SA2 + D_GCC056_08S_SA2
+	case Jan {
+		condition month == JAN
+		rhs	0.}
+	case Feb {
+		condition month == FEB
+		rhs .5*1200.
+		lhs>rhs penalty 9999
+		lhs<rhs penalty 0   }
+	case Winter {
+		condition month >= NOV .and. month <= MAR
+		rhs 1200.
+		lhs>rhs penalty 9999
+		lhs<rhs penalty 0   }
+	case Summer {
+		condition always
+		rhs 99999.
+		lhs>rhs penalty 0
+		lhs<rhs penalty 0   }}
+		
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 9      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -249,7 +249,7 @@ define frespill { value (frespill_1 + frespill_2 + frespill_3 + frespill_4 + fre
 
 define frespilldv {alias frespill kind 'FLOW-DELIVERY' units 'cfs'}
 
-goal actwflow2 { SP_SAC083_YBP034 = frespill}
+goal actwflow2 { SP_SAC083_YBP037 = frespill}
 
 !define QsacFth {alias C_SAC085 + C_FTR003  kind 'flow-channel' units 'cfs'}
 

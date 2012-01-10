@@ -21,7 +21,7 @@ goal continuityNFA019   {C_NFA022 + C_MFA001 - D_NFA016_ABT002 - C_NFA016 = 0.}
 goal continuityNFA016   {C_NFA019 - D_NFA016_ABT002 - C_NFA016                                   = ErrPos_NFA016 - ErrNeg_NFA016}
 goal continuityNFA011   {C_NFA016 + C_STH007 + C_MRM001 - C_NFA011                                      = ErrPos_NFA011 - ErrNeg_NFA011}
 goal continuityABT002    {D_NFA016_ABT002 - D_ABT002_STH001 - C_ABT002                                      = ErrPos_ABT002  - ErrNeg_ABT002 } !Auburn Dam Site
-goal continuityFOLSM    {C_NFA011 + I_FOLSM + C_SFA030 + SG_FOLSM_389 - C_FOLSM - D_FOLSM_26S_PU3 - D_FOLSM_WTPRSV - D_FOLSM_WTPSJP - D_FOLSM_WTPFOL - D_FOLSM_WTPEDH - E_FOLSM   = S_FOLSM * taf_cfs - S_FOLSM(-1) * taf_cfs + ErrPos_FOLSM - ErrNeg_FOLSM} !Folsom Lake 
+goal continuityFOLSM    {C_NFA011 + I_FOLSM + C_SFA030 + SG_FOLSM_389 - C_FOLSM - D_FOLSM_26S_PU3 - D_FOLSM_26S_NU4 - D_FOLSM_WTPRSV - D_FOLSM_WTPSJP - D_FOLSM_WTPFOL - D_FOLSM_WTPEDH - E_FOLSM   = S_FOLSM * taf_cfs - S_FOLSM(-1) * taf_cfs + ErrPos_FOLSM - ErrNeg_FOLSM} !Folsom Lake 
 goal continuityNTOMA    {C_FOLSM + SR_26N_NTOMA + SR_26S_NTOMA + SG_NTOMA_385 - C_NTOMA - D_NTOMA_FSC003 - E_NTOMA  = S_NTOMA * taf_cfs - S_NTOMA(-1) * taf_cfs + ErrPos_NTOMA - ErrNeg_NTOMA} !Lake Natoma
 goal continuityAMR022   {C_NTOMA + CT_FairOaks - C_AMR022                                                     = ErrPos_AMR022 - ErrNeg_AMR022 } !Lower American River - C2VSIM seepage node
 goal continuityAMR020   {C_AMR022 + SG_AMR020_384 + R_RFS26S_AMR020 - C_AMR020                                  = ErrPos_AMR020 - ErrNeg_AMR020 } !Lower American River - C2VSIM seepage node
@@ -37,7 +37,7 @@ goal continuityDCWWTP   {R_RFS26N_DCWWTP - R_DCWWTP_DCK012                      
 goal continuityPGWWTP   {R_RFS26N_PGWWTP - R_PGWWTP_CRC002                                          = ErrPos_PGWWTP - ErrNeg_PGWWTP}
 goal continuityWTPBJM   {D_AMR017_WTPBJM - D_WTPBJM_26N_NU2                                         = ErrPos_WTPBJM - ErrNeg_WTPBJM}
 goal continuityWTPFBN   {D_AMR007_WTPFBN - D_WTPFBN_26S_NU1 - D_WTPFBN_26N_NU1 - D_WTPFBN_26N_NU3 - D_WTPFBN_26N_NU4 - D_WTPFBN_26S_NU2     = ErrPos_WTPFBN - ErrNeg_WTPFBN}
-goal continuityWTPFOL   {D_FOLSM_WTPFOL  - D_WTPFOL_26S_PU1 - D_WTPFOL_26S_NU4                                  = ErrPos_WTPFOL - ErrNeg_WTPFOL}
+goal continuityWTPFOL   {D_FOLSM_WTPFOL  - D_WTPFOL_26S_PU1                                         = ErrPos_WTPFOL - ErrNeg_WTPFOL}
 goal continuityWTPRSV   {D_FOLSM_WTPRSV  - D_WTPRSV_26N_PU1                                         = ErrPos_WTPRSV - ErrNeg_WTPRSV}
 goal continuityWTPSJP   {D_FOLSM_WTPSJP  - D_WTPSJP_26N_PU2 - D_WTPSJP_26N_PU3 - D_WTPSJP_26N_NU1                       = ErrPos_WTPSJP - ErrNeg_WTPSJP}
 goal continuityWTPCOL   {D_FSC003_WTPCOL - D_WTPCOL_26S_PU2                                         = ErrPos_WTPCOL - ErrNeg_WTPCOL}
@@ -276,7 +276,7 @@ goal continuityCCC007  {C_CCC004 + C_LVP007 - D_CCC007_ANTOC - C_CCC007   = 0.}
 goal continuityCCC019  {C_CCC007 + D_CHIPPS_CCC019 - D_CCC019_CCWD        = 0.}
 !goal continuityAIP     {D_VCT002_ORP000 - C_OMR024b			  = 0.} ! see Victoria Canal
 goal continuityORP000  {D_OMR021_ORP000 + D_VCT002_ORP000 - C_ORP000      = 0.}
-goal continuityTRNSFR  {C_ORP000 + C_LOSVQ_TRNSFR - C_TRNSFR 		  = 0.}
+goal continuityTRNSFR  {C_ORP000 + D_LOSVQ_TRNSFR - C_TRNSFR 		  = 0.}
 goal continuityLVP007  {C_TRNSFR + D_MAQ057_LVP007 - C_LVP007 		  = 0.}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -333,7 +333,7 @@ goal continuityDHC001   {I_DHC001 + R_15S_NA1_DHC001 + R_15S_NA2_DHC001 + R_15S_
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! East Bay Aqueduct   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!goal continuityEBA000  {D_PRDEE_EBA000 + D_FSC027_EBMUD - C_EBA000     = ErrPos_EBA000 - ErrNeg_EBA000}
+!goal continuityEBA000  {D_PRDEE_EBA000 + D_FSC027_MAQ012 - C_EBA000     = ErrPos_EBA000 - ErrNeg_EBA000}
 !goal continuityEBA100  {C_EBA000  - D_EBA100_EBMUD             = ErrPos_EBA100 - ErrNeg_EBA100}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -448,7 +448,7 @@ goal continuityFSC003   {D_NTOMA_FSC003 - D_FSC003_FSCLOS - D_FSC003_WTPCOL - C_
 goal continuityFSC013   {C_FSC003   + D_FPT013_FSC013 - C_FSC013                    = ErrPos_FSC013 - ErrNeg_FSC013}
 goal continuityFSC015   {C_FSC013   - D_FSC015_60N_NA2  - C_FSC015                  = ErrPos_FSC015 - ErrNeg_FSC015}
 goal continuityFSC025   {C_FSC015   - D_FSC025_60N_PU - C_FSC025                    = ErrPos_FSC025 - ErrNeg_FSC025}
-goal continuityFSC027   {C_FSC025   - D_FSC027_EBMUD                            = ErrPos_FSC027 - ErrNeg_FSC027}
+goal continuityFSC027   {C_FSC025   - D_FSC027_MAQ012                            = ErrPos_FSC027 - ErrNeg_FSC027}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Freeport                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -490,11 +490,12 @@ goal continuityHON004   {C_HON021 + SR_12_HON004 + SR_14_HON004 + SR_15N_HON004 
 !!! Knights Landing Ridgecut    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityKLR005   {D_CBD001_KLR005 - D_KLR005_21_PA - C_KLR005                = ErrPos_KLR005 - ErrNeg_KLR005}    
+goal continuityKLR006   {C_KLR005 - C_KLR006 = 0.} ! gated weir
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Los Vaqueros !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityLOSVQ  {I_LOSVQ - C_LOSVQ - C_LOSVQ_TRNSFR - E_LOSVQ = S_LOSVQ*taf_cfs - S_LOSVQ(-1)*taf_cfs} !Los Vaqueros reservoir
+goal continuityLOSVQ  {I_LOSVQ - C_LOSVQ - D_LOSVQ_TRNSFR - E_LOSVQ = S_LOSVQ*taf_cfs - S_LOSVQ(-1)*taf_cfs} !Los Vaqueros reservoir
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Marsh Creek !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -521,8 +522,8 @@ goal continuityMNS000   {I_MNS000 - C_MNS000                                = Er
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mokulmne River                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityMOK014    {/*C_MOK019*/I_MOK014 + SR_26S_MOK014 /*+ SG_MOK014_494*/ + D_SAC030_MOK014 - C_MOK014         = ErrPos_MOK014 - ErrNeg_MOK014}!
-goal continuityMOK004    {C_MOK014 /*+ SG_MOK004_495*/ + C_SAC029B + DA_MOK_MOK004 - DD_MOK004_MOK - C_MOK004             = ErrPos_MOK004 - ErrNeg_MOK004}!
+goal continuityMOK014    {/*C_MOK019*/I_MOK014 + SR_26S_MOK014 + SG_MOK014_494 + D_SAC030_MOK014 - C_MOK014         = ErrPos_MOK014 - ErrNeg_MOK014}!
+goal continuityMOK004    {C_MOK014 + SG_MOK004_495 + C_SAC029B + DA_MOK_MOK004 - DD_MOK004_MOK - C_MOK004             = ErrPos_MOK004 - ErrNeg_MOK004}!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! North Bay Aqueduct                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -681,7 +682,7 @@ goal continuitySAC093   {C_SAC097 + C_CBD000 + R_RFS8S_SAC093 - C_SAC093        
 goal continuitySAC092   {C_SAC093 + SG_SAC092_339 - C_SAC092                                                    = ErrPos_SAC092 - ErrNeg_SAC092}
 goal continuitySAC091   {C_SAC092 - D_SAC091_19_SA - C_SAC091                                           = ErrPos_SAC091 - ErrNeg_SAC091}
 goal continuitySAC085   {C_SAC091 + SG_SAC085_349 + C_SSL001 + R_17S_SA_SAC085 - C_SAC085                       = ErrPos_SAC085 - ErrNeg_SAC085}    ! Knights Landing Ridgecut/Grays Bend.  
-goal continuitySAC083   {C_SAC085 + CT_Verona + SG_SAC083_350 + C_FTR003 + R_22_SA2_SAC083 - D_SAC083_21_SA - SP_SAC083_YBP034 - C_SAC083           = ErrPos_SAC083 - ErrNeg_SAC083}
+goal continuitySAC083   {C_SAC085 + CT_Verona + SG_SAC083_350 + C_FTR003 + R_22_SA2_SAC083 - D_SAC083_21_SA - SP_SAC083_YBP037 - C_SAC083           = ErrPos_SAC083 - ErrNeg_SAC083}
 goal continuitySAC082   {C_SAC083 + SG_SAC082_351 + C_CRC002 - D_SAC082_22_SA1 - C_SAC082                           = ErrPos_SAC082 - ErrNeg_SAC082}! confluence Feather River.  
 goal continuitySAC081   {C_SAC082 + SG_SAC081_363 - D_SAC081_21_NA - C_SAC081                                                = ErrPos_SAC081 - ErrNeg_SAC081}! Verona gage
 goal continuitySAC078   {C_SAC081 + SG_SAC078_362 - D_SAC078_22_SA1 - C_SAC078                                              = ErrPos_SAC078 - ErrNeg_SAC078}
@@ -718,23 +719,23 @@ goal continuitySAC000   {C_SAC003 + SG_SAC000_531 + C_SJR006 + DA_SACW_SAC000 - 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! San Joaquin River   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuitySJR062       {C_SJR070 /*+ SG_SJR062_605*/ - D_SJR062_50_PA1 - C_SJR062                   = ErrPos_SJR062 - ErrNeg_SJR062}!
-goal continuitySJR056       {C_SJR062 /*+ SG_SJR056_592*/ + R_RFS61C_SJR056 + R_50_PA1_SJR056 + R_MAWWTP_SJR056 - C_SJR056       = ErrPos_SJR056 - ErrNeg_SJR056}!
+goal continuitySJR062       {C_SJR070 + SG_SJR062_605 - D_SJR062_50_PA1 - C_SJR062                   = ErrPos_SJR062 - ErrNeg_SJR062}!
+goal continuitySJR056       {C_SJR062 + SG_SJR056_592 + R_RFS61C_SJR056 + R_50_PA1_SJR056 + R_MAWWTP_SJR056 - C_SJR056       = ErrPos_SJR056 - ErrNeg_SJR056}!
 goal continuitySJR053       {C_SJR056 + SR_61_SJR053 - C_SJR053B - C_SJR053A                        = ErrPos_SJR053 - ErrNeg_SJR053}!
-goal continuitySJR048       {C_SJR053A/*+ SG_SJR048_576*/ - C_SJR048                            = ErrPos_SJR048 - ErrNeg_SJR048}!
+goal continuitySJR048       {C_SJR053A+ SG_SJR048_576 - C_SJR048                            = ErrPos_SJR048 - ErrNeg_SJR048}!
 goal continuitySJR043       {C_SJR048 + C_FCS006 + SR_61_SJR043 - C_SJR043                          = ErrPos_SJR043 - ErrNeg_SJR043}!
-goal continuitySJR042       {C_SJR043 /*+ SG_SJR042_567*/ + R_STWWTP_SJR042 - C_SJR042                  = ErrPos_SJR042 - ErrNeg_SJR042}!Return flow from Stockton Regional Wastewater Treatment Plant
-goal continuitySJR038       {C_SJR042 /*+ SG_SJR038_558*/ + C_CLV004 + R514 + SR_60N_SJR038 + SR_60S_SJR038 - C_SJR038  = ErrPos_SJR038 - ErrNeg_SJR038}!Confluence with Calaveras River. R514 represents return flow from Stockton East Water District.
-goal continuitySJR033       {C_SJR038 /*+ SG_SJR033_553*/ - C_SJR033                            = ErrPos_SJR033 - ErrNeg_SJR033}!
-goal continuitySJR028       {C_SJR033 /*+ SG_SJR028_543*/ + R_60N_NA3_SJR028 + R_WSWWTP_SJR028 + SR_60N_SJR028 + SR_60S_SJR028 - D_SJR028_WTPDWS - C_SJR028 = ErrPos_SJR028 - ErrNeg_SJR028}!City of Stockton proposed diversion. Return flows from North San Joaquin WCD and White Slough WWTP (City of Lodi).
+goal continuitySJR042       {C_SJR043 + SG_SJR042_567 + R_STWWTP_SJR042 - C_SJR042                  = ErrPos_SJR042 - ErrNeg_SJR042}!Return flow from Stockton Regional Wastewater Treatment Plant
+goal continuitySJR038       {C_SJR042 + SG_SJR038_558 + C_CLV004 + R514 + SR_60N_SJR038 + SR_60S_SJR038 - C_SJR038  = ErrPos_SJR038 - ErrNeg_SJR038}!Confluence with Calaveras River. R514 represents return flow from Stockton East Water District.
+goal continuitySJR033       {C_SJR038 + SG_SJR033_553 - C_SJR033                            = ErrPos_SJR033 - ErrNeg_SJR033}!
+goal continuitySJR028       {C_SJR033 + SG_SJR028_543 + R_60N_NA3_SJR028 + R_WSWWTP_SJR028 + SR_60N_SJR028 + SR_60S_SJR028 - D_SJR028_WTPDWS - C_SJR028 = ErrPos_SJR028 - ErrNeg_SJR028}!City of Stockton proposed diversion. Return flows from North San Joaquin WCD and White Slough WWTP (City of Lodi).
 goal continuityWSWWTP	    {R_60N_NU1_WSWWTP - R_WSWWTP_SJR028  = 0.}      
 !goal continuityWTPDWS      {D_SJR028_WTPDWS - D_WTPDWS_60S_NU1                                 = ErrPos_WTPDWS - ErrNeg_WTPDWS}!                   
 goal continuitySJR026       {C_SJR028 + DA_SJRE_SJR026 - DD_SJR026_SJRE - C_SJR026                  = ErrPos_SJR026 - ErrNeg_SJR026}!
-goal continuitySJR023       {C_SJR026 /*+ SG_SJR023_540*/ - C_SJR023                                        = ErrPos_SJR023 - ErrNeg_SJR023}!
-goal continuitySJR022       {C_SJR023 /*+ SG_SJR022_520*/ + R_60N_NA4_SJR022 + C_MOK004 + SR_60N_SJR022 - C_SJR022              = ErrPos_SJR022 - ErrNeg_SJR022}!Confluence with Mokelumne. Return flow from Woodbridge ID.
-goal continuitySJR013       {C_SJR022 /*+ SG_SJR013_534*/ + C_OMR002 + DA_SJRW_SJR013 - DD_SJR013_SJRW - C_SJR013    = ErrPos_SJR013 - ErrNeg_SJR013}!
-goal continuitySJR009       {C_SJR013 /*+ SG_SJR009_533*/ + C_MSH015 - C_SJR009                     = ErrPos_SJR009 - ErrNeg_SJR009}
-goal continuitySJR006       {C_SJR009 /*+ SG_SJR006_532*/ - D_SJR006_ANTOC - C_SJR006               = ErrPos_SJR006 - ErrNeg_SJR006}
+goal continuitySJR023       {C_SJR026 + SG_SJR023_540 - C_SJR023                                        = ErrPos_SJR023 - ErrNeg_SJR023}!
+goal continuitySJR022       {C_SJR023 + SG_SJR022_520 + R_60N_NA4_SJR022 + C_MOK004 + SR_60N_SJR022 - C_SJR022              = ErrPos_SJR022 - ErrNeg_SJR022}!Confluence with Mokelumne. Return flow from Woodbridge ID.
+goal continuitySJR013       {C_SJR022 + SG_SJR013_534 + C_OMR002 + DA_SJRW_SJR013 - DD_SJR013_SJRW - C_SJR013    = ErrPos_SJR013 - ErrNeg_SJR013}!
+goal continuitySJR009       {C_SJR013 + SG_SJR009_533 + C_MSH015 - C_SJR009                     = ErrPos_SJR009 - ErrNeg_SJR009}
+goal continuitySJR006       {C_SJR009 + SG_SJR006_532 - D_SJR006_ANTOC - C_SJR006               = ErrPos_SJR006 - ErrNeg_SJR006}
 
 goal setC_FCS006    {C_FCS006 = 0.}
 
@@ -762,7 +763,7 @@ goal set_E_LOSVQ		{E_LOSVQ = E422}
 goal set_D_OMR021_ORP000	{D_OMR021_ORP000 = D408_OR}
 goal set_D_VCT002_ORP000	{D_VCT002_ORP000 = D408_VC}
 goal set_C_LVP007		{C_LVP007 = C424}
-goal set_C_LOSVQ_TRNSFR		{C_LOSVQ_TRNSFR = C422}
+goal set_D_LOSVQ_TRNSFR		{D_LOSVQ_TRNSFR = C422}
 goal set_D_MAQ057_LVP007	{D_MAQ057_LVP007 = I424}
 goal set_C_TRNSFR		{C_TRNSFR = C423}
 goal set_D_CCC007_ANTOC		{D_CCC007_ANTOC = 0.0}
@@ -847,14 +848,15 @@ goal continuityWSB005   {C_WSB000 + R_DVWWTP_WSB005 - C_WSB005 = 0.}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Yolo Bypass     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityYBP034   {C_KLR005 + SR_07S_YBP034 + SP_SAC083_YBP034 - C_YBP034                                 = ErrPos_YBP034 - ErrNeg_YBP034}    
+goal continuityYBP037   {SP_SAC083_YBP037 - C_YBP037 = 0.}  ! USGS gage discontinued
+goal continuityYBP034   {C_KLR006 + SR_07S_YBP034 + C_YBP037 - C_YBP034                                 = ErrPos_YBP034 - ErrNeg_YBP034}    
 goal continuityWLWWTP   {R_20_NU1_WLWWTP - R_WLWWTP_YBP032 = 0.}
 goal continuityYBP032   {C_YBP034 + C_CCH003 + SG_YBP032_360 + R_21_NA_YBP032 + R_21_PA_YBP032 + R_WLWWTP_YBP032 - C_YBP032          = ErrPos_YBP032 - ErrNeg_YBP032}    
 goal continuityYBP026   {C_YBP032 + SG_YBP026_401 - C_YBP026                                            = ErrPos_YBP026 - ErrNeg_YBP026}    
 goal continuityYBP023   {C_YBP026 + SG_YBP023_407 + SR_21_YBP023 + SR_20_YBP023 + C_WSB000 - D_YBP023_21_SA - C_YBP023              = ErrPos_YBP023 - ErrNeg_YBP023}    
 goal continuityYBP020   {C_YBP023 + SG_YBP020_414 + R_21_SA_YBP020 + SP_SAC066_YBP020 + C_PTH007 - C_YBP020                 = ErrPos_YBP020 - ErrNeg_YBP020}    
-goal continuityYBP016   {C_YBP020 + SG_YBP016_433 - C_YBP016                                  = ErrPos_YBP016 - ErrNeg_YBP016}    
-goal continuityYBP014   {C_YBP016 + SG_YBP014_432 - C_YBP014                                                            = ErrPos_YBP014 - ErrNeg_YBP014}    
+goal continuityYBP016   {C_YBP020 + SG_YBP016_433 - C_YBP016                                            = ErrPos_YBP016 - ErrNeg_YBP016}    
+goal continuityYBP014   {C_YBP016 + SG_YBP014_432 - C_YBP014                                            = ErrPos_YBP014 - ErrNeg_YBP014}    
 goal continuityYBP011   {C_YBP014 + SG_YBP011_448 - C_YBP011                                            = ErrPos_YBP011 - ErrNeg_YBP011}    
 goal continuityYBP007   {C_YBP011 + SG_YBP007_460 - C_YBP007                                            = ErrPos_YBP007 - ErrNeg_YBP007}
 goal continuityYBP002   {C_YBP007 + SG_YBP002_473 - C_YBP002                                            = ErrPos_YBP002 - ErrNeg_YBP002}
