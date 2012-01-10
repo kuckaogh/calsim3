@@ -623,14 +623,14 @@ Objective obj = {
 [D_WTPVNY_26S_PU6,   5000],
 [D_FOLSM_26S_PU3,    5000],
 [D_FOLSM_WTPEDH,     5000],
-[D_WTPFOL_26S_NU4,   4999],
+[D_FOLSM_26S_NU4,    4999],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 60N    !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [D_FSC015_60N_NA2,5000],! Sacramento County agriculture 
 [D_FSC025_60N_PU, 5000],! SMUD - Ranch Seco
-![D_FSC027_EBMUD,  5000],! EBMUD
+![D_FSC027_MAQ012,  5000],! EBMUD
 ![D_EBA100_EBMUD,  5000],! EBMUD
 [D_FSC003_FSCLOS, 15000],! FSC losses  
 

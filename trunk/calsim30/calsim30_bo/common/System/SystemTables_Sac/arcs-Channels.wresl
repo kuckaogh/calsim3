@@ -448,6 +448,7 @@ define C_JCK002	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 !!! Knights Landing Ridgecut	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define C_KLR005	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
+define C_KLR006	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -480,7 +481,6 @@ define C_LCC016	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_LOSVQ	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_LVP007	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_TRNSFR	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define C_LOSVQ_TRNSFR	{lower -99999 upper 400 kind 'CHANNEL' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -802,6 +802,7 @@ define C_WSB005		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Yolo Bypass		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define C_YBP037	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 define C_YBP034	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 define C_YBP032	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}	
 define C_YBP026	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}	

@@ -276,7 +276,7 @@ define D_LDC007_11_SA2	{std kind 'DIVERSION' units 'CFS'}
 define D_FSC003_WTPCOL 	{std kind 'DIVERSION' units 'CFS'}!Coloma WTP
 define D_FSC015_60N_NA2 	{std kind 'DIVERSION' units 'CFS'}
 define D_FSC025_60N_PU 	{std kind 'DIVERSION' units 'CFS'}
-define D_FSC027_EBMUD 	{std kind 'DIVERSION' units 'CFS'}
+define D_FSC027_MAQ012 	{std kind 'DIVERSION' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -318,6 +318,7 @@ define D_KLR005_21_PA 	{std kind 'DIVERSION' units 'CFS'}
 !!! Los Vaquerous !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define D_MAQ057_LVP007 	{std kind 'DIVERSION' units 'cfs'}
+define D_LOSVQ_TRNSFR	{lower -99999 upper 400 kind 'CHANNEL' units 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mokelumne River !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -493,14 +494,14 @@ define D_WTPSJP_26N_PU3 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPSJP_26N_NU1 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFOL_26S_PU1 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPVNY_26S_PU1 	{std kind 'DIVERSION' units 'CFS'}
-define D_WTPFOL_26S_NU4 	{std kind 'DIVERSION' units 'CFS'}
+define D_FOLSM_26S_NU4 		{std kind 'DIVERSION' units 'CFS'}
 define D_WTPCOL_26S_PU2 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFBN_26N_NU1 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFBN_26N_NU3 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFBN_26N_NU4 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFBN_26S_NU1 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFBN_26S_NU2 	{std kind 'DIVERSION' units 'CFS'}
-define D_FOLSM_26S_PU3 	{std kind 'DIVERSION' units 'CFS'}
+define D_FOLSM_26S_PU3 		{std kind 'DIVERSION' units 'CFS'}
 define D_WTPBJM_26N_NU2 	{std kind 'DIVERSION' units 'CFS'}
 
 

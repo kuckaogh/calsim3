@@ -150,7 +150,7 @@ define[local] C_SAC066_Cycle6 {alias C_SAC066[MONTHLYWEIGHTED] kind 'FLOW-CHANNE
 !define[local] C_SAC048IF400_Cycle6 {alias C_SAC048_IF400[MONTHLYWEIGHTED] kind 'FLOW-CHANNEL' units 'CFS'}
 define[local] C_SAC048_Cycle6 {alias C_SAC048[MONTHLYWEIGHTED] kind 'FLOW-CHANNEL' units 'CFS'}
 
-define[local] SP_SAC083_YBP034_Cycle6 {alias SP_SAC083_YBP034[MONTHLYWEIGHTED] kind 'FLOW-DELIVERY' units 'CFS'}
+define[local] SP_SAC083_YBP037_Cycle6 {alias SP_SAC083_YBP037[MONTHLYWEIGHTED] kind 'FLOW-DELIVERY' units 'CFS'}
 define[local] SP_SAC066_YBP020_Cycle6 {alias SP_SAC066_YBP020[MONTHLYWEIGHTED] kind 'FLOW-DELIVERY' units 'CFS'}
 !define[local] D400_Cycle6 {alias D400[MONTHLYWEIGHTED] kind 'FLOW-DELIVERY' units 'CFS'}
 
@@ -166,7 +166,7 @@ define[local] C_SAC048IF400_Cycle7 {alias C_SAC048_IF400[UPSTREAM] kind 'FLOW-CH
 define[local] QsaC_SAC048ns_c7 {alias QsaC_SAC048nospilldv[UPSTREAM] kind 'DEBUG' units 'CFS'}
 define[local] QsaC_SAC048corr_c7 {alias QsaC_SAC048corrdv[UPSTREAM] kind 'DEBUG' units 'CFS'}
 
-define[local] SP_SAC083_YBP034_Cycle7 {alias SP_SAC083_YBP034[UPSTREAM] kind 'FLOW-DELIVERY' units 'CFS'}
+define[local] SP_SAC083_YBP037_Cycle7 {alias SP_SAC083_YBP037[UPSTREAM] kind 'FLOW-DELIVERY' units 'CFS'}
 define[local] SP_SAC066_YBP020_Cycle7 {alias SP_SAC066_YBP020[UPSTREAM] kind 'FLOW-DELIVERY' units 'CFS'}
 define[local] D400_Cycle7 {alias D400[UPSTREAM] kind 'FLOW-DELIVERY' units 'CFS'}
 !!!!needs to be corrected to 'FLOW-CHANNEL'
@@ -402,7 +402,7 @@ define[local] C_SAC048IF400_Cycle8 {alias C_SAC048_IF400[DELTA] kind 'FLOW-CHANN
 define[local] QsaC_SAC048ns_c8 {alias QsaC_SAC048nospilldv[DELTA] kind 'DEBUG' units 'CFS'}
 define[local] QsaC_SAC048corr_c8 {alias QsaC_SAC048corrdv[DELTA] kind 'DEBUG' units 'CFS'}
 
-define[local] SP_SAC083_YBP034_Cycle8 {alias SP_SAC083_YBP034[DELTA] kind 'FLOW-DELIVERY' units 'CFS'}
+define[local] SP_SAC083_YBP037_Cycle8 {alias SP_SAC083_YBP037[DELTA] kind 'FLOW-DELIVERY' units 'CFS'}
 define[local] SP_SAC066_YBP020_Cycle8 {alias SP_SAC066_YBP020[DELTA] kind 'FLOW-DELIVERY' units 'CFS'}
 define[local] D400_Cycle8 {alias D400[DELTA] kind 'FLOW-DELIVERY' units 'CFS'}
 

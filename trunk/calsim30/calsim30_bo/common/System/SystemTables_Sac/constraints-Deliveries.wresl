@@ -1463,7 +1463,7 @@ goal setUD_26S_NU3  {UD_26S_NU3 = GP_26S_NU3 } ! + SHRTG_26S_NU3 }
 ! 26S_NU4
 !======================================================================
 ! gross surface water diversions
-goal setDG_26S_NU4  {DG_26S_NU4 = D_WTPFOL_26S_NU4}
+goal setDG_26S_NU4  {DG_26S_NU4 = D_FOLSM_26S_NU4}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_26S_NU4  {DN_26S_NU4 = DG_26S_NU4 - DL_26S_NU4}
 ! Total Applied Water = net surface delivery + groundwater pumping
@@ -1550,6 +1550,6 @@ define DD_SAC_West             {timeseries kind 'DELTA-DEPLETION' units 'TAF' co
 goal setDD_SAC000_SACW   {DD_SAC000_SACW < DD_SAC_West}
 
 goal setD_SJR062_50_PA1  {D_SJR062_50_PA1 = 0.}
-goal setD_SJR028_WTPDWS  {D_SJR028_WTPDWS = 0.}
+goal setD_SJR028_WTPDWS  {D_SJR028_WTPDWS = D514A[SJR_WQ1]}
 
 

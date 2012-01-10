@@ -240,7 +240,18 @@ define	SG_MLC006_088	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 define	SG_MLC004_087	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!087		244
 
 define	SG_MLC_Total	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-											  
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Mokelumne River		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define	SG_MOK014_494	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define	SG_MOK004_495	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+
+goal setSG_MOK014_494	{SG_MOK014_494 = 0.}
+goal setSG_MOK004_495	{SG_MOK004_495 = 0.}
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Paynes Creek	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -329,7 +340,37 @@ define	SG_SAC4_Total	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 define	SG_SAC5_Total	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'} ! For reach below Freeport
 
 define	SG_SAC_Total		{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-											  !
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! San Joaquin		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define  SG_SJR062_605	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR056_592	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR048_576	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR042_567	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR038_558	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR033_553	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR028_543	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR023_540	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR022_520	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR013_534	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR009_533	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+define  SG_SJR006_532	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+
+goal setSG_SJR062_605	{SG_SJR062_605 = 0.}
+goal setSG_SJR056_592	{SG_SJR056_592 = 0.}
+goal setSG_SJR048_576	{SG_SJR048_576 = 0.}
+goal setSG_SJR042_567	{SG_SJR042_567 = 0.}
+goal setSG_SJR038_558	{SG_SJR038_558 = 0.}
+goal setSG_SJR033_553	{SG_SJR033_553 = 0.}
+goal setSG_SJR028_543	{SG_SJR028_543 = 0.}
+goal setSG_SJR023_540	{SG_SJR023_540 = 0.}
+goal setSG_SJR022_520	{SG_SJR022_520 = 0.}
+goal setSG_SJR013_534	{SG_SJR013_534 = 0.}
+goal setSG_SJR009_533	{SG_SJR009_533 = 0.}
+goal setSG_SJR006_532	{SG_SJR006_532 = 0.}
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Stony Creek		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
