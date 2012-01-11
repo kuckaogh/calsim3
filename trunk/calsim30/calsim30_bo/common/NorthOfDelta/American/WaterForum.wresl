@@ -56,14 +56,14 @@ define CLWF_ANN_PCWA_S	 	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
 !define CLWF_ANN_SCWA 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
 !define CLWF_ANN_ROSEV 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
 !define CLWF_ANN_CAREC 		{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !see sumcvpCL_sys.wresl
-/*
+
 !Special allocations for Hodge Decision flow criteria
 !If flow in the lower American River is less than the Hodge Decision flow levels,
 !then more of the City of Sac demand is shifted to the Sac River
 
 define WRWF_SCMTO_S {value WRWF_ANN_SCMTO_S * perdem_SCMTO * taf_cfs}
 define WRWF_SCMTO_A {value WRWF_ANN_SCMTO_A * perdem_SCMTO * taf_cfs}
-*/
+
 ! Set up the integer and accompanying goals that determine if flow is above or below the Hodge flow levels triggers.
 define nimbus_trigger1 {
  case oct_Feb {condition month >= OCT .and. month <= FEB value S_FOLSM(-1)+S_FOLSMmod }
@@ -264,7 +264,7 @@ define WRWF_CRMCL 	{value WRWF_ANN_CRMCL * perdem_CRMCL * taf_cfs}
 !goal limit_D_WTPSRW_24_NU2 {D_WTPSRW_24_NU2 < CL2_PCWA_S + WRWF_PCWA_S}
 
 !Sacramento River
-goal limit_D_SAC062_WTPSAC 	{D_SAC062_WTPSAC < CL2_SCWA /*+ WRWF_SCMTO_S_Hodge*/} ! Remove Hodge decision
+goal limit_D_SAC062_WTPSAC 	{D_SAC062_WTPSAC < CL2_SCWA + WRWF_SCMTO_S /*WRWF_SCMTO_S_Hodge*/} ! Remove Hodge decision
 goal limit_D_WTPSAC_26S_PU4 	{D_WTPSAC_26S_PU4 < min(0.4* taf_cfs, UD_26S_PU4)}
 goal limit_D_WTPSAC_26S_PU4_2	{D_WTPSAC_26S_PU4 < CL2_SCWA}
 
@@ -292,7 +292,7 @@ goal limit_D_FSC003_WTPCOL 	{D_FSC003_WTPCOL < CL2_GSWC + WRWF_GSWC}
 ! American River
 goal limit_D_NFA016_ABT002 	{D_NFA016_ABT002 < CL2_PCWA_NFA + WRWF_PCWA_NFA}
 goal limit_D_AMR017_WTPBJM 	{D_AMR017_WTPBJM < WRWF_CRMCL}
-goal limit_D_AMR007_WTPFBN 	{D_AMR007_WTPFBN < WRWF_ArcWD /*+ WRWF_SCMTO_A_Hodge*/} ! Remove Hodge decision
+goal limit_D_AMR007_WTPFBN 	{D_AMR007_WTPFBN < WRWF_ArcWD + WRWF_SCMTO_A /*WRWF_SCMTO_A_Hodge*/} ! Remove Hodge decision
 goal limit_D_WTPFBN_26N_NU4	{D_WTPFBN_26N_NU4 < WRWF_ArcWD}
 
 ! Facilities not built
