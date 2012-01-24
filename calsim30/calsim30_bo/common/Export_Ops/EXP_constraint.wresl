@@ -22,7 +22,7 @@ define MAXEXP_RPA {value max( min(NMFS_MaxExp, NMFS_MaxExp_DCC, FWS_MaxExp_X2), 
 ! **********************************************************************************************
 !
 
-define MAXEXP_RPA_CVP {value max(tracyminpump,min(0.5*MAXEXP_RPA,maxTracycalc)) }
+define MAXEXP_RPA_CVP {value max(tracyminpump,min(0.5*MAXEXP_RPA,D418[UPSTREAM]/*maxTracycalc*/)) }
 define MAXEXP_RPA_SWP {value max(banksminpump,MAXEXP_RPA - MAXEXP_RPA_CVP) }
 
 
