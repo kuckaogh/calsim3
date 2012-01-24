@@ -25,28 +25,32 @@ SEQUENCE CYCLE5 {
     order   5
     }
 SEQUENCE CYCLE6 {
-    model   SETUP
+    model   PRESETUP
     order   6
     }
 SEQUENCE CYCLE7 {
-    model   MONTHLYWEIGHTED
+    model   SETUP
     order   7
     }
 SEQUENCE CYCLE8 {
-    model   UPSTREAM
+    model   MONTHLYWEIGHTED
     order   8
     }
 SEQUENCE CYCLE9 {
-    model   DELTA
+    model   UPSTREAM
     order   9
     }
 SEQUENCE CYCLE10 {
-    model   DELTA2
+    model   DELTA
     order   10
-    }    
+    }
 SEQUENCE CYCLE11 {
-    model   TRANSFERS_STAGE1
+    model   DELTA2
     order   11
+    }    
+SEQUENCE CYCLE12 {
+    model   TRANSFERS_STAGE1
+    order   12
     }
 /*SEQUENCE CYCLE12 {
     model   CVCWHEELING
@@ -183,7 +187,7 @@ MODEL VAMP_AND_DO {           !CYCLE 5
      }
 
 
-MODEL SETUP {      !CYCLE 6
+MODEL PRESETUP {      !CYCLE 6
     define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -200,6 +204,105 @@ MODEL SETUP {      !CYCLE 6
 
     INCLUDE        '..\..\common\CVGroundwater\CVGroundwater_ExtFuncs.wresl'
     
+    goal[local] wheeling6 {I419 = 0.0}
+    INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
+    INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+!    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
+!    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
+    INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
+!    INCLUDE[LOCAL] 'ReOperations\Transfers\TransfersCore.wresl'
+
+    INCLUDE[local] '..\..\common\Freeport\Freeport.wresl'           !ejc
+
+!    INCLUDE[LOCAL] '..\..\common\swp_dellogic\swp_dellogic.wresl'
+    INCLUDE[LOCAL] 'DeliveryLogic\SwpDeliveryLogic.wresl'                           !contains Stage1 Transfers adjustment to supply allocations
+!    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersPreOps.wresl'
+    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersZeroOps.wresl'
+
+!    INCLUDE[LOCAL] 'Delta\MRDO\X2\x2req.wresl'          ! X2 code for D1641 is different than B2 and EWA (additional Roe Island days are not triggered)
+    INCLUDE[local] '..\..\common\delta\Ann\AnnCommon1.wresl'
+    INCLUDE[local] '..\..\common\export_ops\DCC_stub.wresl'
+    INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
+    INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
+
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+!    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
+    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
+    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
+    INCLUDE[local] '..\..\common\NorthOfDelta\Sacramento\setnodminflows.wresl' ! Set minimum flows at Keswick, Whiskeytown, and Nimbus
+!    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\Cycle7_Hst.wresl'
+
+!    INCLUDE[local] 'ReOperations\integration\NOD_Storage_Transfer.wresl'
+    INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelCore.wresl'
+    INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\wheelzeroCVC.wresl'
+    INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroJPOD.wresl'
+    INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
+!    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
+
+    INCLUDE[LOCAL] 'coa\coa_PRESETUP.wresl'
+
+    INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
+    INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
+    
+    INCLUDE[LOCAL] '..\..\common\cvp_dellogic\cvp_dellogic_sys\cvp_dellogic_sys_cycle6.wresl'
+    INCLUDE[LOCAL] '..\..\common\cvp_dellogic\cvp_dellogic_s\cvp_dellogic_s_cycle6.wresl'
+!    INCLUDE[LOCAL] '..\..\common\CAAFramework\LCPSIM\LCPSIM_Adjustments.wresl'
+    INCLUDE[LOCAL] '..\..\common\CAAFramework\LCPSIM\LCPSIM_ZeroAdjustments.wresl'
+!    INCLUDE[LOCAL] '..\..\common\wsi_di_gen\wsi_di_gen.wresl'
+    
+    INCLUDE[LOCAL] '..\..\common\sanjoaquin\Friant\SJR_Rest_Req_Off_Local.wresl'
+!    INCLUDE[LOCAL] '..\..\common\sanjoaquin\Friant\SJR_Rest_Full.wresl'          !Turns on SJRR Operations    
+    INCLUDE[LOCAL] '..\..\common\sanjoaquin\SanJoaquinAddCyc6.wresl'
+    INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\x2req_ANN.wresl'
+   include[LOCAL] '..\..\common\SouthOfDelta\NODOS\Kern_GWRecharge.wresl'
+    INCLUDE[LOCAL] '..\..\common\rulecurve\rulecv.wresl'
+
+    INCLUDE[LOCAL] '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCyc6.wresl'    
+    
+    INCLUDE [LOCAL] '..\..\common\Delta\ANN\ExportEstimate1_PRESETUP.wresl'     /* Use this file for ANN salinity requirements, Gmodel must be OFF if this is ON */
+    INCLUDE [LOCAL] '..\..\common\Delta\Delta_ANN.wresl'     /* Use this file for ANN salinity requirements, Gmodel must be OFF if this is ON */
+    INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
+    INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
+    INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
+!    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
+!    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
+
+    INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+!    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
+!    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
+
+    INCLUDE[LOCAL] '..\..\common\export_ops\Banks_pump_allow2.wresl'
+
+!    INCLUDE[local] '..\..\common\ReOperations\ReOps_Limits.wresl'
+    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+    define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
+    !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
+
+    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
+
+    INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
+    INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
+    
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation.wresl'    
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
+
+!    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+     }
+     
+MODEL SETUP {      !CYCLE 7
+    INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
+    INCLUDE[local] '..\..\common\System\System_ALL.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
+!    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
+    INCLUDE[local] '..\..\common\System\System_Sac.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_first.wresl'
+    
+    INCLUDE[LOCAL] '..\..\common\ReOperations\ReopsVarDefine.wresl'
+    INCLUDE[LOCAL] '..\..\common\EWAActions\ZeroEWAOps.wresl'
+
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
@@ -288,7 +391,7 @@ MODEL SETUP {      !CYCLE 6
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
      }
      
-MODEL MONTHLYWEIGHTED {      !CYCLE 7
+MODEL MONTHLYWEIGHTED {      !CYCLE 8
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -394,7 +497,7 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 7
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
      }
      
-MODEL UPSTREAM {      !CYCLE 8
+MODEL UPSTREAM {      !CYCLE 9
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
@@ -502,7 +605,7 @@ MODEL UPSTREAM {      !CYCLE 8
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
      }
      
-MODEL DELTA {      !CYCLE 9
+MODEL DELTA {      !CYCLE 10
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
@@ -557,7 +660,7 @@ MODEL DELTA {      !CYCLE 9
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
+    INCLUDE[LOCAL] 'coa\coa_BO.wresl'
 
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
@@ -614,7 +717,7 @@ MODEL DELTA {      !CYCLE 9
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
      }
 
-MODEL DELTA2 {      !CYCLE 10
+MODEL DELTA2 {      !CYCLE 11
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -669,7 +772,7 @@ MODEL DELTA2 {      !CYCLE 10
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
+    INCLUDE[LOCAL] 'coa\coa_BO.wresl'
 
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
@@ -726,7 +829,7 @@ MODEL DELTA2 {      !CYCLE 10
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
      }
      
-MODEL TRANSFERS_STAGE1 {      !CYCLE 11
+MODEL TRANSFERS_STAGE1 {      !CYCLE 12
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -787,7 +890,7 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 11
     INCLUDE[LOCAL] '..\..\common\ReOperations\reopcontinuity.wresl'
     INCLUDE[LOCAL] 'ReOperations\wheeling\wheelfixes_DELTA2.wresl'
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
+    INCLUDE[LOCAL] 'coa\coa_BO.wresl'
 
 !    INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'

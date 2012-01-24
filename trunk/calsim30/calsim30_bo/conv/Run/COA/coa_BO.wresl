@@ -186,7 +186,7 @@ goal EI_split_swp {
     lhs     D419_EXP1_TD
      case ei_control {
      condition	C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1 
-                   .and. eiexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01
+                   .and. eiexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01 .and. C_OMR014[UPSTREAM] > C_OMR014_Limit
      rhs        0.5*EiExpCtrl + ExpRatio*C_THRMA- ExpRatio*C_THRMA[PRESETUP]
                               + ExpRatio*C_FTR068  - ExpRatio*C_FTR068[PRESETUP]
      lhs>rhs    penalty 1285
@@ -195,7 +195,8 @@ goal EI_split_swp {
 goal EI_split_cvp {
     lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
      case ei_control {
-     condition	C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1 .and. eiexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01
+     condition	C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1
+                   .and. eiexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01 .and. C_OMR014[UPSTREAM] > C_OMR014_Limit
      rhs        0.5*EiExpCtrl + ExpRatio*C_WKYTN_m - ExpRatio*C_WKYTN_m[PRESETUP]
                               + ExpRatio*C_KSWCK_m - ExpRatio*C_KSWCK_m[PRESETUP]    
                               + ExpRatio*C_NTOMA_m - ExpRatio*C_NTOMA_m[PRESETUP]

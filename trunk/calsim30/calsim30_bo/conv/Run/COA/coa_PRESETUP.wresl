@@ -182,32 +182,25 @@ goal setUNUSED_SS { D418_EXP2 + D419_cvpded_Exp2 /*+ D168B_EXP2*/ + D408_DS_EXP2
 
 ! Attempt to split export even during EI control situations
 
+/*
 goal EI_split_swp {
     lhs     D419_EXP1_TD
-     case ei_control {
-     condition	C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1 
-                   .and. eiexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01
-     rhs        0.5*EiExpCtrl + ExpRatio*C_THRMA- ExpRatio*C_THRMA[PRESETUP]
-                              + ExpRatio*C_FTR068  - ExpRatio*C_FTR068[PRESETUP]
+     rhs        0.5*EiExpCtrl
      lhs>rhs    penalty 1285
      lhs<rhs    penalty 0
-}}
+}
 goal EI_split_cvp {
     lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
-     case ei_control {
-     condition	C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1 .and. eiexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01
-     rhs        0.5*EiExpCtrl + ExpRatio*C_WKYTN_m - ExpRatio*C_WKYTN_m[PRESETUP]
-                              + ExpRatio*C_KSWCK_m - ExpRatio*C_KSWCK_m[PRESETUP]    
-                              + ExpRatio*C_NTOMA_m - ExpRatio*C_NTOMA_m[PRESETUP]
+     rhs        0.5*EiExpCtrl
      lhs>rhs    penalty 1285
      lhs<rhs    penalty 0
-}}
+}
 
 ! Attempt to split export even during April-May pulse and Vamp control situations
 goal AprMay_split_swp {
     lhs     D419_EXP1_TD
      case AprMay {
-     condition range(month,apr,may) .and. C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1 .and. aprmayexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01
+        condition      month==APR .or. month==MAY
      rhs        0.5*AprMayExpCtrl
      lhs>rhs    penalty 1285
      lhs<rhs        penalty 0
@@ -216,10 +209,26 @@ goal AprMay_split_swp {
 goal AprMay_split_cvp {
     lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
      case AprMay {
-     condition range(month,apr,may) .and. C_SAC000_ADD_swp[PRESETUP] + C_SAC000_ADD_cvp[PRESETUP] > 0.1 .and. aprmayexpctrl[PRESETUP] - ExportActualTD[PRESETUP] < 0.01
+        condition        month==APR .or. month==MAY
      rhs        0.5*AprMayExpCtrl
      lhs>rhs    penalty 1285
      lhs<rhs        penalty 0
      }
+}
+*/
+
+goal temp_DO_penalty {
+	lhs	C_SAC000_ADD
+	rhs	0
+	lhs>rhs	penalty 1285
+	lhs<rhs penalty 0
+}
+
+
+goal temp_exp_penalty {
+	lhs	D418 + D419
+	rhs	tracyminpump + banksminpump
+	lhs>rhs penalty 1285
+	lhs<rhs penalty 0
 }
 

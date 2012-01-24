@@ -110,5 +110,20 @@ define CVPRULEcalc {
 !       value       CvpRuleCalc }
 !}
 
-define CvpRuleCalc1 {value max(S11level2,min(CvpRuleCalc,CVP_Rule_Cap_Shasta,S11level4))}
+!define CvpRuleCalc1 {value max(S11level2,min(CvpRuleCalc,CVP_Rule_Cap_Shasta,S11level4))}
+! goal revised to be conditional on Shasta and Folsom storage.  This affects balancing 
+! decisions between nod and sod storage, and the calculation of estimated cvp export 
+! which is used to set the upper bound on C400_MIF.  This edit allows the removal of the 
+! penalty for pumping above H&S when shasta and folsom are low.  
+define CvpRuleCalc1 {
+    case RClowshasta {
+        condition 	S_SHSTA(-1) < 1500.
+        value		S11Level2}
+    case RClowShastaFolsom {
+        condition 	S_FOLSM(-1) < 400. .and. S_SHSTA(-1) < 2000.
+        value		S11Level2}
+    case otherwise {
+    	condition	always 
+    	value		max(S11Level2,min(CvpRuleCalc,CVP_Rule_Cap_Shasta,S11Level4))}
+}
 goal setCVPRULECV { CVPRULECV = CVPRulecalc1 }
