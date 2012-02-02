@@ -276,8 +276,8 @@ goal continuityCCC007  {C_CCC004 + C_LVP007 - D_CCC007_ANTOC - C_CCC007   = 0.}
 goal continuityCCC019  {C_CCC007 + D_CHIPPS_CCC019 - D_CCC019_CCWD        = 0.}
 !goal continuityAIP     {D_VCT002_ORP000 - C_OMR024b			  = 0.} ! see Victoria Canal
 goal continuityORP000  {D_OMR021_ORP000 + D_VCT002_ORP000 - C_ORP000      = 0.}
-goal continuityTRNSFR  {C_ORP000 + D_LOSVQ_TRNSFR - C_TRNSFR 		  = 0.}
-goal continuityLVP007  {C_TRNSFR + D_MAQ057_LVP007 - C_LVP007 		  = 0.}
+goal continuityTRNSF  {C_ORP000 + D_LOSVQ_TRNSF - C_TRNSF 		  = 0.}
+goal continuityLVP007  {C_TRNSF + D_MAQ057_LVP007 - C_LVP007 		  = 0.}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Corning Canal   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -495,7 +495,7 @@ goal continuityKLR006   {C_KLR005 - C_KLR006 = 0.} ! gated weir
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Los Vaqueros !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityLOSVQ  {I_LOSVQ - C_LOSVQ - D_LOSVQ_TRNSFR - E_LOSVQ = S_LOSVQ*taf_cfs - S_LOSVQ(-1)*taf_cfs} !Los Vaqueros reservoir
+goal continuityLOSVQ  {I_LOSVQ - C_LOSVQ - D_LOSVQ_TRNSF - E_LOSVQ = S_LOSVQ*taf_cfs - S_LOSVQ(-1)*taf_cfs} !Los Vaqueros reservoir
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Marsh Creek !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -763,9 +763,9 @@ goal set_E_LOSVQ		{E_LOSVQ = E422}
 goal set_D_OMR021_ORP000	{D_OMR021_ORP000 = D408_OR}
 goal set_D_VCT002_ORP000	{D_VCT002_ORP000 = D408_VC}
 goal set_C_LVP007		{C_LVP007 = C424}
-goal set_D_LOSVQ_TRNSFR		{D_LOSVQ_TRNSFR = C422}
+goal set_D_LOSVQ_TRNSF		{D_LOSVQ_TRNSF = C422}
 goal set_D_MAQ057_LVP007	{D_MAQ057_LVP007 = I424}
-goal set_C_TRNSFR		{C_TRNSFR = C423}
+goal set_C_TRNSF		{C_TRNSF = C423}
 goal set_D_CCC007_ANTOC		{D_CCC007_ANTOC = 0.0}
 goal set_D_CCC019_CCWD		{D_CCC019_CCWD = D420}
 
@@ -890,8 +890,8 @@ goal continuityENGLB    {I_ENGLB + C_YUB030 + CT_Smartville - C_ENGLB - E_ENGLB	
 goal continuityMERLC    {I_MERLC - C_MERLC - E_MERLC                       = S_MERLC * taf_cfs - S_MERLC(-1) * taf_cfs + ErrPos_MERLC - ErrNeg_MERLC} 
 goal continuityYUB024   {C_ENGLB - C_YUB024                                = ErrPos_YUB024 - ErrNeg_YUB024}! Smartsville gage (USGS ####), flow requirement
 goal continuityYUB023   {C_DER001 + C_YUB024 - C_YUB023                                         = ErrPos_YUB023 - ErrNeg_YUB023}! Confluence: Deere Creek
-goal continuityYUB021   {C_YUB023 - C_YUB021                               = 0.}
-goal continuityYUB014   {C_YUB021 + C_FDC006 + R_RFS14_YUB014 - C_YUB014                = ErrPos_YUB014 - ErrNeg_YUB014}! Confluence: French Dry Creek
+goal continuityYUB022   {C_YUB023 - C_YUB022                               = 0.} ! Yuba River at Smartville gage (discontinued)
+goal continuityYUB014   {C_YUB022 + C_FDC006 + R_RFS14_YUB014 - C_YUB014                = ErrPos_YUB014 - ErrNeg_YUB014}! Confluence: French Dry Creek
 goal continuityYUB013   {C_YUB014 - D_YUB013_14_NA - C_YUB013                       = ErrPos_YUB013 - ErrNeg_YUB013}! BVID Pipeline Canal Diversion
 goal continuityYUB011   {C_YUB013 + SG_YUB011_285 + SR_14_YUB011 - D_YUB011_15N_NA2 - D_YUB011_15S_NA2 - C_YUB011   = ErrPos_YUB011 - ErrNeg_YUB011}! Degeurre Dam & diversions for N. and S. Canals
 goal continuityYUB006   {C_YUB011 + SG_YUB006_284 - C_YUB006                        = ErrPos_YUB006 - ErrNeg_YUB006}! Marysville gage (USGS ####), flow requirement

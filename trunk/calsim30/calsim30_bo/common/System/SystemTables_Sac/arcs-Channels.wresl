@@ -480,7 +480,7 @@ define C_LCC016	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define C_LOSVQ	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_LVP007	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define C_TRNSFR	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define C_TRNSF	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -672,7 +672,6 @@ define C_SAC017	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 define C_SAC011	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 define C_SAC007	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 define C_SAC003	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
-define C_SAC000	{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -842,7 +841,7 @@ define C_YUB030	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_ENGLB	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_YUB024	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_YUB023	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define C_YUB021	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define C_YUB022	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_YUB014	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_YUB013	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_YUB011	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
