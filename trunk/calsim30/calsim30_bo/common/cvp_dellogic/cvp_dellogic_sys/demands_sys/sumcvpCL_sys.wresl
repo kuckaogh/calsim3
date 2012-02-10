@@ -102,7 +102,7 @@ define CLWF_ANN_SMUD       {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}
 define CLWF_ANN_GSWC       {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define CLWF_ANN_SCWA       {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define CLWF_ANN_ROSEV     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
-define CLWF_ANN_CAREC     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
+!define CLWF_ANN_CAREC     {timeseries kind 'CVPWF-CONTRACT-LIMIT'  units 'TAF'}  !
 define CLann_ANN_SCWA_FRPT    		{VALUE 0.0}  !
 define CLann_ANN_EBMD_FRPT    		{VALUE 0.0}  !
 
@@ -146,7 +146,6 @@ define anncvpCL_pmi_n { value
       +CLWF_ANN_GSWC
       +CLWF_ANN_SCWA
       +CLWF_ANN_ROSEV
-      +CLWF_ANN_CAREC
       +CLann_ANN_SCWA_FRPT
       +CLann_ANN_EBMD_FRPT}
 

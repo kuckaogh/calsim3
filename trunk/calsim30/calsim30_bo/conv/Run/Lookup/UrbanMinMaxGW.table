@@ -61,7 +61,7 @@ ID	MinFraction	MaxFraction
 57	0.00	1.00	!26S_NU3	Florin RCD, Elk Grove WSC
 58	0.00	1.00	!26S_NU4	Aerojet
 59	0.00	1.00	!26S_PU1	Folsom, Folsom Prison
-60	0.00	1.00	!26S_PU2	Golden State WC
+60	0.55	1.00	!26S_PU2	Golden State WC
 61	0.00	1.00	!26S_PU3	Cal Parks & Rec
 62	0.00	1.00	!26S_PU4	SCWA Zone 41
 63	0.00	1.00	!26S_PU5	Elk Grove WSC

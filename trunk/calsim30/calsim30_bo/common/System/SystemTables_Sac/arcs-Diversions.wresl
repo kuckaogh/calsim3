@@ -431,7 +431,6 @@ define D_WTPFTH_03_SU 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFTH_02_SU 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC289_03_SA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC240_TCC001 	{std kind 'DIVERSION' units 'CFS'}
-define D_SAC240_CCL005 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC224_04_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC240_05_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC207_GCC007 	{std kind 'DIVERSION' units 'CFS'}
@@ -442,7 +441,6 @@ define D_MTC000_09_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC185_09_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_MTC000_09_PR 	{std kind 'DIVERSION' units 'CFS'}
 
-define D_SAC193_BTC032 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC185_08N_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC178_08N_SA1 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC162_09_SA2 	{std kind 'DIVERSION' units 'CFS'}

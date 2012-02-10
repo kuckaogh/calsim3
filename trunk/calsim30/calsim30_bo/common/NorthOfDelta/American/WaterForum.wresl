@@ -43,6 +43,7 @@ define WRWF_ANN_ELDOR 		{timeseries kind 'WRWF-CONTRACT-LIMIT' units 'TAF'} !Ann
 define WRWF_ANN_ROSEV 		{timeseries kind 'WRWF-CONTRACT-LIMIT' units 'TAF'} !Annual water right demand--Roseville City
 define WRWF_ANN_SMUD 		{timeseries kind 'WRWF-CONTRACT-LIMIT' units 'TAF'} !Annual water right demand--SMUD Folsom South Canal
 define WRWF_ANN_GSWC 		{timeseries kind 'WRWF-CONTRACT-LIMIT' units 'TAF'} !Annual water right demand--Golden State Water Company
+define WRWF_ANN_CAREC 		{timeseries kind 'WRWF-CONTRACT-LIMIT' units 'TAF'} !Annual water right demand--CA Parks & Recreation
 
 !Define demands for CVP contract water - reduced by WF agreement
 define CLWF_ANN_PCWA_NFA	{timeseries kind 'CVPWF-CONTRACT-LIMIT' units 'TAF'} !
@@ -164,9 +165,9 @@ goal set_LimitROSEV {LimitROSEV = CL2_ROSEV + WRWF_ROSEV}
 
 
 !==================================================================================================
-! California Parks and Rec
+! California Parks and Rec -- Not a CVP contract
 !===================================================================================================
-define LimitCAREC 		{std kind 'DEMAND-WATER-FORUM' units 'CFS'}
+/*define LimitCAREC 		{std kind 'DEMAND-WATER-FORUM' units 'CFS'}
 
 define CL1_ANN_CAREC {select CalPrkRc from American_PRJ_WR where index=2} !Annual project demand
 define CL2_ANN_CAREC {value min(CLWF_ANN_CAREC, CL1_ANN_CAREC)} !Removed CVP cuts since not a CVP contract
@@ -174,7 +175,7 @@ define CL2_CAREC 		{value CL2_ANN_CAREC * perdem_CARec * taf_cfs}
 define CL2_CARECdv 	{alias CL2_CAREC kind 'DEMAND-WATER-FORUM' units 'CFS'}
 
 goal set_LimitCAREC 	{LimitCAREC = CL2_CAREC}
-
+*/
 !==================================================================================================
 ! SMUD export Folsom South Canal
 !===================================================================================================
@@ -283,7 +284,7 @@ goal limit_D_WTPSJP_26N_PU2     {D_WTPSJP_26N_PU2 < CL2_SJWD_S + WRWF_SJWD_P + C
 
 goal limit_D_FOLSM_WTPFOL 	{D_FOLSM_WTPFOL < CL2_FOLSM + WRWF_FOLSM + WRWF_FOLPR}
 goal limit_D_FOLSM_WTPEDH 	{D_FOLSM_WTPEDH < CL2_ELDOR + WRWF_ELDOR}
-goal limit_D_FOLSM_26S_PU3	{D_FOLSM_26S_PU3 < CL2_CAREC}
+goal limit_D_FOLSM_26S_PU3	{D_FOLSM_26S_PU3 < WRWF_ANN_CAREC}
 
 ! Folsom South Canal
 goal limit_D_FSC025_60N_PU 	{D_FSC025_60N_PU < CL2_SMUD + WRWF_SMUD}
@@ -307,7 +308,7 @@ goal limit_GP_26S_NU1 {GP_26S_NU1 < min(0.40 * taf_cfs, UD_26S_NU1)} ! City of S
 goal limit_GP_26S_PU2 {GP_26S_PU2 > min(0.75 * taf_cfs, UD_26S_PU2)} ! Golden State Rancho
 
 ! Only Citrus Heights WD and Fair Oaks WD use groundwater. Supply limited by well capacity (6 and 14 TAF/year, respectively)
-goal limit_GP_26N_PU3 {GP_26S_PU3 < min(20/12., UD_26S_PU2)} !San Juan WD wholesale service area (Orange Vale WC, Citrus Heights WD, Fair Oaks WD, City of Folsom - Ashland)
+goal limit_GP_26N_PU3 {GP_26S_PU3 < min(20/12., UD_26S_PU3)} !San Juan WD wholesale service area (Orange Vale WC, Citrus Heights WD, Fair Oaks WD, City of Folsom - Ashland)
 
 ! Limit Diversion to Water Treatment Plant Capacity in cfs (existing level of development only)
 goal limit2_D_FOLSM_WTPSJP 	{D_FOLSM_WTPSJP   < 120.* 1.5472 * ExistingLOD + 99999.* FutureLOD} ! Plant capacity 120 MGD
