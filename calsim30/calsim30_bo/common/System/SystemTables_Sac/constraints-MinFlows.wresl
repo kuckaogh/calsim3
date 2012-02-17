@@ -16,9 +16,9 @@ goal   C_SAC240total {C_SAC240 = C_SAC240_MIF + C_SAC240_MIF_DAILY + C_SAC240_AD
 
 goal   C_SAC201total {C_SAC201 = C_SAC201_MIF + C_SAC201_MIF_DAILY + C_SAC201_ADD}  ! Hamilton City
 
-goal   C_SAC120total {C_SAC120 = C_SAC120_MIF + C_SAC120_MIF_DAILY + C_SAC120_ADD}  ! Wilkins Slough
+goal   C_SAC120total {C_SAC120 = C_SAC120_MIF + C_SAC120_ADD}  ! Wilkins Slough
 
-goal   C_SAC097total {C_SAC097 = C_SAC097_MIF + C_SAC097_ADD}  ! Navigation Control Point
+goal   C_SAC097total {C_SAC097 = C_SAC097_MIF + C_SAC097_MIF_DAILY + C_SAC097_ADD}  ! Navigation Control Point
 
 !goal   C_SAC041total {C_SAC041 = C_SAC041_MIF + C_SAC041_ADD}  ! Hood
 
