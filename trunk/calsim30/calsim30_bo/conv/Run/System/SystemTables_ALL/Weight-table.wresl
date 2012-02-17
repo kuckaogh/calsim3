@@ -657,7 +657,7 @@ Objective obj = {
 [C_SAC201_MIF, 5500],   ! Sacramento River at Hamilton City
 [C_SAC201_MIF_DAILY, 5500],   ! Sacramento River at Hamilton City Daily
 [C_SAC120_MIF, 4950],   ! Sacramento River at Wilkins Slough
-[C_SAC120_MIF_DAILY, 4950],   ! Sacramento River at Wilkins Slough Daily
+[C_SAC097_MIF_DAILY, 4950],   ! Sacramento River at NCP Daily
 [C_SAC097_MIF, 4950],   ! Sacramento River NCP
 [C_SAC041_MIF, 2000],   ! Sacramento River at Hood
 [C_SAC017_MIF, 5500],   ! Sacramento River at Rio Vista

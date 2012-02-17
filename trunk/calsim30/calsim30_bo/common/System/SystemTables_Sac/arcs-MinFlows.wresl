@@ -26,10 +26,10 @@ define C_SAC201_MIF_DAILY {std kind 'FLOW-MIN-INSTREAM' units 'CFS'} ! Hamilton 
 define C_SAC201_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 
 define C_SAC120_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'} ! Wilkins Slough
-define C_SAC120_MIF_DAILY {std kind 'FLOW-MIN-INSTREAM' units 'CFS'} ! Wilkins Slough Daily
 define C_SAC120_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 
 define C_SAC097_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'} ! Navigation Control Point
+define C_SAC097_MIF_DAILY {std kind 'FLOW-MIN-INSTREAM' units 'CFS'} ! Wilkins Slough Daily (applied at NCP)
 define C_SAC097_ADD 	{std kind 'FLOW-ADDITIONAL-INSTREAM' units 'CFS'}
 
 !define C_SAC041_MIF 	{std kind 'FLOW-MIN-INSTREAM' units 'CFS'} ! Hood

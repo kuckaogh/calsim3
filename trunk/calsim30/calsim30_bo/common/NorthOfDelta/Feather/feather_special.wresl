@@ -74,21 +74,21 @@ define MF_FTR059 {
   case DecemberToMarch1 {
     condition month >= DEC .AND. month <= MAR .AND.
         int(C_FTR059(prevOCT)) > oct_trigger_cfs .AND. 
-        S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT) .AND.
+        S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT) - .001 .AND.
         int(C_FTR059(prevNOV)) > nov_trigger_cfs .AND.
-        S_OROVL(prevNOV)+S_OROVL_mod_dv(prevNOV) < S_OROVLlevel5(prevNOV)
+        S_OROVL(prevNOV)+S_OROVL_mod_dv(prevNOV) < S_OROVLlevel5(prevNOV) - .001
     value   max(C_FTR059(prevOCT) - 500, C_FTR059(prevNOV) - 500)
   }
   case DecemberToMarch2 {
     condition month >= DEC .AND. month <= MAR .AND.
     int(C_FTR059(prevOCT)) > oct_trigger_cfs .AND.
-    S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT)
+    S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT) - .001
     value   C_FTR059(prevOCT) - 500
   }
   case DecemberToMarch3 {
     condition month >= DEC .AND. month <= MAR .AND.
     int(C_FTR059(prevNOV)) > nov_trigger_cfs .AND.
-    S_OROVL(prevNOV)+S_OROVL_mod_dv(prevNOV) < S_OROVLlevel5(prevNOV)
+    S_OROVL(prevNOV)+S_OROVL_mod_dv(prevNOV) < S_OROVLlevel5(prevNOV) - .001
     value   C_FTR059(prevNOV) - 500
   }
   case otherwise {
