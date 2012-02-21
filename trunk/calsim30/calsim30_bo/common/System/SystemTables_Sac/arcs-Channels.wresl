@@ -183,7 +183,7 @@ define C_BTC015	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_BTC012	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}	
 define C_BTC007	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}	
 define C_BTC003	{lower 0 upper 150000 kind 'CHANNEL' units 'CFS'}
-define C_BSL001a	{lower 0 upper 1500 kind 'CHANNEL' units 'CFS'} !Reduced from 99999 to 1500 on 4-26-11
+define C_BSL001a	{lower 0 upper 250 kind 'CHANNEL' units 'CFS'} !Reduced from 99999 to 1500 cfs on 4-26-11 and from 1500 to 250 cfs on 2-21-12
 define C_BSL001b	{lower 0 upper 150000 kind 'CHANNEL' units 'CFS'}
 define C_BSL004	{lower 0 upper 150000 kind 'CHANNEL' units 'CFS'}
 define C_RFS17		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}		
