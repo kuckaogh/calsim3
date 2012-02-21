@@ -15,7 +15,7 @@ define EstSWPSodRC {value SWPRULEcalc1*taf_cfs - (S12(-1)+S12mod)*taf_cfs}
 define exp_est_SWPRC {alias EstSWPSodRC kind 'EXPORT-ESTIMATE' units 'CFS'}
 
 ! export for south-of-delta SWP: demand + rulecurve
-define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC), max(300.,0.25*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs))}
+define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC))}
 define exp_est_SWP {alias EstSWPSodExp kind 'EXPORT-ESTIMATE' units 'CFS'}
 
 !*********************************************************************************************
