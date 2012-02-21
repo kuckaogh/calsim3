@@ -18,7 +18,7 @@ define exp_est_SWPRC {alias EstSWPSodRC kind 'EXPORT-ESTIMATE' units 'CFS'}
 define EstSWPMaxExp_RPA {select estimate from ExportEstimate_SWP where month = month }
 
 ! export for south-of-delta SWP: demand + rulecurve
-define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC), EstSWPMaxExp_RPA, max(300.,0.25*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs))}
+define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC), EstSWPMaxExp_RPA)}
 define exp_est_SWP {alias EstSWPSodExp kind 'EXPORT-ESTIMATE' units 'CFS'}
 
 !*********************************************************************************************
