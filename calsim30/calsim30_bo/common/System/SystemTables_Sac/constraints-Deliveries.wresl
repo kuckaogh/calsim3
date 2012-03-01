@@ -1315,7 +1315,7 @@ goal setD_WTPCMT_SUISN      {D_WTPCMT_SUISN < UD_SUISN}
 goal setD_WTP_FRFLD         {D_WTPNBR_FRFLD + D_WTPWMN_FRFLD < UD_FRFLD }
 goal setD_WTPTAB_TVAFB         {D_WTPTAB_TVAFB < UD_TVAFB}
 goal setD_WTPBNC_BNCIA        {D_WTPBNC_BNCIA < UD_BNCIA}
-goal setD_WTPFMH_VLLJO  {D_WTPFMH_VLLJO < UD_VLLJO}
+!goal setD_WTPFMH_VLLJO  {D_WTPFMH_VLLJO < UD_VLLJO}
 
 !======================================================================
 ! 25_NU
