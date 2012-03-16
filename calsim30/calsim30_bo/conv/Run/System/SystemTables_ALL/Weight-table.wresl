@@ -604,7 +604,7 @@ Objective obj = {
 [D_YUB013_14_NA,15004],
 [C_FDC006_ADD,-15000], !Only release for BVID diversion
 [C_FDC006_MIF,5100],
-[D_NBLDB_CGT005, -50000],
+[D_NBLDB_CGT005, 5000],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 15 North  !!!!!!!!!!!!!!!!!!!
