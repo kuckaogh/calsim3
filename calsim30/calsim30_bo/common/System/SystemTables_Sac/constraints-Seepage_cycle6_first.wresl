@@ -297,60 +297,23 @@ goal setBTL006_038  {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Cache Creek         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal setCCH030_335  {
-	lhs SG_CCH030_335
-	case first {
-		condition wateryear == bgnWY .and. month == Oct
-		rhs 0.}
-	case other {
-		condition always
-		rhs SG_CCH030_335(-1)}}
+goal setCCH030_335  {SG_CCH030_335 = 0.}
+	
 
-goal setCCH023_336  {
-	lhs SG_CCH023_336
-	case first {
-		condition wateryear == bgnWY .and. month == Oct
-		rhs 0.}
-	case other {
-		condition always
-		rhs SG_CCH023_336(-1)}}
+goal setCCH023_336  {SG_CCH023_336 = 0.}
+	
 
-goal setCCH017_347  {
-	lhs SG_CCH017_347
-	case first {
-		condition wateryear == bgnWY .and. month == Oct
-		rhs 0.}
-	case other {
-		condition always
-		rhs SG_CCH017_347(-1)}}
+goal setCCH017_347  {SG_CCH017_347 = 0.}
+	
 
-goal setCCH012_348  {
-	lhs SG_CCH012_348
-	case first {
-		condition wateryear == bgnWY .and. month == Oct
-		rhs 0.}
-	case other {
-		condition always
-		rhs SG_CCH012_348(-1)}}
+goal setCCH012_348  {SG_CCH012_348 = 0.}
+	
 
-goal setCCH006_358  {
-	lhs SG_CCH006_358
-	case first {
-		condition wateryear == bgnWY .and. month == Oct
-		rhs 0.}
-	case other {
-		condition always
-		rhs SG_CCH006_358(-1)}}
+goal setCCH006_358  {SG_CCH006_358 = 0.}
+	
 
-goal setCCH003_359  {
-	lhs SG_CCH003_359
-	case first {
-		condition wateryear == bgnWY .and. month == Oct
-		rhs 0.}
-	case other {
-		condition always
-		rhs SG_CCH003_359(-1)}}
-
+goal setCCH003_359  {SG_CCH003_359 = 0.}
+	
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Colusa Basin Drain  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
