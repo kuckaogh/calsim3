@@ -94,13 +94,28 @@ goal setBTL006_038 { SG_BTL006_038 = - GetSeep(220)   / cfs_cfm }
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!! Cache Creek         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
-goal setCCH030_335 { SG_CCH030_335 = - GetSeep(390)   / cfs_cfm }	   
-goal setCCH023_336 { SG_CCH023_336 = - GetSeep(391)   / cfs_cfm }	   
-goal setCCH017_347 { SG_CCH017_347 = - GetSeep(392)   / cfs_cfm }	   
-goal setCCH012_348 { SG_CCH012_348 = - GetSeep(393)   / cfs_cfm }	   
-goal setCCH006_358 { SG_CCH006_358 = - GetSeep(394)   / cfs_cfm }	   
-goal setCCH003_359 { SG_CCH003_359 = - GetSeep(395)   / cfs_cfm }	   
+! New code to limit stream seepage losses to available water in stream.
 
+Define SG_CCH030_seep {case pos {condition GetSeep(390)>= 0. Value - GetSeep(390) / cfs_cfm} case otherwise {condition always value 0.} }
+Define SG_CCH023_seep {case pos {condition GetSeep(391)>= 0. Value - GetSeep(390) / cfs_cfm} case otherwise {condition always value 0.} }
+Define SG_CCH017_seep {case pos {condition GetSeep(392)>= 0. Value - GetSeep(390) / cfs_cfm} case otherwise {condition always value 0.} }
+Define SG_CCH012_seep {case pos {condition GetSeep(393)>= 0. Value - GetSeep(390) / cfs_cfm} case otherwise {condition always value 0.} }
+Define SG_CCH006_seep {case pos {condition GetSeep(394)>= 0. Value - GetSeep(390) / cfs_cfm} case otherwise {condition always value 0.} }
+Define SG_CCH003_seep {case pos {condition GetSeep(395)>= 0. Value - GetSeep(390) / cfs_cfm} case otherwise {condition always value 0.} }
+
+Define CT_Yolo_neg {case neg {condition CT_Yolo < 0. Value CT_Yolo} case otherwise {condition always value 0.} }
+
+Define SG_CCH_seep {value  SG_CCH030_seep + SG_CCH023_seep + SG_CCH017_seep + SG_CCH012_seep + SG_CCH006_seep + SG_CCH003_seep} !seepage from stream to groundwater
+
+Define SG_CCH_adjust {value max(0., min(1.0, (C_CCH032[setup] - D_CCH030_20_NA1[setup] + CT_Yolo_Neg ))/ SG_CCH_seep)} !factor based on available water supply, value varies between 0 and 1
+
+goal setCCH030_335 { SG_CCH030_335 = max(- GetSeep(390),-GetSeep(390)*SG_CCH_adjust)  / cfs_cfm }            
+goal setCCH023_336 { SG_CCH023_336 = max(- GetSeep(391),-GetSeep(391)*SG_CCH_adjust)  / cfs_cfm }         
+goal setCCH017_347 { SG_CCH017_347 = max(- GetSeep(392),-GetSeep(392)*SG_CCH_adjust)  / cfs_cfm }                            
+goal setCCH012_348 { SG_CCH012_348 = max(- GetSeep(393),-GetSeep(393)*SG_CCH_adjust)  / cfs_cfm }            
+goal setCCH006_358 { SG_CCH006_358 = max(- GetSeep(394),-GetSeep(394)*SG_CCH_adjust)  / cfs_cfm }            
+goal setCCH006_359 { SG_CCH003_359 = max(- GetSeep(395),-GetSeep(395)*SG_CCH_adjust)  / cfs_cfm }         
+	   
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!! Colusa Basin Drain  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !

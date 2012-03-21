@@ -238,7 +238,7 @@ Objective obj = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! GP Weight     !!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- 
+/* 
 [GP_02_NA, -80000],      !set to divert surface water first. Richard Chen 2/09/2012
 [GP_02_NU, -80000],
 [GP_02_PA, -80000],
@@ -384,7 +384,7 @@ Objective obj = {
 [GP_26S_PU4, -80000],
 [GP_26S_PU5, -80000],
 [GP_26S_PU6, -80000],
-
+*/
 [ErrPos_TRNTY  ,-99999], 
 [ErrNeg_TRNTY  ,-99999], 
 [ErrPos_LWSTN  ,-99999], 
