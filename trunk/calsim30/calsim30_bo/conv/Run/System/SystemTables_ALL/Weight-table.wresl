@@ -100,7 +100,7 @@ Objective obj = {
 [S_CLRLK_4,   100*taf_cfs],
 [S_CLRLK_5,-15000*taf_cfs],
 
-[S_INDVL_1, 20000*taf_cfs],
+[S_INDVL_1,200000*taf_cfs],
 [S_INDVL_2,   400*taf_cfs],
 [S_INDVL_3,   300*taf_cfs],
 [S_INDVL_4,   200*taf_cfs],
@@ -407,14 +407,14 @@ Objective obj = {
 [ErrNeg_BLKBT  ,-99999],
 [ErrPos_SGRGE  ,-99999], 
 [ErrNeg_SGRGE  ,-99999], 
-[ErrPos_EPARK  ,-99999], 
-[ErrNeg_EPARK  ,-99999], 
+![ErrPos_EPARK  ,-99999], 
+![ErrNeg_EPARK  ,-99999], 
 [ErrPos_SLYCK  ,-99999], 
 [ErrNeg_SLYCK  ,-99999],  
 [ErrPos_ENGLB  ,-99999],
 [ErrNeg_ENGLB  ,-99999],
-[ErrPos_MERLC  ,-99999],
-[ErrNeg_MERLC  ,-99999],
+![ErrPos_MERLC  ,-99999],
+![ErrNeg_MERLC  ,-99999],
 [ErrPos_CMBIE  ,-99999],
 [ErrNeg_CMBIE  ,-99999],
 [ErrPos_CMPFW  ,-99999],
@@ -2412,7 +2412,7 @@ Objective obj = {
 [ErrNeg_YUB039 ,-99999],
 
 ! Reuse
-/*
+
 [RU_02_NA , 99999]
 [RU_02_PA , 99999]
 [RU_02_SA , 99999]
@@ -2481,7 +2481,7 @@ Objective obj = {
 [RU_25_PA1  , 99999]
 [RU_25_PA2  , 99999]
 [RU_60N_NA2  , 99999]
-*/
+
  }
  
  

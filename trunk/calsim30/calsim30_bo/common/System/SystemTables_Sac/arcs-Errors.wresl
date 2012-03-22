@@ -166,7 +166,7 @@ define ErrPos_ELD027   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_EMD001   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_EMD007   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_ENGLB    {std kind 'Error-TERM' units 'CFS'}
-define ErrPos_EPARK    {std kind 'Error-TERM' units 'CFS'}
+!define ErrPos_EPARK    {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_ESL008   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_FDC006   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_FOLSM    {std kind 'Error-TERM' units 'CFS'}
@@ -250,7 +250,7 @@ define ErrPos_LST004   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_LST003   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_LVC001   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_LWSTN    {std kind 'Error-TERM' units 'CFS'}
-define ErrPos_MERLC    {std kind 'Error-TERM' units 'CFS'}
+!define ErrPos_MERLC    {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_MFA023   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_MFA001   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_MFF019   {std kind 'Error-TERM' units 'CFS'}
@@ -732,7 +732,7 @@ define ErrNeg_ELD027   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_EMD001   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_EMD007   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_ENGLB    {std kind 'Error-TERM' units 'CFS'}
-define ErrNeg_EPARK    {std kind 'Error-TERM' units 'CFS'}
+!define ErrNeg_EPARK    {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_ESL008   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_FDC006   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_FOLSM    {std kind 'Error-TERM' units 'CFS'}
@@ -816,7 +816,7 @@ define ErrNeg_LST004   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_LST003   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_LVC001   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_LWSTN    {std kind 'Error-TERM' units 'CFS'}
-define ErrNeg_MERLC    {std kind 'Error-TERM' units 'CFS'}
+!define ErrNeg_MERLC    {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_MFA023   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_MFA001   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_MFF019   {std kind 'Error-TERM' units 'CFS'}
