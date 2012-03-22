@@ -772,7 +772,7 @@ goal set_D_CCC019_CCWD		{D_CCC019_CCWD = D420}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Stony Creek     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityEPARK    {I_EPARK - D_EPARK_SCKWD - E_EPARK - C_EPARK            = S_EPARK * taf_cfs - S_EPARK(-1) * taf_cfs + ErrPos_EPARK - ErrNeg_EPARK}
+goal continuityEPARK    {I_EPARK - D_EPARK_SCKWD - E_EPARK - C_EPARK            = S_EPARK * taf_cfs - S_EPARK(-1) * taf_cfs}
 goal continuitySGRGE    {I_SGRGE  + C_EPARK - E_SGRGE - C_SGRGE         = S_SGRGE * taf_cfs - S_SGRGE(-1) * taf_cfs + ErrPos_SGRGE - ErrNeg_SGRGE}
 goal continuityBLKBT    {I_BLKBT  + C_SGRGE - E_BLKBT - C_BLKBT         = S_BLKBT * taf_cfs - S_BLKBT(-1) * taf_cfs + ErrPos_BLKBT - ErrNeg_BLKBT}
 goal continuitySTN026   {C_BLKBT  + SG_STN026_124 - D_STN026_06_PA - C_STN026    = ErrPos_STN026 - ErrNeg_STN026}   
@@ -887,7 +887,7 @@ goal continuityYUB034   {C_YUB039 + C_CGT006 - C_YUB034                         
 goal continuityYUB030   {C_YUB034 + C_SFY007 - C_YUB030                         = ErrPos_YUB030 - ErrNeg_YUB030}! Confluence: South Fork Yuba
 goal continuityENGLB    {I_ENGLB + C_YUB030 + CT_Smartville - C_ENGLB - E_ENGLB	= S_ENGLB * taf_cfs - S_ENGLB(-1) * taf_cfs + ErrPos_ENGLB - ErrNeg_ENGLB}! Englebright Reservoir 
 
-goal continuityMERLC    {I_MERLC - C_MERLC - E_MERLC                       = S_MERLC * taf_cfs - S_MERLC(-1) * taf_cfs + ErrPos_MERLC - ErrNeg_MERLC} 
+goal continuityMERLC    {I_MERLC - C_MERLC - E_MERLC                       = S_MERLC * taf_cfs - S_MERLC(-1) * taf_cfs} 
 goal continuityYUB024   {C_ENGLB - C_YUB024                                = ErrPos_YUB024 - ErrNeg_YUB024}! Smartsville gage (USGS ####), flow requirement
 goal continuityYUB023   {C_DER001 + C_YUB024 - C_YUB023                                         = ErrPos_YUB023 - ErrNeg_YUB023}! Confluence: Deere Creek
 goal continuityYUB022   {C_YUB023 - C_YUB022                               = 0.} ! Yuba River at Smartville gage (discontinued)

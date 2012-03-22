@@ -108,12 +108,14 @@ Define CT_Yolo_neg {case neg {condition CT_Yolo < 0. Value CT_Yolo} case otherwi
 Define SG_CCH_seep {value  SG_CCH030_seep + SG_CCH023_seep + SG_CCH017_seep + SG_CCH012_seep + SG_CCH006_seep + SG_CCH003_seep} !seepage from stream to groundwater
 
 Define SG_CCH_adjust {
-	case infeasibility {
-	condition wateryear == 1927 .and. month == may
-	value 0.2}
+	case seepagezero {
+	condition SG_CCH_seep == 0.
+	value 1.}
 	case other {
 	condition always
 	value max(0., min(1.0, (C_CCH032[setup] - D_CCH030_20_NA1[setup] + CT_Yolo_Neg ))/ SG_CCH_seep)}} !factor based on available water supply, value varies between 0 and 1
+
+Define SG_CCH_adjustdv {alias SG_CCH_adjust kind 'seepage-factor' units 'none'}
 
 goal setCCH030_335 { SG_CCH030_335 = max(- GetSeep(390),-GetSeep(390)*SG_CCH_adjust)  / cfs_cfm }            
 goal setCCH023_336 { SG_CCH023_336 = max(- GetSeep(391),-GetSeep(391)*SG_CCH_adjust)  / cfs_cfm }         
