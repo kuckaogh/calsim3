@@ -115,7 +115,7 @@ Define SG_CCH_adjust {
 	value 1.}
 	case other {
 	condition always
-	value max(0., min(1.0, (C_CCH032[monthlyweighted] - D_CCH030_20_NA1[monthlyweighted] + CT_Yolo_Neg ))/ SG_CCH_seep)}} !factor based on available water supply, value varies between 0 and 1
+	value max(0., min(1.0, (C_CCH032[monthlyweighted] - D_CCH030_20_NA1[monthlyweighted] + CT_Yolo_Neg)/ SG_CCH_seep))}} !factor based on available water supply, value varies between 0 and 1
 
 Define SG_CCH_adjustdv {alias SG_CCH_adjust kind 'seepage-factor' units 'none'}
 	
