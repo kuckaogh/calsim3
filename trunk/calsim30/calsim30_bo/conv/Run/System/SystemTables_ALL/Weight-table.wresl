@@ -423,8 +423,8 @@ Objective obj = {
 [ErrNeg_RLLNS  ,-99999],
 [ErrPos_CLRLK  ,-99999],
 [ErrNeg_CLRLK  ,-99999],
-[ErrPos_INDVL  ,-99999],
-[ErrNeg_INDVL  ,-99999],
+![ErrPos_INDVL  ,-99999],
+![ErrNeg_INDVL  ,-99999],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 1     !!!!!!!!!!!!!!!!!!!!!!!
