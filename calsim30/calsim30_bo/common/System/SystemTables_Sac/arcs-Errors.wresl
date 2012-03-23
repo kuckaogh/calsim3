@@ -216,7 +216,7 @@ define ErrPos_GCC060   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_GCC065   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_HON004   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_HON021   {std kind 'Error-TERM' units 'CFS'}
-define ErrPos_INDVL    {std kind 'Error-TERM' units 'CFS'}
+!define ErrPos_INDVL    {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_JBC000   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_JBC002   {std kind 'Error-TERM' units 'CFS'}
 define ErrPos_JBC004   {std kind 'Error-TERM' units 'CFS'}
@@ -782,7 +782,7 @@ define ErrNeg_GCC060   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_GCC065   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_HON004   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_HON021   {std kind 'Error-TERM' units 'CFS'}
-define ErrNeg_INDVL    {std kind 'Error-TERM' units 'CFS'}
+!define ErrNeg_INDVL    {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_JBC000   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_JBC002   {std kind 'Error-TERM' units 'CFS'}
 define ErrNeg_JBC004   {std kind 'Error-TERM' units 'CFS'}

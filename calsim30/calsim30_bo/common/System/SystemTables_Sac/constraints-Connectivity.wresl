@@ -214,7 +214,7 @@ goal continuityCCH012   {C_CCH017 + CT_Yolo + SG_CCH012_348 - C_CCH012          
 goal continuityCCH006   {C_CCH012 + SG_CCH006_358 - C_CCH006            = ErrPos_CCH006 - ErrNeg_CCH006}
 goal continuityCCH003   {C_CCH006 + SG_CCH003_359 - C_CCH003            = ErrPos_CCH003 - ErrNeg_CCH003}
 
-goal continuityINDVL    {I_INDVL - C_INDVL - E_INDVL    = S_INDVL*taf_cfs - S_INDVL(-1)*taf_cfs + ErrPos_INDVL - ErrNeg_INDVL}
+goal continuityINDVL    {I_INDVL - C_INDVL - E_INDVL    = S_INDVL*taf_cfs - S_INDVL(-1)*taf_cfs}
 goal continuityNFC013   {C_INDVL - C_NFC013                 = ErrPos_NFC013 - ErrNeg_NFC013} ! North Fork Cache Creek
 goal continuityNFC005   {C_NFC013 - C_NFC005                    = ErrPos_NFC005 - ErrNeg_NFC005}
 
