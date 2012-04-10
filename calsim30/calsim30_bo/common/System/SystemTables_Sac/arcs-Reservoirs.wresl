@@ -348,8 +348,10 @@ define Relcap_BRYSA  	{select discharge from res_info given storage=1000*S_BRYSA
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Englebright Dam, Yuba River		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define	S_ENGLB		{std kind 'STORAGE' units 'TAF'} !
-define  E_ENGLB         {lower unbounded kind 'EVAPORATION' units 'CFS'}
+define S_ENGLB		{std kind 'STORAGE' units 'TAF'} !
+define E_ENGLB         {lower unbounded kind 'EVAPORATION' units 'CFS'}
+define A_ENGLB   {value 786.0} ! Reservoir Surface Area at storage 65 TAF. 
+define ER_ENGLB  {timeseries kind 'EVAPORATION-RATE' units 'IN'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

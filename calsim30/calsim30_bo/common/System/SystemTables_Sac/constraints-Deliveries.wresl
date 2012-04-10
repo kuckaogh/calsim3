@@ -742,14 +742,13 @@ goal meetAW_15N_NA1 {AW_15N_NA1 + RP_15N_NA1 = GP_15N_NA1 + RU_15N_NA1 } ! + SHR
 !======================================================================
 ! 15N_NA2
 !======================================================================
-define ERRNEG_15N_NA2 {std kind 'ERROR-TERM' units 'CFS'}
 
 ! gross surface water diversions
 goal setDG_15N_NA2  {DG_15N_NA2 = D_YUB011_15N_NA2}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_15N_NA2  {DN_15N_NA2 = DG_15N_NA2 - DL_15N_NA2}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
-goal meetAW_15N_NA2     {AW_15N_NA2 + RP_15N_NA2 = DN_15N_NA2 + GP_15N_NA2 + RU_15N_NA2 } ! + SHRTG_15N_NA2 - ERRNEG_15N_NA2}
+goal meetAW_15N_NA2     {AW_15N_NA2 + RP_15N_NA2 = DN_15N_NA2 + GP_15N_NA2 + RU_15N_NA2 } ! + SHRTG_15N_NA2 }
 
 !======================================================================
 ! 15N_SA
@@ -796,14 +795,13 @@ goal meetAW_15S_NA1 {AW_15S_NA1 + RP_15S_NA1 = GP_15S_NA1 + RU_15S_NA1 } ! + SHR
 !======================================================================
 ! 15S_NA2
 !======================================================================
-define ERRNEG_15S_NA2 {std kind 'ERROR-TERM' units 'CFS'}
 
 ! gross surface water diversions
 goal setDG_15S_NA2  {DG_15S_NA2 = D_YUB011_15S_NA2}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_15S_NA2  {DN_15S_NA2 = DG_15S_NA2 - DL_15S_NA2}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
-goal meetAW_15S_NA2     {AW_15S_NA2 + RP_15S_NA2 = DN_15S_NA2 + GP_15S_NA2 + RU_15S_NA2 } ! + SHRTG_15S_NA2 - ERRNEG_15S_NA2}
+goal meetAW_15S_NA2     {AW_15S_NA2 + RP_15S_NA2 = DN_15S_NA2 + GP_15S_NA2 + RU_15S_NA2 } ! + SHRTG_15S_NA2 }
 
 !======================================================================
 ! 15S_NU

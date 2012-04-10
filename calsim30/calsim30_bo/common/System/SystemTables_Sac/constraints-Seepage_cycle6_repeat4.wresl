@@ -113,7 +113,7 @@ Define SG_CCH_adjust {
 	value 1.}
 	case other {
 	condition always
-	value max(0., min(1.0, (C_CCH032[delta] - D_CCH030_20_NA1[delta] + CT_Yolo_Neg)/ SG_CCH_seep))}} !factor based on available water supply, value varies between 0 and 1
+	value max(0., min(1.0, (C_CCH032[gw_third] - D_CCH030_20_NA1[gw_third] + CT_Yolo_Neg)/ SG_CCH_seep))}} !factor based on available water supply, value varies between 0 and 1
 
 Define SG_CCH_adjustdv {alias SG_CCH_adjust kind 'seepage-factor' units 'none'}
 
@@ -210,19 +210,19 @@ goal setGCC056_258 { SG_GCC056_258 = - GetSeep(314)   / cfs_cfm }
 goal setGCC060_266 { SG_GCC060_266 = - GetSeep(315)   / cfs_cfm }
 goal setGCC065_267 { SG_GCC065_267 = - GetSeep(316)   / cfs_cfm }
 */
-goal setGCC010_139 { SG_GCC010_139 = SG_GCC010_139 [setup] }
-goal setGCC015_154 { SG_GCC015_154 = SG_GCC015_154 [setup] }
-goal setGCC022_169 { SG_GCC022_169 = SG_GCC022_169 [setup] }
-goal setGCC027_183 { SG_GCC027_183 = SG_GCC027_183 [setup] }
-goal setGCC032_198 { SG_GCC032_198 = SG_GCC032_198 [setup] }
-goal setGCC036_211 { SG_GCC036_211 = SG_GCC036_211 [setup] }
-goal setGCC039_216 { SG_GCC039_216 = SG_GCC039_216 [setup] }
-goal setGCC042_227 { SG_GCC042_227 = SG_GCC042_227 [setup] }
-goal setGCC046_236 { SG_GCC046_236 = SG_GCC046_236 [setup] }
-goal setGCC050_250 { SG_GCC050_250 = SG_GCC050_250 [setup] }
-goal setGCC056_258 { SG_GCC056_258 = SG_GCC056_258 [setup] }
-goal setGCC060_266 { SG_GCC060_266 = SG_GCC060_266 [setup] }
-goal setGCC065_267 { SG_GCC065_267 = SG_GCC065_267 [setup] }
+goal setGCC010_139 { SG_GCC010_139 = SG_GCC010_139 [gw_third] }
+goal setGCC015_154 { SG_GCC015_154 = SG_GCC015_154 [gw_third] }
+goal setGCC022_169 { SG_GCC022_169 = SG_GCC022_169 [gw_third] }
+goal setGCC027_183 { SG_GCC027_183 = SG_GCC027_183 [gw_third] }
+goal setGCC032_198 { SG_GCC032_198 = SG_GCC032_198 [gw_third] }
+goal setGCC036_211 { SG_GCC036_211 = SG_GCC036_211 [gw_third] }
+goal setGCC039_216 { SG_GCC039_216 = SG_GCC039_216 [gw_third] }
+goal setGCC042_227 { SG_GCC042_227 = SG_GCC042_227 [gw_third] }
+goal setGCC046_236 { SG_GCC046_236 = SG_GCC046_236 [gw_third] }
+goal setGCC050_250 { SG_GCC050_250 = SG_GCC050_250 [gw_third] }
+goal setGCC056_258 { SG_GCC056_258 = SG_GCC056_258 [gw_third] }
+goal setGCC060_266 { SG_GCC060_266 = SG_GCC060_266 [gw_third] }
+goal setGCC065_267 { SG_GCC065_267 = SG_GCC065_267 [gw_third] }
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!! Mill Creek          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
@@ -377,7 +377,7 @@ define seepYBP007_460  {value  - GetSeep(410)   / cfs_cfm}
 define seepYBP002_473  {value  - GetSeep(411)   / cfs_cfm}
 
 define fweir1_idx {std kind 'weir-index' units 'none'}
-goal setfweir1_idx {fweir1_idx = int_fweir1[setup]}
+goal setfweir1_idx {fweir1_idx = int_fweir1[gw_third]}
 
 goal setYBP032_360 { SG_YBP032_360 = seepYBP032_360 * fweir1_idx }
 goal setYBP026_401 { SG_YBP026_401 = seepYBP026_401 * fweir1_idx }

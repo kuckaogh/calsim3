@@ -91,7 +91,7 @@ define SG_CCH017_347	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 define SG_CCH012_348	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}	
 define SG_CCH006_358	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}	
 define SG_CCH003_359	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-
+/*
 define SG_CCH030_335_1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 define SG_CCH023_336_1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}	
 define SG_CCH017_347_1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}	
@@ -119,7 +119,7 @@ define SG_CCH017_347_4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units
 define SG_CCH012_348_4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}	
 define SG_CCH006_358_4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}	
 define SG_CCH003_359_4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-
+*/
 	
 define SG_CCH_Total	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 											  !
