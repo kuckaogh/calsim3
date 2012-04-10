@@ -32,6 +32,12 @@ define RUFR3	 	{select fraction from AgReuse where DU=3,month=month} !maximum re
 define RUFR4	 	{select fraction from AgReuse where DU=4,month=month} !maximum reuse fraction for irrigated rice - GCID
 define RUFR5	 	{select fraction from AgReuse where DU=5,month=month} !maximum reuse fraction for irrigated rice - Others
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!  Reuse factor for refuge !!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define RUFW1_TS	{timeseries kind 'REUSE-FACTOR' units 'NONE' } ! GCID SacNWR 08N_PR1
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 1      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -509,9 +515,9 @@ define LFF_GCC027_08N_PR1     {value 0.05} !lateral flow loss fraction lateral f
 define OSF_GCC027_08N_PR1     {value 0.03} !canal operating spill fraction
 
 define RUFR_08N_PR1      {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_08N_PR1      {value 0.00} !reuse fraction for all other crops
-define RUFW_08N_PR1      {value 0.00} !reuse fraction for wetlands
-define RPF_08N_PR1       {value 0.15} !riparian and miscellaneous ET fraction
+define RUFO_08N_PR1      {value 0.05} !reuse fraction for all other crops
+define RUFW_08N_PR1      {value RUFW1_TS} !{select fraction from RfReuse where DU=1,month=month} !Monthly reuse fraction for refuge {value 0.12} !reuse fraction for wetlands
+define RPF_08N_PR1       {value 0.00} !riparian and miscellaneous ET fraction
 
 define EV_08N_PR1        {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_08N_PR1        {std kind 'DEEP-PERCOLATION' units 'CFS'}
