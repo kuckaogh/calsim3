@@ -193,7 +193,7 @@ MODEL GW_INITIAL {      !CYCLE 6
     INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_initial.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_initial.wresl'
     INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
@@ -298,7 +298,7 @@ MODEL GW_FIRST {      !CYCLE 7
     INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_repeat.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_repeat.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
@@ -403,7 +403,7 @@ MODEL GW_SECOND {      !CYCLE 8
     INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_repeat2.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_repeat2.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
@@ -508,7 +508,7 @@ MODEL GW_THIRD {      !CYCLE 9
     INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_repeat3.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_repeat3.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
@@ -613,7 +613,7 @@ MODEL SETUP {      !CYCLE 10
     INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle6_repeat4.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_repeat4.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
@@ -720,7 +720,7 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac2.wresl'
     INCLUDE[LOCAL] '..\..\common\hydrology\weirs\weir_steps_dailyops_SETUP.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle7.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_last.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
@@ -826,7 +826,7 @@ MODEL WHEELCVC {      !CYCLE 12
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac2.wresl'
     INCLUDE[LOCAL] '..\..\common\hydrology\weirs\weir_steps_dailyops_MONTHLYWEIGHTED.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_cycle7.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_last.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
