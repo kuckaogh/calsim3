@@ -1,10 +1,12 @@
 /*
-File Name: constraints-seepage_cycle6_repeat3.wresl
+File Name: constraints-seepage_repeat2.wresl
 CalSim 3.0 System File
 
 Purpose:
 
 Naming takes the following form:
+
+
 
 The sign of GetSeep is with respect to groundwater; i.e.
 
@@ -34,7 +36,7 @@ define  cfs_cfmp {case first{
 !***  Groundwater simulation
 !*********************************************************************
 !*********************************************************************
-INCLUDE '..\..\CVGroundwater\CVGroundwater_Third.wresl'
+INCLUDE '..\..\CVGroundwater\CVGroundwater_Second.wresl'
 
          
 !*********************************************************************
@@ -113,7 +115,7 @@ Define SG_CCH_adjust {
 	value 1.}
 	case other {
 	condition always
-	value max(0., min(1.0, (C_CCH032[gw_second] - D_CCH030_20_NA1[gw_second] + CT_Yolo_Neg)/ SG_CCH_seep))}} !factor based on available water supply, value varies between 0 and 1
+	value max(0., min(1.0, (C_CCH032[gw_first] - D_CCH030_20_NA1[gw_first] + CT_Yolo_Neg)/ SG_CCH_seep))}} !factor based on available water supply, value varies between 0 and 1
 
 Define SG_CCH_adjustdv {alias SG_CCH_adjust kind 'seepage-factor' units 'none'}
 	
@@ -210,19 +212,19 @@ goal setGCC056_258 { SG_GCC056_258 = - GetSeep(314)   / cfs_cfm }
 goal setGCC060_266 { SG_GCC060_266 = - GetSeep(315)   / cfs_cfm }
 goal setGCC065_267 { SG_GCC065_267 = - GetSeep(316)   / cfs_cfm }
 */
-goal setGCC010_139 { SG_GCC010_139 = SG_GCC010_139 [gw_second] }
-goal setGCC015_154 { SG_GCC015_154 = SG_GCC015_154 [gw_second] }
-goal setGCC022_169 { SG_GCC022_169 = SG_GCC022_169 [gw_second] }
-goal setGCC027_183 { SG_GCC027_183 = SG_GCC027_183 [gw_second] }
-goal setGCC032_198 { SG_GCC032_198 = SG_GCC032_198 [gw_second] }
-goal setGCC036_211 { SG_GCC036_211 = SG_GCC036_211 [gw_second] }
-goal setGCC039_216 { SG_GCC039_216 = SG_GCC039_216 [gw_second] }
-goal setGCC042_227 { SG_GCC042_227 = SG_GCC042_227 [gw_second] }
-goal setGCC046_236 { SG_GCC046_236 = SG_GCC046_236 [gw_second] }
-goal setGCC050_250 { SG_GCC050_250 = SG_GCC050_250 [gw_second] }
-goal setGCC056_258 { SG_GCC056_258 = SG_GCC056_258 [gw_second] }
-goal setGCC060_266 { SG_GCC060_266 = SG_GCC060_266 [gw_second] }
-goal setGCC065_267 { SG_GCC065_267 = SG_GCC065_267 [gw_second] }
+goal setGCC010_139 { SG_GCC010_139 = SG_GCC010_139 [gw_first] }
+goal setGCC015_154 { SG_GCC015_154 = SG_GCC015_154 [gw_first] }
+goal setGCC022_169 { SG_GCC022_169 = SG_GCC022_169 [gw_first] }
+goal setGCC027_183 { SG_GCC027_183 = SG_GCC027_183 [gw_first] }
+goal setGCC032_198 { SG_GCC032_198 = SG_GCC032_198 [gw_first] }
+goal setGCC036_211 { SG_GCC036_211 = SG_GCC036_211 [gw_first] }
+goal setGCC039_216 { SG_GCC039_216 = SG_GCC039_216 [gw_first] }
+goal setGCC042_227 { SG_GCC042_227 = SG_GCC042_227 [gw_first] }
+goal setGCC046_236 { SG_GCC046_236 = SG_GCC046_236 [gw_first] }
+goal setGCC050_250 { SG_GCC050_250 = SG_GCC050_250 [gw_first] }
+goal setGCC056_258 { SG_GCC056_258 = SG_GCC056_258 [gw_first] }
+goal setGCC060_266 { SG_GCC060_266 = SG_GCC060_266 [gw_first] }
+goal setGCC065_267 { SG_GCC065_267 = SG_GCC065_267 [gw_first] }
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!! Mill Creek          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
@@ -377,7 +379,7 @@ define seepYBP007_460  {value  - GetSeep(410)   / cfs_cfm}
 define seepYBP002_473  {value  - GetSeep(411)   / cfs_cfm}
 
 define fweir1_idx {std kind 'weir-index' units 'none'}
-goal setfweir1_idx {fweir1_idx = int_fweir1[gw_second]}
+goal setfweir1_idx {fweir1_idx = int_fweir1[gw_first]}
 
 goal setYBP032_360 { SG_YBP032_360 = seepYBP032_360 * fweir1_idx }
 goal setYBP026_401 { SG_YBP026_401 = seepYBP026_401 * fweir1_idx }
