@@ -43,9 +43,10 @@ INCLUDE 'systemtables_Sac\constraints-DeepPercolation.wresl'
 
 define C_SAC041_ANN {std kind 'FLOW-ANN' units 'CFS'}
 define C_SAC041_WQ {std kind 'FLOW-WQ' units 'CFS'}
-goal C400total_ann {C_SAC041=C_SAC041_ANN + C_SAC041_WQ}
+goal C_SAC041_tot_ann {C_SAC041=C_SAC041_ANN + C_SAC041_WQ}
 
 define C_YBP002_ANN {std kind 'FLOW-ANN' units 'CFS'}
+goal C_YBP002_tot_ann {C_YBP002=C_YBP002_ANN
 
 goal setC_SAC041_WQ {C_SAC041_WQ=0.0} ! Remove this goal if NODOS activated
 
