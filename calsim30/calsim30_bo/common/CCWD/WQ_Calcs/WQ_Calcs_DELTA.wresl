@@ -1,0 +1,102 @@
+!Define WQ (salinity) decision variables by node
+
+define WQ420 {std kind 'salinity' units 'mg/l'}
+define WQ421 {std kind 'salinity' units 'mg/l'}
+!define WQ422 {std kind 'salinity' units 'mg/l'}
+define WQ423 {std kind 'salinity' units 'mg/l'}
+define WQ424 {std kind 'salinity' units 'mg/l'}
+
+!Calculate water quality
+
+!Old River Pipeline
+define scale_421 {
+    case no_water {
+                condition       D408_OR[delta] + D408_VC[delta] < 0.01
+        value       0.
+    }
+    case otherwise {
+        condition   always
+                value           max(0.,1./(D408_OR[delta] + D408_VC[delta]))
+    }
+}
+goal calc_WQ421 {WQ421 = WQ408_OR*D408_OR[delta]*scale_421 + WQ408_VC*D408_VC[delta]*scale_421}
+
+!Transfer Facility
+define scale_423 {
+    case no_water {
+                condition       C421[delta] + C423_FILL[delta] + C422_REL[delta] < 0.01
+        value       0.
+    }
+    case otherwise {
+        condition   always
+                value           max(0.,1./(C421[delta] + C423_FILL[delta] + C422_REL[delta]))
+    }
+}
+goal calc_WQ423 {WQ423 = WQ421*C421[delta]*scale_423 + WQ424_MOK*C423_FILL[delta]*scale_423 + WQ422(-1)*C422_REL[delta]*scale_423}
+
+!Los Vaqueros
+
+define scale_422 {
+    case no_water {
+                condition       S422[delta]*taf_cfs < 0.01
+        value       0.
+    }
+    case otherwise {
+        condition   always
+                value           max(0.,1./(S422[delta]*taf_cfs))
+    }
+}
+
+goal calc_WQ422 {WQ422 = WQ422(-1)*S422(-1)*taf_cfs*scale_422 - WQ422(-1)*C422_REL[delta]*scale_422 - WQ422(-1)*C422_KC[delta]*scale_422
+                        + WQ422_inflow*I422*scale_422 + WQ422_ppt*I422_ppt_cfs*scale_422 + WQ423*C422_FILL[delta]*scale_422}
+
+
+!Los Vaqueros Pipeline at Mok Aq. Intertie
+define scale_424 {
+    case no_water {
+                condition       I424[delta] + C423_DEL[delta] < 0.01
+        value       0.
+    }
+    case otherwise {
+        condition   always
+                value           max(0.,1./(I424[delta] + C423_DEL[delta]))
+    }
+}
+
+goal calc_WQ424 {WQ424 = WQ424_MOK*I424[delta]*scale_424 + WQ423*C423_DEL[delta]*scale_424}
+
+!Contra Costa Canal downstream of Mallard Slough intake
+
+define scale_420 {
+    case no_water {
+                condition       C424[delta] + D408_RS[delta] + D406A_MS[delta] < 0.01
+        value       0.
+    }
+    case otherwise {
+        condition   always
+                value           max(0.,1./(C424[delta] + D408_RS[delta] + D406A_MS[delta]))
+    }
+}
+
+goal calc_WQ420 {WQ420 = WQ424*C424[delta]*scale_420 + WQ408_RS*D408_RS[delta]*scale_420 + WQ406A_MS*D406A_MS[delta]*scale_420}
+/* !Uncomment if Debugging the WQ calcs is needed
+define scale_420_dv {alias scale_420 kind 'debug' units 'none'}
+define scale_421_dv {alias scale_421 kind 'debug' units 'none'}
+define scale_422_dv {alias scale_422 kind 'debug' units 'none'}
+define scale_423_dv {alias scale_423 kind 'debug' units 'none'}
+define scale_424_dv {alias scale_424 kind 'debug' units 'none'}
+
+
+define I424_c10 {alias I424[delta] kind 'debug' units 'cfs'}
+define C423_DEL_c10 {alias C423_DEL[delta] kind 'debug' units 'cfs'}
+define C424_c10 {alias C424[delta] kind 'debug' units 'cfs'}
+define D408_RS_c10 {alias D408_RS[delta] kind 'debug' units 'cfs'}
+define D406A_MS_c10 {alias D406A_MS[delta] kind 'debug' units 'cfs'}
+define D408_OR_c10 {alias D408_OR[delta] kind 'debug' units 'cfs'}
+define D408_VC_c10 {alias D408_VC[delta] kind 'debug' units 'cfs'}
+define C421_c10 {alias C421[delta] kind 'debug' units 'cfs'}
+define C423_FILL_c10 {alias C423_FILL[delta] kind 'debug' units 'cfs'}
+define C422_REL_c10 {alias C422_REL[delta] kind 'debug' units 'cfs'}
+define S422_c10 {alias S422[delta]*taf_cfs kind 'debug' units 'cfs'}
+define wq424_1stComp {alias WQ424_MOK*I424[delta]*scale_424 kind 'debug' units 'cfs'}
+define wq424_2ndComp {alias WQ423*C423_DEL[delta]*scale_424 kind 'debug' units 'cfs'}*/
