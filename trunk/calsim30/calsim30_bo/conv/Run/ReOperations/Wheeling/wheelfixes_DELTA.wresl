@@ -2,309 +2,309 @@
 /*
 goal fixD14401_NORM {
   lhs     D14401_NORM
-  rhs     D14401_NORM[DELTA2]
+  rhs     D14401_NORM[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixD17501_NORM {
   lhs     D17501_NORM
-  rhs     D17501_NORM[DELTA2]
+  rhs     D17501_NORM[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixD124A_norm {
   lhs     D124A_norm
-  rhs     D124A_norm[DELTA2]
+  rhs     D124A_norm[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixc177A {
   lhs     c177A
-  rhs     c177A[DELTA2]
+  rhs     c177A[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixc177B {
   lhs     c177B
-  rhs     c177B[DELTA2]
+  rhs     c177B[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixc177C_norm {
   lhs     c177C_norm
-  rhs     c177C_norm[DELTA2]
+  rhs     c177C_norm[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixc177D {
   lhs     c177D
-  rhs     c177D[DELTA2]
+  rhs     c177D[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixc177E {
   lhs     c177E
-  rhs     c177E[DELTA2]
+  rhs     c177E[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal fixSwpPumping1 {
   lhs     D419_swp
-  rhs     D419_swp[DELTA2]
+  rhs     D419_swp[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixSwpPumping2 {
   lhs     D419_EXP1
-  rhs     D419_EXP1[DELTA2]
+  rhs     D419_EXP1[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixSwpPumping3 {
   lhs     D419_EXP2
-  rhs     D419_EXP2[DELTA2]
+  rhs     D419_EXP2[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixCvpPumping1 {
   lhs     D418_cvp
-  rhs     D418_cvp[DELTA2]
+  rhs     D418_cvp[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixCvpPumping2 {
   lhs     D418_EXP1
-  rhs     D418_EXP1[DELTA2]
+  rhs     D418_EXP1[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixCvpPumping3 {
   lhs     D418_EXP2
-  rhs     D418_EXP2[DELTA2]
+  rhs     D418_EXP2[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixD419CVPDED {
   lhs     D419_CVPDED
-  rhs     D419_CVPDED[DELTA2]
+  rhs     D419_CVPDED[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixD419CVPDED1 {
   lhs     D419_CVPDED_EXP1
-  rhs     D419_CVPDED_EXP1[DELTA2]
+  rhs     D419_CVPDED_EXP1[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixD419CVPDED2 {
   lhs     D419_CVPDED_EXP2
-  rhs     D419_CVPDED_EXP2[DELTA2]
+  rhs     D419_CVPDED_EXP2[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal FixD859GWSWP {
   lhs     D859_GWRECH_SWP
-  rhs     D859_GWRECH_SWP[DELTA2]
+  rhs     D859_GWRECH_SWP[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal FixD859GWCVPA {
   lhs     D859_GWRECH_CVPA
-  rhs     D859_GWRECH_CVPA[DELTA2]
+  rhs     D859_GWRECH_CVPA[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixNBAPumping {
   lhs     D_BKR004_NBA009_PRJ
-  rhs     D_BKR004_NBA009_PRJ[DELTA2]
+  rhs     D_BKR004_NBA009_PRJ[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixNBPumpingC {
   lhs     D403C
-  rhs     D403C[DELTA2]
+  rhs     D403C[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal fixCCCPumping {
   lhs     D408
-  rhs     D408[DELTA2]
+  rhs     D408[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixfeatherretflow {
   lhs     c137
-  rhs     c137[DELTA2]
+  rhs     c137[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixyubaflow {
   lhs     C230
-  rhs     C230[DELTA2]
+  rhs     C230[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixd207a {
   lhs     d207a
-  rhs     d207a[DELTA2]
+  rhs     d207a[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixd207b {
   lhs     d207b
-  rhs     d207b[DELTA2]
+  rhs     d207b[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixbearflow {
   lhs     c282
-  rhs     c282[DELTA2]
+  rhs     c282[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixfeatherinflow {
   lhs     c223
-  rhs     c223[DELTA2]
+  rhs     c223[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixfeatherexport {
   lhs     c225
-  rhs     c225[DELTA2]
+  rhs     c225[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal fixcvprefuge {
   lhs     d705
-  rhs     d705[DELTA2]
+  rhs     d705[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixsouthbay {
   lhs     d801
-  rhs     d801[DELTA2]
+  rhs     d801[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixSL {
   lhs     s12
-  rhs     s12[DELTA2]
+  rhs     s12[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixSLout {
   lhs     c12
-  rhs     c12[DELTA2]
+  rhs     c12[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal fixSLin {
   lhs     d805
-  rhs     d805[DELTA2]
+  rhs     d805[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixterminals {
   lhs     c855
-  rhs     c855[DELTA2]
+  rhs     c855[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixUNUSEDFS {
   lhs     UNUSED_FS
-  rhs     UNUSED_FS[DELTA2]
+  rhs     UNUSED_FS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixUNUSEDSS {
   lhs     UNUSED_SS
-  rhs     UNUSED_SS[DELTA2]
+  rhs     UNUSED_SS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixSWPDS {
   lhs     SWPDS
-  rhs     SWPDS[DELTA2]
+  rhs     SWPDS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixNODOSswpDS {
   lhs     NODOSswpDS
-  rhs     NODOSswpDS[DELTA2]
+  rhs     NODOSswpDS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal fixSHADS {
   lhs     SHADS
-  rhs     SHADS[DELTA2]
+  rhs     SHADS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixFOLDS {
   lhs     FOLDS
-  rhs     FOLDS[DELTA2]
+  rhs     FOLDS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixWHSSW {
   lhs     WHSSW
-  rhs     WHSSW[DELTA2]
+  rhs     WHSSW[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixNODOScvpDS {
   lhs     NODOScvpDS
-  rhs     NODOScvpDS[DELTA2]
+  rhs     NODOScvpDS[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 */
 goal fixUWFE {
   lhs     UWFE
-  rhs     UWFE[DELTA2]
+  rhs     UWFE[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixIBU {
   lhs     IBU
-  rhs     IBU[DELTA2]
+  rhs     IBU[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 /*
 goal fixc184a {
   lhs     c184a
-  rhs     c184a[DELTA2]
+  rhs     c184a[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixgc184b {
   lhs     c184b
-  rhs     c184b[DELTA2]
+  rhs     c184b[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixc152a {
   lhs     c152a
-  rhs     c152a[DELTA2]
+  rhs     c152a[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixgc152b {
   lhs     c152b
-  rhs     c152b[DELTA2]
+  rhs     c152b[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }*/

@@ -1,5 +1,0 @@
-define D418_Base {value D418[DELTA2]}
-define D419_Base {value D419[DELTA2]}
-define C_SAC000_ADD_cvp_Base {value C_SAC000_ADD_cvp[DELTA2]}
-define C_SAC000_ADD_swp_Base {value C_SAC000_ADD_swp[DELTA2]}
-
