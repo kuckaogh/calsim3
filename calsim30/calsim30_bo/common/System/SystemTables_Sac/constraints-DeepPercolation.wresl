@@ -18,43 +18,6 @@ Only the second timeseries is passed to the groundwater dll
 
 !*********************************************************************
 !*********************************************************************
-!***  Deep Perc reduction fractions for each WBA
-!*********************************************************************
-!*********************************************************************
-define fDP_WBA_2       {value 0.765300}
-define fDP_WBA_3       {value 0.483492}
-define fDP_WBA_4       {value 0.872396}
-define fDP_WBA_5       {value 0.863460}
-define fDP_WBA_6       {value 0.989377}
-define fDP_WBA_7N      {value 0.659092}
-define fDP_WBA_7S      {value 0.640658}
-define fDP_WBA_8N      {value 1.000000}
-define fDP_WBA_8S      {value 0.998462}
-define fDP_WBA_9       {value 1.000000}
-define fDP_WBA_10      {value 0.667199}
-define fDP_WBA_11      {value 0.939634}
-define fDP_WBA_12      {value 0.936876}
-define fDP_WBA_13      {value 0.117455}
-define fDP_WBA_14      {value 0.099593}
-define fDP_WBA_15N     {value 0.974323}
-define fDP_WBA_15S     {value 0.896003}
-define fDP_WBA_16      {value 1.000000}
-define fDP_WBA_17N     {value 1.000000}
-define fDP_WBA_17S     {value 1.000000}
-define fDP_WBA_18      {value 1.000000}
-define fDP_WBA_19      {value 1.000000}
-define fDP_WBA_20      {value 0.643077}
-define fDP_WBA_21      {value 1.000000}
-define fDP_WBA_22      {value 1.000000}
-define fDP_WBA_23      {value 0.995585}
-define fDP_WBA_24      {value 0.453422}
-define fDP_WBA_25      {value 0.871243}
-define fDP_WBA_26N     {value 0.960061}
-define fDP_WBA_26S     {value 0.923919}
-
-
-!*********************************************************************
-!*********************************************************************
 !Time series definitions for field level deep percolation
 !from precipitation and irrigation
 !*********************************************************************
