@@ -10,42 +10,6 @@ I_{DESTINATION NODE} 	- boundary inflow from rim watershed
 SR_{WBA} 			- aggregated precipitation runoff from specific WBA 
 
 */
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! BASE FLOW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define BF_02  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_03  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_04  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_05  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_06  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_07N {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_07S {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_08N {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_08S {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_09  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_10  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_11  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_12  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_13  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_14  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_15N {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_15S {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_16  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_17N {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_17S {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_18  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_19  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_20  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_21  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_22  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_23  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_24  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_25  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_26N {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-define BF_26S {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-!define BF_71  {timeseries kind 'BASE-FLOW' units  'TAF' convert 'CFS'}
-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! SURFACE RUNOFF FROM WBAs !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

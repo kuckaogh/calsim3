@@ -4,18 +4,14 @@ DEEP PERC PASSED TO GW MODULE
 
 The total deep perc for each WBA that are input to CalSim-III are passed
 to GW module using SetDP function.  The deep perc amounts are for each
-WBA area, and not all WBAs are covered by C2VSIM domain.  Then, it is 
-assumed that deep perc rate is uniform over the WBA so, the total deep
-perc at a WBA is scaled back using fDP_WBA_?? factor based on its area 
-overlaid by C2VSIM domain.  This scaled back deep perc is passed to the 
-GW module.
+WBA area, and not all WBAs are covered by C2VSIM domain.  
 
 Can Dogrul October 2008
 */
 
-define DP_Total_E3        	{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
-define DP_Total_E4		{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
-define DP_Total_E6		{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
+define DP_Total_E3      {timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
+define DP_Total_E4	{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
+define DP_Total_E6	{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
 define DP_Total_E10	{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
 define DP_Total_E11	{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
 define DP_Total_E17	{timeseries kind 'percolation-loss' units 'TAF' convert 'CFS'}
