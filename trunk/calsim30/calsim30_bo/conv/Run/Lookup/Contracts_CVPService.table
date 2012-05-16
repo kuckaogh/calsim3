@@ -9,11 +9,11 @@ Diversion      Contract
 5         121.720   ! CL_STN026_6_PA    Orland Unit WUA
 6         57.280    ! CL_STN021_6_PA    Orland Unit WUA
 7         109.725   ! CL_TCC036_7N_PA   Glide WD, Holthouse WD, Kanawha WD, Orland-Artois WD
-8         82.910    ! CL_TCC081_7S_PA   4-M WD, Colusa County WD, Cortina WD, Davis WD, Glenn Valley WD, Holthouse WD, Le Grande WD, Myers-Marsh MWC, Westside WD
+8         85.110    ! CL_TCC081_7S_PA   4-M WD, Colusa County WD, Cortina WD, Davis WD, Glenn Valley WD, Holthouse WD, Le Grande WD, Myers-Marsh MWC, Westside WD
 9         20.000    ! CL_FTR021_16_PA   Feather WD
 10        108.07    ! CL_PSC003_25_PA1  Solano ID - North (assumes 77% of 140.35 TAF/year)
 11        6.140     ! CL_WTPBUK_3_PU3   City of Redding     
-12        11.222    ! CL_WTPCSD_2_PU    Centerville CSD, Clear Creek CSD, Shasta County WA (2.900 + 8.000 + 0.322) 
+12        11.232    ! CL_WTPCSD_2_PU    Centerville CSD, Clear Creek CSD, Shasta County WA (2.900 + 8.000 + 0.332) 
 13        1.400     ! CL_WKYTN_2_PU          Shasta CSD, Keswick CSA (1.000 + 0.400)
 14        6.040     ! CL_SHSTA_3_PU1    Jones Valley CSA, City of Shasta Lake, Mountain Gate CSD
 15        2.458     ! CL_SAC294_3_PU2   Bella Vista WD

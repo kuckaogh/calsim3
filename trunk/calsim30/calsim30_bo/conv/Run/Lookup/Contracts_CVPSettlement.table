@@ -1,9 +1,9 @@
 Contracts_CVPSettlement
 Diversion	Peak	NonPeak			
-1	1.980	4.950	!2_SU	WTPFTH	July-August pk  City of Redding
-2	45.975	69.245	!2_SA	SAC296	July-August pk  Anderson Cottonwood ID, Non-District (short-form) 85% of contract amount
-3	4.020	10.050	!3_SU	WTPFTH	July-August pk  City of Redding
-4	6.142	9.363	!3_SA	SAC289	July-August pk  Anderson Cottonwood ID, Non-District  15% of contract amount
+1	3.000	7.500	!2_SU	WTPFTH	July-August pk  City of Redding
+2	43.935	66.345	!2_SA	SAC296	July-August pk  Anderson Cottonwood ID, Non-District (short-form) 85% of contract amount
+3	3.000	7.500	!3_SU	WTPFTH	July-August pk  City of Redding
+4	8.182	12.343	!3_SA	SAC289	July-August pk  Anderson Cottonwood ID, Non-District  15% of contract amount
 5	0.852	0.571	!4_NA	SAC224	July-Sept peak  small amount of settlement contractors lumped with non-project water users
 6	0.343	0.279	!5_NA	SAC240	July-Sept peak  small amount of settlement contractors lumped with non-project water users
 7	50.120	72.420	!8N_SA1	SAC178	July-Sept peak  Princeton-Cordora-Glenn ID, Provident ID, Maxwell ID, Non-District (Long and Short-Form)
