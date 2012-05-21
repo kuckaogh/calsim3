@@ -826,7 +826,7 @@ MODEL WHEELCVC {      !CYCLE 12
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac2.wresl'
     INCLUDE[LOCAL] '..\..\common\hydrology\weirs\weir_steps_dailyops_MONTHLYWEIGHTED.wresl'
-    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_last.wresl'
+    INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_final.wresl'
     !INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
     !INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
     !INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
