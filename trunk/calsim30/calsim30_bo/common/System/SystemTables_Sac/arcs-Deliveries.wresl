@@ -115,7 +115,7 @@ define SHRTG_17S_SA	{std kind 'SHORTAGE' units 'CFS'}
 define SHRTG_18_NA	{std kind 'SHORTAGE' units 'CFS'}
 define SHRTG_18_NU	{std kind 'SHORTAGE' units 'CFS'}
 define SHRTG_18_SA	{std kind 'SHORTAGE' units 'CFS'}
-define SHRTG_19_NA	{std kind 'SHORTAGE' units 'CFS'}
+!define SHRTG_19_NA	{std kind 'SHORTAGE' units 'CFS'}
 define SHRTG_19_NU	{std kind 'SHORTAGE' units 'CFS'}
 define SHRTG_19_SA	{std kind 'SHORTAGE' units 'CFS'}
 define SHRTG_20_NA1	{std kind 'SHORTAGE' units 'CFS'}
