@@ -166,8 +166,6 @@ define D_CBD001_KLR005 	{std kind 'DIVERSION' units 'CFS'}
 define D_CHIPPS_CCC019 	{std kind 'DIVERSION' units 'cfs'} 
 define D_CCC019_CCWD 	{std kind 'DIVERSION' units 'cfs'}
 define D_CCC007_ANTOC 	{std kind 'DIVERSION' units 'cfs'}
-define D_CCWD 		{std kind 'DIVERSION' units 'cfs'} ! TOTAL CCWD DIVERSION
-
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

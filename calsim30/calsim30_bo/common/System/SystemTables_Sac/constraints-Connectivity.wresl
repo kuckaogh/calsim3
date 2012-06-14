@@ -748,7 +748,6 @@ goal DeltaTransR644CD   {R_50_PA1_SJR056 = R644c + R644d}
 goal DeltaTransD418 {C_DMC003       = D418}
 goal DeltaTransD419 {C_CAA003       = D419}
 goal DeltaTransD409 {D_OMR027_CAA000 + D_OMR028_DMC003  = D409}
-goal DeltaTransD408 {D_CCWD         = D408 + C422}
 goal DeltaTransC639 {C_SJR070       = C639}
 goal DeltaTransD407 {C_SAC000_MIN   = D407}
 goal DeltaTransC407 {C_SAC000_ADD   = C407}
