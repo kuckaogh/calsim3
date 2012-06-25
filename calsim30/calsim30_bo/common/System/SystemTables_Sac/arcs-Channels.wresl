@@ -505,7 +505,7 @@ define C_MNS000	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mokelumne River 	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!define C_MOK018 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define C_MOK019 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_MOK014 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_MOK004 	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 

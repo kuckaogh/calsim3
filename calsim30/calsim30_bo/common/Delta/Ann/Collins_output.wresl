@@ -45,7 +45,7 @@ goal setCOmrdo {
     rhs 0.}
   case Normal {
     condition always
-    rhs ((1-CO_m_sv)/CO_m_sv)*D409 - CO_b_sv/CO_m_sv + C_SJR056 + C_CLV004 + I_MOK014 + SG_SAC017_492 + C_CSL005A + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-CO_m_sv)/CO_m_sv)*D409 - CO_b_sv/CO_m_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + C_CSL005A + I_MSH015 - D408 - net_delta_cu}
     }
 
 !****************************************************************************************

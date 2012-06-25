@@ -348,6 +348,7 @@ define D_WTPBNC_BNCIA 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPFMH_VLLJO 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPAMC_AMCYN 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPJAC_NAPA 	{std kind 'DIVERSION' units 'CFS'}
+define D_WTPJAC_AMCYN 	{std kind 'DIVERSION' units 'CFS'}
 
 !Need to define sub-arcs here
 define D_BKR004_NBA009_PRJ 		{std kind 'DIVERSION' units 'CFS'}

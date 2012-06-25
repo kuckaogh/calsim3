@@ -104,7 +104,7 @@ goal setRSmrdo1 {
     rhs 999999.}*/
   case Normal {
     condition always
-    rhs ((1-RS_m_1_sv)/RS_m_1_sv)*D409 - RS_b_1_sv/RS_m_1_sv + C_SJR056 + C_CLV004 + I_MOK014 + SG_SAC017_492 + C_CSL005A + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-RS_m_1_sv)/RS_m_1_sv)*D409 - RS_b_1_sv/RS_m_1_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + C_CSL005A + I_MSH015 - D408 - net_delta_cu}
 }
 
 define RS_MRDO_2 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -127,7 +127,7 @@ goal setRSmrdo2 {
     rhs 0.}
   case Normal {
     condition always
-    rhs ((1-RS_m_2_sv)/RS_m_2_sv)*D409 - RS_b_2_sv/RS_m_2_sv + C_SJR056 + I_MOK014 + SG_SAC017_492 + C_CSL005A + CT_Woodland + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-RS_m_2_sv)/RS_m_2_sv)*D409 - RS_b_2_sv/RS_m_2_sv + C_SJR056 + C_MOK019 + SG_SAC017_492 + C_CSL005A + CT_Woodland + I_MSH015 - D408 - net_delta_cu}
 }
 
 define RS_MRDO_3 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -150,7 +150,7 @@ goal setRSmrdo3 {
     rhs 0.}
   case Normal {
     condition always
-    rhs ((1-RS_m_3_sv)/RS_m_3_sv)*D409 - RS_b_3_sv/RS_m_3_sv + C_SJR056 + C_CLV004 + I_MOK014 + SG_SAC017_492 + C_CSL005A + CT_Woodland + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-RS_m_3_sv)/RS_m_3_sv)*D409 - RS_b_3_sv/RS_m_3_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + C_CSL005A + CT_Woodland + I_MSH015 - D408 - net_delta_cu}
     }
 
 !****************************************************************************************
