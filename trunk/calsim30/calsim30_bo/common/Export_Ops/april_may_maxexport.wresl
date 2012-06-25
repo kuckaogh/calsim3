@@ -9,7 +9,7 @@
 !!!    Export is the smaller of the pump capacity and the Export Allowed by thr E/I ratio for that period.
 
 ! Delta inflow using the previous cycle SJR flow
-define Dinflow {alias C_SAC041_ANN+I_MOK014+C_YBP002+C508+C639[VAMP_AND_DO] kind 'INFLOW-PULSE' units 'CFS'}
+define Dinflow {alias C_SAC041_ANN+C_MOK019+C_YBP002+C508+C639[VAMP_AND_DO] kind 'INFLOW-PULSE' units 'CFS'}
 
 !############ PULSE PERIOD #############################
 ! Allowable export is set to certain limits based upon the flow of the

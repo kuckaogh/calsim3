@@ -522,7 +522,8 @@ goal continuityMNS000   {I_MNS000 - C_MNS000                                = Rs
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mokulmne River                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-goal continuityMOK014    {/*C_MOK019*/I_MOK014 + SR_26S_MOK014 + SG_MOK014_494 + D_SAC030_MOK014 - C_MOK014         = RsdPos_MOK014 - RsdNeg_MOK014}!
+goal continuityMOK019    {I_MOK019A + I_MOK019B - C_MOK019         = 0.}
+goal continuityMOK014    {C_MOK019 + SR_26S_MOK014 + SG_MOK014_494 + D_SAC030_MOK014 - C_MOK014         = RsdPos_MOK014 - RsdNeg_MOK014}!
 goal continuityMOK004    {C_MOK014 + SG_MOK004_495 + C_SAC029B + DA_MOK_MOK004 - DD_MOK004_MOK - C_MOK004             = RsdPos_MOK004 - RsdNeg_MOK004}!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -534,7 +535,7 @@ goal continuityNBA021   {C_NBA011 - D_NBA021_VJB000 - C_NBA021                  
 goal continuityNBA027   {C_NBA021 - D_NBA027_WTPJAC - D_NBA027_WTPAMC - D_NBA027_NBALOS	        = RsdPos_NBA027 - RsdNeg_NBA027 }
 goal continuityVJB000   {D_NBA021_VJB000 + D_PSC033_VJB000 - D_VJB000_WTPFMH - D_VJB000_WTPBNC     = RsdPos_VJB000 - RsdNeg_VJB000 }
 goal continuityWTPTAB   {D_NBA009_WTPTAB - D_WTPTAB_TVAFB                        = RsdPos_WTPTAB - RsdNeg_WTPTAB }
-goal continuityWTPJAC   {D_NBA027_WTPJAC - D_WTPJAC_NAPA                        = RsdPos_WTPJAC - RsdNeg_WTPJAC }
+goal continuityWTPJAC   {D_NBA027_WTPJAC - D_WTPJAC_NAPA - D_WTPJAC_AMCYN            = RsdPos_WTPJAC - RsdNeg_WTPJAC }
 goal continuityWTPAMC   {D_NBA027_WTPAMC - D_WTPAMC_AMCYN                       = RsdPos_WTPAMC - RsdNeg_WTPAMC }
 goal continuityWTPFMH  {D_VJB000_WTPFMH - D_WTPFMH_VLLJO                     = RsdPos_WTPFMH - RsdNeg_WTPFMH }
 goal continuityWTPBNC   {D_VJB000_WTPBNC - D_WTPBNC_BNCIA                       = RsdPos_WTPBNC - RsdNeg_WTPBNC }

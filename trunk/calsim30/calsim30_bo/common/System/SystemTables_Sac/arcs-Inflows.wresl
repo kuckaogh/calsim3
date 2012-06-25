@@ -237,7 +237,8 @@ define I_MSH015 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'} ! Inflow t
 define I_MLC006 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}
 
 !!! Mokelumne River !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define I_MOK014 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}
+define I_MOK019A 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}
+define I_MOK019B 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}
 
 !!! Paynes Creek !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define I_PYN001 	{timeseries kind 'INFLOW' units 'TAF' convert 'CFS'}

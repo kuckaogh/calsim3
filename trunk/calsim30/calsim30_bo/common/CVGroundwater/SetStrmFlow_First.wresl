@@ -258,7 +258,7 @@ define rSetFlow_086_245  {value    SetStrmFlow(C_MLC004[gw_initial] * cfs_cfm,24
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mokulmne River                  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define rSetFlow_494_197  {value    SetStrmFlow(I_MOK014 * cfs_cfm,197) }
+define rSetFlow_494_197  {value    SetStrmFlow(C_MOK019[gw_initial]  * cfs_cfm,197) }
  
 define rSetFlow_495_198  {value    SetStrmFlow(C_MOK014[gw_initial] * cfs_cfm,198) }
 
