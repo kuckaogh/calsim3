@@ -5,6 +5,7 @@ Estimates are based on current month delivery and San Luis rule-curve.
 
 !*********************************************************************************************
 ! SWP exports:
+! This calculation is considering both potential ND intake as well as SD intake - see ExportEstimate2.wresl
 
 ! export for south-of-delta SWP: demand
 define EstSWPSodDem {value swp_total_demand - I860 } !Ryan 8/9/2005
@@ -20,6 +21,7 @@ define exp_est_SWP {alias EstSWPSodExp kind 'EXPORT-ESTIMATE' units 'CFS'}
 
 !*********************************************************************************************
 ! CVP exports:
+! This calculation is considering both potential ND intake as well as SD intake - see ExportEstimate2.wresl
 
 ! export for south-of-delta CVP: demand
 define EstCVPSodDem {value
@@ -37,21 +39,19 @@ define exp_est_CVPDem {alias EstCVPSodDem kind 'EXPORT-ESTIMATE' units 'CFS'}
 define EstCVPSodRC {value CvpRuleCalc1*taf_cfs - (S11(-1)+S11mod)*taf_cfs}
 define exp_est_CVPRC {alias EstCVPSodRC kind 'EXPORT-ESTIMATE' units 'CFS'}
 
-! minimum Tracy pumping
+! minimum Tracy pumping (for potential ND intake as well as SD intake)
 define TracyMinPumpLevel {
         case TracyShastaLow {
                 condition S_SHSTA(-1) /*+ S44(-1)*/ + S_SHSTAmod < 1500.0
                 value 600.0 }
         case tracylowshastafolsom {
                 condition S_FOLSM(-1) + S_FOLSMmod < 400. .and. S_SHSTA(-1) /*+ S44(-1)*/ + S_SHSTAmod < 2000. !Better reflection of actual operations by trying to keep
-                value 800.  }                                                           !water from being released for SL storage during low storage
+                value 800. }                                                            !water from being released for SL storage during low storage
         case TracyShastaHigh {
                 condition always
                 value 800.0 }
 }
 ! export for south-of-delta CVP: demand + rulecurve
 define CVPexportcap {value maxTracycalc+ CVPDedBanksSwitch*BanksMaxAllowCVP}
-
 define EstCVPSodExp {value min(CVPexportcap, max(TracyMinPumpLevel, EstCVPSodDem + EstCVPSodRC))}
-
 define exp_est_CVP {alias EstCVPSodExp kind 'EXPORT-ESTIMATE' units 'CFS'}

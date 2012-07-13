@@ -2,7 +2,7 @@
 
 !*****Linearization #1***************************************************************
 goal meetRS_1 {
-  lhs D409
+  lhs D409 + D408_P
   case LowCL{
     condition C_SAC041_ANN(-1) >=40000.
     rhs 999999.
@@ -38,13 +38,13 @@ goal meetRS_1 {
     lhs<rhs penalty 0}
   case Normal {
     condition always
-    rhs RS_m_1_sv*C_SAC041_ANN + RS_m_1_sv*C_YBP002 + RS_b_1_sv
+    rhs RS_m_1_sv*C_SACtot_ANN + RS_b_1_sv
     lhs<rhs penalty 0}
 }
 
 !*****Linearization #2***************************************************************
 goal meetRS_2 {
-  lhs D409
+  lhs D409 + D408_P
   case LowCL{
     condition C_SAC041_ANN(-1) >=40000.
     rhs 999999.
@@ -71,13 +71,13 @@ goal meetRS_2 {
     lhs<rhs penalty 0}
   case Normal {
     condition always
-    rhs RS_m_2_sv*C_SAC041_ANN + RS_m_2_sv*C_YBP002 + RS_b_2_sv
+    rhs RS_m_2_sv*C_SACtot_ANN + RS_b_2_sv
     lhs<rhs penalty 0}
 }
 
 !*****Linearization #3***************************************************************
 goal meetRS_3 {
-  lhs D409
+  lhs D409 + D408_P
   case LowCL{
     condition C_SAC041_ANN(-1) >=40000.
     rhs 999999.
@@ -104,6 +104,6 @@ goal meetRS_3 {
     lhs<rhs penalty 0}
   case Normal {
     condition always
-    rhs RS_m_3_sv*C_SAC041_ANN + RS_m_3_sv*C_YBP002 + RS_b_3_sv
+    rhs RS_m_3_sv*C_SACtot_ANN + RS_b_3_sv
     lhs<rhs penalty 0}
 }

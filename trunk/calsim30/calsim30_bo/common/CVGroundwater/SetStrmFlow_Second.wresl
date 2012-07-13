@@ -536,7 +536,7 @@ define rSetFlow_460_410  {value    SetStrmFlow((C_YBP011[gw_first] + C_YBP007[gw
  
 define rSetFlow_473_411  {value    SetStrmFlow((C_YBP007[gw_first] + C_YBP002[gw_first])/2 * cfs_cfm,411) }
  
-define rSetFlow_492_412  {value    SetStrmFlow(C_CSL005A[gw_first] * cfs_cfm,412) }
+define rSetFlow_492_412  {value    SetStrmFlow(C_CSL004A[gw_first] * cfs_cfm,412) }
  
  
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

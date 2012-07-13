@@ -103,7 +103,7 @@ define ANNcap_out {alias ANNcap kind 'FLOW' units 'CFS'}
 !define sac_oth { std kind 'FLOW-INFLOW' units 'CFS' } ! Known inflows (previous month): Mokelumne R. with Yolo Bypass
 !goal def_sac_oth { sac_oth = C157 + C504  + C508} shengjun comment 2/20/2005
 !goal def_sac_oth { sac_oth = C157 + C504  + C508 - D403A - D403B - D403C - D403D } !shengjun add 2/20/2005
-goal def_sac_oth { sac_oth = SG_SAC017_492 + C_CSL005A + C_MOK019  + C_CLV004 }
+goal def_sac_oth { sac_oth = C_CSL005 + C_MOK019  + C_CLV004 }
 
 !*************************************************************************************************************
 ! Currently known inflows: Mokelumne R., Consumnes R. and Calaveras R. | Yolo Bypass not known.

@@ -22,7 +22,7 @@ Objective obj = {
 [S_SHSTA_2,    93*taf_cfs],
 [S_SHSTA_3,    88*taf_cfs],
 [S_SHSTA_4,    84*taf_cfs],
-[S_SHSTA_5,    62*taf_cfs],
+[S_SHSTA_5,    50*taf_cfs],
 [S_SHSTA_6,-15000*taf_cfs],
       
 [S_KSWCK_1, 20000*taf_cfs],
@@ -58,7 +58,7 @@ Objective obj = {
 [S_FOLSM_2,    93*taf_cfs],
 [S_FOLSM_3,    88*taf_cfs],
 [S_FOLSM_4,    84*taf_cfs],
-[S_FOLSM_5,    62*taf_cfs],
+[S_FOLSM_5,    50*taf_cfs],
 [S_FOLSM_6,-15000*taf_cfs],
       
 [S_NTOMA_1, 20000*taf_cfs],
@@ -121,6 +121,10 @@ Objective obj = {
 [S_CMPFW_3,   300*taf_cfs],
 [S_CMPFW_4,   200*taf_cfs],
 [S_CMPFW_5,-10000*taf_cfs],
+
+[C_OROVL_IBU,-3000],
+[C_OROVL_valve, 0.01],
+[C_OROVL_PP135, 0.02],
 
 [C_BRR073_MIF,5100],
 [C_BRR066_MIF,5100],
@@ -790,7 +794,7 @@ Objective obj = {
 
 [C_LWSTN_MIF,  5500],
 [C_LWSTN_ADD1,-1900],
-[C_LWSTN_ADD2,-2700],
+[C_LWSTN_ADD2,-4000],
 [D_LWSTN_import, 40],
 [D_LWSTN_ADD,    -3],
 
@@ -809,7 +813,7 @@ Objective obj = {
 [C_SAC041_MIF, 2000],   ! Sacramento River at Hood
 [C_SAC017_MIF, 5500],   ! Sacramento River at Rio Vista
 
-[C_YBP002_MIF, 2000],   ! Yolo Bypass at mile 2
+[C_CSL005_MIF, 2000],   ! Cache Slough at mile 5
 
 [C_FTR068_MIF, 5500],   ! Feather River low flow channel
 [C_FTR068,       -1],   ! Feather River low flow channel
@@ -890,8 +894,8 @@ Objective obj = {
 [UNUSED_SS,   -1285],   ! COA - unused state share
 [C_SAC000_ADD_CVP,    -2000],   ! Delta outflow - CVP share
 [C_SAC000_ADD_SWP,    -2000],   ! Delta outflow - SWP share
-[C_SAC000_ADD_WHLCV,  -2000],   ! Delta outflow - wheeling share
-[C_SAC000_ADD_ANN,    -2000],   ! Delta outflow - ANN share
+[C_SAC000_ADD_WHLCV,  -2008],   ! Delta outflow - wheeling share
+[C_SAC000_ADD_ANN,    -2010],   ! Delta outflow - ANN share
 [D407,         5000],   ! Required Delta Outflow
 [D_SAC030_MOK014,-5],   ! Delta Cross Channel
 [D408,         5000],   ! CCWD diversions at Rock Slough and Old River
@@ -903,11 +907,11 @@ Objective obj = {
 !Place weights on diversion at Barker Slough rather than deliveries to individual contractors
 [D_BKR004_NBA009_SMT,		15]
 [D_BKR004_NBA009_VPW,		5000]
-[D_BKR004_NBA009_NAPA_PMI,  	1265],
+[D_BKR004_NBA009_NAPA_PMI,  	4000.2],
 [D_BKR004_NBA009_NAPA_PCO,  	1264],
 [D_BKR004_NBA009_NAPA_PIN,  	20],
-[D_BKR004_NBA009_NAPA_PLS,  	1285],
-[D_BKR004_NBA009_SCWA_PMI,  	1265],
+[D_BKR004_NBA009_NAPA_PLS,  	4000.3],
+[D_BKR004_NBA009_SCWA_PMI,  	4000.1],
 [D_BKR004_NBA009_SCWA_PCO,  1264],
 [D_WTPFMH_VLLJO,  -1], !All water pumped in excess of demand goes here
 
@@ -922,6 +926,13 @@ Objective obj = {
 [DD_OMR027_OMR, 99998], ! Delta Depletion
 [DD_SAC041_SACN, 99998], ! Delta Depletion
 [DD_SAC000_SACW, 99998], ! Delta Depletion
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Export control !!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[AprMayExpCtrl, 0.1],
+[AprMayTracyCtrl, 0.1],
+[AprMayBanksCtrl, 0.1],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! South of Delta !!!!!!!!!!!!!!!!!!

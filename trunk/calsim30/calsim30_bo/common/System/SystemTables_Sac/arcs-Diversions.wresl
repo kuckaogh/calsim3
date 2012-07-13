@@ -304,6 +304,11 @@ define D_GCC056_08S_PR 	{std kind 'DIVERSION' units 'CFS'}
 define D_GCC065_08S_PA	{std kind 'DIVERSION' units 'CFS'}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Isolated Facility !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+define D_ISF001_OMR024 	{std kind 'DIVERSION' units 'CFS'}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Knights Landing Ridgecut !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define D_KLR005_21_PA 	{std kind 'DIVERSION' units 'CFS'}
@@ -368,8 +373,14 @@ define D_BKR004_NBA009_SCWA_PCO 	{std kind 'DIVERSION' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Old Middle River (Delta) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define D_OMR027_CAA000 	{std kind 'DIVERSION' units 'cfs'}!Banks Pumping Plant to California 
-define D_OMR028_DMC003 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant to Delta-Men
+define D_OMR027_CAA000	 	{std kind 'DIVERSION' units 'cfs'}!Banks Pumping Plant to California Aqueduct
+define D_OMR027_CAA000_TD 	{std kind 'DIVERSION' units 'cfs'}!Banks Pumping Plant through Delta to California Aqueduct
+define D_OMR027_CAA000_IF 	{std kind 'DIVERSION' units 'cfs'}!Banks Pumping Plant from Isolated Facility to California Aqueduct 
+
+define D_OMR028_DMC003	 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant to Delta-Mendota Canal
+define D_OMR028_DMC003_TD 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant through Delta to Delta-Mendota Canal
+define D_OMR028_DMC003_IF 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant from Isolated Facility to Delta-Mendota Canal
+
 define D_OMR021_ORP000 	{std kind 'DIVERSION' units 'cfs'}!
 define DD_OMR027_OMR 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}!Delta Net
 
@@ -470,6 +481,7 @@ define D_SAC065_WTPBTB 	{std kind 'DIVERSION' units 'CFS'}
 define D_WTPBTB_21_PU 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC062_WTPSAC 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC050_FPT013 	{std kind 'DIVERSION' units 'CFS'}
+define D_SAC041_ISF001 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC030_MOK014 	{std kind 'DIVERSION' units 'CFS'} 
 define DD_SAC017_SACS 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
 define DD_SAC041_SACN 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}

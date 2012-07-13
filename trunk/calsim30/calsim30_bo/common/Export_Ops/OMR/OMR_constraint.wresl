@@ -19,6 +19,7 @@ define Qexp_Max {value min(MAXEXP_RPA,Qexp_pulseperiod) }
 
 ! How much of CCWD estimated demand will impact OMR flows?
 define CCWDFraction {value (D408_OR_max + D408_VC_max)/(D408_RS_max + D408_OR_max + D408_VC_max)}
+define Qsod_noExp { value 0. + D408D416_est*CCWDFraction + netDICU_SOD}
 !
 define Qsod_VAMPperiod { value Qexp_Max + D408D416_est*CCWDFraction + netDICU_SOD}
 define Qomr_VAMPperiod { value coefA*C639[VAMP_AND_DO]+coefb*Qsod_VAMPperiod+coefc}
@@ -52,7 +53,10 @@ define C_OMR014_limit_init {
 define Qsod_HandS { value max(tracyminpump + banksminpump,HandS_minpump) + D408D416_est*CCWDFraction + netDICU_SOD}
 define Qomr_HandS { value coefA*C639[VAMP_AND_DO]+coefb*Qsod_HandS+coefc}
 define Qomr_HandSdv {alias Qomr_HandS kind 'FLOW-CHANNEL' units 'CFS'}
-define C_OMR014_limit {value min(C_OMR014_limit_init,Qomr_HandS)}
+define Qomr_noExp { value coefA*C639[VAMP_AND_DO]+coefb*Qsod_noExp+coefc}
+define Qomr_noExpdv {alias Qomr_noExp kind 'FLOW-CHANNEL' units 'CFS'}
+!define C_OMR014_limit {value min(C_OMR014_limit_init,Qomr_HandS)}
+define C_OMR014_limit {value min(C_OMR014_limit_init,Qomr_noExp)}
 define C_OMR014_LBound  {alias C_OMR014_limit kind 'FLOW-LBOUND' units 'CFS'}
 !
 goal bound_Qomr { C_OMR014 > C_OMR014_limit }
@@ -61,21 +65,21 @@ goal bound_Qomr { C_OMR014 > C_OMR014_limit }
 !*********************************************************************************************
 ! C_OMR014_Base represents the OMR flow not including COA related pumping at Banks or Tracy
 define C_OMR014_NoEXP1  {lower -99999*taf_cfs upper 99999*taf_cfs kind 'FLOW-CHANNEL' units 'CFS'}
-goal set_C_OMR014NoEXP1 {C_OMR014_NoEXP1 - C_OMR014 = D419_EXP1_TD + D418_EXP1_TD + D419_CVPDEDEX1TD}
+goal set_C_OMR014NoEXP1 {C_OMR014_NoEXP1 - C_OMR014 = D419_EXP1_TD + D418_EXP1_TD + D419_CVPDEDEX1TD + D408_P_WHL_SB_E1 + D408_P_WHL_SF_E1}
 !
 goal bound_D419 {
-  lhs     D419_EXP1_TD
+  lhs     D419_EXP1_TD + D408_P_WHL_SB_E1
   case FWSBOActions{
-  condition month>=dec .or. month<=jun
+  condition month>=dec .and. month<=jun
     rhs     0.5*C_OMR014_NoEXP1 - 0.5*C_OMR014_limit
     lhs>rhs    penalty 1285
     lhs<rhs penalty    0}
 }
 !
 goal bound_D418 {
-  lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
+  lhs     D418_EXP1_TD + D419_CVPDEDEX1TD + D408_P_WHL_SF_E1
   case FWSBOActions{
-    condition month>=dec .or. month<=jun
+    condition month>=dec .and. month<=jun
     rhs     0.5*C_OMR014_NoEXP1 - 0.5*C_OMR014_limit
     lhs>rhs    penalty 1285
     lhs<rhs penalty    0}

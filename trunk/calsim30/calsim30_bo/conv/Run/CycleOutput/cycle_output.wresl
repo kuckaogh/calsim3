@@ -28,6 +28,9 @@ goal setstanpulseC_WKYTN {
 define Stan_C520FW_dv {alias Stan_C520FW kind 'output-cfs' units 'cfs'}
 define Stan_C528FW_dv {alias Stan_C528FW kind 'output-cfs' units 'cfs'}
 define C10InstreamTgtdv {alias C10InstrmTgt1dv[sjrbase] kind 'output-cfs' units 'cfs'}
+define C520InstreamC1 {alias C520INSTREAM[sjrbase] kind 'output-cfs' units 'cfs'}
+define C520INSTGTDV2 {std kind 'output-cfs' units 'cfs'}
+goal setC520INSTGTDV2 {C520INSTGTDV2 = C520INSTGTDV[SJRBASE]}
 
 ! SJR_WQ1
 define[local] C605a_SJRWQ1 {alias C605a[SJR_WQ1]     kind 'FLOW-CHANNEL'  units 'CFS'}
@@ -122,6 +125,9 @@ define D408_ECC_c8 {alias D408_ECC[delta] kind 'flow-delivery' units 'cfs'}
 define I424_c8 {alias I424[delta] kind 'flow-inflow' units 'cfs'}
 define S422_c8 {alias S422[delta] kind 'storage' units 'taf'}
 define D420_c8 {alias D420[delta] kind 'flow-delivery' units 'cfs'}
+
+define NMFSdaysopen_c8  {alias NMFSdaysopendv[DELTA] kind 'DCC-DAYS-OPEN' UNITS 'NONE'}
+define NMFSMaxExpDCC_c8 {alias NMFS_MaxExpDCCdv[DELTA] kind 'Export-Limit' units 'cfs'}
 
 ! Outputs for US FWS RPA Verification
 define NDO_cyc_MW {alias NDO[monthlyweighted] kind 'flow-ndo' units 'cfs'}

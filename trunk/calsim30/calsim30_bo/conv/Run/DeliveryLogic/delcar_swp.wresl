@@ -103,15 +103,21 @@ define buffSWP_MayAug {select buffer from ExportEstimate_SWP where month = May}
         condition always
         value 0.}
 } */
+
 ! SJR in flood - if C639 over 16,000 cfs
+define floodSJRdv {std kind 'trigger' UNITS 'NONE'}
 define floodSJR {
     case Wet {
-        condition C639[VAMP_AND_DO] > 16000.
+        condition month>=MAR .and. month <= MAY .and. C639[VAMP_AND_DO] > 16000.
         value 1.}
+    case MarthruMay {
+        condition month>=APR .and. month <= MAY
+        value floodSJRdv(-1)}
     case other {
         condition always
         value 0.}
 }
+goal savefloodSJR {floodSJRdv=floodSJR}
 
 ! Estimate Export Capability for use in determining delivery target limitations
 define SWPDelCapEst {
@@ -233,7 +239,10 @@ define deltar_drymin {
 
 ! This implements the two SL adjustments defined in the previous lines
 define swp_allocation_1 {value max(min(swp_allocation_0+nds_swpdel_adj,deltar_expmax),deltar_drymin) }
+!define swp_allocation_1 {value max(swp_allocation_0+nds_swpdel_adj,deltar_drymin) }
+
 define swp_alloc_1_io   {value max(min(swp_alloc_0_io,deltar_expmax_io),deltar_drymin) }
+!define swp_alloc_1_io   {value max(swp_alloc_0_io,deltar_drymin) }
 
 ! This implements the export capacity constraint previously determined
 define swp_allocation_2 {
