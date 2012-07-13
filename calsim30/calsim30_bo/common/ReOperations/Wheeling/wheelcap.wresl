@@ -90,7 +90,7 @@ goal wheelingCVP1 {D419_cvpwhl < remWheelCap*taf_cfs }
 define EWA_CVPWHLcap {value max(BanksMaxAllow - D419_Base,0.)}
 
 ! Allow JPOD half of the cap - the other half is reserved for EWA
-goal maxJPOD_CVP {D419_cvpwhl < 0.5*EWA_CVPWHLcap*tracy_int}
+goal maxJPOD_CVP {D419_cvpwhl < EWA_CVPWHLcap*tracy_int}
 
 ! See wheelcontinuity for Surplus side and total Release side
 goal JPODReleaseCont {C3_whljp + C5_whljp + C9_whljp + C32_whljp = C407_whljp + D419_whlrels + c177C_EXOP}

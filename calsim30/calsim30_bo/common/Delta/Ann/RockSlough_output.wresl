@@ -27,7 +27,7 @@ goal setRSMax1 {
     rhs 999999.}*/
   case Normal {
     condition always
-    rhs RS_m_1_sv*C_SAC041_ANN + RS_m_1_sv*C_YBP002 + RS_b_1_sv}
+    rhs RS_m_1_sv*C_SACtot_ANN + RS_b_1_sv}
 }
 
 define RS_MaxExport_2 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -50,7 +50,7 @@ goal setRSMax2 {
     rhs 999999.}
   case Normal {
     condition always
-    rhs RS_m_2_sv*C_SAC041_ANN + RS_m_2_sv*C_YBP002 + RS_b_2_sv}
+    rhs RS_m_2_sv*C_SACtot_ANN + RS_b_2_sv}
 }
 
 define RS_MaxExport_3 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -73,7 +73,7 @@ goal setRSMax3 {
     rhs 999999.}
   case Normal {
     condition always
-    rhs RS_m_3_sv*C_SAC041_ANN + RS_m_3_sv*C_YBP002 + RS_b_3_sv}
+    rhs RS_m_3_sv*C_SACtot_ANN + RS_b_3_sv}
 }
 
 
@@ -104,7 +104,7 @@ goal setRSmrdo1 {
     rhs 999999.}*/
   case Normal {
     condition always
-    rhs ((1-RS_m_1_sv)/RS_m_1_sv)*D409 - RS_b_1_sv/RS_m_1_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + C_CSL005A + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-RS_m_1_sv)/RS_m_1_sv)*ExportActualTD - RS_b_1_sv/RS_m_1_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + I_MSH015 + CT_Woodland - C_CSL004B - D408 - net_delta_cu}
 }
 
 define RS_MRDO_2 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -127,7 +127,7 @@ goal setRSmrdo2 {
     rhs 0.}
   case Normal {
     condition always
-    rhs ((1-RS_m_2_sv)/RS_m_2_sv)*D409 - RS_b_2_sv/RS_m_2_sv + C_SJR056 + C_MOK019 + SG_SAC017_492 + C_CSL005A + CT_Woodland + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-RS_m_2_sv)/RS_m_2_sv)*ExportActualTD - RS_b_2_sv/RS_m_2_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + I_MSH015 + CT_Woodland - C_CSL004B - D408 - net_delta_cu}
 }
 
 define RS_MRDO_3 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -150,7 +150,7 @@ goal setRSmrdo3 {
     rhs 0.}
   case Normal {
     condition always
-    rhs ((1-RS_m_3_sv)/RS_m_3_sv)*D409 - RS_b_3_sv/RS_m_3_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + C_CSL005A + CT_Woodland + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-RS_m_3_sv)/RS_m_3_sv)*ExportActualTD - RS_b_3_sv/RS_m_3_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + I_MSH015 + CT_Woodland - C_CSL004B - D408 - net_delta_cu}
     }
 
 !****************************************************************************************
@@ -180,7 +180,7 @@ goal set_RS_ReqSac1 {
     rhs 999999.}*/
   case Normal {
     condition always
-    rhs D409/RS_m_1_sv - RS_b_1_sv/RS_m_1_sv}
+    rhs ExportActualTD/RS_m_1_sv - RS_b_1_sv/RS_m_1_sv}
 }
 
 define RS_ReqSac2 {lower unbounded upper unbounded kind 'FLOW' units 'cfs'}
@@ -203,7 +203,7 @@ goal set_RS_ReqSac2 {
     rhs 0.}
   case Normal {
     condition always
-    rhs D409/RS_m_2_sv - RS_b_2_sv/RS_m_2_sv}
+    rhs ExportActualTD/RS_m_2_sv - RS_b_2_sv/RS_m_2_sv}
 }
 
 define RS_ReqSac3 {lower unbounded upper unbounded kind 'FLOW' units 'cfs'}
@@ -226,5 +226,5 @@ goal set_RS_ReqSac3 {
     rhs 0.}
   case Normal {
     condition always
-    rhs D409/RS_m_3_sv - RS_b_3_sv/RS_m_3_sv}
+    rhs ExportActualTD/RS_m_3_sv - RS_b_3_sv/RS_m_3_sv}
 }

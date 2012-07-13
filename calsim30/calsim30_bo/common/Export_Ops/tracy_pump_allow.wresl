@@ -50,6 +50,9 @@ define tracyminpump {
         condition always
         value 800. }
 }
+
+define tracyminpumpdv {alias tracyminpump kind 'health-safety' units 'cfs'}
+
 goal settracyminpump {
     lhs D418_cvp
     case tracylowshasta {

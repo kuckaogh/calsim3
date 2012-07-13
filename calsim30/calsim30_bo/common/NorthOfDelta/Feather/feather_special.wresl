@@ -170,6 +170,17 @@ goal minflow_C_FTR003 {C_FTR003_MIF < minflowFeather} ! at the mouth
 
 
 ! Oroville would be operated only to satify minimum instream and delta conditions if less than 1.0 MAF - Aaron Miller 5/21/08
+define C_OROVL_IBU {std kind 'flow-channel' units 'cfs'}  !Weight with -3000 to replace commented out constraint oro_releases.
+define C_OROVL_EXP {std kind 'flow-channel' units 'cfs'}
+goal split_C_OROVL {C_OROVL = C_OROVL_IBU + C_OROVL_EXP}
+
+define C_OROVL_EXP_max_ {value max(0., I_OROVL + CT_OROVILLE + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 + D_SLT009_SCT000_SV - D_WBF030_HKC002_SV - D_WBF015_MIO023_SV - D_SFF011_MNRRH_SV - D_LST004_OWC000_SV + (S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs)}
+
+goal lim_C_OROVL_EXP {C_OROVL_EXP < C_OROVL_EXP_max_}
+
+define C_OROVL_EXP_max {alias C_OROVL_EXP_max_ kind 'upper-bound' units 'cfs'}
+
+/*
 goal oro_releases {
     lhs C_OROVL
     case low_storage {
@@ -183,10 +194,31 @@ goal oro_releases {
             lhs>rhs penalty 0
             lhs<rhs penalty 0 }
 }
+*/
 
 ! Oroville would have physical contraints when reaching lower elevations - Aaron Miller 5/21/08
 ! oro<1250 TAF units 2,4,6 are lost
 ! oro<850 TAF units 1,3,5 are lost
+define C_OROVL_valve {upper 1500 kind 'flow-channel' units 'cfs'}
+define C_OROVL_PP135 {upper 7200 kind 'flow-channel' units 'cfs'}
+define C_OROVL_Rem {std kind 'flow-channel' units 'cfs'}
+goal split_C_OROVL2 {C_OROVL = C_OROVL_valve + C_OROVL_PP135 + C_OROVL_Rem}
+
+define C_OROVL_Rem_max_ {value max(0., I_OROVL + CT_OROVILLE + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 + D_SLT009_SCT000_SV - D_WBF030_HKC002_SV - D_WBF015_MIO023_SV - D_SFF011_MNRRH_SV - D_LST004_OWC000_SV + (S_OROVL(-1) - 1250.)*taf_cfs)}
+define C_OROVL_PP135_max_ {value max(0., I_OROVL + CT_OROVILLE + I_RVPHB + I_WBF030 + I_WBF015 + I_WBF006 + I_NFF027 + I_MFF019 + I_SFF008 + I_SFF011 + I_LGRSV + I_LST007 + D_SLT009_SCT000_SV - D_WBF030_HKC002_SV - D_WBF015_MIO023_SV - D_SFF011_MNRRH_SV - D_LST004_OWC000_SV + (S_OROVL(-1) - 850.)*taf_cfs)}
+
+goal lim_C_OROVL_Rem {C_OROVL_Rem < C_OROVL_Rem_max_}
+!goal lim_C_OROVL_PP135 {C_OROVL_PP135 < C_OROVL_PP135_max_}
+goal lim_C_OROVL_PP135 {
+    lhs C_OROVL_PP135
+    rhs C_OROVL_PP135_max_
+    lhs<rhs penalty 0
+    lhs>rhs penalty 99999}
+
+define C_OROVL_Rem_max {alias C_OROVL_Rem_max_ kind 'upper-bound' units 'cfs'}
+define C_OROVL_PP135_max {alias C_OROVL_PP135_max_ kind 'upper-bound' units 'cfs'}
+
+/*
 goal river_valve_flow {
     lhs C_OROVL
     case river_valve_only {
@@ -204,4 +236,4 @@ goal river_valve_flow {
         rhs 17000.
         lhs>rhs penalty 0
         lhs<rhs penalty 0 }
-}
+}*/

@@ -21,7 +21,7 @@ goal setCOMax {
     rhs 999999.}
   case Normal {
     condition always
-    rhs CO_m_sv*C_SAC041_ANN + CO_m_sv*C_YBP002 + CO_b_sv}
+    rhs CO_m_sv*C_SACtot_ANN + CO_b_sv}
 }
 
 !****************************************************************************************
@@ -45,7 +45,7 @@ goal setCOmrdo {
     rhs 0.}
   case Normal {
     condition always
-    rhs ((1-CO_m_sv)/CO_m_sv)*D409 - CO_b_sv/CO_m_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + C_CSL005A + I_MSH015 - D408 - net_delta_cu}
+    rhs ((1-CO_m_sv)/CO_m_sv)*ExportActualTD - CO_b_sv/CO_m_sv + C_SJR056 + C_CLV004 + C_MOK019 + SG_SAC017_492 + I_MSH015 + CT_Woodland - C_CSL004B - D408 - net_delta_cu}
     }
 
 !****************************************************************************************
@@ -69,5 +69,5 @@ goal set_CO_ReqSac {
     rhs 0.}
   case Normal {
     condition always
-    rhs D409/CO_m_sv - CO_b_sv/CO_m_sv}
+    rhs ExportActualTD/CO_m_sv - CO_b_sv/CO_m_sv}
 }

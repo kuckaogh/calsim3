@@ -188,6 +188,13 @@ MODEL VAMP_AND_DO {           !CYCLE 5
 
 MODEL GW_INITIAL {      !CYCLE 6
     define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
+    INCLUDE '..\..\common\CCWD\LVM_System.wresl'
+
+    !*************************************************
+    !Make LVM changes with UserInput.wresl or associated SV timeseries or lookup tables.
+    INCLUDE '..\..\common\CCWD\UserInput.wresl'
+    !*************************************************
+
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
@@ -206,6 +213,7 @@ MODEL GW_INITIAL {      !CYCLE 6
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -224,7 +232,11 @@ MODEL GW_INITIAL {      !CYCLE 6
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -264,10 +276,12 @@ MODEL GW_INITIAL {      !CYCLE 6
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
@@ -278,6 +292,8 @@ MODEL GW_INITIAL {      !CYCLE 6
     define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
@@ -311,6 +327,7 @@ MODEL GW_FIRST {      !CYCLE 7
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -329,7 +346,11 @@ MODEL GW_FIRST {      !CYCLE 7
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -369,10 +390,12 @@ MODEL GW_FIRST {      !CYCLE 7
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
@@ -383,6 +406,8 @@ MODEL GW_FIRST {      !CYCLE 7
     define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
@@ -416,6 +441,7 @@ MODEL GW_SECOND {      !CYCLE 8
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -434,7 +460,11 @@ MODEL GW_SECOND {      !CYCLE 8
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -474,10 +504,12 @@ MODEL GW_SECOND {      !CYCLE 8
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
@@ -488,6 +520,8 @@ MODEL GW_SECOND {      !CYCLE 8
     define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
@@ -521,6 +555,7 @@ MODEL GW_THIRD {      !CYCLE 9
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -539,7 +574,11 @@ MODEL GW_THIRD {      !CYCLE 9
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -579,10 +618,12 @@ MODEL GW_THIRD {      !CYCLE 9
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
@@ -593,6 +634,8 @@ MODEL GW_THIRD {      !CYCLE 9
     define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
@@ -626,6 +669,7 @@ MODEL SETUP {      !CYCLE 10
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -644,7 +688,11 @@ MODEL SETUP {      !CYCLE 10
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -684,10 +732,12 @@ MODEL SETUP {      !CYCLE 10
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
@@ -698,6 +748,8 @@ MODEL SETUP {      !CYCLE 10
     define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
@@ -733,6 +785,7 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -751,7 +804,11 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_readWQ.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -791,20 +848,25 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
     INCLUDE[LOCAL] '..\..\common\export_ops\Banks_pump_allow2.wresl'
+    INCLUDE[LOCAL] '..\..\common\export_ops\jul_sep_prefer_td_exp_SETUP.wresl'
 
 !    INCLUDE[local] '..\..\common\ReOperations\ReOps_Limits.wresl'
     INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
     define[local] cvpdeadstor {alias S_TRNTY_1 + S_SHSTA_1 + S_FOLSM_1 units 'taf'}
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
@@ -839,6 +901,7 @@ MODEL WHEELCVC {      !CYCLE 12
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops2.wresl'
+    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\Transfers_MultiYr.wresl'
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\D204_Adjustment.wresl'                    !Comment in for WTS
     INCLUDE[LOCAL] 'ReOperations\Transfers\LYRA_stub.wresl'
@@ -858,7 +921,11 @@ MODEL WHEELCVC {      !CYCLE 12
     INCLUDE[local] '..\..\common\delta\xchannel\xc-gates.wresl'
     INCLUDE[LOCAL] '..\..\common\Delta\MRDO\X2\X2setup_ANN_FWS.wresl'
 
-    INCLUDE[LOCAL] '..\..\common\CCWD\LVM.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops1.wresl'
+
+    INCLUDE[local] '..\..\common\export_ops\exportratio.wresl'
+    INCLUDE[local] '..\..\common\export_ops\april_may_maxexport.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\ERP\NODOS_ERP_preFlowSelect.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\nod.wresl'
     INCLUDE[LOCAL] '..\..\common\NorthOfDelta\American\FMStandard.wresl'
@@ -903,14 +970,17 @@ MODEL WHEELCVC {      !CYCLE 12
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IsolatedFacility.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
+    INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
+
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_release.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\WQ\NODOS_pre_wqrelease.wresl'   ! NODOS WQ
 
     INCLUDE[LOCAL] '..\..\common\export_ops\Banks_pump_allow2.wresl'
+    INCLUDE[LOCAL] '..\..\common\export_ops\jul_sep_prefer_td_exp_SETUP.wresl'
 
 !    INCLUDE[local] '..\..\common\ReOperations\ReOps_Limits.wresl'
 !    INCLUDE[local] '..\..\common\CAAFramework\LCPSIM\CALSIM_to_LCPSIM_linkage.wresl'
@@ -921,6 +991,8 @@ MODEL WHEELCVC {      !CYCLE 12
 !    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersCycOut_DELTA.wresl'
     !goal[local] setWTS_SWPAlloc {WTS_SWPAlloc = perdel_swp_mwd1}
 
+    INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
+    INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
     INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
