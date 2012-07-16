@@ -70,7 +70,7 @@ define C_CRC002	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Barker and Cache Sloughs	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define C_CSL005		{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
+define C_CSL005		{lower 0 upper 999999 kind 'CHANNEL' units 'CFS'}
 define C_CSL004B	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_CSL004A	{lower -99999 upper 999999 kind 'CHANNEL' units 'CFS'}
 
