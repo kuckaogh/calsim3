@@ -68,19 +68,19 @@ Objective obj = {
 [S_NTOMA_5,-15000*taf_cfs],
 
 [S_EPARK_1,200000*taf_cfs],      
-[S_EPARK_2, 14000*taf_cfs],
+[S_EPARK_2, 18000*taf_cfs],
 [S_EPARK_3, 11000*taf_cfs],
 [S_EPARK_4, 10000*taf_cfs],
 [S_EPARK_5,-15000*taf_cfs],
       
 [S_SGRGE_1,200000*taf_cfs],
-[S_SGRGE_2, 14000*taf_cfs],
+[S_SGRGE_2, 18000*taf_cfs],
 [S_SGRGE_3, 11000*taf_cfs],
 [S_SGRGE_4, 10000*taf_cfs],
 [S_SGRGE_5,-15000*taf_cfs],
       
 [S_BLKBT_1,200000*taf_cfs],
-[S_BLKBT_2, 14000*taf_cfs],
+[S_BLKBT_2, 18000*taf_cfs],
 [S_BLKBT_3, 11000*taf_cfs],
 [S_BLKBT_4, 10000*taf_cfs],
 [S_BLKBT_5,-15000*taf_cfs],
@@ -484,8 +484,8 @@ Objective obj = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 6     !!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[D_STN026_06_PA,  15000],
-[D_STN021_06_PA,  15000],
+[D_STN026_06_PA,  19000],
+[D_STN021_06_PA,  19000],
 [D_STN014_TCC031,12500],
 
 
@@ -836,11 +836,11 @@ Objective obj = {
 [C_NBLDB_POW_MIN,13000],
 ![C_ENGLB_POW,-1100],
 
-[C_EPARK_MIF, 13000],
-[C_SGRGE_MIF, 13000],
-[C_BLKBT_MIF, 13000],
-[C_STN021_MIF,13000],
-[C_STN014_MIF,13000],
+[C_EPARK_MIF, 17000],
+[C_SGRGE_MIF, 17000],
+[C_BLKBT_MIF, 17000],
+[C_STN021_MIF,17000],
+[C_STN014_MIF,17000],
 [C_STN014_ADD,-3000],
 
 [C_PTH007_MIF,5500],
