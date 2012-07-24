@@ -245,32 +245,34 @@ goal fixsouthbay {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-/*
+
 goal fixSL {
   lhs     s12
-  rhs     s12[DELTA]
+  rhs     s12[DELTA] + D419_WTS_Stg1*cfs_taf - E12*cfs_taf + E12[Delta]*cfs_taf
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
+/*
 goal fixSLout {
   lhs     c12
   rhs     c12[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixSLin {
+*/
+/*goal fixSLin {
   lhs     d805
   rhs     d805[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
-}
+}*/
 goal fixterminals {
   lhs     c855
   rhs     c855[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-*/
+
 goal fixUNUSEDFS {
   lhs     UNUSED_FS + C422_RELPWHLSBE2
   rhs     UNUSED_FS[DELTA]
@@ -283,12 +285,6 @@ goal fixUNUSEDSS {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixSWPDS {
-  lhs     SWPDS
-  rhs     SWPDS[DELTA]
-  lhs>rhs penalty 99999
-  lhs<rhs penalty 99999
-}
 /*
 goal fixNODOSswpDS {
   lhs     NODOSswpDS
@@ -297,12 +293,10 @@ goal fixNODOSswpDS {
   lhs<rhs penalty 99999
 }
 */
-goal fixSHADS {
-  lhs     SHADS
-  rhs     SHADS[DELTA]
-  lhs>rhs penalty 99999
-  lhs<rhs penalty 99999
-}
+
+goal fixSWPDS {SWPDS < SWPDS[Delta]}
+goal fixSHADS {SHADS < SHADS[Delta]}
+  
 goal fixFOLDS {
   lhs     FOLDS
   rhs     FOLDS[DELTA]
@@ -335,6 +329,25 @@ goal fixIBU {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
+goal fixC_SAC000_ADD_ANN {
+  lhs     C_SAC000_ADD_ANN
+  rhs     C_SAC000_ADD_ANN[delta]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_SAC000_ADD_SWP {
+  lhs     C_SAC000_ADD_SWP
+  rhs     C_SAC000_ADD_SWP[delta]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_SAC000_ADD_CVP {
+  lhs     C_SAC000_ADD_CVP
+  rhs     C_SAC000_ADD_CVP[delta]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+
 /*
 goal fixc184a {
   lhs     c184a

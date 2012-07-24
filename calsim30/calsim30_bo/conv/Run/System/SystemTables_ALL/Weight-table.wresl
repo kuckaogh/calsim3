@@ -533,6 +533,7 @@ Objective obj = {
 [D_SAC121_08S_SA3,  5000],
 [D_SAC109_08S_SA3,  5000],
 [C_KLR005,         -10],
+[C_CBD000_LP,	   -20],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! WBA 9     !!!!!!!!!!!!!!!!!!!!!!!
@@ -632,7 +633,6 @@ Objective obj = {
 [D_FTR018_16_SA, 5000], ! Tudor MWC
 [D_FTR014_16_SA, 5000], ! Garden Highway MWC
 [D_FTR008_16_SA, 5000], ! Riparian
-[D_DWRPS2_16_SA, 5000],
 [D_DWRPS1_16_NA2,  5100],
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -892,9 +892,16 @@ Objective obj = {
 
 [UNUSED_FS,   -1285],   ! COA - unused federal share
 [UNUSED_SS,   -1285],   ! COA - unused state share
+[WTS_Yuba_Stg1_cvp, -1285],  !Allow CVP to control LYRA transfer water only when SWP unable to
+[D419_wts_td2, -0.1],    !Fill permitted capacity first, EWA 500 cfs second.
+[I_Orovl_WTS, -1],	!Prevent simultaneous inflow and outflow
+[I_Shsta_WTS, -1.1],	!Prevent simultaneous inflow and outflow
+[D419_WTS_Stg1, 1000],  !encourage SWP to move transfer water SOD first, back up in storage second.
 [C_SAC000_ADD_CVP,    -2000],   ! Delta outflow - CVP share
 [C_SAC000_ADD_SWP,    -2000],   ! Delta outflow - SWP share
-[C_SAC000_ADD_WHLCV,  -2008],   ! Delta outflow - wheeling share
+[C_SAC000_ADD_WTS,    -2005],
+[C_SAC000_ADD_WHLCV,  -2007],   ! Delta outflow - wheeling share
+[C_SAC000_ADD_WHLJP,  -2008],
 [C_SAC000_ADD_ANN,    -2010],   ! Delta outflow - ANN share
 [D407,         5000],   ! Required Delta Outflow
 [D_SAC030_MOK014,-5],   ! Delta Cross Channel
@@ -1039,6 +1046,7 @@ Objective obj = {
 ![S92_4,100*taf_cfs],
 ![S92_5,-100000*taf_cfs],
 
+[C12, -0.1],
 [D419_CVPDED,-10],
 [C700A,-10], !Intertie
 [D701,1265], ! DMC

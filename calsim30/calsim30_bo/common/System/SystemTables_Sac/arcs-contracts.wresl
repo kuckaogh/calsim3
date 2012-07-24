@@ -2508,7 +2508,6 @@ define WRmon_DRC010_05_NA     {value 99999. }
 define WRmon_DRC005_05_NA     {value 99999. }
 define WRmon_DWRPS1_16_NA2    {value 99999. }
 define WRmon_DWRPS2_11_NA     {value 99999. }
-define WRmon_DWRPS2_16_SA     {value 99999. }
 define WRmon_ELD012_04_NA     {value 99999. }
 define WRmon_ESL008_09_SA1    {value 99999. }
 define WRmon_FDC006_14_NA     {value 99999. }
