@@ -477,9 +477,6 @@ define DLT_FTR021_16_SA	{alias perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs kind 'DI
 goal limitD_FTR008_16_SA {D_FTR008_16_SA < WRmon_FTR008_16_SA*taf_cfs}
 define DLT_FTR008_16_SA	{alias WRmon_FTR008_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
-goal limitD_DWRPS2_16_SA {D_DWRPS2_16_SA < WRmon_DWRPS2_16_SA*taf_cfs}
-define DLT_DWRPS2_16_SA	{alias WRmon_DWRPS2_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
-
 goal limitD_WTPCYC_16_PU {D_WTPCYC_16_PU < perdv_swp_oth1*CL1mon_WTPCYC_16_PU*taf_cfs + CL2mon_WTPCYC_16_PU*taf_cfs + WR1mon_WTPCYC_16_PU*taf_cfs + WR2mon_WTPCYC_16_PU*taf_cfs}
 define DLT_WTPCYC_16_PU	{alias perdv_swp_oth1*CL1mon_WTPCYC_16_PU*taf_cfs + CL2mon_WTPCYC_16_PU*taf_cfs + WR1mon_WTPCYC_16_PU*taf_cfs + WR2mon_WTPCYC_16_PU*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 

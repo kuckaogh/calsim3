@@ -55,8 +55,11 @@ define nds_swpdel_adj {value nds_perdel_adj*SWP_TableA}
 define nds_swpdel_adjdv {alias nds_swpdel_adj kind 'swp-delivery' units 'TAF'}
 
 ! Stage 1 Transfers adjustment
-define swp_allocation_0 {value wsidi_swpdel /*+ SWP_Targ*(1.-SaltCostFact_stg1)*/}     ! Added 100% of Stage1 Transfers target
-define swp_alloc_0_io {value max(wsidi_swpdel + min(SIO_SWP(-1),max_return_swp2), wsidi_swpdel_io) /*+ SWP_Targ*(1.-SaltCostFact_stg1)*/}     ! Added 100% of Stage1 Transfers target
+define SWP_TargP1 {select SWP_LYRA from WTS_Stage1_Targets_C3 where year=transfersyear}
+define SWP_TargP2 {select SWP_Phase8 from WTS_Stage1_Targets_C3 where year=transfersyear}
+define SWP_Targ {value SWP_TargP1 + SWP_TargP2 }
+define swp_allocation_0 {value wsidi_swpdel + SWP_Targ*(1.-SaltCostFact_stg1)}     ! Added 100% of Stage1 Transfers target
+define swp_alloc_0_io {value max(wsidi_swpdel + min(SIO_SWP(-1),max_return_swp2), wsidi_swpdel_io) + SWP_Targ*(1.-SaltCostFact_stg1)}     ! Added 100% of Stage1 Transfers target
 
 !need to adjust deltar to include implicit storage in san luis for article 56 carryover
 !define deltar_adjust {select carryover from wsi_deltar_adjust given deltar=del_swp_trial1 use linear}

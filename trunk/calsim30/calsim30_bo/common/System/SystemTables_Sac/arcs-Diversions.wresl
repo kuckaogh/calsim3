@@ -532,7 +532,6 @@ define D_SBP028_17S_PR 	{std kind 'DIVERSION' units 'CFS'}
 define D_SBP014_17S_NA 	{std kind 'DIVERSION' units 'CFS'}
 define D_DWRPS1_16_NA2 	{std kind 'DIVERSION' units 'CFS'}
 define D_DWRPS2_11_NA 	{std kind 'DIVERSION' units 'CFS'}
-define D_DWRPS2_16_SA 	{std kind 'DIVERSION' units 'CFS'}
 define D_SBP012_DWRPS1 	{std kind 'DIVERSION' units 'CFS'}
 define D_SBP021_DWRPS2 	{std kind 'DIVERSION' units 'CFS'}
 

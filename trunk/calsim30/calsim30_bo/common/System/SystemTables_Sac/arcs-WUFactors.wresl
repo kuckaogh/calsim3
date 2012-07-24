@@ -1370,11 +1370,6 @@ define DPF_FTR008_16_SA  {value 0.045} !deep percolation loss fraction
 define LFF_FTR008_16_SA  {value 0.04} !lateral flow loss fraction lateral flow
 define OSF_FTR008_16_SA  {value 0.30} !canal operating spill fraction
 
-define EVF_DWRPS2_16_SA  {value 0.00} !evaporative loss fraction
-define DPF_DWRPS2_16_SA  {value 0.01} !deep percolation loss fraction
-define LFF_DWRPS2_16_SA  {value 0.00} !lateral flow loss fraction lateral flow
-define OSF_DWRPS2_16_SA  {value 0.00} !canal operating spill fraction
-
 define RUFR_16_SA   {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_16_SA   {value 0.025} !reuse fraction for all other crops
 define RPF_16_SA    {value 0.10} !riparian and miscellaneous ET fraction

@@ -194,7 +194,7 @@ define Index_D1644 {
  
  !**********************************************************        
    
-   define MinFlowCrit   {value 2} !Change this value for other standards
+   define MinFlowCrit   {value 4} !Change this value for other standards
    
    define wytype_YUBA {
    	case Agreement1965 {

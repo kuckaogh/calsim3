@@ -828,7 +828,7 @@ goal meetAW_16_PA   {AW_16_PA + RP_16_PA = DN_16_PA + GP_16_PA + RU_16_PA } ! + 
 ! 16_SA
 !======================================================================
 ! gross surface water diversions
-goal setDG_16_SA    {DG_16_SA = D_DWRPS2_16_SA + D_FTR021_16_SA + D_FTR018_16_SA + D_FTR014_16_SA + D_FTR008_16_SA}
+goal setDG_16_SA    {DG_16_SA = D_FTR021_16_SA + D_FTR018_16_SA + D_FTR014_16_SA + D_FTR008_16_SA}
 ! net surface delivery = surface diversion - conveyance losses
 goal setDN_16_SA    {DN_16_SA = DG_16_SA - DL_16_SA}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse

@@ -196,6 +196,9 @@ define Index_D1644 {
    
    define MinFlowCrit   {value 2} !Change this value for other standards
    
+   define wytype_Yuba_D1644 {value YrType_D1644}
+   define wytype_Yuba_LYRA {value YrType_Accord}
+   
    define wytype_YUBA {
    	case Agreement1965 {
            	condition MinFlowCrit == 1
@@ -211,14 +214,60 @@ define Index_D1644 {
            	value YrType_Accord}
            }
            
-   
- 
     define wytype_YUBADV  {std KIND 'YTYPE' UNITS 'NONE'}    
     goal set_wytype_YUBADV {wytype_YUBADV=wytype_YUBA}
 
  !Marysville- MINFLOWDEFINITION
- define MIF_YUB006 {
- 	case Wet {
+  define MIF_YUB006_D1644 {
+  	case Wet {
+          	condition wytype_YUBA_D1644 == 1
+          	select Wet   from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          case AN {
+  	        condition wytype_YUBA_D1644 == 2
+          	select AN    from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          case BN {
+  	        condition wytype_YUBA_D1644 == 3
+          	select BN    from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          case Dry {
+  	        condition wytype_YUBA_D1644 == 4
+          	select Dry   from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          case Crit1 {
+  	        condition wytype_YUBA_D1644 == 5 .AND. S_NBLDB(PREVSEP) < 400.
+          	select ModCrit  from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          case Crit2 {
+  	        condition wytype_YUBA_D1644 == 5
+          	select Crit  from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          case otherwise {
+  		condition always
+          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=230,standard = 2,month=month}
+          }
+
+  define MIF_YUB006_LYRA {
+  	case Wet {
+          	condition wytype_YUBA_LYRA == 1
+          	select Wet   from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          case AN {
+  	        condition wytype_YUBA_LYRA == 2
+          	select AN    from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          case BN {
+  	        condition wytype_YUBA_LYRA == 3
+          	select BN    from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          case Dry {
+  	        condition wytype_YUBA_LYRA == 4
+          	select Dry   from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          case Crit1 {
+  	        condition wytype_YUBA_LYRA == 5 .AND. S_NBLDB(PREVSEP) < 400.
+          	select ModCrit  from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          case Crit2 {
+  	        condition wytype_YUBA_LYRA == 5
+          	select Crit  from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          case otherwise {
+  		condition always
+          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=230,standard = 4,month=month}
+          }
+          
+ define MIF_YUB006 {value min(MIF_YUB006_D1644,MIF_YUB006_LYRA)}
+/* 	case Wet {
          	condition wytype_YUBA == 1
          	select Wet   from Yuba_LowerYubaMinflow where C_arc=230,standard = MinFlowCrit,month=month}
          case AN {
@@ -239,15 +288,57 @@ define Index_D1644 {
          case otherwise {
  		condition always
          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=230,standard = MinFlowCrit,month=month}
-         }
+         }*/
         	
  define MIF_YUB006dv {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
  goal set_MIF_YUB006dv {MIF_YUB006dv=MIF_YUB006}
  
  
  !Smartsville- MINFLOWDEFINITION
- define MIF_YUB024 {
- 	case Wet {
+  define MIF_YUB024_D1644 {
+  	case Wet {
+          	condition wytype_YUBA_D1644 == 1
+          	select Wet   from Yuba_LowerYubaMinflow where C_arc=237,standard = 2,month=month}
+          case AN {
+  	        condition wytype_YUBA_D1644 == 2
+          	select AN    from Yuba_LowerYubaMinflow where C_arc=237,standard = 2,month=month}
+          case BN {
+  	        condition wytype_YUBA_D1644 == 3
+          	select BN    from Yuba_LowerYubaMinflow where C_arc=237,standard = 2,month=month}
+          case Dry {
+  	        condition wytype_YUBA_D1644 == 4
+          	select Dry   from Yuba_LowerYubaMinflow where C_arc=237,standard = 2,month=month}
+          case Crit {
+  	        condition wytype_YUBA_D1644 == 5
+          	select Crit  from Yuba_LowerYubaMinflow where C_arc=237,standard = 2,month=month}
+          case otherwise {
+  		condition always
+          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=237,standard = 2,month=month}
+          }
+
+  define MIF_YUB024_LYRA {
+  	case Wet {
+          	condition wytype_YUBA_LYRA == 1
+          	select Wet   from Yuba_LowerYubaMinflow where C_arc=237,standard = 4,month=month}
+          case AN {
+  	        condition wytype_YUBA_LYRA == 2
+          	select AN    from Yuba_LowerYubaMinflow where C_arc=237,standard = 4,month=month}
+          case BN {
+  	        condition wytype_YUBA_LYRA == 3
+          	select BN    from Yuba_LowerYubaMinflow where C_arc=237,standard = 4,month=month}
+          case Dry {
+  	        condition wytype_YUBA_LYRA == 4
+          	select Dry   from Yuba_LowerYubaMinflow where C_arc=237,standard = 4,month=month}
+          case Crit {
+  	        condition wytype_YUBA_LYRA == 5
+          	select Crit  from Yuba_LowerYubaMinflow where C_arc=237,standard = 4,month=month}
+          case otherwise {
+  		condition always
+          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=237,standard = 4,month=month}
+          }
+          
+ define MIF_YUB024 {value min(MIF_YUB024_D1644,MIF_YUB024_LYRA)}
+ 	/*case Wet {
          	condition wytype_YUBA == 1
          	select Wet   from Yuba_LowerYubaMinflow where C_arc=237,standard = MinFlowCrit,month=month}
          case AN {
@@ -265,7 +356,7 @@ define Index_D1644 {
          case otherwise {
  		condition always
          	select Ecrit from Yuba_LowerYubaMinflow where C_arc=237,standard = MinFlowCrit,month=month}
-         }
+         }*/
  
  define MIF_YUB024dv {std kind 'FLOW-MIN-INSTREAM' units 'CFS'}
  goal set_MIF_YUB024dv {MIF_YUB024dv=MIF_YUB024}

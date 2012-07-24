@@ -21,6 +21,7 @@ define C_KSWCK_EWA {std kind 'FLOW-CHANNEL' units 'CFS'}
 define C_KSWCK_SWP {std kind 'FLOW-CHANNEL' units 'CFS'}
 goal setC_KSWCK_SWP {C_KSWCK_SWP = 0.0}
 define C_KSWCK_WTS {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
+define C_KSWCK_WTS_STG1_SWP {STD KIND 'FLOW-CHANNEL' UNITS 'CFS'}
 define C_KSWCK_S32SWP {std kind 'FLOW-CHANNEL' units 'CFS'}   ! NODOS related
 goal setC_KSWCK_S32SWP {C_KSWCK_S32SWP = 0.0}
 define C_KSWCK_S32OTH {std kind 'FLOW-CHANNEL' units 'CFS'}   ! NODOS related
@@ -28,6 +29,8 @@ goal setC_KSWCK_S32OTH {C_KSWCK_S32OTH = 0.0}
 goal wheeling1a {D_WKYTN_whlcv < C_KSWCK_whlcv}
 goal wheeling1b {D_WKYTN_whljp < C_KSWCK_whljp}
 goal ShastaWhl { C_KSWCK = C_KSWCK_m + C_KSWCK_whlcv + C_KSWCK_whljp + C_KSWCK_EWA + C_KSWCK_SWP + C_KSWCK_WTS + C_KSWCK_S32SWP + C_KSWCK_S32OTH}
+
+goal split_C_KSWCK_WTS {C_KSWCK_WTS = C_KSWCK_WTS_STG1_SWP}
 
 ! Folsom/Nimbus
 define C_NTOMA_m {std kind 'FLOW' UNITS 'CFS'}
@@ -45,14 +48,20 @@ goal NODOSCVPWhl { C32 = C32_m + C32_whlcv + C32_whljp }
 ! Oroville
 !define C_OROVL_m {std kind 'FLOW' UNITS 'CFS'}
 define C_OROVL_EWA {std kind 'FLOW-CHANNEL' units 'CFS'}
-define C_OROVL_WTS {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
+!define C_OROVL_WTS {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
+!define C_OROVL_WTS_STG1_SWP {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
 !goal OroWhl   {C_OROVL = C_OROVL_m /* + C_OROVL_EWA */ + C_OROVL_WTS}
+
+!goal split_C_OROVL_WTS {C_OROVL_WTS = C_OROVL_WTS_STG1_SWP}
 
 ! Feather COA Adjustment
 define C_FTR059_m {std kind 'FLOW' UNITS 'CFS'}
 !define C_FTR059_EWA {std kind 'FLOW-CHANNEL' units 'CFS'}
 define C_FTR059_WTS {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
+define C_FTR059_WTS_STG1_SWP {std kind 'FLOW-CHANNEL' UNITS 'CFS'}
 goal OroWhl   {C_FTR059 = C_FTR059_m /* + C_FTR059_EWA */ + C_FTR059_WTS}
+
+goal split_C_FTR059_WTS {C_FTR059_WTS = C_FTR059_WTS_STG1_SWP}
 
 ! Inflow components
 define C_SAC041_reop {std kind 'FLOW-REOP-ADJ' units 'cfs'}
