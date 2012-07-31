@@ -345,7 +345,7 @@ define rSetFlow_129_273  {value    SetStrmFlow((C_SAC196[gw_initial]) * cfs_cfm,
  
 define rSetFlow_140_274  {value    SetStrmFlow(((C_SAC196[gw_initial] + C_STN004[gw_initial]) + C_SAC193[gw_initial])/2 * cfs_cfm,274) }
  
-define rSetFlow_144_275  {value    SetStrmFlow((C_SAC188[gw_initial] + C_SAC185[gw_initial])/2 * cfs_cfm,275) }
+define rSetFlow_144_275  {value    SetStrmFlow((C_SAC193[gw_initial] + C_SAC188[gw_initial])/2 * cfs_cfm,275) }
  
 define rSetFlow_155_276  {value    SetStrmFlow((C_SAC185[gw_initial] + C_SAC182[gw_initial])/2 * cfs_cfm,276) }
  

@@ -839,7 +839,6 @@ define C_OGN005	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_OGN004	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_SFY007	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_NBLDB	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
-define C_YUB041	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_YUB039	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_CGT005	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
 define C_CGT006	{lower 0 upper 99999 kind 'CHANNEL' units 'CFS'}
