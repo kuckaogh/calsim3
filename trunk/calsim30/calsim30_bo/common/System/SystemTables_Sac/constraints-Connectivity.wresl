@@ -551,7 +551,7 @@ goal continuityWTPBNC   {D_VJB000_WTPBNC - D_WTPBNC_BNCIA                       
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 goal continuityOMR039   {C_SJR053B + SR_71_OMR039 + R_TCWWTP_OMR039 + R_RFS71A_OMR039 - C_OMR039         = RsdPos_OMR039 - RsdNeg_OMR039}
 goal continuityOMR028   {C_OMR039 - D_OMR028_DMC003 - C_OMR028         = RsdPos_OMR028 - RsdNeg_OMR028}
-goal continuityOMR027   {C_OMR028 + DA_OMR_OMR027 + C_ISF001_OMR027 - DND_OMR_adj - D_OMR027_CAA000 - DD_OMR027_OMR - C_OMR027    = RsdPos_OMR027 - RsdNeg_OMR027}
+goal continuityOMR027   {C_OMR028 + DA_OMR_OMR027 + C_ISF001_OMR027 - DD_OMR027_OMR_adj - D_OMR027_CAA000 - DD_OMR027_OMR - C_OMR027    = RsdPos_OMR027 - RsdNeg_OMR027}
 goal continuityOMR024   {C_OMR027 + D_ISF001_OMR024 - C_OMR024A - C_OMR024B           = RsdPos_OMR024 - RsdNeg_OMR024}
 goal continuityOMR021   {C_OMR024A - D_OMR021_ORP000 - C_OMR021         = RsdPos_OMR021 - RsdNeg_OMR021}
 goal continuityOMR018   {C_OMR021 + C_LOSVQ + C_RSL001B - C_OMR018            = RsdPos_OMR018 - RsdNeg_OMR018}
