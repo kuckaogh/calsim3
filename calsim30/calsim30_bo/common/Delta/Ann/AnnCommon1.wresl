@@ -40,8 +40,8 @@ define ave_last_15days {value 8}
 
 ! Estimate Delta uplands demand adjustments to accretion/depletion at OMR027
 define DND_Uplands	{timeseries kind 'DELTA-NET-DEPLETION' units 'TAF' convert 'CFS'}
-define DND_OMR_adjdv{lower -99999 upper 99999 kind 'DELTA-NET-DEPLETION' units 'CFS'}
-define DND_OMR_adj{
+define DD_OMR027_OMR_adjdv{lower -99999 upper 99999 kind 'DELTA-NET-DEPLETION' units 'CFS'}
+define DD_OMR027_OMR_adj{
 	case octBgnWY {  ! special case for first wateryear
        	  condition month == OCT .and. wateryear == bgnWY
 	  value DND_Uplands - dem_D700_pag*taf_cfs}
@@ -49,11 +49,11 @@ define DND_OMR_adj{
        	  condition always
        	  value DND_Uplands - perdv_cvpag_s(-1)*dem_D700_pag*taf_cfs}}
        	  
-goal setDND_OMR_adjdv {DND_OMR_adjdv = DND_OMR_adj}
+goal setDD_OMR027_OMR_adjdv {DD_OMR027_OMR_adjdv = DD_OMR027_OMR_adj}
 
 !*************************************************************************************************************
 ! define the other flows that go into making the export component
-!define net_delta_cu { value DND_OMR + DND_OMR_adj + DND_MOK + DND_SJR_East + DND_SJR_West + DND_SAC_South}   ! Net Delta Consumptive Use
+!define net_delta_cu { value DND_OMR + DD_OMR027_OMR_adj + DND_MOK + DND_SJR_East + DND_SJR_West + DND_SAC_South}   ! Net Delta Consumptive Use
 define net_delta_cu { value                       ! Net Delta Consumptive Use
 !        DND_SAC_North +    ! Don't include this because it occurs upstream of C_SAC041
         DND_SAC_South +
@@ -62,7 +62,7 @@ define net_delta_cu { value                       ! Net Delta Consumptive Use
         DND_SJR_East +
         DND_SJR_West +
         DND_OMR +
-        DND_OMR_adj
+        DD_OMR027_OMR_adj
 }
 
 define net_DICU{ lower unbounded kind 'DICU_FLOW' units 'CFS' }!shengjun add 2/24/2005
@@ -74,7 +74,7 @@ goal def_net_DICU{ net_DICU=
         DND_SJR_East +
         DND_SJR_West +
         DND_OMR +
-        DND_OMR_adj
+        DD_OMR027_OMR_adj
 }
 
 ! Net Delta Consumptive Use decision variable for calculating ANN MRDO
