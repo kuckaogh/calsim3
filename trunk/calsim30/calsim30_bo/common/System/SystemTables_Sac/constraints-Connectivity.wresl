@@ -859,7 +859,7 @@ goal continuityYBP034   {C_KLR006 + SR_07S_YBP034 + C_YBP037 - C_YBP034         
 goal continuityWLWWTP   {R_20_NU1_WLWWTP - R_WLWWTP_YBP032 = 0.}
 goal continuityYBP032   {C_YBP034 + C_CCH003 + SG_YBP032_360 + R_21_NA_YBP032 + R_21_PA_YBP032 + R_WLWWTP_YBP032 - C_YBP032          = RsdPos_YBP032 - RsdNeg_YBP032}    
 goal continuityYBP026   {C_YBP032 + SG_YBP026_401 - C_YBP026                                            = RsdPos_YBP026 - RsdNeg_YBP026}    
-goal continuityYBP023   {C_YBP026 + SG_YBP023_407 + SR_21_YBP023 + SR_20_YBP023 + C_WSB000 - D_YBP023_21_SA - C_YBP023              = RsdPos_YBP023 - RsdNeg_YBP023}    
+goal continuityYBP023   {C_YBP026 + SG_YBP023_407 + SR_21_YBP023 + SR_20_YBP023 + C_WSB005 - D_YBP023_21_SA - C_YBP023              = RsdPos_YBP023 - RsdNeg_YBP023}    
 goal continuityYBP020   {C_YBP023 + SG_YBP020_414 + R_21_SA_YBP020 + SP_SAC066_YBP020 + C_PTH007 - C_YBP020                 = RsdPos_YBP020 - RsdNeg_YBP020}    
 goal continuityYBP016   {C_YBP020 + SG_YBP016_433 - C_YBP016                                            = RsdPos_YBP016 - RsdNeg_YBP016}    
 goal continuityYBP014   {C_YBP016 + SG_YBP014_432 - C_YBP014                                            = RsdPos_YBP014 - RsdNeg_YBP014}    
