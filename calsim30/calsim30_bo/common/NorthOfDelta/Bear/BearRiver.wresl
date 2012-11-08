@@ -156,8 +156,8 @@ goal setD_LBR002_LBC002 	{D_LBR002_LBC001 = D_CYN009_TWL005}
 goal setD_LBC001_LBCLOS	{D_LBC001_LBCLOS = 0.12 * D_LBR002_LBC001}
 
 ! Impose penalty on C_LBC010 to limit excess diversion from Drum Canal to Lower Boardman Canal
-!goal setC_LBC010 {lhs C_LBC010 rhs 0. lhs<rhs penalty 0 lhs>rhs penalty 5}
-goal setC_LBC010 {C_LBC010= 0.0}
+goal setC_LBC010 {lhs C_LBC010 rhs 0. lhs<rhs penalty 0 lhs>rhs penalty 90000}
+!goal setC_LBC010 {C_LBC010= 0.0}
 
 ! Set flow in Bowman Feeder to zero
 goal set_D_LBC030_BEC021	{D_LBC030_BEC021 = 0.}
