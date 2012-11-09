@@ -335,6 +335,12 @@ goal fixD_BRR050_BEC000 {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
+goal fixD_SAC240_TCC001 {
+  lhs     D_SAC240_TCC001
+  rhs     D_SAC240_TCC001[TRANSFERS_STAGE1]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
 
 /*
 goal fixc184a {
