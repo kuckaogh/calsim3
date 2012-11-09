@@ -372,6 +372,54 @@ goal fixD_SAC240_TCC001 {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
+goal fixD_SAC065_WTPBTB {
+  lhs     D_SAC065_WTPBTB
+  rhs     D_SAC065_WTPBTB[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_SAC296_WTPFTH {
+  lhs     D_SAC296_WTPFTH
+  rhs     D_SAC296_WTPFTH[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_MNRRH_WTPMNR {
+  lhs     D_MNRRH_WTPMNR
+  rhs     D_MNRRH_WTPMNR[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_THRMA_JBC000 {
+  lhs     D_THRMA_JBC000
+  rhs     D_THRMA_JBC000[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_THRMA_WEC000 {
+  lhs     D_THRMA_WEC000
+  rhs     D_THRMA_WEC000[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_THRMA_RVC000 {
+  lhs     D_THRMA_RVC000
+  rhs     D_THRMA_RVC000[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_JBC002_RVC005 {
+  lhs     D_JBC002_RVC005
+  rhs     D_JBC002_RVC005[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_SHSTA_WTPJMS {
+  lhs     D_SHSTA_WTPJMS
+  rhs     D_SHSTA_WTPJMS[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
 
 /*
 goal fixc184a {
