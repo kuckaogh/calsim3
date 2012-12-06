@@ -471,8 +471,8 @@ define DLT_FTR014_16_SA	{alias perdv_swp_fsc*CLmon_FTR014_16_SA*taf_cfs + 1.0*WR
 goal limitD_FTR018_16_SA       {D_FTR018_16_SA < perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + 1.0*WRmon_FTR018_16_SA*taf_cfs}
 define DLT_FTR018_16_SA	{alias perdv_swp_fsc*CLmon_FTR018_16_SA*taf_cfs + 1.0*WRmon_FTR018_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
-goal limitD_FTR021_16_SA       {D_FTR021_16_SA < perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs}
-define DLT_FTR021_16_SA	{alias perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
+goal limitD_FTR021_16_SA       {D_FTR021_16_SA < perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs + 1.0*WRmon_FTR021_16_SA*taf_cfs}
+define DLT_FTR021_16_SA	{alias perdv_swp_fsc*CLmon_FTR021_16_SA*taf_cfs + 1.0*WRmon_FTR021_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}
 
 goal limitD_FTR008_16_SA {D_FTR008_16_SA < WRmon_FTR008_16_SA*taf_cfs}
 define DLT_FTR008_16_SA	{alias WRmon_FTR008_16_SA*taf_cfs kind 'DIVERSION-LIMIT' units 'CFS'}

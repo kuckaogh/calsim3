@@ -1106,7 +1106,7 @@ define    DN_25_PU  {std kind 'SW-DELIVERY-NET' units 'CFS'}
 define    DG_25_PU  {std kind 'SW-DELIVERY-GROSS' units 'CFS'}
 define    UD_25_PU  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 
-!define AWO_SIDSH    {timeseries kind 'APPLIED-WATER' units 'TAF' convert 'CFS'} !21% of AWo_25_PA1
+!define AWO_SIDSH    {timeseries kind 'APPLIED-WATER' units 'TAF' convert 'CFS'} !23% of total of AWo_25_PA1 and SIDSH
 define    UD_CSPSO  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_SUISN  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}
 define    UD_FRFLD  {timeseries kind 'URBAN-DEMAND' units 'TAF' convert 'CFS'}

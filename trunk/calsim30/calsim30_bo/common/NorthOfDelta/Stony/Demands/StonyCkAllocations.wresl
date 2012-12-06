@@ -178,11 +178,11 @@ goal setTCCA_allocdv {TCCA_allocdv = alloc_TCCA}
 
 
 ! define the monthly allocation for OUWUA South Canal (units = cfs)
-define alloc_OUWUA_s     {VALUE (max(0.0,min(1.0,(alloc_OUWUA/OUWUA_maxdr))*0.68*(AWR_06_PA*(1.- RUFR_06_PA) + AWO_06_PA*(1.- RUFO_06_PA)) * (1.- GPmin_06_PA) * (1 + RPF_06_PA)))/(1 - EVF_STN026_06_PA - DPF_STN026_06_PA - LFF_STN026_06_PA - OSF_STN026_06_PA) }
+define alloc_OUWUA_s     {VALUE (max(0.0,min(1.0,(alloc_OUWUA/OUWUA_maxdr))*0.65*(AWR_06_PA*(1.- RUFR_06_PA) + AWO_06_PA*(1.- RUFO_06_PA)) * (1.- GPmin_06_PA) * (1 + RPF_06_PA)))/(1 - EVF_STN026_06_PA - DPF_STN026_06_PA - LFF_STN026_06_PA - OSF_STN026_06_PA) }
 goal set_D_STN026_06_PA   { D_STN026_06_PA  < alloc_OUWUA_s}
 
 ! define the monthly allocation for OUWUA North Canal (units = cfs)
-define alloc_OUWUA_n     {VALUE (max(0.0,min(1.0,(alloc_OUWUA/OUWUA_maxdr))*0.32*(AWR_06_PA*(1.- RUFR_06_PA) + AWO_06_PA*(1.- RUFO_06_PA)) * (1.- GPmin_06_PA) * (1 + RPF_06_PA)))/(1 - EVF_STN021_06_PA - DPF_STN021_06_PA - LFF_STN021_06_PA - OSF_STN021_06_PA) }
+define alloc_OUWUA_n     {VALUE (max(0.0,min(1.0,(alloc_OUWUA/OUWUA_maxdr))*0.35*(AWR_06_PA*(1.- RUFR_06_PA) + AWO_06_PA*(1.- RUFO_06_PA)) * (1.- GPmin_06_PA) * (1 + RPF_06_PA)))/(1 - EVF_STN021_06_PA - DPF_STN021_06_PA - LFF_STN021_06_PA - OSF_STN021_06_PA) }
 goal set_D_STN021_06_PA   { D_STN021_06_PA  < alloc_OUWUA_n}
 
 ! define monthly distribution percent for TCCA
