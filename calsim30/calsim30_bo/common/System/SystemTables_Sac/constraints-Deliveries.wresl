@@ -1303,7 +1303,7 @@ goal setUD_25_PU        {UD_25_PU = DN_25_PU + GP_25_PU } ! + SHRTG_25_PU }
 !======================================================================
 ! Other agricultural deliveries from Putah South Canal (external to WBA25)
 !======================================================================
-goal setUD_25_SUISN1        {D_PSC024_SIDSH < 0.21*D_PSC003_25_PA1} !21% of SID acreage lies outside WBA25
+goal setD_PSC024_SIDSH        {D_PSC024_SIDSH < (0.23/0.77)*D_PSC003_25_PA1} !23% of SID acreage lies outside WBA25
 
 !======================================================================
 ! Other urban deliveries from Putah South Canal (external to WBA25) and North Bay Aqueduct

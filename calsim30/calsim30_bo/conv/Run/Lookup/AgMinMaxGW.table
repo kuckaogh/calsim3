@@ -60,7 +60,7 @@ ID	MinFraction	MaxFraction
 56	0	1	!19_SA	Reynen, Oji Bros. Farm, Inc., Oji Family Partnership, PelgerMWC, SutterMWC,Non-District (Short-Form)
 57	0.39	1	!20_NA1	Yolo County FCWCD
 58	0.81	1	!20_NA2	Non-District 
-59	0.94	1	!20_PA	UC Davis
+59	0.50	1	!20_PA	UC Davis value changed from 0.94 to 0.50 to match historical deliveries
 60	0.06	1	!21_NA	Non-District
 61	0.04	1	!21_PA	Colusa Drain MWC
 62	0.01	1	!21_SA	RD 2035 (Conway Conservancy), Sacramento River Ranch LLC

@@ -382,19 +382,19 @@ define DL_05_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 ! 6_PA -
 !=============================================
 define EVF_STN021_06_PA  {value 0.01} !evaporative loss fraction
-define DPF_STN021_06_PA  {value 0.45} !deep percolation loss fraction - value from calibration
+define DPF_STN021_06_PA  {value 0.60} !deep percolation loss fraction - value from calibration
 define LFF_STN021_06_PA  {value 0.00} !lateral flow loss fraction lateral flow - no return flow
 define OSF_STN021_06_PA  {value 0.00} !canal operating spill fraction - no return flow
 
 define EVF_STN026_06_PA  {value 0.01} !evaporative loss fraction
-define DPF_STN026_06_PA  {value 0.45} !deep percolation loss fraction
+define DPF_STN026_06_PA  {value 0.60} !deep percolation loss fraction
 define LFF_STN026_06_PA  {value 0.00} !lateral flow loss fraction lateral flow
 define OSF_STN026_06_PA  {value 0.00} !canal operating spill fraction
 
-define EVF_STN_06_PA     {value EVF_STN021_06_PA*.32 + EVF_STN026_06_PA*.68} ! Used in Stony Creek allocation logic
-define DPF_STN_06_PA     {value DPF_STN021_06_PA*.32 + DPF_STN026_06_PA*.68} ! Used in Stony Creek allocation logic
-define LFF_STN_06_PA     {value LFF_STN021_06_PA*.32 + LFF_STN026_06_PA*.68} ! Used in Stony Creek allocation logic
-define OSF_STN_06_PA     {value OSF_STN021_06_PA*.32 + OSF_STN026_06_PA*.68} ! Used in Stony Creek allocation logic
+define EVF_STN_06_PA     {value EVF_STN021_06_PA*.35 + EVF_STN026_06_PA*.65} ! Used in Stony Creek allocation logic
+define DPF_STN_06_PA     {value DPF_STN021_06_PA*.35 + DPF_STN026_06_PA*.65} ! Used in Stony Creek allocation logic
+define LFF_STN_06_PA     {value LFF_STN021_06_PA*.35 + LFF_STN026_06_PA*.65} ! Used in Stony Creek allocation logic
+define OSF_STN_06_PA     {value OSF_STN021_06_PA*.35 + OSF_STN026_06_PA*.65} ! Used in Stony Creek allocation logic
 
 define RUFR_06_PA   {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_06_PA   {value 0.10} !reuse fraction for all other crops (no retrn flow, so all tailwater must be reused
