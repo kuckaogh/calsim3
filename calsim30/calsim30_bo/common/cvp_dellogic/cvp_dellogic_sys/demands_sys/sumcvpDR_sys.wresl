@@ -1272,6 +1272,8 @@ define DR_07S_PA  	{value  MAX(0.0,MIN(CLann_TCC081_07S_PA,	((AWRann_07S_PA *(1-
 define DR_16_PA  	{value  MAX(0.0,MIN(CLann_FTR021_16_PA,		((AWRann_16_PA  *(1- RUFR_16_PA)  +AWOann_16_PA  *(1- RUFO_16_PA))  	* (1+ RPF_16_PA) 	*(1-GPmin_16_PA  ))	/(1 - EVF_FTR021_16_PA   - DPF_FTR021_16_PA  - LFF_FTR021_16_PA  - OSF_FTR021_16_PA	)))}
 
 define anncvpDR_pag_n {value DR_02_PA + DR_03_PA + DR_04_PA1 + DR_04_PA2 + DR_07N_PA + DR_07S_PA + DR_16_PA}
+define anncvpDR_pag_ndv {std kind 'CVP-DIVERSION-REQMT' units 'taf'}
+goal totcvpDR_pag_n {anncvpDR_pag_ndv = anncvpDR_pag_n}
 
 ! CVP Urban Water Service Contractors
 define DR_02_PU  	{value  MAX(0.0,MIN(CLann_WTPCSD_02_PU + CLann_WKYTN_02_PU,	(UDann_02_PU		*(1-GPmin_02_PU  ))	/(1 + EF_WTPCSD_02_PU   + SF_WTPCSD_02_PU	)))}				
@@ -1280,6 +1282,8 @@ define DR_03_PU1 	{value  MAX(0.0,MIN(CLann_SHSTA_03_PU1,   			(UDann_03_PU1 		*
 define DR_03_PU2 	{value  MAX(0.0,MIN(CLann_WTPBLV_03_PU2,  			(UDann_03_PU2 		*(1-GPmin_03_PU2 ))	/(1 + EF_WTPBLV_03_PU2 	+ SF_WTPBLV_03_PU2	)))}
 
 define anncvpDR_pmi_n {value DR_02_PU + DR_03_PU3 + DR_03_PU1 + DR_03_PU2 }
+define anncvpDR_pmi_ndv {std kind 'CVP-DIVERSION-REQMT' units 'taf'}
+goal totcvpDR_pmi_n {anncvpDR_pmi_ndv = anncvpDR_pmi_n}
 
 ! CVP Settlement Contractors (for multiple diversions assume losses the same to simplify code)
 define DR_02_SA 	{value  MAX(0.0,MIN(CLP_SAC296_02_SA   	+ CLN_SAC296_02_SA,	((AWRann_02_SA   *(1- RUFR_02_SA)	+AWOann_02_SA   *(1- RUFO_02_SA))	* (1+ RPF_02_SA)        *(1-GPmin_02_SA ))	/(1 - EVF_SAC296_02_SA   - DPF_SAC296_02_SA  - LFF_SAC296_02_SA   - OSF_SAC296_02_SA	)))}		
@@ -1306,6 +1310,8 @@ define DR_03_SU 	{value  MAX(0.0,MIN(CLP_WTPFTH_03_SU  	+ CLN_WTPFTH_03_SU,  		U
 define DR_02_SU 	{value  MAX(0.0,MIN(CLP_WTPFTH_02_SU  	+ CLN_WTPFTH_02_SU,  		UDann_02_SU 		*(1-GPmin_02_SU )	*(1 + EF_WTPFTH_02_SU  + SF_WTPFTH_02_SU	)))}
 
 define anncvpDR_psc_n {value DR_02_SA + DR_03_SA + DR_08N_SA1_A + DR_08N_SA1_B + DR_08N_SA2 + DR_08S_SA1 +  DR_08S_SA2 + DR_08S_SA3_A + DR_08S_SA3_B +  DR_09_SA1 + DR_09_SA2 + DR_18_SA + DR_19_SA_A + DR_19_SA_B + DR_19_SA_C + DR_19_SA_D + DR_21_SA_A + DR_21_SA_B + DR_22_SA1_A + DR_22_SA1_B + DR_03_SU + DR_02_SU}
+define anncvpDR_psc_ndv {std kind 'CVP-DIVERSION-REQMT' units 'taf'}
+goal totcvpDR_psc_n {anncvpDR_psc_ndv = anncvpDR_psc_n}
 
 ! Refuges
 define DR_08N_PR1 	{value  MAX(0.0,MIN(CLann_GCC027_08N_PR1,	((AWRann_08N_PR1 	*(1- RUFR_08N_PR1) 	+AWOann_08N_PR1 *(1- RUFO_08N_PR1)		+AWWann_08N_PR1 *(1- RUFW_08N_PR1))	* (1+ RPF_08N_PR1) 	*(1-GPmin_08N_PR1))	/(1 - EVF_GCC027_08N_PR1  - DPF_GCC027_08N_PR1 - LFF_GCC027_08N_PR1 - OSF_GCC027_08N_PR1)))}
@@ -1316,9 +1322,13 @@ define DR_17N_PR	{value  MAX(0.0,MIN(CLann_JBC002_17N_PR, 	((AWRann_17N_PR  	*(1
 !define DR_17S_PR	{value  MAX(0.0,MIN(CLann_SBP028_17S_PR, 	((AWRann_17S_PR  	*(1- RUFR_17S_PR)	+AWOann_17S_PR  *(1- RUFO_17S_PR)		+AWWann_17S_PR  *(1- RUFW_17S_PR))	* (1+ RPF_17S_PR)  	*(1-GPmin_17S_PR ))	/(1 - EVF_SBP028_17S_PR   - DPF_SBP028_17S_PR  - LFF_SBP028_17S_PR  - OSF_SBP028_17S_PR	)))}
 
 define anncvpDR_prf_n {value  DR_08N_PR1 + DR_08N_PR2 + DR_08S_PR_A + DR_08S_PR_B + DR_17N_PR /*+ DR_17S_PR*/}
+define anncvpDR_prf_ndv {std kind 'CVP-DIVERSION-REQMT' units 'taf'}
+goal totcvpDR_prf_n {anncvpDR_prf_ndv = anncvpDR_prf_n}
 
 ! Water Forum
 define anncvpDR_wf_n {value CLWF_ANN_PCWA_A+CLWF_ANN_FOLSM+CLWF_ANN_SJWD_S+CLWF_ANN_ELDOR_ID+CLWF_ANN_ELDOR_CO+CLWF_ANN_SMUD+CLWF_ANN_GSWC+CLWF_ANN_SCWA+ CLWF_ANN_ROSEV/*+CLWF_ANN_CAREC*/+CLANN_ANN_SCWA_FRPT+CLANN_ANN_EBMD_FRPT }
+define anncvpDR_wf_ndv {std kind 'CVP-DIVERSION-REQMT' units 'taf'}
+goal totcvpDR_wf_n {anncvpDR_wf_ndv = anncvpDR_wf_n}
 
 define anncvpDR_sysdv {std kind 'ANNUAL-DIVR-REQMNT' units 'taf'}
 
