@@ -491,6 +491,9 @@ define WR_FTR018_16_SA        	{alias WRmon_FTR018_16_SA kind 'WATER-RIGHT' unit
 define WRmon_FTR008_16_SA     	{value max (0.0,WRann_FTR008_16_SA * (AWR_16_SA*cfs_taf*(1+ RPF_16_SA - RUFr5_TS) + AWO_16_SA*cfs_taf*(1+ RPF_16_SA - RUFo_16_SA)) / SumAW_16_SA_sv)} !Miscellaneous Diverters
 define WR_FTR008_16_SA        	{alias WRmon_FTR008_16_SA kind 'CONTRACT-LIMIT' units 'TAF'}
 
+define WRmon_FTR021_16_SA     	{value max(0.0,WRann_FTR021_16_SA * (AWR_16_SA*cfs_taf*(1+ RPF_16_SA - RUFr5_TS) + AWO_16_SA*cfs_taf*(1+ RPF_16_SA - RUFo_16_SA)) / SumAW_16_SA_sv)} !Oswald WD
+define WR_FTR021_16_SA        	{alias WRmon_FTR021_16_SA kind 'WATER-RIGHT' units 'TAF'}
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!! City of Yuba City!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
