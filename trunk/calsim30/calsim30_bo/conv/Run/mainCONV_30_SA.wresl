@@ -1265,7 +1265,7 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 14
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows_LYRA.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
-    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2_TXFR.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
 
@@ -1404,7 +1404,7 @@ MODEL WHEELCVC {      !CYCLE 15
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows_LYRA.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
-    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2_TXFR.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
 
@@ -1544,7 +1544,7 @@ MODEL WHEELJPOD {      !CYCLE 16
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_minflows_LYRA.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_power.wresl'
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
-    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
+    INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2_TXFR.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
 

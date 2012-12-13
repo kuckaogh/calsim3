@@ -9,3 +9,6 @@ goal whlewa_zero5 {C_OROVL_ewa = 0.0}
 
 !Zero out Sac Flow Reop adjustment
 goal zeroC_SAC000_ADD_ewa {C_SAC000_ADD_ewa = 0.0}
+
+!Zero out Sac Flow Reop adjustment
+goal zeroCSAC041ewa {C_SAC041_ewa = 0.0}

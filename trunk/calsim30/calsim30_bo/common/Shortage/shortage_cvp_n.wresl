@@ -37,7 +37,7 @@ define del_cvp_pmi_n {alias D_WTPBUK_03_PU3 + D_WTPCSD_02_PU + D_WKYTN_02_PU + D
 
 
 ! Settlement contractor deliveries occur in April-October and non-project water right diversions occur at same diversion arc in November-March
-define  X_SAC296_02_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC296_02_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC296_02_SA  {
     lhs  X_SAC296_02_SA
     case APR_OCT {
@@ -49,7 +49,7 @@ goal short_SAC296_02_SA  {
     rhs 0. }
     }
 
-define  X_WTPFTH_03_SU {std kind 'delivery-shortage' units 'cfs'}
+define  X_WTPFTH_03_SU {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_WTPFTH_03_SU  {
     lhs  X_WTPFTH_03_SU
     case APR_OCT {
@@ -61,7 +61,7 @@ goal short_WTPFTH_03_SU  {
     rhs 0. }
     }
     
-define  X_WTPFTH_02_SU {std kind 'delivery-shortage' units 'cfs'}
+define  X_WTPFTH_02_SU {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_WTPFTH_02_SU  {
     lhs  X_WTPFTH_02_SU
     case APR_OCT {
@@ -73,7 +73,7 @@ goal short_WTPFTH_02_SU  {
     rhs 0. }
     }   
 
-define  X_SAC289_03_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC289_03_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC289_03_SA  {
     lhs  X_SAC289_03_SA
     case APR_OCT {
@@ -85,7 +85,7 @@ goal short_SAC289_03_SA  {
     rhs 0. }
     }
 
-define  X_SAC178_08N_SA1 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC178_08N_SA1 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC178_08N_SA1  {
     lhs  X_SAC178_08N_SA1
     case APR_OCT {
@@ -97,7 +97,7 @@ goal short_SAC178_08N_SA1  {
     rhs 0. }
     }
     
-define  X_SAC159_08N_SA1 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC159_08N_SA1 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC159_08N_SA1  {
     lhs  X_SAC159_08N_SA1
     case APR_OCT {
@@ -110,7 +110,7 @@ goal short_SAC159_08N_SA1  {
     }   
     
 
-define  X_GCC027_08N_SA2 {std kind 'delivery-shortage' units 'cfs'}
+define  X_GCC027_08N_SA2 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_GCC027_08N_SA2  {
     lhs  X_GCC027_08N_SA2
     case APR_OCT {
@@ -122,7 +122,7 @@ goal short_GCC027_08N_SA2  {
     rhs 0. }
     }
 
-define  X_SAC159_08S_SA1 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC159_08S_SA1 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC159_08S_SA1  {
     lhs  X_SAC159_08S_SA1
     case APR_OCT {
@@ -134,7 +134,7 @@ goal short_SAC159_08S_SA1  {
     rhs 0. }
     }
 
-define  X_GCC056_08S_SA2 {std kind 'delivery-shortage' units 'cfs'}
+define  X_GCC056_08S_SA2 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_GCC056_08S_SA2  {
     lhs  X_GCC056_08S_SA2
     case APR_OCT {
@@ -146,7 +146,7 @@ goal short_GCC056_08S_SA2  {
     rhs 0. }
     }
 
-define  X_SAC121_08S_SA3 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC121_08S_SA3 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC121_08S_SA3  {
     lhs  X_SAC121_08S_SA3
     case APR_OCT {
@@ -158,7 +158,7 @@ goal short_SAC121_08S_SA3  {
     rhs 0. }
     }
     
-define  X_SAC109_08S_SA3 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC109_08S_SA3 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC109_08S_SA3  {
     lhs  X_SAC109_08S_SA3
     case APR_OCT {
@@ -170,7 +170,7 @@ goal short_SAC109_08S_SA3  {
     rhs 0. }
     }
 
-define  X_MTC000_09_SA1 {std kind 'delivery-shortage' units 'cfs'}
+define  X_MTC000_09_SA1 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_MTC000_09_SA1  {
     lhs  X_MTC000_09_SA1
     case APR_OCT {
@@ -182,7 +182,7 @@ goal short_MTC000_09_SA1  {
     rhs 0. }
     }
 
-define  X_SAC162_09_SA2 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC162_09_SA2 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC162_09_SA2  {
     lhs  X_SAC162_09_SA2
     case APR_OCT {
@@ -194,7 +194,7 @@ goal short_SAC162_09_SA2  {
     rhs 0. }
     }
 
-define  X_SAC136_18_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC136_18_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC136_18_SA  {
     lhs  X_SAC136_18_SA
     case APR_OCT {
@@ -206,7 +206,7 @@ goal short_SAC136_18_SA  {
     rhs 0. }
     }
 
-define  X_SAC122_19_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC122_19_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC122_19_SA  {
     lhs  X_SAC122_19_SA
     case APR_OCT {
@@ -218,7 +218,7 @@ goal short_SAC122_19_SA  {
     rhs 0. }
     }
 
-define  X_SAC115_19_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC115_19_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC115_19_SA  {
     lhs  X_SAC115_19_SA
     case APR_OCT {
@@ -230,7 +230,7 @@ goal short_SAC115_19_SA  {
     rhs 0. }
     }
     
-define  X_SAC099_19_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC099_19_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC099_19_SA  {
     lhs  X_SAC099_19_SA
     case APR_OCT {
@@ -242,7 +242,7 @@ goal short_SAC099_19_SA  {
     rhs 0. }
     }
     
-define  X_SAC091_19_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC091_19_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC091_19_SA  {
     lhs  X_SAC091_19_SA
     case APR_OCT {
@@ -254,7 +254,7 @@ goal short_SAC091_19_SA  {
     rhs 0. }
     }   
 
-define  X_SAC083_21_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC083_21_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC083_21_SA  {
     lhs  X_SAC083_21_SA
     case APR_OCT {
@@ -266,7 +266,7 @@ goal short_SAC083_21_SA  {
     rhs 0. }
     }
 
-define  X_SAC074_21_SA {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC074_21_SA {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC074_21_SA  {
     lhs  X_SAC074_21_SA
     case APR_OCT {
@@ -278,7 +278,7 @@ goal short_SAC074_21_SA  {
     rhs 0. }
     }
 
-define  X_SAC082_22_SA1 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC082_22_SA1 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC082_22_SA1  {
     lhs  X_SAC082_22_SA1
     case APR_OCT {
@@ -290,7 +290,7 @@ goal short_SAC082_22_SA1  {
     rhs 0. }
     }
 
-define  X_SAC078_22_SA1 {std kind 'delivery-shortage' units 'cfs'}
+define  X_SAC078_22_SA1 {lower unbounded upper unbounded kind 'delivery-shortage' units 'cfs'}
 goal short_SAC078_22_SA1  {
     lhs  X_SAC078_22_SA1
     case APR_OCT {
@@ -306,7 +306,7 @@ define short_cvp_psc_n {alias  X_SAC296_02_SA +  X_WTPFTH_03_SU +  X_WTPFTH_02_S
 
 
 ! Settlement contractor deliveries occur in April-October and non-project water right diversions occur at same diversion arc in November-March
-define Z_SAC296_02_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC296_02_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC296_02_SA  {
     lhs Z_SAC296_02_SA
     case APR_OCT {
@@ -318,7 +318,7 @@ goal del_SAC296_02_SA  {
     rhs 0. }
     }
 
-define Z_WTPFTH_03_SU {std kind 'delivery-cvp' units 'cfs'}
+define Z_WTPFTH_03_SU {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_WTPFTH_03_SU  {
     lhs Z_WTPFTH_03_SU
     case APR_OCT {
@@ -330,7 +330,7 @@ goal del_WTPFTH_03_SU  {
     rhs 0. }
     }
     
-define Z_WTPFTH_02_SU {std kind 'delivery-cvp' units 'cfs'}
+define Z_WTPFTH_02_SU {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_WTPFTH_02_SU  {
     lhs Z_WTPFTH_02_SU
     case APR_OCT {
@@ -342,7 +342,7 @@ goal del_WTPFTH_02_SU  {
     rhs 0. }
     }   
 
-define Z_SAC289_03_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC289_03_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC289_03_SA  {
     lhs Z_SAC289_03_SA
     case APR_OCT {
@@ -354,7 +354,7 @@ goal del_SAC289_03_SA  {
     rhs 0. }
     }
 
-define Z_SAC178_08N_SA1 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC178_08N_SA1 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC178_08N_SA1  {
     lhs Z_SAC178_08N_SA1
     case APR_OCT {
@@ -366,7 +366,7 @@ goal del_SAC178_08N_SA1  {
     rhs 0. }
     }
 
-define Z_SAC159_08N_SA1 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC159_08N_SA1 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC159_08N_SA1  {
     lhs Z_SAC159_08N_SA1
     case APR_OCT {
@@ -378,7 +378,7 @@ goal del_SAC159_08N_SA1  {
     rhs 0. }
     }
     
-define Z_GCC027_08N_SA2 {std kind 'delivery-cvp' units 'cfs'}
+define Z_GCC027_08N_SA2 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_GCC027_08N_SA2  {
     lhs Z_GCC027_08N_SA2
     case APR_OCT {
@@ -390,7 +390,7 @@ goal del_GCC027_08N_SA2  {
     rhs 0. }
     }
 
-define Z_SAC159_08S_SA1 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC159_08S_SA1 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC159_08S_SA1  {
     lhs Z_SAC159_08S_SA1
     case APR_OCT {
@@ -402,7 +402,7 @@ goal del_SAC159_08S_SA1  {
     rhs 0. }
     }
 
-define Z_GCC056_08S_SA2 {std kind 'delivery-cvp' units 'cfs'}
+define Z_GCC056_08S_SA2 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_GCC056_08S_SA2  {
     lhs Z_GCC056_08S_SA2
     case APR_OCT {
@@ -414,7 +414,7 @@ goal del_GCC056_08S_SA2  {
     rhs 0. }
     }
 
-define Z_SAC121_08S_SA3 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC121_08S_SA3 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC121_08S_SA3  {
     lhs Z_SAC121_08S_SA3
     case APR_OCT {
@@ -426,7 +426,7 @@ goal del_SAC121_08S_SA3  {
     rhs 0. }
     }
 
-define Z_SAC109_08S_SA3 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC109_08S_SA3 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC109_08S_SA3  {
     lhs Z_SAC109_08S_SA3
     case APR_OCT {
@@ -438,7 +438,7 @@ goal del_SAC109_08S_SA3  {
     rhs 0. }
     }
 
-define Z_MTC000_09_SA1 {std kind 'delivery-cvp' units 'cfs'}
+define Z_MTC000_09_SA1 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_MTC000_09_SA1  {
     lhs Z_MTC000_09_SA1
     case APR_OCT {
@@ -450,7 +450,7 @@ goal del_MTC000_09_SA1  {
     rhs 0. }
     }
 
-define Z_SAC162_09_SA2 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC162_09_SA2 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC162_09_SA2  {
     lhs Z_SAC162_09_SA2
     case APR_OCT {
@@ -462,7 +462,7 @@ goal del_SAC162_09_SA2  {
     rhs 0. }
     }
 
-define Z_SAC136_18_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC136_18_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC136_18_SA  {
     lhs Z_SAC136_18_SA
     case APR_OCT {
@@ -474,7 +474,7 @@ goal del_SAC136_18_SA  {
     rhs 0. }
     }
 
-define Z_SAC122_19_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC122_19_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC122_19_SA  {
     lhs Z_SAC122_19_SA
     case APR_OCT {
@@ -486,7 +486,7 @@ goal del_SAC122_19_SA  {
     rhs 0. }
     }
 
-define Z_SAC115_19_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC115_19_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC115_19_SA  {
     lhs Z_SAC115_19_SA
     case APR_OCT {
@@ -498,7 +498,7 @@ goal del_SAC115_19_SA  {
     rhs 0. }
     }
     
-define Z_SAC099_19_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC099_19_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC099_19_SA  {
     lhs Z_SAC099_19_SA
     case APR_OCT {
@@ -510,7 +510,7 @@ goal del_SAC099_19_SA  {
     rhs 0. }
     }
 
-define Z_SAC091_19_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC091_19_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC091_19_SA  {
     lhs Z_SAC091_19_SA
     case APR_OCT {
@@ -522,7 +522,7 @@ goal del_SAC091_19_SA  {
     rhs 0. }
     }
 
-define Z_SAC083_21_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC083_21_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC083_21_SA  {
     lhs Z_SAC083_21_SA
     case APR_OCT {
@@ -534,7 +534,7 @@ goal del_SAC083_21_SA  {
     rhs 0. }
     }
 
-define Z_SAC074_21_SA {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC074_21_SA {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC074_21_SA  {
     lhs Z_SAC074_21_SA
     case APR_OCT {
@@ -546,7 +546,7 @@ goal del_SAC074_21_SA  {
     rhs 0. }
     }
 
-define Z_SAC082_22_SA1 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC082_22_SA1 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC082_22_SA1  {
     lhs Z_SAC082_22_SA1
     case APR_OCT {
@@ -558,7 +558,7 @@ goal del_SAC082_22_SA1  {
     rhs 0. }
     }
 
-define Z_SAC078_22_SA1 {std kind 'delivery-cvp' units 'cfs'}
+define Z_SAC078_22_SA1 {lower unbounded upper unbounded kind 'delivery-cvp' units 'cfs'}
 goal del_SAC078_22_SA1  {
     lhs Z_SAC078_22_SA1
     case APR_OCT {
