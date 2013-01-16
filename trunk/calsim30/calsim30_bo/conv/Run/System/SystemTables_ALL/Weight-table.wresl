@@ -122,7 +122,7 @@ Objective obj = {
 [S_CMPFW_4,   200*taf_cfs],
 [S_CMPFW_5,-10000*taf_cfs],
 
-[C_OROVL_IBU,-3000],
+[C_OROVL_IBU,-1250],
 [C_OROVL_valve, 0.01],
 [C_OROVL_PP135, 0.02],
 
@@ -902,7 +902,7 @@ Objective obj = {
 [C_SAC000_ADD_WTS,    -2005],
 [C_SAC000_ADD_WHLCV,  -2007],   ! Delta outflow - wheeling share
 [C_SAC000_ADD_WHLJP,  -2008],
-[C_SAC000_ADD_ANN,    -2010],   ! Delta outflow - ANN share
+[C_SAC000_ADD_ANN,    -2050],   ! Delta outflow - ANN share
 [D407,         5000],   ! Required Delta Outflow
 [D_SAC030_MOK014,-5],   ! Delta Cross Channel
 [D408,         5000],   ! CCWD diversions at Rock Slough and Old River

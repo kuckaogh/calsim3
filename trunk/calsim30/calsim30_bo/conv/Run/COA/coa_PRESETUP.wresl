@@ -58,7 +58,6 @@ define WTS_Yuba_Stg1_cvp {std kind 'SUPPLY-TRANSFER' UNITS 'CFS'}
 define I_OROVL_WTS {std kind 'Transfer-Accounting' units 'cfs'}
 define I_SHSTA_WTS {std kind 'Transfer-Accounting' units 'cfs'}
 
-
 goal split_D419_WTS {D419_WTS = D419_WTS_Stg1}
 goal split_D418_WTS {D418_WTS = D418_WTS_Stg1}
 goal split_C_SAC000_ADD_WTS_Stg1 {C_SAC000_ADD_WTS = C_SAC000_ADD_WTS_Stg1}
@@ -140,8 +139,8 @@ goal WHSSI_force {WHSSI < WHS_stor_chg_max - int_WHS_stor_chg * WHS_stor_chg_max
 define D408_DS_EXP1 {std kind 'flow-delivery' units 'cfs'}      !CCWD diversion of Delta surplus under LV water right.
 define D408_DS_EXP2 {std kind 'flow-delivery' units 'cfs'}      !CCWD diversion of Delta surplus under LV water right.
 
-define D168B_EXP1 {std kind 'FLOW-DELIVERY' units 'CFS'}        !added for Delta Exporter study of Freeport Project- RSR
-define D168B_EXP2 {std kind 'FLOW-DELIVERY' units 'CFS'}        !added for Delta Exporter study of Freeport Project- RSR
+!define D168B_EXP1 {std kind 'FLOW-DELIVERY' units 'CFS'}        !added for Delta Exporter study of Freeport Project- RSR
+!define D168B_EXP2 {std kind 'FLOW-DELIVERY' units 'CFS'}        !added for Delta Exporter study of Freeport Project- RSR
 
 !define D419_EXP1 {std kind 'FLOW-DELIVERY' units 'CFS'}
 !define D419_EXP2 {std kind 'FLOW-DELIVERY' units 'CFS'}
@@ -163,7 +162,7 @@ goal COA_balance {UWFE - IBU = C_SAC000_ADD_cvp  + C_SAC000_ADD_swp + C_SAC000_A
                              + D418_EXP1 + D419_EXP1 + D419_cvpded_Exp1 + D419_WTS_Stg1 + D418_WTS_Stg1  
                              /*+ D168B_EXP1*/ + D408_CVP  + 2./3.*D_BKR004_NBA009_PRJ 
                              /*+ D168c_exc_ntDep*/ + Surp1Terms + Surp2Terms
-                             - SHADS - FOLDS - WHSSW - SWPDS + UNUSED_FS + UNUSED_SS - WTS_Yuba_Stg1 - C_KSWCK_WTS - C_FTR059_WTS}
+                             - SHADS - FOLDS - WHSSW - SWPDS + UNUSED_FS + UNUSED_SS - WTS_Yuba_Stg1 - C_KSWCK_WTS - C_FTR059_WTS + D408_P}
 
 goal UWFE_force {UWFE < int_IBU_UWFE * IBU_UWFE_max}                       ! if int=0, UWFE=0, IBU=pos
 goal IBU_force  {IBU < IBU_UWFE_max - int_IBU_UWFE * IBU_UWFE_max}         ! if int=1, UWFE=pos, IBU=0
@@ -179,58 +178,119 @@ goal SWP_Split {SWP_share = 1.0 - CVP_share }                      !SWP Share
     also note D419_swp = banks pumping without Wheeling  */
 
 !goal coa_cvp3 { D418_EXP1 + D419_cvpded_Exp1 + D419_cvcsurp1 + D408_CS /*+ D168B_EXP1*/ = SHADS + FOLDS + WHSSW /*+ NODOScvpDS*/ - 0.75*IBU + 0.55*UWFE - UNUSED_FS - C_SAC000_ADD_cvp}
-goal coa_cvp3 { D418_EXP1 + D419_CVPDED_EXP1 /*+ D168B_EXP1*/ + D408_CVP + D408_DS_EXP1
+goal coa_cvp3 { D418_EXP1 + D419_CVPDED_EXP1 /*+ D168B_EXP1*/ + D408_CVP + D408_DS_EXP1 + D408_P_WHL_SF_E1 + D408_P_DEL_CVP + D408_P_STR_CVP
                 + Surp1Terms + D418_WTS_Stg1
         = SHADS + FOLDS + WHSSW /*+ NODOScvpDS*/ - 0.75*IBU + 0.55*UWFE - UNUSED_FS - C_SAC000_ADD_cvp + WTS_Yuba_Stg1_cvp
                 /*- D168c_exc_ntDep1*/}
 
 !goal coa_swp3 { D419_EXP1 + 2./3.*D_BKR004_NBA009_PRJ + D419_cvcsurp2 = SWPDS - 0.25*IBU + 0.45*UWFE - UNUSED_SS - C_SAC000_ADD_swp}
 goal coa_swp3 { D419_EXP1 + 2./3.*D_BKR004_NBA009_PRJ
-                + Surp2Terms + D419_WTS_Stg1
+                + Surp2Terms + D419_WTS_Stg1 + D408_P_WHL_SB_E1 + D408_P_DEL_SWP + D408_P_STR_SWP
                 = SWPDS - 0.25*IBU + 0.45*UWFE - UNUSED_SS - C_SAC000_ADD_swp + WTS_Yuba_Stg1_swp - C_SAC000_ADD_WTS_Stg1 + C_KSWCK_WTS_Stg1_swp + C_FTR059_WTS_Stg1_swp
                 /*- D168c_exc_ntDep2*/}
 
 
-goal setUNUSED_FS { D419_EXP2 < UNUSED_FS }
-goal setUNUSED_SS { D418_EXP2 + D419_cvpded_Exp2 /*+ D168B_EXP2*/ + D408_DS_EXP2 < UNUSED_SS }
+goal setUNUSED_FS { D419_EXP2 + D408_P_WHL_SB_E2 < UNUSED_FS }
+goal setUNUSED_SS { D418_EXP2 + D419_cvpded_Exp2 /*+ D168B_EXP2*/ + D408_DS_EXP2 + D408_P_WHL_SF_E2 < UNUSED_SS }
 
-! Attempt to split export even during EI control situations
+
+! The projects share available export capacity when EI is controlling.
 
 /*
-goal EI_split_swp {
-    lhs     D419_EXP1_TD
-     rhs        0.5*EiExpCtrl
-     lhs>rhs    penalty 1285
-     lhs<rhs    penalty 0
-}
-goal EI_split_cvp {
-    lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
-     rhs        0.5*EiExpCtrl
-     lhs>rhs    penalty 1285
-     lhs<rhs    penalty 0
+!EI_control_on = 1 when the EI Ratio was controlling total exports in the GW_INITIAL cycle.  When controlling, sharing logic under the EI control is implemented in subsequent cycles.
+!When NOT controlling in the GW_INITIAL cycle, EI sharing logic is turned off and protections are implemented to prevent one project from incurring the carriage
+!costs of another project aggressively pressing against the EI constraint in the remaining cycles.
+define EI_control_on {
+	case EI_control {
+		condition	C_SAC000_ADD_swp[GW_INITIAL] + C_SAC000_ADD_cvp[GW_INITIAL] > 0.1 .and. eiexpctrl[GW_INITIAL] - ExportActualTD[GW_INITIAL] < 0.01 .and. MRDO_final < C_SAC000_ADD[GW_INITIAL] + C_SAC000_MIN[GW_INITIAL] + 0.1
+		value		1.
+	}
+	case otherwise {
+		condition	always
+		value		0.
+	}
 }
 
-! Attempt to split export even during April-May pulse and Vamp control situations
+goal EI_split_swp {
+    lhs     D419_EXP1_TD
+     case ei_control {
+     condition  EI_control_on > 0.5
+    
+     rhs        0.5*EiExpCtrl[GW_INITIAL] + ExpRatio*C_FTR059_m - ExpRatio*C_FTR059_m[GW_INITIAL]
+
+     lhs>rhs    penalty 1285
+     lhs<rhs    penalty 0
+}}
+
+goal EI_split_cvp {
+    lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
+      case ei_control {
+     condition  EI_control_on > 0.5
+   
+     rhs        0.5*EiExpCtrl[GW_INITIAL] + ExpRatio*C_WKYTN_m + ExpRatio*C_KSWCK_m + ExpRatio*C_NTOMA_m 
+                              - ExpRatio*C_WKYTN_m[GW_INITIAL] - ExpRatio*C_KSWCK_m[GW_INITIAL] - ExpRatio*C_NTOMA_m[GW_INITIAL]
+
+     lhs>rhs    penalty 1285
+     lhs<rhs    penalty 0
+}}
+
+goal No_EI_split_swp1 {
+    lhs     D419_SWP
+    case no_ei_control {
+    condition	EI_control_on < 0.5  .and. MRDO_final < C_SAC000_ADD[GW_INITIAL] + C_SAC000_MIN[GW_INITIAL] + 0.1
+    rhs        D419_SWP[GW_INITIAL]
+    lhs>rhs    penalty 0
+    lhs<rhs	penalty 1290
+}}
+
+goal No_EI_split_swp2 {
+    lhs     C_SAC000_ADD_swp
+    case no_ei_control {
+    condition	EI_control_on < 0.5 .and. S12[GW_INITIAL] > swprulecv[GW_INITIAL] + 0.01
+    rhs        C_SAC000_ADD_swp[GW_INITIAL]
+    lhs<rhs    penalty 0
+    lhs>rhs    penalty 1290
+}}
+
+goal No_EI_split_cvp1 {
+    lhs     D418_CVP
+    case no_ei_control {
+    condition	EI_control_on < 0.5 .and. MRDO_final < C_SAC000_ADD[GW_INITIAL] + C_SAC000_MIN[GW_INITIAL] + 0.1
+    rhs        D418_CVP[GW_INITIAL]
+    lhs>rhs    penalty 0
+    lhs<rhs	penalty 1290
+}}
+
+goal No_EI_split_cvp2 {
+    lhs     C_SAC000_ADD_cvp
+    case no_ei_control {
+    condition	EI_control_on < 0.5 .and. S11[GW_INITIAL] > cvprulecv[GW_INITIAL] + 0.01
+    rhs        C_SAC000_ADD_cvp[GW_INITIAL]
+    lhs<rhs    penalty 0
+    lhs>rhs    penalty 1290
+}}
+
+! Only apply sharing logic under the AprilMay pulse flow export contraint when this constraint was controlling operations in the GW_INITIAL cycle.
 goal AprMay_split_swp {
     lhs     D419_EXP1_TD
      case AprMay {
-        condition      month==APR .or. month==MAY
+     condition range(month,apr,may) .and. C_SAC000_ADD_swp[GW_INITIAL] + C_SAC000_ADD_cvp[GW_INITIAL] > 0.1 .and. aprmayexpctrl[GW_INITIAL] - ExportActualTD[GW_INITIAL] < 0.01
      rhs        0.5*AprMayExpCtrl
      lhs>rhs    penalty 1285
      lhs<rhs        penalty 0
      }
 }
+
 goal AprMay_split_cvp {
     lhs     D418_EXP1_TD + D419_CVPDEDEX1TD
      case AprMay {
-        condition        month==APR .or. month==MAY
+     condition range(month,apr,may) .and. C_SAC000_ADD_swp[GW_INITIAL] + C_SAC000_ADD_cvp[GW_INITIAL] > 0.1 .and. aprmayexpctrl[GW_INITIAL] - ExportActualTD[GW_INITIAL] < 0.01
      rhs        0.5*AprMayExpCtrl
      lhs>rhs    penalty 1285
      lhs<rhs        penalty 0
      }
 }
 */
-
 goal temp_DO_penalty {
 	lhs	C_SAC000_ADD
 	rhs	0
@@ -245,4 +305,3 @@ goal temp_exp_penalty {
 	lhs>rhs penalty 1285
 	lhs<rhs penalty 0
 }
-

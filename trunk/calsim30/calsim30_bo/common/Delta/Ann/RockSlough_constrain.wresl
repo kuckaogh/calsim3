@@ -31,8 +31,7 @@ goal meetRS_1 {
     condition RS_Sac_ZeroExp_sv2 >= ANNcap
     rhs ExportCap
     lhs<rhs penalty 0}
-  case NegCarriage{
-!    condition abs(RS_m_1_sv) >= 1.0
+  case LargeNegInt{
     condition RS_b_1_sv < -10000.0
     rhs 999999.
     lhs<rhs penalty 0}
@@ -64,6 +63,10 @@ goal meetRS_2 {
   case HighCost{
     condition RS_Sac_ZeroExp_sv2 >= ANNcap
     rhs ExportCap
+    lhs<rhs penalty 0}
+  case LargeNegInt{
+    condition RS_b_2_sv < -10000.0
+    rhs 999999.
     lhs<rhs penalty 0}
   case NegCarriage{
     condition RS_m_2_sv >= 1.0
@@ -98,6 +101,10 @@ goal meetRS_3 {
     condition RS_Sac_ZeroExp_sv2 >= ANNcap
     rhs ExportCap
     lhs<rhs penalty 0}
+  case LargeNegInt{
+    condition RS_b_3_sv < -10000.0
+    rhs 999999.
+    lhs<rhs penalty 0}  
   case NegCarriage{
     condition RS_m_3_sv >= 1.0
     rhs 999999.

@@ -21,7 +21,7 @@ goal setJPMax {
     rhs 999999.}
   case Normal {
     condition always
-    rhs JP_m_sv*C_SACtot_ANN + JP_b_sv}
+    rhs JP_m_sv*C_SACtot_ANN + JP_m_sv*C_CSL005 + JP_b_sv}
 }
 
 

@@ -199,7 +199,7 @@ MODEL VAMP_AND_DO {           !CYCLE 5
      }
 
 
-MODEL GW_INITIAL {      !CYCLE 6
+MODEL GW_INITIAL {      !CYCLE 6 (also functions as the PRESETUP cycle)
     define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE '..\..\common\CCWD\LVM_System.wresl'
 
@@ -263,7 +263,7 @@ MODEL GW_INITIAL {      !CYCLE 6
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
+    INCLUDE[LOCAL] 'coa\coa_PRESETUP.wresl'
 
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
@@ -283,7 +283,7 @@ MODEL GW_INITIAL {      !CYCLE 6
 
     INCLUDE[LOCAL] '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCyc6.wresl'    
     
-    INCLUDE [LOCAL] '..\..\common\Delta\ANN\ExportEstimate1.wresl'     /* Use this file for ANN salinity requirements, Gmodel must be OFF if this is ON */
+    INCLUDE [LOCAL] '..\..\common\Delta\ANN\ExportEstimate1_PRESETUP.wresl'     /* Use this file for ANN salinity requirements, Gmodel must be OFF if this is ON */
     INCLUDE [LOCAL] '..\..\common\Delta\Delta_ANN.wresl'     /* Use this file for ANN salinity requirements, Gmodel must be OFF if this is ON */
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\B2Actions\B2VampCommon.wresl'    !Needed for WangerActions.wresl unless already included elsewhere
@@ -377,8 +377,6 @@ MODEL GW_FIRST {      !CYCLE 7
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -405,6 +403,8 @@ MODEL GW_FIRST {      !CYCLE 7
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
 
+    INCLUDE[LOCAL] 'coa\coa.wresl'
+	
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
     INCLUDE[LOCAL] '..\..\common\CCWD\LVM_Ops2.wresl'
@@ -491,8 +491,6 @@ MODEL GW_SECOND {      !CYCLE 8
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -518,6 +516,8 @@ MODEL GW_SECOND {      !CYCLE 8
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
@@ -605,8 +605,6 @@ MODEL GW_THIRD {      !CYCLE 9
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -632,6 +630,8 @@ MODEL GW_THIRD {      !CYCLE 9
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
@@ -662,7 +662,7 @@ MODEL GW_THIRD {      !CYCLE 9
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
      }
 
-MODEL SETUP {      !CYCLE 10
+MODEL SETUP {      !CYCLE 10 (also functions as fourth groundwater cycle)
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -719,8 +719,6 @@ MODEL SETUP {      !CYCLE 10
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -746,6 +744,8 @@ MODEL SETUP {      !CYCLE 10
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
@@ -835,8 +835,6 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -862,6 +860,8 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_SETUP.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
@@ -953,8 +953,6 @@ MODEL UPSTREAM {      !CYCLE 12
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -980,6 +978,8 @@ MODEL UPSTREAM {      !CYCLE 12
     INCLUDE[local] '..\..\common\export_ops\OMR\OMR_stub.wresl'
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_MONTHLYWEIGHTED.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_MW.wresl'
@@ -1071,8 +1071,6 @@ MODEL DELTA {      !CYCLE 13
     INCLUDE[LOCAL] '..\..\common\ReOperations\wheeling\WheelZeroEWA.wresl'
 !    INCLUDE[LOCAL] '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_zeroCVPExOp.wresl' 
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     
@@ -1102,6 +1100,8 @@ MODEL DELTA {      !CYCLE 13
 
 !    INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_UPSTREAM.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa_bo.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_DELTA.wresl'
@@ -1201,8 +1201,6 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 14
     INCLUDE[LOCAL] '..\..\common\ReOperations\reopcontinuity.wresl'
     INCLUDE[LOCAL] 'ReOperations\wheeling\wheelfixes_DELTA.wresl'
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
 !    INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\DWSP_Term91.wresl'
@@ -1233,6 +1231,8 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 14
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
     INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa_bo.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_DELTA.wresl'
@@ -1340,8 +1340,6 @@ MODEL WHEELCVC {      !CYCLE 15
     INCLUDE[LOCAL] '..\..\common\ReOperations\reopcontinuity.wresl'
     INCLUDE[LOCAL] 'ReOperations\wheeling\wheelfixes_TS1.wresl'
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
 !    INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\DWSP_Term91.wresl'
@@ -1372,6 +1370,8 @@ MODEL WHEELCVC {      !CYCLE 15
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
     INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa_bo.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_DELTA.wresl'
@@ -1480,8 +1480,6 @@ MODEL WHEELJPOD {      !CYCLE 16
     INCLUDE[LOCAL] '..\..\common\ReOperations\reopcontinuity.wresl'
     INCLUDE[LOCAL] 'ReOperations\wheeling\wheelfixes_WHEELCVC.wresl'
 
-    INCLUDE[LOCAL] 'coa\coa.wresl'
-
 !    INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\COSMA_restrict_c6_c7.wresl'
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\DWSP_Term91.wresl'
@@ -1512,6 +1510,8 @@ MODEL WHEELJPOD {      !CYCLE 16
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
     INCLUDE[local] '..\..\common\shortage\shortage.wresl'
 !    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA.wresl'
+
+    INCLUDE[LOCAL] 'coa\coa_bo.wresl'
 
     INCLUDE[local] '..\..\common\EWAActions\EWA_Purch_Est.wresl'
     INCLUDE[local] '..\..\common\CCWD\CCWD_OPS\CCWD_LVFILL_OMR_DELTA.wresl'
