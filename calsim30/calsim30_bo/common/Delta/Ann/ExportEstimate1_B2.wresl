@@ -19,7 +19,7 @@ define exp_est_SWPRC {alias EstSWPSodRC kind 'EXPORT-ESTIMATE' units 'CFS'}
 define EstSWPMaxExp_RPA {select estimate from ExportEstimate_SWP where month = month }
 
 ! export for south-of-delta SWP: demand + rulecurve
-define EstSWPSodExp {
+/*define EstSWPSodExp {
 ! constrain to EstSWPMaxExp_RPA for cases where FWS and NMFS BO Delta Actions control ALL exports from Delta
     case noIF{
 	condition JonesIFSwitch == 0 .and. BanksIFSwitch == 0
@@ -30,9 +30,22 @@ define EstSWPSodExp {
 	condition always
         value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC))
     }
+}*/
+
+define est_oro_release{
+	case verylow {condition S_OROVL[GW_INITIAL] <= 1250.0 
+	value 300.0}
+	case low {condition S_OROVL[GW_INITIAL]>1250.0 .and. S_OROVL[GW_INITIAL] <= 1800.0 
+	value  0.25*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs}
+	case high {condition S_OROVL[GW_INITIAL]>1800.0 .and. S_OROVL[GW_INITIAL] <= 2200.0 
+	value 0.50*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs}
+	case veryhigh { condition always 
+	value 0.75*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs}
 }
 
+define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC), EstSWPMaxExp_RPA, max(300.,est_oro_release))}
 define exp_est_SWP {alias EstSWPSodExp kind 'EXPORT-ESTIMATE' units 'CFS'}
+
 
 !*********************************************************************************************
 ! CVP exports:

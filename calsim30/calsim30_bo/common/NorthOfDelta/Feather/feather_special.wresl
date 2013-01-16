@@ -68,26 +68,30 @@ define MF_FTR059 {
     value   0
   }
   case November3 {
+    condition month == NOV .and. D419_exp1(prevOCT) <= 300.1
+    value  0
+  }
+  case November4 {
     condition month == NOV
     value   C_FTR059(prevOCT) - 500
   }
   case DecemberToMarch1 {
     condition month >= DEC .AND. month <= MAR .AND.
         int(C_FTR059(prevOCT)) > oct_trigger_cfs .AND. 
-        S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT) - .001 .AND.
-        int(C_FTR059(prevNOV)) > nov_trigger_cfs .AND.
+        S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT) - .001 .AND. D419_exp1(prevOct) > 300.1 .and.
+        int(C_FTR059(prevNOV)) > nov_trigger_cfs .AND. D419_exp1(prevNov) > 300.1 .and.
         S_OROVL(prevNOV)+S_OROVL_mod_dv(prevNOV) < S_OROVLlevel5(prevNOV) - .001
     value   max(C_FTR059(prevOCT) - 500, C_FTR059(prevNOV) - 500)
   }
   case DecemberToMarch2 {
     condition month >= DEC .AND. month <= MAR .AND.
-    int(C_FTR059(prevOCT)) > oct_trigger_cfs .AND.
+    int(C_FTR059(prevOCT)) > oct_trigger_cfs .AND. D419_exp1(prevOct) > 300.1 .and.
     S_OROVL(prevOCT)+S_OROVL_mod_dv(prevOCT) < S_OROVLlevel5(prevOCT) - .001
     value   C_FTR059(prevOCT) - 500
   }
   case DecemberToMarch3 {
     condition month >= DEC .AND. month <= MAR .AND.
-    int(C_FTR059(prevNOV)) > nov_trigger_cfs .AND.
+    int(C_FTR059(prevNOV)) > nov_trigger_cfs .AND. D419_exp1(prevNov) > 300.1 .and.
     S_OROVL(prevNOV)+S_OROVL_mod_dv(prevNOV) < S_OROVLlevel5(prevNOV) - .001
     value   C_FTR059(prevNOV) - 500
   }
@@ -97,17 +101,27 @@ define MF_FTR059 {
   }
 }
 
+!Ensure that the state can release sufficient water to meet it's IBU obligations and H&S
+
+define D419_0 {upper 300 kind 'flow-delivery' units 'cfs'}
+define D419_1 {std kind 'flow-delivery' units 'cfs'}
+goal split_D419_EXP1 {D419_Exp1 = D419_0 + D419_1}
+
+define int_HandS {integer std kind 'INTEGER' units 'none'}
+goal boundN_D419_0 {D419_0 > int_HandS * 300}
+goal boundN_D419_1 {D419_1 < int_HandS * 99999}
+
 goal avoidTrigger {
   lhs C_FTR059
   case October {
     condition month == OCT
-    rhs   oct_trigger_cfs
+    rhs   oct_trigger_cfs + 99999 - 99999*int_HandS
     lhs>rhs   penalty 4600
     lhs<rhs   penalty 0
   }
   case November {
     condition month == NOV
-    rhs   max(nov_trigger_cfs, MF_FTR059 + 500)
+    rhs   max(nov_trigger_cfs, MF_FTR059 + 500) + 99999 - 99999*int_HandS
     lhs>rhs   penalty 4600
     lhs<rhs   penalty 0
   }

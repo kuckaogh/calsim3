@@ -16,8 +16,21 @@ define EstSWPSodRC {value SWPRULEcalc1*taf_cfs - (S12(-1)+S12mod)*taf_cfs}
 define exp_est_SWPRC {alias EstSWPSodRC kind 'EXPORT-ESTIMATE' units 'CFS'}
 
 ! export for south-of-delta SWP: demand + rulecurve
-define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC))}
+define est_oro_release{
+	case verylow {condition S_OROVL[GW_INITIAL] <= 1250.0 
+	value 300.0}
+	case low {condition S_OROVL[GW_INITIAL]>1250.0 .and. S_OROVL[GW_INITIAL] <= 1800.0 
+	value  0.25*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs}
+	case high {condition S_OROVL[GW_INITIAL]>1800.0 .and. S_OROVL[GW_INITIAL] <= 2200.0 
+	value 0.50*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs}
+	case veryhigh { condition always 
+	value 0.75*(S_OROVL(-1) - 1000. - DrainTar_buffer)*taf_cfs}
+}
+
+define EstSWPSodExp {value min(BanksMaxAllow, max(300.0, EstSWPSodDem + EstSWPSodRC), max(300., est_oro_release))}
 define exp_est_SWP {alias EstSWPSodExp kind 'EXPORT-ESTIMATE' units 'CFS'}
+define exp_estSWPlim3  {alias max(300.,est_oro_release) kind 'debug' units 'cfs'}
+
 
 !*********************************************************************************************
 ! CVP exports:
