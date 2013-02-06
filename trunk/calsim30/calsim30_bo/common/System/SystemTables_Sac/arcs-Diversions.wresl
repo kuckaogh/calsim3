@@ -326,7 +326,7 @@ define D_LOSVQ_TRNSF	{lower -99999 upper 400 kind 'DIVERSION' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mokelumne River !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define DD_MOK004_MOK 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
+define DD_MOK004_MOK 	{std kind 'DIVERSION' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -381,8 +381,8 @@ define D_OMR028_DMC003	 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant 
 define D_OMR028_DMC003_TD 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant through Delta to Delta-Mendota Canal
 define D_OMR028_DMC003_IF 	{std kind 'DIVERSION' units 'cfs'}!Tracy Pumping Plant from Isolated Facility to Delta-Mendota Canal
 
-define D_OMR021_ORP000 	{std kind 'DIVERSION' units 'cfs'}!
-define DD_OMR027_OMR 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}!Delta Net
+define D_OMR021_ORP000 	{std kind 'DIVERSION' units 'cfs'}
+define DD_OMR027_OMR 	{std kind 'DIVERSION' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -483,9 +483,9 @@ define D_SAC062_WTPSAC 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC050_FPT013 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC041_ISF001 	{std kind 'DIVERSION' units 'CFS'}
 define D_SAC030_MOK014 	{std kind 'DIVERSION' units 'CFS'} 
-define DD_SAC017_SACS 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
-define DD_SAC041_SACN 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
-define DD_SAC000_SACW 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}
+define DD_SAC017_SACS 	{std kind 'DIVERSION' units 'CFS'}
+define DD_SAC041_SACN 	{std kind 'DIVERSION' units 'CFS'}
+define DD_SAC000_SACW 	{std kind 'DIVERSION' units 'CFS'}
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -517,8 +517,8 @@ define D_WTPBJM_26N_NU2 	{std kind 'DIVERSION' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! San Joaquin River !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define DD_SJR026_SJRE 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}!Delta Net 
-define DD_SJR013_SJRW 	{lower -99999 upper 99999 kind 'DIVERSION' units 'CFS'}!Delta Net
+define DD_SJR026_SJRE 	{std kind 'DIVERSION' units 'CFS'} 
+define DD_SJR013_SJRW 	{std kind 'DIVERSION' units 'CFS'}
 define D_SJR062_50_PA1	{std kind 'DIVERSION' units 'CFS'}
 define D_SJR028_WTPDWS 	{std kind 'DIVERSION' units 'CFS'}
 define D_SJR006_ANTOC 	{std kind 'DIVERSION' units 'CFS'}
