@@ -19,7 +19,7 @@ goal setC_BSL001b_exc  {
   		case Season {
     		condition   month >= Apr
     	rhs     0
-    	lhs>rhs     penalty 9999
+    	lhs>rhs     penalty 999
     	lhs<rhs     penalty 0 }
 }
 
