@@ -24,7 +24,7 @@ goal setRSMax1 {
     rhs 999999.}
   case Normal {
     condition always
-    rhs RS_m_1_sv*C_SACtot_ANN + RS_m_1_sv*C_CSL005 + RS_b_1_sv}
+    rhs RS_m_1_sv*C_SACtot_ANN /*+ RS_m_1_sv*C_CSL005*/ + RS_b_1_sv} !removed double accounting
 }
 
 define RS_MaxExport_2 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -50,7 +50,7 @@ goal setRSMax2 {
     rhs 999999.}
   case Normal {
     condition always
-    rhs RS_m_2_sv*C_SACtot_ANN + RS_m_2_sv*C_CSL005 + RS_b_2_sv}
+    rhs RS_m_2_sv*C_SACtot_ANN /*+ RS_m_2_sv*C_CSL005*/ + RS_b_2_sv} !removed double accounting
 }
 
 define RS_MaxExport_3 {lower unbounded upper unbounded kind 'FLOW' units 'CFS'}
@@ -76,7 +76,7 @@ goal setRSMax3 {
     rhs 999999.}
   case Normal {
     condition always
-    rhs RS_m_3_sv*C_SACtot_ANN + RS_m_3_sv*C_CSL005 + RS_b_3_sv}
+    rhs RS_m_3_sv*C_SACtot_ANN /*+ RS_m_3_sv*C_CSL005*/ + RS_b_3_sv} !removed double accounting
 }
 
 

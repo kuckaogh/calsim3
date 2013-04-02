@@ -49,39 +49,75 @@ goal fixc177E {
   lhs<rhs penalty 99999
 }
 */
-goal fixSwpPumping1 {
-  lhs     D419_swp
-  rhs     D419_swp[WHEELCVC]
+goal fixSwpPumping1TD {
+  lhs     D419_swp_TD + D408_P_WHL_SB + C422_REL_P_WHLSB
+  rhs     D419_swp_TD[WHEELCVC]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixSwpPumping2 {
-  lhs     D419_EXP1
-  rhs     D419_EXP1[WHEELCVC]
+goal fixSwpPumping1IF {
+  lhs     D419_swp_IF
+  rhs     D419_swp_IF[WHEELCVC]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixSwpPumping3 {
-  lhs     D419_EXP2
-  rhs     D419_EXP2[WHEELCVC]
+goal fixSwpPumping2TD {
+  lhs     D419_EXP1_TD + D408_P_WHL_SB_E1 + C422_RELPWHLSBE1
+  rhs     D419_EXP1_TD[WHEELCVC]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixCvpPumping1 {
-  lhs     D418_cvp
-  rhs     D418_cvp[WHEELCVC]
+goal fixSwpPumping2IF {
+  lhs     D419_EXP1_IF
+  rhs     D419_EXP1_IF[WHEELCVC]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixCvpPumping2 {
-  lhs     D418_EXP1
-  rhs     D418_EXP1[WHEELCVC]
+goal fixSwpPumping3TD {
+  lhs     D419_EXP2_TD + D408_P_WHL_SB_E2 + C422_RELPWHLSBE2
+  rhs     D419_EXP2_TD[WHEELCVC]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixCvpPumping3 {
-  lhs     D418_EXP2
-  rhs     D418_EXP2[WHEELCVC]
+goal fixSwpPumping3IF {
+  lhs     D419_EXP2_IF
+  rhs     D419_EXP2_IF[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixCvpPumping1TD {
+  lhs     D418_cvp_TD + D408_P_WHL_SF + C422_REL_P_WHLSF
+  rhs     D418_cvp_TD[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixCvpPumping1IF {
+  lhs     D418_cvp_IF
+  rhs     D418_cvp_IF[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixCvpPumping2TD {
+  lhs     D418_EXP1_TD + D408_P_WHL_SF_E1 + C422_RELPWHLSFE1
+  rhs     D418_EXP1_TD[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixCvpPumping2IF {
+  lhs     D418_EXP1_IF
+  rhs     D418_EXP1_IF[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixCvpPumping3TD {
+  lhs     D418_EXP2_TD + D408_P_WHL_SF_E2 + C422_RELPWHLSFE2
+  rhs     D418_EXP2_TD[WHEELCVC]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixCvpPumping3IF {
+  lhs     D418_EXP2_IF
+  rhs     D418_EXP2_IF[WHEELCVC]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
