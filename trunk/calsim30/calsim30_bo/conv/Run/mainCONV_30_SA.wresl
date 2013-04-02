@@ -1369,7 +1369,7 @@ MODEL WHEELCVC {      !CYCLE 15
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
     INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-!    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA.wresl'
+!    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_TRANSFERS_STAGE1.wresl'
 
     INCLUDE[LOCAL] 'coa\coa_bo.wresl'
 
@@ -1509,7 +1509,7 @@ MODEL WHEELJPOD {      !CYCLE 16
     INCLUDE [LOCAL] '..\..\common\Delta\SoDeltaChannels\SoDeltaChannels.wresl'
     INCLUDE[local] '..\..\common\export_ops\DELTA_RPA2.wresl'
     INCLUDE[local] '..\..\common\shortage\shortage.wresl'
-!    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_DELTA.wresl'
+!    INCLUDE[local] '..\..\common\Delta\IsolatedFacility\IFDiversionCriteria_DailyOps_WHEELCVC.wresl'
 
     INCLUDE[LOCAL] 'coa\coa_bo.wresl'
 
