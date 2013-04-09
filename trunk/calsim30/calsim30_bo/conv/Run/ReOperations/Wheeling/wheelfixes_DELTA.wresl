@@ -1,5 +1,5 @@
 ! fix swp and coa operations to that without wheeling
-/*
+/*!Fix diversions and flow to NODOS reservoirs
 goal fixD14401_NORM {
   lhs     D14401_NORM
   rhs     D14401_NORM[DELTA]
@@ -48,7 +48,7 @@ goal fixc177E {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-*/
+*/!Fix pumping
 goal fixSwpPumping1TD {
   lhs     D419_swp_TD + D408_P_WHL_SB + C422_REL_P_WHLSB
   rhs     D419_swp_TD[DELTA]
@@ -91,7 +91,7 @@ goal fixCvpPumping1TD {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixCvpPumping1IF {
+goal fixCvpPumping1IF { 
   lhs     D418_cvp_IF
   rhs     D418_cvp_IF[DELTA]
   lhs>rhs penalty 99999
@@ -187,20 +187,20 @@ goal fixPartnerPumping {
   lhs>rhs penalty 0
   lhs<rhs penalty 99999
 }
-/*
-goal fixfeatherretflow {
-  lhs     c137
-  rhs     c137[DELTA]
+
+goal fixsacsloughflow {
+  lhs     C_SSL001
+  rhs     C_SSL001[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
 goal fixyubaflow {
-  lhs     C230
-  rhs     C230[DELTA]
+  lhs     C_YUB002
+  rhs     C_YUB002[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixd207a {
+/*goal fixd207a {
   lhs     d207a
   rhs     d207a[DELTA]
   lhs>rhs penalty 99999
@@ -211,10 +211,10 @@ goal fixd207b {
   rhs     d207b[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
-}
+}*/
 goal fixbearflow {
-  lhs     c282
-  rhs     c282[DELTA]
+  lhs     C_BRR004
+  rhs     C_BRR004[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
@@ -226,13 +226,48 @@ goal fixbearflow {
 !  lhs<rhs penalty 99999
 !}
 
-goal fixfeatherexport {
-  lhs     c225
-  rhs     c225[DELTA]
+goal fixD_BRR017_23_NA {
+  lhs     D_BRR017_23_NA
+  rhs     D_BRR017_23_NA[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-*/
+goal fixC_CBC000 {
+  lhs     C_CBC000
+  rhs     C_CBC000[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_BRR050_BEC000 {
+  lhs     D_BRR050_BEC000
+  rhs     D_BRR050_BEC000[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_LBR002 {
+  lhs     C_LBR002
+  rhs     C_LBR002[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_DRM011 {
+  lhs     C_DRM011
+  rhs     C_DRM011[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_DRM001_BRR074 {
+  lhs     D_DRM001_BRR074
+  rhs     D_DRM001_BRR074[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_SYC002_BRR074 {
+  lhs     D_SYC002_BRR074
+  rhs     D_SYC002_BRR074[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
 goal fixcvprefuge {
   lhs     d705
   rhs     d705[DELTA]
@@ -329,7 +364,8 @@ goal fixIBU {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixC_SAC000_ADD_ANN {
+
+/*goal fixC_SAC000_ADD_ANN {
   lhs     C_SAC000_ADD_ANN
   rhs     C_SAC000_ADD_ANN[delta]
   lhs>rhs penalty 99999
@@ -346,30 +382,77 @@ goal fixC_SAC000_ADD_CVP {
   rhs     C_SAC000_ADD_CVP[delta]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
-}
-
-/*
-goal fixc184a {
-  lhs     c184a
-  rhs     c184a[DELTA]
-  lhs>rhs penalty 99999
-  lhs<rhs penalty 99999
-}
-goal fixgc184b {
-  lhs     c184b
-  rhs     c184b[DELTA]
-  lhs>rhs penalty 99999
-  lhs<rhs penalty 99999
-}
-goal fixc152a {
-  lhs     c152a
-  rhs     c152a[DELTA]
-  lhs>rhs penalty 99999
-  lhs<rhs penalty 99999
-}
-goal fixgc152b {
-  lhs     c152b
-  rhs     c152b[DELTA]
-  lhs>rhs penalty 99999
-  lhs<rhs penalty 99999
 }*/
+
+goal fixC_CBD000 {
+  lhs     C_CBD000
+  rhs     C_CBD000[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_CBD001_KLR005 {
+  lhs     D_CBD001_KLR005
+  rhs     D_CBD001_KLR005[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_KLR005 {
+  lhs     C_KLR005
+  rhs     C_KLR005[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_KLR005_21_PA {
+  lhs     D_KLR005_21_PA
+  rhs     D_KLR005_21_PA[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_CCH003 {
+  lhs     C_CCH003
+  rhs     C_CCH003[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_WSB005 {
+  lhs     C_WSB005
+  rhs     C_WSB005[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixC_PTH007 {
+  lhs     C_PTH007
+  rhs     C_PTH007[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixD_CSL005_25_NA {
+  lhs     D_CSL005_25_NA
+  rhs     D_CSL005_25_NA[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixR_EAWWTP_CSL005 {
+  lhs     R_EAWWTP_CSL005
+  rhs     R_EAWWTP_CSL005[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixR_25_NA_CSL005 {
+  lhs     R_25_NA_CSL005
+  rhs     R_25_NA_CSL005[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixR_WLWWTP_YBP032 {
+  lhs     R_WLWWTP_YBP032
+  rhs     R_WLWWTP_YBP032[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
+goal fixR_21_PA_YBP032 {
+  lhs     R_21_PA_YBP032
+  rhs     R_21_PA_YBP032[DELTA]
+  lhs>rhs penalty 99999
+  lhs<rhs penalty 99999
+}
