@@ -194,13 +194,13 @@ goal fixsacsloughflow {
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-goal fixyubaflow {
+/*goal fixyubaflow {
   lhs     C_YUB002
   rhs     C_YUB002[DELTA]
   lhs>rhs penalty 99999
   lhs<rhs penalty 99999
 }
-/*goal fixd207a {
+goal fixd207a {
   lhs     d207a
   rhs     d207a[DELTA]
   lhs>rhs penalty 99999
