@@ -72,7 +72,7 @@ define Class1_delivered {
         case march {
             condition month == mar
             value 0.0 }
-        case initial {
+        case initialCase {
             condition month < mar .and. wateryear == 1922
             value 0.0 }
         case otherwise {
@@ -261,7 +261,7 @@ define Class2_delivered {
         case march {
             condition month == mar
             value 0.0 }
-        case initial {
+        case initialCase {
             condition month < mar .and. wateryear == 1922
             value 0.0 }
         case otherwise {
