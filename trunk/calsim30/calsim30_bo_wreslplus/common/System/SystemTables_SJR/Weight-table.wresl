@@ -1,4 +1,4 @@
-Objective obj = {[C10DO,18500],
+Objective obj_SYS_SJR = {[C10DO,18500],
 [C10F,-1000000],
 [C10INSTREAM,20100],
 [C10MIN,18000],
