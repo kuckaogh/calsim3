@@ -124,7 +124,7 @@ define EstCVPSodExp {
 	value min(CVPexportcap, max(TracyMinPumpLevel, EstCVPSodDem + EstCVPSodRC), EstCVPMaxExp_RPA )
     }
 ! If there is another intake (Isolated Facility ND intake) do not constrain
-    case IF{
+    case IFCase{
 	condition always
         value     min(CVPexportcap, max(TracyMinPumpLevel, EstCVPSodDem + EstCVPSodRC))
     }
