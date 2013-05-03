@@ -24,83 +24,75 @@ SEQUENCE CYCLE5 {
      condition month>=APR .and. month<=SEP
     order   5
     }
-SEQUENCE CYCLE6 {
-    model   GW_INITIAL
-    order   6
-    }
-SEQUENCE CYCLE7 {
-    model   GW_FIRST
-    order   7
-    }
-SEQUENCE CYCLE8 {
-    model   GW_SECOND
-    order   8
-    }
-SEQUENCE CYCLE9 {
-    model   GW_THIRD
-    order   9
-    }
-SEQUENCE CYCLE10 {
-    model   SETUP
-    order   10
-    }    
-SEQUENCE CYCLE11 {
-    model   MONTHLYWEIGHTED
-    order   11
-    }
-SEQUENCE CYCLE12 {
-    model   UPSTREAM
-    order   12
-    }
-SEQUENCE CYCLE13 {
-    model   DELTA
-    order   13
-    }
-SEQUENCE CYCLE14 {
-    model   TRANSFERS_STAGE1
-    order   14
-    }
-SEQUENCE CYCLE15 {
-    model   WHEELCVC
-    order   15
-    }
-SEQUENCE CYCLE16 {
-    model   WHEELJPOD
-    order   16
-    }
+!SEQUENCE CYCLE6 {
+!    model   GW_INITIAL
+!    order   6
+!    }
+!SEQUENCE CYCLE7 {
+!    model   GW_FIRST
+!    order   7
+!    }
+!SEQUENCE CYCLE8 {
+!    model   GW_SECOND
+!    order   8
+!    }
+!SEQUENCE CYCLE9 {
+!    model   GW_THIRD
+!    order   9
+!    }
+!SEQUENCE CYCLE10 {
+!    model   SETUP
+!    order   10
+!    }    
+!SEQUENCE CYCLE11 {
+!    model   MONTHLYWEIGHTED
+!    order   11
+!    }
+!SEQUENCE CYCLE12 {
+!    model   UPSTREAM
+!    order   12
+!    }
+!SEQUENCE CYCLE13 {
+!    model   DELTA
+!    order   13
+!    }
+!SEQUENCE CYCLE14 {
+!    model   TRANSFERS_STAGE1
+!    order   14
+!    }
+!SEQUENCE CYCLE15 {
+!    model   WHEELCVC
+!    order   15
+!    }
+!SEQUENCE CYCLE16 {
+!    model   WHEELJPOD
+!    order   16
+!    }
 
-MODEL SJRBASE {         !CYCLE 1
+group CommonGroup { 
     INCLUDE '..\..\common\NewFacilitySwitches.wresl'
     INCLUDE '..\..\common\LevelofDevelopment.wresl'
     INCLUDE '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_JobControl.wresl'
     INCLUDE '..\..\common\CAAFramework\LCPSIM\LCPSIM_Defines.wresl'
     INCLUDE '..\..\common\CAAFramework\LCPSIM\LCPSIM_to_CALSIM_linkage.wresl'
 !    INCLUDE '..\..\common\Baseline\SanLuisLimitsDefs.wresl'
-
     INCLUDE '..\..\common\sanjoaquin\Various\definitions\SJR_GWPumpingSplits.wresl'
     INCLUDE 'Restoration\AprPartInflow.wresl'    
     INCLUDE '..\..\common\System\System_SJR.wresl'
-
     INCLUDE '..\..\common\wytypes\wytypes.wresl'
-
 !    INCLUDE '..\..\common\System\System_MOK.wresl'
-
-    INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCommon1.wresl'    
-
-
-!CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
-    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefsLocal.wresl'
+    INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCommon1.wresl'   
+ 
     INCLUDE '..\..\common\Cycle1thru5SystemDefsGlobal.wresl'  
 
-    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersZeroOps_Cyc1thru5.wresl'    
 !    INCLUDE '..\..\common\hydrology\demands\demands_defs.wresl'
 !    INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod.wresl'         !Comment in for EWA runs
     INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_PreCONV.wresl'   !Comment in for non-EWA runs WTS runs
 !    INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI.wresl'   !Comment in for non-EWA runs
 
     INCLUDE 'BaseStudyResults\BaseStudyResults.wresl'                !Read in results from B2-submodel
-    INCLUDE[local] '..\..\common\B2Actions\B2VarDefine.wresl'   !Set up for reimplementing B2 actions !CB made local (arc/dvar conflict)
-    INCLUDE '..\..\common\B2Actions\Repeat\B2ActConditionsFix.wresl'        !Set up for reimplementing B2 actions
+ 
+	INCLUDE '..\..\common\B2Actions\Repeat\B2ActConditionsFix.wresl'        !Set up for reimplementing B2 actions
 
     INCLUDE '..\..\common\hydrology\forecast\forecast.wresl'
 !    INCLUDE '..\..\common\cvp_dellogic\cvp_dellogic_sys\cvp_dellogic_sys_cycle1.wresl' !use for WSI training / remove for runs that Stage1 Transfers
@@ -115,25 +107,46 @@ MODEL SJRBASE {         !CYCLE 1
     INCLUDE '..\..\common\sanjoaquin\Friant\SJRR_Rest_off.wresl'
 !    INCLUDE '..\..\common\sanjoaquin\Friant\SJRR_Rest.wresl'                     !Turns on SJRR Operations    
     INCLUDE '..\..\common\sanjoaquin\SanJoaquinCore.wresl'
+    INCLUDE '..\..\common\SouthofDelta\NODOS\NODOS_L4Refuge_SOD.wresl'	
+	INCLUDE '..\..\common\System\SystemTables_SJR\weight-table.wresl'
+
+    INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCommon2.wresl'
+    INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCyc1.wresl'  
+}
+
+!group PreSetup {
+!	
+!	
+!	
+!}
+
+MODEL SJRBASE {         !CYCLE 1
+
+	include group CommonGroup 
+    
+!CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
+    
+    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefsLocal.wresl'
+    INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersZeroOps_Cyc1thru5.wresl'    
+	
+    INCLUDE[local] '..\..\common\B2Actions\B2VarDefine.wresl'   !Set up for reimplementing B2 actions !CB made local (arc/dvar conflict)
+
     INCLUDE[LOCAL] '..\..\common\sanjoaquin\Friant\SJR_Rest_Req_Off_Local.wresl'
 !    INCLUDE[LOCAL] '..\..\common\sanjoaquin\Friant\SJR_Rest_Req_Local.wresl'     !Turns on SJRR Operations
     INCLUDE[LOCAL] '..\..\common\SanJoaquin\Delta\ZeroAOWater.wresl'    
-    INCLUDE '..\..\common\SouthofDelta\NODOS\NODOS_L4Refuge_SOD.wresl'
+
     INCLUDE[local] '..\..\common\sanjoaquin\various\SetWSReturns\SetWSRetcycle1thru5.wresl' !fixing return flows into SJR by fixing associated deliveries
     INCLUDE[LOCAL] '..\..\common\sanjoaquin\PurchasedWater\InstreamFromOID.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\Stanislaus\stan_FW_min.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\Tuolumne\tuol_FERC_min.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\various\bounds_cycles\bounds_cycle1.wresl'
-    INCLUDE '..\..\common\System\SystemTables_SJR\weight-table.wresl'
 
-    INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCommon2.wresl'
-    INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\IntegratedOperationsCyc1.wresl'    
-
-!    INCLUDE '..\..\common\northofdelta\yuba\Yuba_Definition.wresl'
-!    INCLUDE '..\..\common\northofdelta\yuba\wateryear_index.wresl'
-!    INCLUDE[LOCAL]       '..\..\common\northofdelta\yuba\AnnualAllocation.wresl'
-     }
+	}
+     
 MODEL SJR_WQ1 {         !CYCLE 2
+
+	include group CommonGroup
+
 !CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
     INCLUDE[local] '..\..\common\Cycle1thru5SystemDefsLocal.wresl'
     
@@ -150,6 +163,9 @@ MODEL SJR_WQ1 {         !CYCLE 2
      }
 
 MODEL SJR_PULSE {            !CYCLE 3
+
+	include group CommonGroup
+
 !CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
     INCLUDE[local] '..\..\common\Cycle1thru5SystemDefsLocal.wresl'
 
@@ -166,6 +182,9 @@ MODEL SJR_PULSE {            !CYCLE 3
      }
 
 MODEL SJR_WQ2 {         !CYCLE 4
+
+	include group CommonGroup
+	
 !CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
     INCLUDE[local] '..\..\common\Cycle1thru5SystemDefsLocal.wresl'
 
@@ -182,6 +201,9 @@ MODEL SJR_WQ2 {         !CYCLE 4
      }
 
 MODEL VAMP_AND_DO {           !CYCLE 5
+
+	include group CommonGroup
+	
 !CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
     INCLUDE[local] '..\..\common\Cycle1thru5SystemDefsLocal.wresl'
 
@@ -200,6 +222,10 @@ MODEL VAMP_AND_DO {           !CYCLE 5
 
 
 MODEL GW_INITIAL {      !CYCLE 6 (also functions as the PRESETUP cycle)
+
+
+	include group CommonGroup
+	
     define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE '..\..\common\CCWD\LVM_System.wresl'
 
