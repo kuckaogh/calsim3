@@ -220,7 +220,7 @@ define D_ELD012_04_NA 	{std kind 'DIVERSION' units 'CFS'}
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Feather River !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define D_OROVL_13_NU1 	{std kind 'DIVERSION' units 'CFS'}
+define D_OROVL_13_NU1 	{lower 0 upper 25 kind 'DIVERSION' units 'CFS'} !Estimate of current canal capacity from SFWPA.
 define D_FTR068_THRMF 	{std kind 'DIVERSION' units 'CFS'}
 define D_THRMF_11_NU1 	{std kind 'DIVERSION' units 'CFS'}
 define D_THRMF_12_NU1 	{std kind 'DIVERSION' units 'CFS'}

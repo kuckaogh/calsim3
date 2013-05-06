@@ -79,13 +79,13 @@ define DL_02_NA          {std kind 'DELIVERY-LOSS' units 'CFS'}
 ! 2_SA -
 !=============================================
 define EVF_SAC296_02_SA  {value 0.01} !evaporative loss fraction
-define DPF_SAC296_02_SA  {value 0.145} !deep percolation loss fraction
-define LFF_SAC296_02_SA  {value 0.145} !lateral flow loss fraction lateral flow
+define DPF_SAC296_02_SA  {value 0.12} !deep percolation loss fraction
+define LFF_SAC296_02_SA  {value 0.12} !lateral flow loss fraction lateral flow
 define OSF_SAC296_02_SA  {value 0.30} !canal operating spill fraction
 
 define RUFR_02_SA   	{value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
 define RUFO_02_SA   	{value 0.05} !reuse fraction for all other crops
-define RPF_02_SA    	{value 0.07} !riparian and miscellaneous ET fraction
+define RPF_02_SA    	{value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_02_SA          {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_02_SA          {std kind 'DEEP-PERCOLATION' units 'CFS'}
@@ -193,13 +193,13 @@ define DL_03_PA         	{std kind 'DELIVERY-LOSS' units 'CFS'}
 ! 3_SA -
 !=============================================
 define EVF_SAC289_03_SA  {value 0.01} !evaporative loss fraction
-define DPF_SAC289_03_SA  {value 0.17} !deep percolation loss fraction
-define LFF_SAC289_03_SA  {value 0.17} !lateral flow loss fraction lateral flow
+define DPF_SAC289_03_SA  {value 0.12} !deep percolation loss fraction
+define LFF_SAC289_03_SA  {value 0.12} !lateral flow loss fraction lateral flow
 define OSF_SAC289_03_SA  {value 0.30} !canal operating spill fraction
 
 define RUFR_03_SA   {value RUFR5*TWAWRatio}!reuse fraction for irrigated rice
-define RUFO_03_SA   {value 0.00} !reuse fraction for all other crops
-define RPF_03_SA    {value 0.07} !riparian and miscellaneous ET fraction
+define RUFO_03_SA   {value 0.05} !reuse fraction for all other crops
+define RPF_03_SA    {value 0.05} !riparian and miscellaneous ET fraction
 
 define EV_03_SA          {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
 define DP_03_SA          {std kind 'DEEP-PERCOLATION' units 'CFS'}
@@ -1151,7 +1151,14 @@ define SF_WTPMNR_13_NU1       {value 0.0}
 
 define DL_WTPMNR_13_NU1       {std kind 'DELIVERY-LOSS'  units 'CFS'}
 define EL_WTPMNR_13_NU1       {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define SL_WTPMNR_13_NU1       {std kind 'SEENUGE-LOSS'     units 'CFS'}
+define SL_WTPMNR_13_NU1       {std kind 'SEEPAGE-LOSS'     units 'CFS'}
+
+define EF_OROVL_13_NU1       {value 0.0}
+define SF_OROVL_13_NU1       {value 0.8}
+
+define DL_OROVL_13_NU1       {std kind 'DELIVERY-LOSS'  units 'CFS'}
+define EL_OROVL_13_NU1       {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
+define SL_OROVL_13_NU1       {std kind 'SEEPAGE-LOSS'     units 'CFS'}
 
 define DL_13_NU1         {std kind 'DELIVERY-LOSS' units 'CFS'}
 
@@ -1164,7 +1171,7 @@ define SF_MNRRH_13_NU2        {value 0.0}
 
 define DL_MNRRH_13_NU2        {std kind 'DELIVERY-LOSS'  units 'CFS'}
 define EL_MNRRH_13_NU2        {std kind 'EVAPORATIVE-LOSS' units 'CFS'}
-define SL_MNRRH_13_NU2        {std kind 'SEENUGE-LOSS'     units 'CFS'}
+define SL_MNRRH_13_NU2        {std kind 'SEEPAGE-LOSS'     units 'CFS'}
 
 define DL_13_NU2         {std kind 'DELIVERY-LOSS' units 'CFS'}
 

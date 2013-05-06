@@ -588,6 +588,14 @@ goal setDN_11_SA4   {DN_11_SA4 = DG_11_SA4 - DL_11_SA4}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
 goal meetAW_11_SA4  {AW_11_SA4 + RP_11_SA4 = DN_11_SA4 + GP_11_SA4 + RU_11_SA4 } ! + SHRTG_11_SA4 }
 
+! Encourage use of Sunset Pumps
+goal setDG_11_SA4_2 {
+	lhs D_FTR039_SEC009
+	rhs 0.05*DG_11_SA4
+	lhs > rhs penalty 0
+	lhs < rhs penalty 9999
+}
+
 !======================================================================
 ! 11_NU1
 !======================================================================
@@ -685,6 +693,10 @@ goal setDN_13_NA    {DN_13_NA = DG_13_NA - DL_13_NA}
 ! Total Applied Water = net surface delivery + groundwater pumping + reuse
 goal meetAW_13_NA   {AW_13_NA + RP_13_NA = DN_13_NA + GP_13_NA + RU_13_NA } ! + SHRTG_13_NA }
 
+!Add code for sharing of water supplies from Forbestown Ditch and Miners Ranch Canal
+! Placeholder - assume used equally
+goal setDG_13_NA_2 {D_OWC000_13_NA = 0.5 * DG_13_NA}
+
 !======================================================================
 ! 13_NU1
 !======================================================================
@@ -693,6 +705,8 @@ goal setDG_13_NU1   {DG_13_NU1 = D_WTPMNR_13_NU1 + D_OROVL_13_NU1}
 goal setDN_13_NU1   {DN_13_NU1 = DG_13_NU1 - DL_13_NU1}
 ! Total Applied Water = net surface delivery + groundwater pumping
 goal setUD_13_NU1   {UD_13_NU1 = DN_13_NU1 + GP_13_NU1 } ! + SHRTG_13_NU1 }
+
+goal set_D_OROVL_13_NU1 {D_OROVL_13_NU1 - DL_OROVL_13_NU1 < UD_13_NU1 * 0.19} !Factor estimated from historical diversions (5.7 TAF/yr)), demand (6.0 TAF/yr) and 80% diversion loss.
 
 !======================================================================
 ! 13_NU2

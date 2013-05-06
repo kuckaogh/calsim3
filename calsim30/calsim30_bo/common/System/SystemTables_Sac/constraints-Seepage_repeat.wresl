@@ -185,7 +185,7 @@ goal setGCC050_250 { SG_GCC050_250 = - GetSeep(313)   / cfs_cfm }
 goal setGCC056_258 { SG_GCC056_258 = - GetSeep(314)   / cfs_cfm }
 goal setGCC060_266 { SG_GCC060_266 = - GetSeep(315)   / cfs_cfm }
 goal setGCC065_267 { SG_GCC065_267 = - GetSeep(316)   / cfs_cfm }
-*/
+
 goal setGCC010_139 { SG_GCC010_139 = SG_GCC010_139 [gw_initial] }
 goal setGCC015_154 { SG_GCC015_154 = SG_GCC015_154 [gw_initial] }
 goal setGCC022_169 { SG_GCC022_169 = SG_GCC022_169 [gw_initial] }
@@ -199,7 +199,7 @@ goal setGCC050_250 { SG_GCC050_250 = SG_GCC050_250 [gw_initial] }
 goal setGCC056_258 { SG_GCC056_258 = SG_GCC056_258 [gw_initial] }
 goal setGCC060_266 { SG_GCC060_266 = SG_GCC060_266 [gw_initial] }
 goal setGCC065_267 { SG_GCC065_267 = SG_GCC065_267 [gw_initial] }
-
+*/
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!! Mill Creek          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        !
@@ -394,7 +394,7 @@ goal setSG_DRC_Total 	{SG_DRC_Total = SG_DRC010_096 + SG_DRC005_100}
 goal setSG_ELD_Total 	{SG_ELD_Total = SG_ELD027_081 + SG_ELD022_082 + SG_ELD017_083 + SG_ELD012_084 + SG_ELD005_085}     
 goal setSG_FTR_Total 	{SG_FTR_Total = SG_FTR068_162 + SG_FTR063_161 + SG_FTR059_177 + SG_FTR053_192 + SG_FTR048_208 + SG_FTR045_232 + SG_FTR036_246 + SG_FTR029_283 + SG_FTR025_295 + SG_FTR021_307 + SG_FTR016_318 + SG_FTR012_330 + SG_FTR008_329 + SG_FTR003_340}     
 !goal setSG_FSC_Total 	{SG_FSC_Total = SG_FSC003}
-goal setSG_GCC_Total 	{SG_GCC_Total = SG_GCC010_139 + SG_GCC015_154 + SG_GCC022_169 + SG_GCC027_183 + SG_GCC032_198 + SG_GCC036_211 + SG_GCC039_216 + SG_GCC042_227 + SG_GCC046_236 + SG_GCC050_250 + SG_GCC056_258 + SG_GCC060_266 + SG_GCC065_267}     
+!goal setSG_GCC_Total 	{SG_GCC_Total = SG_GCC010_139 + SG_GCC015_154 + SG_GCC022_169 + SG_GCC027_183 + SG_GCC032_198 + SG_GCC036_211 + SG_GCC039_216 + SG_GCC042_227 + SG_GCC046_236 + SG_GCC050_250 + SG_GCC056_258 + SG_GCC060_266 + SG_GCC065_267}     
 goal setSG_MLC_Total 	{SG_MLC_Total = SG_MLC006_088 + SG_MLC004_087}     
 goal setSG_PYN_Total 	{SG_PYN_Total = SG_PYN001_046}     
 goal setSG_PTH_Total 	{SG_PTH_Total = SG_PTH024_428 + SG_PTH020_410 + SG_PTH015_411 + SG_PTH011_412 + SG_PTH007_413}     
@@ -411,5 +411,5 @@ goal setSG_YBP_Total 	{SG_YBP_Total = SG_YBP032_360 + SG_YBP026_401 + SG_YBP023_
 goal setSG_YUB_Total 	{SG_YUB_Total = SG_YUB011_285 + SG_YUB006_284}
 
 ! Calculate total river seepage for Sac basin
-goal setSG_Total 	{SG_Total = SG_AMR_Total + SG_ANT_Total + SG_BTL_Total + SG_BRR_Total + SG_BCC_Total + SG_BTC_Total + SG_CCH_Total + SG_CBD_Total + SG_CWD_Total + SG_COW_Total + SG_DRC_Total + SG_ELD_Total + SG_FTR_Total + SG_GCC_Total + SG_MLC_Total + SG_PYN_Total + SG_PTH_Total + SG_SAC_Total + SG_STN_Total + SG_SBP_Total + SG_THM_Total + SG_YBP_Total + SG_YUB_Total}
+goal setSG_Total 	{SG_Total = SG_AMR_Total + SG_ANT_Total + SG_BTL_Total + SG_BRR_Total + SG_BCC_Total + SG_BTC_Total + SG_CCH_Total + SG_CBD_Total + SG_CWD_Total + SG_COW_Total + SG_DRC_Total + SG_ELD_Total + SG_FTR_Total /*+ SG_GCC_Total*/ + SG_MLC_Total + SG_PYN_Total + SG_PTH_Total + SG_SAC_Total + SG_STN_Total + SG_SBP_Total + SG_THM_Total + SG_YBP_Total + SG_YUB_Total}
 

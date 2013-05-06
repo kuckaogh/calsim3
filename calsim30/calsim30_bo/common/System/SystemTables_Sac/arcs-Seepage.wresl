@@ -203,7 +203,7 @@ define	SG_FTR_Total		{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Glenn_Colusa Canal	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-define	SG_GCC010_139_est	{timeseries kind 'STREAM-GAIN' units 'TAF' convert 'CFS'}!139		304
+/*define	SG_GCC010_139_est	{timeseries kind 'STREAM-GAIN' units 'TAF' convert 'CFS'}!139		304
 define	SG_GCC015_154_est	{timeseries kind 'STREAM-GAIN' units 'TAF' convert 'CFS'}!154		305
 define	SG_GCC022_169_est	{timeseries kind 'STREAM-GAIN' units 'TAF' convert 'CFS'}!169		306
 define	SG_GCC027_183_est	{timeseries kind 'STREAM-GAIN' units 'TAF' convert 'CFS'}!183		307
@@ -232,7 +232,7 @@ define	SG_GCC060_266	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 define	SG_GCC065_267	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}!268		316
 
 define	SG_GCC_Total	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-											  !
+*/											  !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! Mill Creek		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -484,8 +484,8 @@ define	SG_FTR_Total2	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 !define	SG_FSC_Total1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 !define	SG_FSC_Total2	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 
-define	SG_GCC_Total1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-define	SG_GCC_Total2	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+!define	SG_GCC_Total1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+!define	SG_GCC_Total2	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 
 define	SG_MLC_Total1	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 define	SG_MLC_Total2	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
@@ -571,8 +571,8 @@ define	SG_FTR_Total4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units '
 !define	SG_FSC_Total3	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 !define	SG_FSC_Total4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 
-define	SG_GCC_Total3	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
-define	SG_GCC_Total4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+!define	SG_GCC_Total3	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
+!define	SG_GCC_Total4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 
 define	SG_MLC_Total3	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
 define	SG_MLC_Total4	{lower unbounded upper unbounded kind 'STREAM-GAIN' units 'CFS'}
