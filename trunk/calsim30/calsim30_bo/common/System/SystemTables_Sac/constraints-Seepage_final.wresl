@@ -89,7 +89,7 @@ goal setFTR016_318 { SG_FTR016_318 =  SG_FTR016_318[setup]    }
 goal setFTR012_330 { SG_FTR012_330 =  SG_FTR012_330[setup]    }
 goal setFTR008_329 { SG_FTR008_329 =  SG_FTR008_329[setup]    }
 goal setFTR003_340 { SG_FTR003_340 =  SG_FTR003_340[setup]    }
-goal setGCC010_139 { SG_GCC010_139 =  SG_GCC010_139[setup]    }
+/*goal setGCC010_139 { SG_GCC010_139 =  SG_GCC010_139[setup]    }
 goal setGCC015_154 { SG_GCC015_154 =  SG_GCC015_154[setup]    }
 goal setGCC022_169 { SG_GCC022_169 =  SG_GCC022_169[setup]    }
 goal setGCC027_183 { SG_GCC027_183 =  SG_GCC027_183[setup]    }
@@ -101,7 +101,7 @@ goal setGCC046_236 { SG_GCC046_236 =  SG_GCC046_236[setup]    }
 goal setGCC050_250 { SG_GCC050_250 =  SG_GCC050_250[setup]    }
 goal setGCC056_258 { SG_GCC056_258 =  SG_GCC056_258[setup]    }
 goal setGCC060_266 { SG_GCC060_266 =  SG_GCC060_266[setup]    }
-goal setGCC065_267 { SG_GCC065_267 =  SG_GCC065_267[setup]    }
+goal setGCC065_267 { SG_GCC065_267 =  SG_GCC065_267[setup]    }*/
 goal setMLC006_088 { SG_MLC006_088 =  SG_MLC006_088[setup]    }
 goal setMLC004_087 { SG_MLC004_087 =  SG_MLC004_087[setup]    }
 goal setPYN001_046 { SG_PYN001_046 =  SG_PYN001_046[setup]    }
@@ -211,7 +211,7 @@ goal setSG_DRC_Total {SG_DRC_Total = SG_DRC010_096 + SG_DRC005_100}
 goal setSG_ELD_Total {SG_ELD_Total = SG_ELD027_081 + SG_ELD022_082 + SG_ELD017_083 + SG_ELD012_084 + SG_ELD005_085}     
 goal setSG_FTR_Total {SG_FTR_Total = SG_FTR068_162 + SG_FTR063_161 + SG_FTR059_177 + SG_FTR053_192 + SG_FTR048_208 + SG_FTR045_232 + SG_FTR036_246 + SG_FTR029_283 + SG_FTR025_295 + SG_FTR021_307 + SG_FTR016_318 + SG_FTR012_330 + SG_FTR008_329 + SG_FTR003_340}     
 !goal setSG_FSC_Total {SG_FSC_Total = SG_FSC003}
-goal setSG_GCC_Total {SG_GCC_Total = SG_GCC010_139 + SG_GCC015_154 + SG_GCC022_169 + SG_GCC027_183 + SG_GCC032_198 + SG_GCC036_211 + SG_GCC039_216 + SG_GCC042_227 + SG_GCC046_236 + SG_GCC050_250 + SG_GCC056_258 + SG_GCC060_266 + SG_GCC065_267}     
+!goal setSG_GCC_Total {SG_GCC_Total = SG_GCC010_139 + SG_GCC015_154 + SG_GCC022_169 + SG_GCC027_183 + SG_GCC032_198 + SG_GCC036_211 + SG_GCC039_216 + SG_GCC042_227 + SG_GCC046_236 + SG_GCC050_250 + SG_GCC056_258 + SG_GCC060_266 + SG_GCC065_267}     
 goal setSG_MLC_Total {SG_MLC_Total = SG_MLC006_088 + SG_MLC004_087}     
 goal setSG_PYN_Total {SG_PYN_Total = SG_PYN001_046}     
 goal setSG_PTH_Total {SG_PTH_Total = SG_PTH024_428 + SG_PTH020_410 + SG_PTH015_411 + SG_PTH011_412 + SG_PTH007_413}     
@@ -228,7 +228,7 @@ goal setSG_YBP_Total {SG_YBP_Total = SG_YBP032_360 + SG_YBP026_401 + SG_YBP023_4
 goal setSG_YUB_Total {SG_YUB_Total = SG_YUB011_285 + SG_YUB006_284}
 
 ! Calculate total river seepage for Sac basin
-goal setSG_Total 		{SG_Total = SG_AMR_Total + SG_ANT_Total + SG_BTL_Total + SG_BRR_Total + SG_BCC_Total + SG_BTC_Total + SG_CCH_Total + SG_CBD_Total + SG_CWD_Total + SG_COW_Total + SG_DRC_Total + SG_ELD_Total + SG_FTR_Total + SG_GCC_Total + SG_MLC_Total + SG_PYN_Total + SG_PTH_Total + SG_SAC_Total + SG_STN_Total + SG_SBP_Total + SG_THM_Total + SG_YBP_Total + SG_YUB_Total}
+goal setSG_Total 		{SG_Total = SG_AMR_Total + SG_ANT_Total + SG_BTL_Total + SG_BRR_Total + SG_BCC_Total + SG_BTC_Total + SG_CCH_Total + SG_CBD_Total + SG_CWD_Total + SG_COW_Total + SG_DRC_Total + SG_ELD_Total + SG_FTR_Total /*+ SG_GCC_Total*/ + SG_MLC_Total + SG_PYN_Total + SG_PTH_Total + SG_SAC_Total + SG_STN_Total + SG_SBP_Total + SG_THM_Total + SG_YBP_Total + SG_YUB_Total}
 
 !Output seepage from SETUP cycle
 /*
@@ -253,7 +253,7 @@ goal setSG_DRC_Total1	{SG_DRC_Total1 	= SG_DRC_Total[gw_initial]}
 goal setSG_ELD_Total1 	{SG_ELD_Total1 	= SG_ELD_Total[gw_initial]} 	
 goal setSG_FTR_Total1 	{SG_FTR_Total1 	= SG_FTR_Total[gw_initial]}
 !goal setSG_FSC_Total1 	{SG_FSC_Total1 	= SG_FSC_Total[gw_initial]}
-goal setSG_GCC_Total1 	{SG_GCC_Total1 	= SG_GCC_Total[gw_initial]} 	
+!goal setSG_GCC_Total1 	{SG_GCC_Total1 	= SG_GCC_Total[gw_initial]} 	
 goal setSG_MLC_Total1 	{SG_MLC_Total1 	= SG_MLC_Total[gw_initial]} 	
 goal setSG_PYN_Total1 	{SG_PYN_Total1 	= SG_PYN_Total[gw_initial]} 	
 goal setSG_PTH_Total1 	{SG_PTH_Total1 	= SG_PTH_Total[gw_initial]} 	
@@ -268,7 +268,7 @@ goal setSG_SBP_Total1 	{SG_SBP_Total1 	= SG_SBP_Total[gw_initial]}
 goal setSG_THM_Total1 	{SG_THM_Total1 	= SG_THM_Total[gw_initial]} 	
 goal setSG_YBP_Total1 	{SG_YBP_Total1	= SG_YBP_Total[gw_initial]} 	
 goal setSG_YUB_Total1 	{SG_YUB_Total1 	= SG_YUB_Total[gw_initial]}
-goal setSG_Total1 	{SG_Total1 = SG_AMR_Total1 + SG_ANT_Total1 + SG_BTL_Total1 + SG_BRR_Total1 + SG_BCC_Total1 + SG_BTC_Total1 + SG_CCH_Total1 + SG_CBD_Total1 + SG_CWD_Total1 + SG_COW_Total1 + SG_DRC_Total1 + SG_ELD_Total1 + SG_FTR_Total1 + SG_GCC_Total1 + SG_MLC_Total1 + SG_PYN_Total1 + SG_PTH_Total1 + SG_SAC_Total1 + SG_STN_Total1 + SG_SBP_Total1 + SG_THM_Total1 + SG_YBP_Total1 + SG_YUB_Total1}
+goal setSG_Total1 	{SG_Total1 = SG_AMR_Total1 + SG_ANT_Total1 + SG_BTL_Total1 + SG_BRR_Total1 + SG_BCC_Total1 + SG_BTC_Total1 + SG_CCH_Total1 + SG_CBD_Total1 + SG_CWD_Total1 + SG_COW_Total1 + SG_DRC_Total1 + SG_ELD_Total1 + SG_FTR_Total1 /*+ SG_GCC_Total1*/ + SG_MLC_Total1 + SG_PYN_Total1 + SG_PTH_Total1 + SG_SAC_Total1 + SG_STN_Total1 + SG_SBP_Total1 + SG_THM_Total1 + SG_YBP_Total1 + SG_YUB_Total1}
 /*
 define C_CCH032_1  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
 define C_CCH030_1  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
@@ -308,7 +308,7 @@ goal setSG_DRC_Total2	{SG_DRC_Total2 	= SG_DRC_Total[gw_first]}
 goal setSG_ELD_Total2	{SG_ELD_Total2 	= SG_ELD_Total[gw_first]} 	
 goal setSG_FTR_Total2 	{SG_FTR_Total2 	= SG_FTR_Total[gw_first]}
 !goal setSG_FSC_Total2 	{SG_FSC_Total2 	= SG_FSC_Total[gw_first]}
-goal setSG_GCC_Total2 	{SG_GCC_Total2 	= SG_GCC_Total[gw_first]} 	
+!goal setSG_GCC_Total2 	{SG_GCC_Total2 	= SG_GCC_Total[gw_first]} 	
 goal setSG_MLC_Total2 	{SG_MLC_Total2 	= SG_MLC_Total[gw_first]} 	
 goal setSG_PYN_Total2 	{SG_PYN_Total2 	= SG_PYN_Total[gw_first]} 	
 goal setSG_PTH_Total2 	{SG_PTH_Total2 	= SG_PTH_Total[gw_first]} 	
@@ -323,7 +323,7 @@ goal setSG_SBP_Total2 	{SG_SBP_Total2 	= SG_SBP_Total[gw_first]}
 goal setSG_THM_Total2 	{SG_THM_Total2 	= SG_THM_Total[gw_first]} 	
 goal setSG_YBP_Total2 	{SG_YBP_Total2 	= SG_YBP_Total[gw_first]} 	
 goal setSG_YUB_Total2 	{SG_YUB_Total2 	= SG_YUB_Total[gw_first]}
-goal setSG_Total2 	{SG_Total2 = SG_AMR_Total2 + SG_ANT_Total2 + SG_BTL_Total2 + SG_BRR_Total2 + SG_BCC_Total2 + SG_BTC_Total2 + SG_CCH_Total2 + SG_CBD_Total2 + SG_CWD_Total2 + SG_COW_Total2 + SG_DRC_Total2 + SG_ELD_Total2 + SG_FTR_Total2 + SG_GCC_Total2 + SG_MLC_Total2 + SG_PYN_Total2 + SG_PTH_Total2 + SG_SAC_Total2 + SG_STN_Total2 + SG_SBP_Total2 + SG_THM_Total2 + SG_YBP_Total2 + SG_YUB_Total2}
+goal setSG_Total2 	{SG_Total2 = SG_AMR_Total2 + SG_ANT_Total2 + SG_BTL_Total2 + SG_BRR_Total2 + SG_BCC_Total2 + SG_BTC_Total2 + SG_CCH_Total2 + SG_CBD_Total2 + SG_CWD_Total2 + SG_COW_Total2 + SG_DRC_Total2 + SG_ELD_Total2 + SG_FTR_Total2 /*+ SG_GCC_Total2*/ + SG_MLC_Total2 + SG_PYN_Total2 + SG_PTH_Total2 + SG_SAC_Total2 + SG_STN_Total2 + SG_SBP_Total2 + SG_THM_Total2 + SG_YBP_Total2 + SG_YUB_Total2}
 /*
 define C_CCH032_2  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
 define C_CCH030_2  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
@@ -364,7 +364,7 @@ goal setSG_DRC_Total3	{SG_DRC_Total3 	= SG_DRC_Total[gw_second]}
 goal setSG_ELD_Total3	{SG_ELD_Total3 	= SG_ELD_Total[gw_second]} 	
 goal setSG_FTR_Total3 	{SG_FTR_Total3 	= SG_FTR_Total[gw_second]}
 !goal setSG_FSC_Total3 	{SG_FSC_Total3 	= SG_FSC_Total[gw_second]}
-goal setSG_GCC_Total3 {SG_GCC_Total3 	= SG_GCC_Total[gw_second]} 	
+!goal setSG_GCC_Total3 {SG_GCC_Total3 	= SG_GCC_Total[gw_second]} 	
 goal setSG_MLC_Total3 {SG_MLC_Total3 	= SG_MLC_Total[gw_second]} 	
 goal setSG_PYN_Total3 {SG_PYN_Total3 	= SG_PYN_Total[gw_second]} 	
 goal setSG_PTH_Total3 {SG_PTH_Total3 	= SG_PTH_Total[gw_second]} 	
@@ -379,7 +379,7 @@ goal setSG_SBP_Total3 {SG_SBP_Total3 	= SG_SBP_Total[gw_second]}
 goal setSG_THM_Total3 {SG_THM_Total3 	= SG_THM_Total[gw_second]} 	
 goal setSG_YBP_Total3 {SG_YBP_Total3 	= SG_YBP_Total[gw_second]} 	
 goal setSG_YUB_Total3 {SG_YUB_Total3 	= SG_YUB_Total[gw_second]}
-goal setSG_Total3 	{SG_Total3 = SG_AMR_Total3 + SG_ANT_Total3 + SG_BTL_Total3 + SG_BRR_Total3 + SG_BCC_Total3 + SG_BTC_Total3 + SG_CCH_Total3 + SG_CBD_Total3 + SG_CWD_Total3 + SG_COW_Total3 + SG_DRC_Total3 + SG_ELD_Total3 + SG_FTR_Total3 + SG_GCC_Total3 + SG_MLC_Total3 + SG_PYN_Total3 + SG_PTH_Total3 + SG_SAC_Total3 + SG_STN_Total3 + SG_SBP_Total3 + SG_THM_Total3 + SG_YBP_Total3 + SG_YUB_Total3}
+goal setSG_Total3 	{SG_Total3 = SG_AMR_Total3 + SG_ANT_Total3 + SG_BTL_Total3 + SG_BRR_Total3 + SG_BCC_Total3 + SG_BTC_Total3 + SG_CCH_Total3 + SG_CBD_Total3 + SG_CWD_Total3 + SG_COW_Total3 + SG_DRC_Total3 + SG_ELD_Total3 + SG_FTR_Total3 /*+ SG_GCC_Total3*/ + SG_MLC_Total3 + SG_PYN_Total3 + SG_PTH_Total3 + SG_SAC_Total3 + SG_STN_Total3 + SG_SBP_Total3 + SG_THM_Total3 + SG_YBP_Total3 + SG_YUB_Total3}
 /* 
 define C_CCH032_3  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
 define C_CCH030_3  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
@@ -420,7 +420,7 @@ goal setSG_DRC_Total4	{SG_DRC_Total4 	= SG_DRC_Total[gw_third]}
 goal setSG_ELD_Total4	{SG_ELD_Total4 	= SG_ELD_Total[gw_third]} 	
 goal setSG_FTR_Total4 	{SG_FTR_Total4 	= SG_FTR_Total[gw_third]}
 !goal setSG_FSC_Total4 	{SG_FSC_Total4 	= SG_FSC_Total[gw_third]}
-goal setSG_GCC_Total4 {SG_GCC_Total4 	= SG_GCC_Total[gw_third]} 	
+!goal setSG_GCC_Total4 {SG_GCC_Total4 	= SG_GCC_Total[gw_third]} 	
 goal setSG_MLC_Total4 {SG_MLC_Total4 	= SG_MLC_Total[gw_third]} 	
 goal setSG_PYN_Total4 {SG_PYN_Total4 	= SG_PYN_Total[gw_third]} 	
 goal setSG_PTH_Total4 {SG_PTH_Total4 	= SG_PTH_Total[gw_third]} 	
@@ -435,7 +435,7 @@ goal setSG_SBP_Total4 {SG_SBP_Total4 	= SG_SBP_Total[gw_third]}
 goal setSG_THM_Total4 {SG_THM_Total4 	= SG_THM_Total[gw_third]} 	
 goal setSG_YBP_Total4 {SG_YBP_Total4 	= SG_YBP_Total[gw_third]} 	
 goal setSG_YUB_Total4 {SG_YUB_Total4 	= SG_YUB_Total[gw_third]}
-goal setSG_Total4 	{SG_Total4 = SG_AMR_Total4 + SG_ANT_Total4 + SG_BTL_Total4 + SG_BRR_Total4 + SG_BCC_Total4 + SG_BTC_Total4 + SG_CCH_Total4 + SG_CBD_Total4 + SG_CWD_Total4 + SG_COW_Total4 + SG_DRC_Total4 + SG_ELD_Total4 + SG_FTR_Total4 + SG_GCC_Total4 + SG_MLC_Total4 + SG_PYN_Total4 + SG_PTH_Total4 + SG_SAC_Total4 + SG_STN_Total4 + SG_SBP_Total4 + SG_THM_Total4 + SG_YBP_Total4 + SG_YUB_Total4}
+goal setSG_Total4 	{SG_Total4 = SG_AMR_Total4 + SG_ANT_Total4 + SG_BTL_Total4 + SG_BRR_Total4 + SG_BCC_Total4 + SG_BTC_Total4 + SG_CCH_Total4 + SG_CBD_Total4 + SG_CWD_Total4 + SG_COW_Total4 + SG_DRC_Total4 + SG_ELD_Total4 + SG_FTR_Total4 /*+ SG_GCC_Total4*/ + SG_MLC_Total4 + SG_PYN_Total4 + SG_PTH_Total4 + SG_SAC_Total4 + SG_STN_Total4 + SG_SBP_Total4 + SG_THM_Total4 + SG_YBP_Total4 + SG_YUB_Total4}
 /*
 define C_CCH032_4  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}
 define C_CCH030_4  {lower 0 upper 99999 kind 'CHANNEL' units 'cfs'}

@@ -76,7 +76,7 @@ goal setDP_WBATotal_12   {DP_WBATotal_12 = DP_12_INT + DP_12_NA + DP_12_SA}
 
 define DP_13_INT         {timeseries kind 'deep-percolation' units 'TAF' convert 'CFS'}
 define DP_WBATotal_13    {std kind 'deep-percolation' units 'CFS'}
-goal setDP_WBATotal_13   {DP_WBATotal_13 = DP_13_INT + DP_13_NA}
+goal setDP_WBATotal_13   {DP_WBATotal_13 = DP_13_INT + DP_13_NA + SL_OROVL_13_NU1}
 
 define DP_14_INT         {timeseries kind 'deep-percolation' units 'TAF' convert 'CFS'}
 define DP_WBATotal_14    {std kind 'deep-percolation' units 'CFS'}

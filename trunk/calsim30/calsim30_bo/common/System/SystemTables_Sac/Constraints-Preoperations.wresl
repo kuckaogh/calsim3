@@ -11,9 +11,9 @@ Naming takes the following form:
 !!! FEATHER RIVER	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !goal set_D_SFF011_MNRRH		{D_SFF011_MNRRH		< D_SFF011_MNRRH_SV}
-goal set_D_LST004_OWC000	{D_LST004_OWC000	< D_LST004_OWC000_SV}
+!goal set_D_LST004_OWC000	{D_LST004_OWC000	< D_LST004_OWC000_SV}
 goal set_R_MNRRH_FTR072		{R_MNRRH_FTR072		< R_MNRRH_FTR072_SV}
-goal set_D_OROVL_13_NU1		{D_OROVL_13_NU1		< D_OROVL_13_NU1_SV} 
+!goal set_D_OROVL_13_NU1	{D_OROVL_13_NU1		< D_OROVL_13_NU1_SV} 
 !goal set_D_WBF030_TTC002	{D_WBF030_TTC002	< D_WBF030_TTC002_SV}
 !goal set_D_WBF015_MIO023	{D_WBF015_MIO023	< D_WBF015_MIO023_SV}
 goal set_D_SLT009_SCT000	{D_SLT009_SCT000	< D_SLT009_SCT000_SV}

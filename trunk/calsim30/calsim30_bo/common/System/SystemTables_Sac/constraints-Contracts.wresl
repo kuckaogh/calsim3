@@ -270,6 +270,20 @@ goal limitD_SAC207_GCC007     {D_SAC207_GCC007 + D_TCC062_GCC036 + D_TCC085_GCC0
                          + WRmon_GCC027_08N_SA2 + WRmon_GCC056_08S_SA2
                          + WestSacRfgDelTar * perdv_cvprf_sys}
 
+! For canal maintenence purposes, no diversion is allowed to Glenn-Colusa Canal in January and February except for Sacramento NWR requirements (08N_PR1).
+goal janfebD_SAC207_GCC007 {
+	lhs D_SAC207_GCC007
+	case jan_feb {
+		condition month == jan .or. month == feb
+		rhs CLmon_GCC027_08N_PR1 *taf_cfs* perdv_cvprf_sys/(1 - EVF_GCC027_08N_PR1  - DPF_GCC027_08N_PR1 - LFF_GCC027_08N_PR1 - OSF_GCC027_08N_PR1)
+		lhs>rhs penalty 9999
+		lhs<rhs penalty 0   }
+	case other {
+		condition always
+		rhs 99999.
+		lhs>rhs penalty 0
+		lhs<rhs penalty 0   }}
+
 ! Limit Glenn-Colusa Canal winter Ag diversions under permit 21101 (max. of 1200 cfs Nov. 1 - Mar.31)
 ! and the canal is shut down for maintenence from Jan.7 - Feb.20 (assume Jan.1 - Feb.14 for modeling).
 

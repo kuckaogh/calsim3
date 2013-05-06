@@ -3,7 +3,7 @@
 Contracts_CVPService       
 Diversion      Contract
 1         7.300     ! CL_WKYTN_2_PA          Clear Creek CSD
-2         22.120    ! CL_SAC294_3_PA    Bella Vista WD 
+2         18.000    ! CL_SAC294_3_PA    Bella Vista WD approximately 75% of total 24,578
 3         32.900    ! CL_CCL005_4_PA1   Corning WD, Proberta WD, Thomes Creek WD     
 4         2.100     ! CL_TCC022_4_PA2   Kirkwood WD
 5         121.720   ! CL_STN026_6_PA    Orland Unit WUA
@@ -16,7 +16,7 @@ Diversion      Contract
 12        11.232    ! CL_WTPCSD_2_PU    Centerville CSD, Clear Creek CSD, Shasta County WA (2.900 + 8.000 + 0.332) 
 13        1.400     ! CL_WKYTN_2_PU     Shasta CSD, Keswick CSA (1.000 + 0.400)
 14        6.040     ! CL_SHSTA_3_PU1    Jones Valley CSA, City of Shasta Lake, Mountain Gate CSD
-15        2.458     ! CL_SAC294_3_PU2   Bella Vista WD
+15        6.578     ! CL_SAC294_3_PU2   Bella Vista WD approximately 25% of total 24,578
 16        46.400    ! CL_GCC027_8N_PR1  Sacramento NWR
 17        25.000    ! CL_GCC046_8S_PR   Colusa NWR
 18        20.950    ! CL_CBD039_8N_PR2  Delevan NWR
