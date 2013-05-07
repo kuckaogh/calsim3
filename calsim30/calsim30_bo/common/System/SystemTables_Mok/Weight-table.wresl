@@ -1,6 +1,6 @@
 
 
-Objective obj = {
+Objective obj_SYS_MOK = {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !CALSIM-III WEIGHTS for Consumnes-Mokelumne Sub-Model
 !Original Formulation: C. Olson (MWH) December 2007
