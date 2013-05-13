@@ -28,48 +28,48 @@ SEQUENCE CYCLE6 {
     model   GW_INITIAL
     order   6
     }
-!SEQUENCE CYCLE7 {
-!    model   GW_FIRST
-!    order   7
-!    }
-!SEQUENCE CYCLE8 {
-!    model   GW_SECOND
-!    order   8
-!    }
-!SEQUENCE CYCLE9 {
-!    model   GW_THIRD
-!    order   9
-!    }
-!SEQUENCE CYCLE10 {
-!    model   SETUP
-!    order   10
-!    }    
-!SEQUENCE CYCLE11 {
-!    model   MONTHLYWEIGHTED
-!    order   11
-!    }
-!SEQUENCE CYCLE12 {
-!    model   UPSTREAM
-!    order   12
-!    }
-!SEQUENCE CYCLE13 {
-!    model   DELTA
-!    order   13
-!    }
-!SEQUENCE CYCLE14 {
-!    model   TRANSFERS_STAGE1
-!    order   14
-!    }
-!SEQUENCE CYCLE15 {
-!    model   WHEELCVC
-!    order   15
-!    }
-!SEQUENCE CYCLE16 {
-!    model   WHEELJPOD
-!    order   16
-!    }
+SEQUENCE CYCLE7 {
+    model   GW_FIRST
+    order   7
+    }
+SEQUENCE CYCLE8 {
+    model   GW_SECOND
+    order   8
+    }
+SEQUENCE CYCLE9 {
+    model   GW_THIRD
+    order   9
+    }
+SEQUENCE CYCLE10 {
+    model   SETUP
+    order   10
+    }    
+SEQUENCE CYCLE11 {
+    model   MONTHLYWEIGHTED
+    order   11
+    }
+SEQUENCE CYCLE12 {
+    model   UPSTREAM
+    order   12
+    }
+SEQUENCE CYCLE13 {
+    model   DELTA
+    order   13
+    }
+SEQUENCE CYCLE14 {
+    model   TRANSFERS_STAGE1
+    order   14
+    }
+SEQUENCE CYCLE15 {
+    model   WHEELCVC
+    order   15
+    }
+SEQUENCE CYCLE16 {
+    model   WHEELJPOD
+    order   16
+    }
 
-group CommonGroup { 
+group CommonGroup_All { 
     INCLUDE '..\..\common\NewFacilitySwitches.wresl'
     INCLUDE '..\..\common\LevelofDevelopment.wresl'
     INCLUDE '..\..\common\NorthOfDelta\Sacramento\NODOS\NODOS_JobControl.wresl'
@@ -120,6 +120,24 @@ group CommonGroup_FromSjrbaseToVamp {
 
 group CommonGroup_FromGWInitialToEnd{
     INCLUDE '..\..\common\sanjoaquin\IntegratedOperations\USJRS_IO_OFF.wresl'
+    define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
+    INCLUDE '..\..\common\CCWD\LVM_System.wresl'
+
+    !*************************************************
+    !Make LVM changes with UserInput.wresl or associated SV timeseries or lookup tables.
+    INCLUDE '..\..\common\CCWD\UserInput.wresl'
+    !*************************************************
+    
+    
+    
+    
+        INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
+    INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
+    INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
+    
+    
+    
+        INCLUDE        '..\..\common\CVGroundwater\CVGroundwater_ExtFuncs.wresl'
 }
 
 group CommonWeight_FromSjrbaseToVamp {
@@ -141,7 +159,7 @@ group CommonWeight_FromGWInitialToEnd {
 
 MODEL SJRBASE {         !CYCLE 1
 
-	include group CommonGroup 
+	include group CommonGroup_All 
 	include group CommonGroup_FromSjrbaseToVamp
     
 !CB    INCLUDE[local] '..\..\common\Cycle1thru5SystemDefs.wresl' !CB separated into global and local parts
@@ -167,7 +185,7 @@ MODEL SJRBASE {         !CYCLE 1
      
 MODEL SJR_WQ1 {         !CYCLE 2
 
-	include group CommonGroup
+	include group CommonGroup_All
 	include group CommonGroup_FromSjrbaseToVamp
 	include group CommonWeight_FromSjrbaseToVamp
 
@@ -188,7 +206,7 @@ MODEL SJR_WQ1 {         !CYCLE 2
 
 MODEL SJR_PULSE {            !CYCLE 3
 
-	include group CommonGroup
+	include group CommonGroup_All
 	include group CommonGroup_FromSjrbaseToVamp
 	include group CommonWeight_FromSjrbaseToVamp
 	
@@ -209,7 +227,7 @@ MODEL SJR_PULSE {            !CYCLE 3
 
 MODEL SJR_WQ2 {         !CYCLE 4
 
-	include group CommonGroup
+	include group CommonGroup_All
 	include group CommonGroup_FromSjrbaseToVamp
 	include group CommonWeight_FromSjrbaseToVamp
 		
@@ -230,7 +248,7 @@ MODEL SJR_WQ2 {         !CYCLE 4
 
 MODEL VAMP_AND_DO {           !CYCLE 5
 
-	include group CommonGroup
+	include group CommonGroup_All
 	include group CommonGroup_FromSjrbaseToVamp
 	include group CommonWeight_FromSjrbaseToVamp
 		
@@ -254,17 +272,10 @@ MODEL VAMP_AND_DO {           !CYCLE 5
 MODEL GW_INITIAL {      !CYCLE 6 (also functions as the PRESETUP cycle)
 
 
-	include group CommonGroup
-	include group CommonGroup_FromGWInitialToEnd
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd	
 
-		
-    define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
-    INCLUDE '..\..\common\CCWD\LVM_System.wresl'
 
-    !*************************************************
-    !Make LVM changes with UserInput.wresl or associated SV timeseries or lookup tables.
-    INCLUDE '..\..\common\CCWD\UserInput.wresl'
-    !*************************************************
     
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -272,14 +283,14 @@ MODEL GW_INITIAL {      !CYCLE 6 (also functions as the PRESETUP cycle)
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\System\System_Sac.wresl'
     INCLUDE[local] '..\..\common\System\SystemTables_Sac\constraints-seepage_initial.wresl'
-    INCLUDE '..\..\common\EWAActions\PreEWAMod\PreEWAStorageMod_WSI-DI_other.wresl'  !Comment in for non-EWA
-    INCLUDE '..\..\common\delta\DeltaExtFuncs_7inpANN.wresl'
-    INCLUDE '..\..\common\swp_dellogic\allocation\co_extfcn.wresl'
+    
+    
+
     
     INCLUDE[LOCAL] '..\..\common\ReOperations\ReopsVarDefine.wresl'
     INCLUDE[LOCAL] '..\..\common\EWAActions\ZeroEWAOps.wresl'
 
-    INCLUDE        '..\..\common\CVGroundwater\CVGroundwater_ExtFuncs.wresl'
+
     
     goal[local] wheeling6 {I419 = 0.0}
     INCLUDE[LOCAL] '..\..\common\export_ops\export_ops1.wresl'
@@ -380,6 +391,10 @@ MODEL GW_INITIAL {      !CYCLE 6 (also functions as the PRESETUP cycle)
      }
      
 MODEL GW_FIRST {      !CYCLE 7
+
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
+
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -480,7 +495,7 @@ MODEL GW_FIRST {      !CYCLE 7
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
+
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -491,9 +506,12 @@ MODEL GW_FIRST {      !CYCLE 7
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
      
 MODEL GW_SECOND {      !CYCLE 8
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -594,7 +612,6 @@ MODEL GW_SECOND {      !CYCLE 8
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -605,9 +622,12 @@ MODEL GW_SECOND {      !CYCLE 8
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
      
 MODEL GW_THIRD {      !CYCLE 9
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -708,7 +728,6 @@ MODEL GW_THIRD {      !CYCLE 9
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -719,9 +738,12 @@ MODEL GW_THIRD {      !CYCLE 9
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
 
 MODEL SETUP {      !CYCLE 10 (also functions as fourth groundwater cycle)
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -822,7 +844,6 @@ MODEL SETUP {      !CYCLE 10 (also functions as fourth groundwater cycle)
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -833,10 +854,13 @@ MODEL SETUP {      !CYCLE 10 (also functions as fourth groundwater cycle)
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_operations.wresl'
 
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
      
 
 MODEL MONTHLYWEIGHTED {      !CYCLE 11
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -939,7 +963,6 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -950,9 +973,12 @@ MODEL MONTHLYWEIGHTED {      !CYCLE 11
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
     
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
      
 MODEL UPSTREAM {      !CYCLE 12
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
@@ -1057,7 +1083,6 @@ MODEL UPSTREAM {      !CYCLE 12
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -1068,9 +1093,12 @@ MODEL UPSTREAM {      !CYCLE 12
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
     
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
      
 MODEL DELTA {      !CYCLE 13
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
 !    INCLUDE[LOCAL] '..\..\common\northofdelta\yuba\delivery.wresl'
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
@@ -1179,7 +1207,6 @@ MODEL DELTA {      !CYCLE 13
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
     INCLUDE[LOCAL] '..\..\common\CCWD\CalSimConnection.wresl'
@@ -1192,9 +1219,12 @@ MODEL DELTA {      !CYCLE 13
     INCLUDE[local] '..\..\common\northofdelta\yuba\yuba_AnnualAllocation_CY2.wresl'
     
 !    INCLUDE[local] '..\..\common\swpcvpdeloutput.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
 
 MODEL TRANSFERS_STAGE1 {      !CYCLE 14
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -1314,7 +1344,6 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 14
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
 
@@ -1331,9 +1360,12 @@ MODEL TRANSFERS_STAGE1 {      !CYCLE 14
     INCLUDE[local] 'CycleOutput\cycle_output.wresl'
     
     INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersOps_Stg1_CalSim3.wresl'
+	include group CommonWeight_FromGWInitialToEnd
      }
 
 MODEL WHEELCVC {      !CYCLE 15
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -1453,7 +1485,6 @@ MODEL WHEELCVC {      !CYCLE 15
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
 
@@ -1470,10 +1501,12 @@ MODEL WHEELCVC {      !CYCLE 15
     INCLUDE[local] 'CycleOutput\cycle_output.wresl'
     
     INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersOps_Stg1_CalSim3.wresl'
-
+	include group CommonWeight_FromGWInitialToEnd
      }
      
 MODEL WHEELJPOD {      !CYCLE 16
+	include group CommonGroup_All
+	include group CommonGroup_FromGWInitialToEnd
     !define  daysindv {alias daysin kind 'DAYS' units 'DAYS'}
     INCLUDE[local] '..\..\common\sanjoaquin\IntegratedOperations\SanLuisTransfers.wresl'    
     INCLUDE[local] '..\..\common\System\System_ALL.wresl'
@@ -1593,7 +1626,6 @@ MODEL WHEELJPOD {      !CYCLE 16
 
     INCLUDE[LOCAL] '..\..\common\CCWD\LVE\WHEELING_OFF.WRESL'
     INCLUDE[local] '..\..\common\System\systemtables_all\connectivity-table.wresl'
-    INCLUDE[local] 'System\SystemTables_ALL\weight-table.wresl'
 
     INCLUDE[local] '..\..\common\Freeport\SCWA\SCWA_excess_cycle6.wresl'    !ejc
 
@@ -1610,5 +1642,6 @@ MODEL WHEELJPOD {      !CYCLE 16
     INCLUDE[local] 'CycleOutput\cycle_output.wresl'
     
     INCLUDE[LOCAL] '..\..\common\ReOperations\Transfers\TransfersOps_Stg1_CalSim3.wresl'
+    include group CommonWeight_FromGWInitialToEnd
 
      }
