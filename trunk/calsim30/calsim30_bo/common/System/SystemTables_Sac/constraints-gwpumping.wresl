@@ -542,7 +542,7 @@ goal setGPmin_17S_PR       {GP_17S_PR  > GPmin_17S_PR * AWo_17S_PR * (1+ RPF_17S
 goal setGPmax_17S_PR       {GP_17S_PR  < GPmax_17S_PR * AWo_17S_PR * (1+ RPF_17S_PR - RUFo_17S_PR) + GPmax_17S_PR * AWr_17S_PR * (1+ RPF_17S_PR - RUFr_17S_PR) + GPmax_17S_PR * AWw_17S_PR * (1+ RPF_17S_PR - RUFw_17S_PR)}
 !define GPmin_17S_PR_dv	{alias GPmin_17S_PR * AWo_17S_PR * (1+ RPF_17S_PR - RUFo_17S_PR) + GPmin_17S_PR * AWr_17S_PR * (1+ RPF_17S_PR - RUFr_17S_PR) + GPmin_17S_PR * AWw_17S_PR * (1+ RPF_17S_PR - RUFw_17S_PR) kind 'GW-PUMPING-LIMIT' units 'CFS'}
 
-goal set_GP_WBATotal_17S  {GP_WBATotal_17S - GP_17S_NA - GP_17S_SA - GP_17S_PR  = 0.}
+goal set_GP_WBATotal_17S  {GP_WBATotal_17S - GP_17S_NA - GP_17S_NU - GP_17S_SA - GP_17S_PR  = 0.}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 18      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
