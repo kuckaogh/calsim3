@@ -95,6 +95,9 @@ goal setR_05_NA_SAC201	{R_05_NA_SAC201 = TW_05_NA + LF_05_NA + OS_05_NA - RU_05_
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define TW_06_NA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 define TW_06_PA 			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
+
+goal setR_06_NA_CBD044 {R_06_NA_CBD044 = TW_06_NA - RU_06_NA}
+goal setR_06_PA_STN009 {R_06_PA_STN009 = TW_06_PA + LF_06_PA + OS_06_PA - RU_06_PA}
 ! No return flow arc defined
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -555,6 +558,10 @@ goal setR_RFS26N_PGWWTP		{R_RFS26N_PGWWTP = 0.25*R_24_NU2_RFS26N + 0.50*R_26N_PU
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 define TW_26S_NA			{timeseries kind 'TAILWATER' units 'TAF' convert 'CFS'}
 
+
+goal setR_26S_NA_MOK019	{R_26S_NA_MOK019 = TW_26S_NA /* +LF_26S_NA + OS_26S_NA */ - RU_26S_NA}  !add by Richard 5/22/2013
+
+
 define WW_26S_EID	{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
 /*
 goal setWW_26S_PU1 {
@@ -692,3 +699,45 @@ goal setR_MAWWTP_SJR056	{R_MAWWTP_SJR056 = 0.}
 goal setR_STWWTP_SJR042	{R_STWWTP_SJR042 = 0.}
 goal setR_60N_NA3_SJR028	{R_60N_NA3_SJR028 = 0.}
 goal setR_60N_NA4_SJR022	{R_60N_NA4_SJR022 = 0.}
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Wastewater goes to deep percolation  "constrans-DeepPercolation.wresl"
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+define WW_03_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_05_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_06_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_07S_NU		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_08N_NU		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_08S_NU		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_09_NU 		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_10_NU2		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_11_NU2		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_12_NU2		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_13_NU2		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_14_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_16_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_17N_NU		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_17S_NU		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_18_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_19_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_20_NU2		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_21_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_22_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_23_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_24_NU4		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_25_NU			{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+define WW_26S_PU3		{timeseries kind 'WASTEWATER' units 'TAF' convert 'CFS'}
+
+
+
+
+
+
+
+
+
+
+
+
