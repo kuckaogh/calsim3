@@ -80,7 +80,7 @@ define net_delta_cu { value                       ! Net Delta Consumptive Use
         DND_SJR_East +
         DND_SJR_West +
         DND_OMR +
-        DD_OMR027_OMR_adj
+        DD_50_PU - DD_OMR039_OMR_adj - DA_50_PU + DD_50_PA1 - DD_SJR056_OMR_adj - DA_50_PA1 + DD_50_PA2 - DA_50_PA2
 }
 
 define net_DICU{ lower unbounded kind 'DICU_FLOW' units 'CFS' }!shengjun add 2/24/2005
@@ -92,7 +92,7 @@ goal def_net_DICU{ net_DICU=
         DND_SJR_East +
         DND_SJR_West +
         DND_OMR +
-        DD_OMR027_OMR_adj
+        DD_50_PU - DD_OMR039_OMR_adj - DA_50_PU + DD_50_PA1 - DD_SJR056_OMR_adj - DA_50_PA1 + DD_50_PA2 - DA_50_PA2
 }
 
 ! Net Delta Consumptive Use decision variable for calculating ANN MRDO
