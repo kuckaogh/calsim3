@@ -518,7 +518,7 @@ goal setGPmin_17N_NR   {GP_17N_NR > GPmin_17N_NR * AWo_17N_NR * (1+ RPF_17N_NR -
 goal setGPmax_17N_NR   {GP_17N_NR < GPmax_17N_NR * AWo_17N_NR * (1+ RPF_17N_NR - RUFo_17N_NR) + GPmax_17N_NR * AWr_17N_NR * (1+ RPF_17N_NR - RUFr_17N_NR) + GPmax_17N_NR * AWw_17N_NR * (1+ RPF_17N_NR - RUFw_17N_NR)}
 !define GPmin_17N_NR_dv	{alias GPmin_17N_NR * AWo_17N_NR * (1+ RPF_17N_NR - RUFo_17N_NR) + GPmin_17N_NR * AWr_17N_NR * (1+ RPF_17N_NR - RUFr_17N_NR) + GPmin_17N_NR * AWw_17N_NR * (1+ RPF_17N_NR - RUFw_17N_NR) kind 'GW-PUMPING-LIMIT' units 'CFS'}
 
-goal set_GP_WBATotal_17N  {GP_WBATotal_17N	- GP_17N_NA - GP_17N_NR - GP_17N_PR  = 0.}
+goal set_GP_WBATotal_17N  {GP_WBATotal_17N	- GP_17N_NA - GP_17N_NR - GP_17N_PR -GP_17N_NU = 0.}  !modified by Z.Q. Richard Chen 7/2/2013
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! WBA 17-South    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
